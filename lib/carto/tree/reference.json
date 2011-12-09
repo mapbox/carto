@@ -575,6 +575,28 @@
                     "gaussian",
                     "lanczos"
                 ]
+            },
+            "colorizer-default-mode": {
+                "css": "raster-colorizer-default-mode",
+                "type": [
+                    "discrete",
+                    "linear",
+                    "exact"
+                ]
+            },
+            "colorizer-default-color": {
+                "css": "raster-colorizer-default-color",
+                "type": "color"
+            },
+            "colorizer-epsilon": {
+                "css": "raster-colorizer-epsilon",
+                "type": "float"
+            },
+            "stop": {
+                "css": "raster-colorizer-stops",
+                "type": "tags",
+                "serialization": "tag",
+                "tagname": "tagname"
             }
         },
         "point": {
