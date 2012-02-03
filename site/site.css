@@ -1,0 +1,127 @@
+body {
+  font-family:DroidSans,'Lucida Grande',sans-serif;
+  font-size:14px;
+  line-height:20px;
+  color:#333;
+}
+
+a {
+  color:#489;
+}
+
+h1 {
+  font-weight:bold;
+  font-size:14px;
+  line-height:20px;
+  padding:10px;
+}
+
+.left {
+  position:fixed;
+  top:0;
+  left:0;
+  width:150px;
+}
+
+.toc a {
+  text-decoration:none;
+  display:block;
+  padding:2px 10px;
+}
+
+.toc a:hover {
+  background:#cae9f0;
+}
+
+.toc li {
+}
+
+.right {
+  position:absolute;
+  top:0;
+  left:150px;
+  border-left:1px solid #ccc;
+}
+
+h2 {
+  background:#f4f4f5;
+  padding:5px 10px;
+}
+
+h2 a {
+  text-decoration:none;
+  color:#000;
+}
+
+ul.symbolizer, ul.values {
+  list-style-type:none;
+}
+
+ul.symbolizer li, ul.values li {
+  padding:10px 10px;
+  border-top:1px solid #eee;
+}
+
+span.css {
+  font-size:14px;
+  line-height:20px;
+}
+
+.type {
+  background:#ffe8e1;
+  padding:2px 4px;
+  border-radius:5px;
+}
+
+.type a {
+  color:#a77;
+}
+
+
+div.description, div.right p {
+  font-size:12px;
+  line-height:20px;
+}
+
+div.footnote {
+  padding:5px 0;
+}
+
+div.footnote p {
+  font-size:14px;
+  line-height:20px;
+  padding:5px 10px;
+  font-style:italic;
+  color:#666;
+}
+
+.toc h3 {
+  padding:0px 10px 5px 10px;
+  font-size:12px;
+  font-weight:bold;
+  line-height:20px;
+}
+
+div.values p {
+  padding:10px;
+}
+
+div.values pre {
+  padding:0 10px;
+  margin-bottom:5px;
+  font-size:12px;
+  line-height:15px;
+  font-family:monospace;
+}
+
+code {
+  font-family:monospace;
+}
+
+.hl {
+  background:#FDFFE4;
+}
+
+.hl h2 {
+  font-weight:bold;
+}

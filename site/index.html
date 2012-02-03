@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carto - MapBox</title>
+    <link href='site/reset.css' type='text/css' rel='stylesheet' />
+    <link href='site/site.css' type='text/css' rel='stylesheet' />
+  </head>
+  <body>
+    <div class='wrapper'>
+      <div class='left'>
+        <div class='header'>
+          <h2>Carto</h2>
+        </div>
+        <div class='toc'>
+        </div>
+      </div>
+      <div class='right'>
+        
+<div class='section section-map'>
+  <h2>map</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    background-color
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    <span class='description'>(transparent)</span>
+  </small>
+  
+  <div class='description'>Map Background color</div>
+  </li>
+  
+  <li>
+  <div>
+    background-image
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    srs
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    buffer
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    0
+    <span class='description'>(No buffer will be used)</span>
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    base
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Any relative paths used to reference files will be understood as relative to this directory path if the map is loaded from an in memory object rather than from the filesystem. If the map is loaded from the filesystem and this option is not provided it will be set to the directory of the stylesheet.</div>
+  </li>
+  
+  <li>
+  <div>
+    font-directory
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    <span class='description'>(No map-specific fonts will be registered)</span>
+  </small>
+  
+  <div class='description'>Path to a directory which holds fonts which should be registered when the Map is loaded (in addition to any fonts that may be automatically registered).</div>
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-polygon'>
+  <h2>polygon</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    polygon-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    rgba(128,128,128,1)
+    <span class='description'>(gray and fully opaque (alpha = 1), same as rgb(128,128,128))</span>
+  </small>
+  
+  <div class='description'>Fill color to assign to a polygon</div>
+  </li>
+  
+  <li>
+  <div>
+    polygon-gamma
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(fully antialiased)</span>
+  </small>
+  
+  <div class='description'>Level of antialiasing of polygon edges</div>
+  </li>
+  
+  <li>
+  <div>
+    polygon-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(opaque)</span>
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    polygon-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    polygon-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-line'>
+  <h2>line</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    line-color
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    rgba(0,0,0,1)
+    <span class='description'>(black and fully opaque (alpha = 1), same as rgb(0,0,0))</span>
+  </small>
+  
+  <div class='description'>The color of a drawn line</div>
+  </li>
+  
+  <li>
+  <div>
+    line-width
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    
+  </small>
+  
+  <div class='description'>The width of a line in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    line-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(opaque)</span>
+  </small>
+  
+  <div class='description'>The opacity of a line</div>
+  </li>
+  
+  <li>
+  <div>
+    line-join
+    <small class='types'>
+      
+      <span class='type'>miter</span>
+      
+      <span class='type'>round</span>
+      
+      <span class='type'>bevel</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    miter
+    
+  </small>
+  
+  <div class='description'>The behavior of lines when joining</div>
+  </li>
+  
+  <li>
+  <div>
+    line-cap
+    <small class='types'>
+      
+      <span class='type'>butt</span>
+      
+      <span class='type'>round</span>
+      
+      <span class='type'>square</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    butt
+    
+  </small>
+  
+  <div class='description'>The display of line endings</div>
+  </li>
+  
+  <li>
+  <div>
+    line-gamma
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(fully antialiased)</span>
+  </small>
+  
+  <div class='description'>Level of antialiasing of stroke line</div>
+  </li>
+  
+  <li>
+  <div>
+    line-dasharray
+    <small class='types'>
+      
+      <span class='type'>numbers</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    <span class='description'>(solid line)</span>
+  </small>
+  
+  <div class='description'>A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported for more complex patterns.</div>
+  </li>
+  
+  <li>
+  <div>
+    line-dash-offset
+    <small class='types'>
+      
+      <span class='type'>numbers</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    <span class='description'>(solid line)</span>
+  </small>
+  
+  <div class='description'>valid parameter but not currently used in renderers</div>
+  </li>
+  
+  <li>
+  <div>
+    line-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    line-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    line-rasterizer
+    <small class='types'>
+      
+      <span class='type'>full</span>
+      
+      <span class='type'>fast</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    full
+    
+  </small>
+  
+  <div class='description'>Exposes an alternate AGG rendering method that sacrifices some accuracy for speed.</div>
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-markers'>
+  <h2>markers</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    marker-file
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(opaque)</span>
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-line-color
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-line-width
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-line-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(opaque)</span>
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-placement
+    <small class='types'>
+      
+      <span class='type'>point</span>
+      
+      <span class='type'>line</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-type
+    <small class='types'>
+      
+      <span class='type'>arrow</span>
+      
+      <span class='type'>ellipse</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-width
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-height
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-allow-overlap
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Space between repeated labels</div>
+  </li>
+  
+  <li>
+  <div>
+    marker-max-error
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-transform
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    marker-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    
+  </small>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-shield'>
+  <h2>shield</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    shield-name
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Value to use for a shield"s text label. Data columns are specified using brackets like [column_name]</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-face-name
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Font name and style to use for the shield text</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-size
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>The size of the shield text in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>The color of the shield text</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-placement
+    <small class='types'>
+      
+      <span class='type'>point</span>
+      
+      <span class='type'>line</span>
+      
+      <span class='type'>vertex</span>
+      
+      <span class='type'>interior</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    point
+    
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    shield-avoid-edges
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Tell positioning algorithm to avoid labeling near intersection edges.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-min-distance
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Minimum distance to the next shield symbol, not necessarily the same shield.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>The spacing between repeated occurrences of the same shield on a line</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-min-padding
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    shield-wrap-width
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Length before wrapping long names.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-wrap-character
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+     
+    
+  </small>
+  
+  <div class='description'>Use this character instead of a space to wrap long names.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-halo-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    #FFFFFF
+    <span class='description'>(white)</span>
+  </small>
+  
+  <div class='description'>Specifies the color of the halo around the text.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-halo-radius
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Specify the radius of the halo in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-character-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-line-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Vertical spacing between lines of multiline labels (in pixels)</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-file
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    
+  </small>
+  
+  <div class='description'>Image file to render behind the shield text</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-text-dx
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Displace text within shield by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-text-dy
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Displace text within shield by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-dx
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Displace shield by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-dy
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Displace shield by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    
+  </small>
+  
+  <div class='description'>(Default 1.0) - opacity of the image used for the shield</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-text-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    
+  </small>
+  
+  <div class='description'>(Default 1.0) - opacity of the text placed on top of the shield</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-horizontal-alignment
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>The shield's horizontal alignment from its centerpoint</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-text-transform
+    <small class='types'>
+      
+      <span class='type'>none</span>
+      
+      <span class='type'>uppercase</span>
+      
+      <span class='type'>lowercase</span>
+      
+      <span class='type'>capitalize</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    
+  </small>
+  
+  <div class='description'>Transform the case of the characters</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-no-text
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Whether the shield should make room for a text label.</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-justify-alignment
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Define how text in a shield's label is justified</div>
+  </li>
+  
+  <li>
+  <div>
+    shield-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    shield-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-line-pattern'>
+  <h2>line-pattern</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    line-pattern-file
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>An image file to be repeated and warped along a line</div>
+  </li>
+  
+  <li>
+  <div>
+    line-pattern-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    line-pattern-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-polygon-pattern'>
+  <h2>polygon-pattern</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    polygon-pattern-file
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Image to use as a repeated pattern fill within a polygon</div>
+  </li>
+  
+  <li>
+  <div>
+    polygon-pattern-alignment
+    <small class='types'>
+      
+      <span class='type'>local</span>
+      
+      <span class='type'>global</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    local
+    
+  </small>
+  
+  <div class='description'>Specify whether to align pattern fills to the layer or to the map.</div>
+  </li>
+  
+  <li>
+  <div>
+    polygon-pattern-gamma
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(fully antialiased)</span>
+  </small>
+  
+  <div class='description'>Level of antialiasing of polygon pattern edges</div>
+  </li>
+  
+  <li>
+  <div>
+    polygon-pattern-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    polygon-pattern-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-raster'>
+  <h2>raster</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    raster-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(opaque)</span>
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    raster-mode
+    <small class='types'>
+      
+      <span class='type'>normal</span>
+      
+      <span class='type'>grain_merge</span>
+      
+      <span class='type'>grain_merge2</span>
+      
+      <span class='type'>multiply</span>
+      
+      <span class='type'>multiply2</span>
+      
+      <span class='type'>divide</span>
+      
+      <span class='type'>divide2</span>
+      
+      <span class='type'>screen</span>
+      
+      <span class='type'>hard_light</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    normal
+    
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    raster-scaling
+    <small class='types'>
+      
+      <span class='type'>fast</span>
+      
+      <span class='type'>bilinear</span>
+      
+      <span class='type'>bilinear8</span>
+      
+      <span class='type'>bicubic</span>
+      
+      <span class='type'>spline16</span>
+      
+      <span class='type'>gaussian</span>
+      
+      <span class='type'>lanczos</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-point'>
+  <h2>point</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    point-file
+    <small class='types'>
+      
+      <span class='type'>uri</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Image file to represent a point</div>
+  </li>
+  
+  <li>
+  <div>
+    point-allow-overlap
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    point-ignore-placement
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>value to control whether the placement of the feature will prevent the placement of other features</div>
+  </li>
+  
+  <li>
+  <div>
+    point-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(Fully opaque)</span>
+  </small>
+  
+  <div class='description'>A value from 0 to 1 to control the opacity of the point</div>
+  </li>
+  
+  <li>
+  <div>
+    point-placement
+    <small class='types'>
+      
+      <span class='type'>centroid</span>
+      
+      <span class='type'>interior</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    centroid
+    
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    point-transform
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>SVG transformation definition</div>
+  </li>
+  
+  <li>
+  <div>
+    point-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    point-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-text'>
+  <h2>text</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    text-name
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Value to use for a text label. Data columns are specified using brackets like [column_name]</div>
+  </li>
+  
+  <li>
+  <div>
+    text-face-name
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Font name and style to render a label in</div>
+  </li>
+  
+  <li>
+  <div>
+    text-size
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    10
+    
+  </small>
+  
+  <div class='description'>Text size in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    text-ratio
+    <small class='types'>
+      
+      <span class='type'>none</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Define the amount of text (of the total) present on successive lines when wrapping occurs</div>
+  </li>
+  
+  <li>
+  <div>
+    text-wrap-width
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Length of a chunk of text in characters before wrapping text</div>
+  </li>
+  
+  <li>
+  <div>
+    text-wrap-character
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+     
+    
+  </small>
+  
+  <div class='description'>Use this character instead of a space to wrap long text.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Distance between repeated text labels on a line</div>
+  </li>
+  
+  <li>
+  <div>
+    text-character-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Horizontal spacing adjustment between characters in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    text-line-spacing
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Vertical spacing adjustment between lines in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    text-label-position-tolerance
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    text-max-char-angle-delta
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    
+  </small>
+  
+  <div class='description'>If present, the maximum angle change, in degrees, allowed between adjacent characters in a label.  This will stop label placement around sharp corners.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    #000000
+    
+  </small>
+  
+  <div class='description'>Specifies the color for the text</div>
+  </li>
+  
+  <li>
+  <div>
+    text-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    1
+    <span class='description'>(Fully opaque)</span>
+  </small>
+  
+  <div class='description'>A number from 0 to 1 specifying the opacity for the text</div>
+  </li>
+  
+  <li>
+  <div>
+    text-halo-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    #FFFFFF
+    <span class='description'>(white)</span>
+  </small>
+  
+  <div class='description'>Specifies the color of the halo around the text.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-halo-radius
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Specify the radius of the halo in pixels</div>
+  </li>
+  
+  <li>
+  <div>
+    text-dx
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Displace text by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right</div>
+  </li>
+  
+  <li>
+  <div>
+    text-dy
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Displace text by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down</div>
+  </li>
+  
+  <li>
+  <div>
+    text-vertical-alignment
+    <small class='types'>
+      
+      <span class='type'>top</span>
+      
+      <span class='type'>middle</span>
+      
+      <span class='type'>bottom</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    middle
+    <span class='description'>(Default affected by value of dy; "bottom" for dy>0, "top" for dy<0.)</span>
+  </small>
+  
+  <div class='description'>Position of label relative to point position.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-avoid-edges
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Tell positioning algorithm to avoid labeling near intersection edges.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-min-distance
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    text-min-padding
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    text-min-path-length
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Place labels only on paths longer than this value.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-allow-overlap
+    <small class='types'>
+      
+      <span class='type'>boolean</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    text-orientation
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Rotate the text.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-placement
+    <small class='types'>
+      
+      <span class='type'>point</span>
+      
+      <span class='type'>line</span>
+      
+      <span class='type'>vertex</span>
+      
+      <span class='type'>interior</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    point
+    
+  </small>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    text-placement-type
+    <small class='types'>
+      
+      <span class='type'>dummy</span>
+      
+      <span class='type'>simple</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    dummy
+    
+  </small>
+  
+  <div class='description'>Re-position and/or re-size text to avoid overlaps. "simple" for basic algorithm (using text-placements string,) "dummy" to turn this feature off.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-placements
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>If "placement-type" is set to "simple", use this "POSITIONS,[SIZES]" string. See TextSymbolizer docs for format.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-transform
+    <small class='types'>
+      
+      <span class='type'>none</span>
+      
+      <span class='type'>uppercase</span>
+      
+      <span class='type'>lowercase</span>
+      
+      <span class='type'>capitalize</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    none
+    
+  </small>
+  
+  <div class='description'>Transform the case of the characters</div>
+  </li>
+  
+  <li>
+  <div>
+    text-align
+    <small class='types'>
+      
+      <span class='type'>left</span>
+      
+      <span class='type'>right</span>
+      
+      <span class='type'>center</span>
+      
+    </small>
+  </div>
+  
+  <small>
+    Default:
+    center
+    
+  </small>
+  
+  <div class='description'>Set the text alignment.</div>
+  </li>
+  
+  <li>
+  <div>
+    text-meta-output
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    text-meta-writer
+    <small class='types'>
+      
+      <span class='type'>string</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+<div class='section section-building'>
+  <h2>building</h2>
+  <ul class='symbolizer'>
+  
+  <li>
+  <div>
+    building-fill
+    <small class='types'>
+      
+      <span class='type'>color</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    building-fill-opacity
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  <li>
+  <div>
+    building-height
+    <small class='types'>
+      
+      <span class='type'>float</span>
+      
+    </small>
+  </div>
+  
+  
+  </li>
+  
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <script type='text/javascript' src='site/jquery.js'></script>
+    <script type='text/javascript' src='site/underscore-min.js'></script>
+  </body>
+</html>

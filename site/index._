@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carto - MapBox</title>
+    <link href='site/reset.css' type='text/css' rel='stylesheet' />
+    <link href='site/site.css' type='text/css' rel='stylesheet' />
+  </head>
+  <body>
+    <div class='wrapper'>
+      <div class='left'>
+        <div class='header'>
+          <h1>Carto Reference</h1>
+        </div>
+        <div class='toc'>
+          <h3>Map Elements</h3>
+          <%= toc({symbolizers:symbolizers, _:_}) %>
+          <h3>Values</h3>
+          <ul>
+            <li><a href='#color'>Color</a>
+            <li><a href='#float'>Float</a>
+            <li><a href='#uri'>URI</a>
+            <li><a href='#string'>String</a>
+            <li><a href='#boolean'>Boolean</a>
+          </ul>
+        </div>
+      </div>
+      <div class='right'>
+        <div class='footnote'>
+        <p><a href='https://github.com/mapbox/carto'>Carto</a> is the
+          stylesheet language in <a href='http://mapbox.com/tilemill/'>TileMill</a>,
+          from <a href='http://mapbox.com/'>MapBox</a>.</p>
+          <p>This is a reference guide for the various <a href='http://mapnik.org/'>Mapnik</a>
+          features that Carto supports, along with some examples of syntax for their values.
+          You can learn more about Carto by trying it out in TileMill and testing some of the
+          styles published by MapBox, like <a href='https://github.com/mapbox/osm-bright'>osm-bright</a>. There's also a very useful <a href='http://mapbox.com/tilemill/docs/crashcourse/styling/'>styling data section in the TileMill crash course.</a></p>
+        </div>
+        <%= table({symbolizers:symbolizers, _:_}) %>
+        <div class='values'>
+        <div id='color'>
+        <h2>Color</h2>
+        <p>Carto accepts a variety of syntaxes for colors - HTML-style hex values,
+        rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
+        <code>yellow</code> and <code>blue</code>.</p>
+<pre>#line {
+  line-color: #ff0;
+  line-color: #ffff00;
+  line-color: rgb(255, 255, 0);
+  line-color: rgba(255, 255, 0, 1);
+  line-color: yellow;
+}</pre>
+        </div>
+
+        <div id='float'>
+        <h2>Float</h2>
+        <p>Float is a fancy way of saying 'number'. In Carto, you specify <em>just a number</em> -
+        unlike CSS, there are no units, but everything is specified in pixels.</p>
+<pre>#line {
+  line-width: 2;
+}</pre>
+        </div>
+
+
+        <div id='uri'>
+        <h2>URI</h2>
+        <p>URI is a fancy way of saying URL. When an argument is a URI, you use the same kind of
+        <code>url('place.png')</code> notation that you would with HTML. Quotes around the URL
+        aren't required, but are highly recommended.</p>
+        <p>URIs can be paths to places on your computer, or on the internet.</p>
+<pre>#markers {
+  marker-file: url('marker.png');
+}</pre>
+        </div>
+
+        <div id='string'>
+        <h2>String</h2>
+        <p>A string is basically just text. In the case of Carto, you're going to put it in quotes. Strings
+        can be anything, though pay attention to the cases of <code>text-name</code> and <code>shield-name</code> -
+        they actually will refer to features, which you refer to by putting them in brackets, as seen
+        in the example below.</p>
+<pre>#labels {
+  text-name: "[MY_FIELD]";
+}</pre>
+        </div>
+
+        <div id='boolean'>
+        <h2>Boolean</h2>
+        <p>Boolean means yes or no.</p>
+<pre>#markers {
+  marker-allow-overlap:true;
+}</pre>
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    <script type='text/javascript' src='site/page.js'></script>
+  </body>
+</html>
