@@ -6,6 +6,12 @@ Is a stylesheet renderer for Mapnik. It's an evolution of the [Cascadenik](https
 
     npm install carto
 
+NOTE: this version of carto expects to be installed and run with a 0.4.x version of node. If you are using something newer, like an 0.6.x version, the above command will attempt to install 0.1.15 version of carto. Instead, grab a copy of the [node-v6 branch](https://github.com/mapbox/carto/tree/node-v6) and install that.
+
+    git clone -b node-v6 git://github.com/mapbox/carto.git carto-node-v6
+    cd carto-node-v6
+    npm install -g
+
 ## MML
 _incompatibility_
 
