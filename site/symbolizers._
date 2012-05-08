@@ -6,24 +6,24 @@
       .filter(function(p) { return p.css; })
       .each(function(p, name) {
   %>
-  <li><div>
-    <span class='css'><%= p.css %></span>
-    <small class='types'>
-      <% if (_.isArray(p.type)) { _(p.type).each(function(type) { %>
-      <span class='type'><%= type %></span>
-      <% }); } else { %>
-      <span class='type'><a href='#<%= p.type %>'><%= p.type %></a></span>
+      <li id='section-<%= name %>-<%= p.css %>'><div>
+        <span class='css'><a href='#section-<%= name %>-<%= p.css %>'><%= p.css %></a></span>
+        <small class='types'>
+          <% if (_.isArray(p.type)) { _(p.type).each(function(type) { %>
+          <span class='type'><%= type %></span>
+          <% }); } else { %>
+          <span class='type'><a href='#<%= p.type %>'><%= p.type %></a></span>
+          <% } %>
+        </small>
+      </div>
+      <% if (typeof p['default-value'] !== 'undefined') { %>
+      <small>Default:
+        <%= p['default-value'] %>
+        <% if (p['default-meaning']) { %><span class='description'>(<%= p['default-meaning'] %>)</span><% } %>
+      </small>
       <% } %>
-    </small>
-  </div>
-  <% if (p['default-value']) { %>
-  <small>Default:
-    <%= p['default-value'] %>
-    <% if (p['default-meaning']) { %><span class='description'>(<%= p['default-meaning'] %>)</span><% } %>
-  </small>
-  <% } %>
-  <% if (p.doc) { %><div class='description'><%=p.doc%></div><% } %>
-  </li>
+      <% if (p.doc) { %><div class='description'><%=p.doc%></div><% } %>
+      </li>
   <% }); %>
   </ul>
 </div>
