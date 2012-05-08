@@ -18,7 +18,7 @@
       </div>
       <% if (typeof p['default-value'] !== 'undefined') { %>
       <small>Default:
-        <%= p['default-value'] %>
+        <%= '' + p['default-value'] %>
         <% if (p['default-meaning']) { %><span class='description'>(<%= p['default-meaning'] %>)</span><% } %>
       </small>
       <% } %>
