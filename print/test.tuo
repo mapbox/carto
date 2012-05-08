@@ -1,0 +1,33 @@
+%
+% loaded files: 1
+%
+% > test 1
+%
+% temporary files: 0
+%
+%
+% commands: 19
+%
+\thisissectionseparator{-}%
+\thisisutilityversion{2008.10.14}%
+\usedmapfile{=}{original-base}%
+\usedmapfile{=}{original-ams-base}%
+\usedmapfile{=}{original-public-lm}%
+\usedmapfile{=}{lm-ec}%
+\usedmapfile{=}{lm-math}%
+\usedmapfile{=}{lm-rm}%
+\usedmapfile{=}{original-ams-euler}%
+\initializevariable\usedoutputdriver{pdftex}%
+\initializevariable\usedcolorchannels{}%
+\listentry{section}{1}{1}{Property Reference}{2--0-0-1-0-0-0-0--1}{1}%
+\listentry{subsection}{2}{1.1}{Polygon}{2--0-0-1-1-0-0-0--1}{1}%
+\initializevariable\currentstrategypass{1}%
+\initializevariable\totalnofpositions{0}%
+\initializevariable\totalnofMPgraphics{0}%
+\initializevariable\totalnofparbackgrounds{0}%
+\initializevariable\lastpage{1}%
+\initializevariable\lastpagenumber{1}%
+%
+% programs: 0
+%
+\endinput

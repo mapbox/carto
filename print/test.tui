@@ -1,0 +1,502 @@
+c \thisissectionseparator{-}
+c \thisisutilityversion{2008.10.14}
+f b {test}
+c \usedmapfile{=}{original-base}
+c \usedmapfile{=}{original-ams-base}
+c \usedmapfile{=}{original-public-lm}
+c \usedmapfile{=}{lm-ec}
+c \usedmapfile{=}{lm-math}
+c \usedmapfile{=}{lm-rm}
+c \usedmapfile{=}{original-ams-euler}
+c \initializevariable\usedoutputdriver{pdftex}
+x e {} {aeligature} {ae}
+x e {} {AEligature} {AE}
+x e {} {ijligature} {ij}
+x e {} {IJligature} {IJ}
+x e {} {oeligature} {oe}
+x e {} {OEligature} {OE}
+x e {} {ssharp} {ss}
+x e {} {Ssharp} {SS}
+x e {} {thorn} {}
+x e {} {Thorn} {}
+x e {} {eth} {}
+x e {} {Eth} {}
+x e {} {dj} {dstroke}
+x e {} {Dj} {Dstroke}
+x e {} {Acircumflex} {}
+x e {} {acircumflex} {}
+x e {} {Ccircumflex} {}
+x e {} {ccircumflex} {}
+x e {} {Ecircumflex} {}
+x e {} {ecircumflex} {}
+x e {} {Gcircumflex} {}
+x e {} {gcircumflex} {}
+x e {} {Hcircumflex} {}
+x e {} {hcircumflex} {}
+x e {} {Icircumflex} {}
+x e {} {icircumflex} {}
+x e {} {Jcircumflex} {}
+x e {} {jcircumflex} {}
+x e {} {Ocircumflex} {}
+x e {} {ocircumflex} {}
+x e {} {Scircumflex} {}
+x e {} {scircumflex} {}
+x e {} {Ucircumflex} {}
+x e {} {ucircumflex} {}
+x e {} {Wcircumflex} {}
+x e {} {wcircumflex} {}
+x e {} {Ycircumflex} {}
+x e {} {ycircumflex} {}
+x e {} {Agrave} {}
+x e {} {agrave} {}
+x e {} {Egrave} {}
+x e {} {egrave} {}
+x e {} {Igrave} {}
+x e {} {igrave} {}
+x e {} {Ograve} {}
+x e {} {ograve} {}
+x e {} {Ugrave} {}
+x e {} {ugrave} {}
+x e {} {Ygrave} {}
+x e {} {ygrave} {}
+x e {} {Atilde} {}
+x e {} {atilde} {}
+x e {} {Itilde} {}
+x e {} {itilde} {}
+x e {} {Ntilde} {}
+x e {} {ntilde} {}
+x e {} {Otilde} {}
+x e {} {otilde} {}
+x e {} {Utilde} {}
+x e {} {utilde} {}
+x e {} {Ytilde} {}
+x e {} {ytilde} {}
+x e {} {Adiaeresis} {}
+x e {} {adiaeresis} {}
+x e {} {Ediaeresis} {}
+x e {} {ediaeresis} {}
+x e {} {Idiaeresis} {}
+x e {} {idiaeresis} {}
+x e {} {Odiaeresis} {}
+x e {} {odiaeresis} {}
+x e {} {Udiaeresis} {}
+x e {} {udiaeresis} {}
+x e {} {Ydiaeresis} {}
+x e {} {ydiaeresis} {}
+x e {} {Aacute} {}
+x e {} {aacute} {}
+x e {} {Cacute} {}
+x e {} {cacute} {}
+x e {} {Eacute} {}
+x e {} {eacute} {}
+x e {} {Iacute} {}
+x e {} {iacute} {}
+x e {} {Lacute} {}
+x e {} {lacute} {}
+x e {} {Nacute} {}
+x e {} {nacute} {}
+x e {} {Oacute} {}
+x e {} {oacute} {}
+x e {} {Racute} {}
+x e {} {racute} {}
+x e {} {Sacute} {}
+x e {} {sacute} {}
+x e {} {Uacute} {}
+x e {} {uacute} {}
+x e {} {Yacute} {}
+x e {} {yacute} {}
+x e {} {Zacute} {}
+x e {} {zacute} {}
+x e {} {dstroke} {}
+x e {} {Dstroke} {}
+x e {} {Hstroke} {}
+x e {} {hstroke} {}
+x e {} {Tstroke} {}
+x e {} {tstroke} {}
+x e {} {Cdotaccent} {}
+x e {} {cdotaccent} {}
+x e {} {Edotaccent} {}
+x e {} {edotaccent} {}
+x e {} {Gdotaccent} {}
+x e {} {gdotaccent} {}
+x e {} {Idotaccent} {}
+x e {} {idotaccent} {}
+x e {} {Zdotaccent} {}
+x e {} {zdotaccent} {}
+x e {} {Amacron} {}
+x e {} {amacron} {}
+x e {} {Emacron} {}
+x e {} {emacron} {}
+x e {} {Imacron} {}
+x e {} {imacron} {}
+x e {} {Omacron} {}
+x e {} {omacron} {}
+x e {} {Umacron} {}
+x e {} {umacron} {}
+x e {} {Ccedilla} {}
+x e {} {ccedilla} {}
+x e {} {Kcedilla} {}
+x e {} {kcedilla} {}
+x e {} {Lcedilla} {}
+x e {} {lcedilla} {}
+x e {} {Ncedilla} {}
+x e {} {ncedilla} {}
+x e {} {Rcedilla} {}
+x e {} {rcedilla} {}
+x e {} {Scedilla} {}
+x e {} {scedilla} {}
+x e {} {Tcedilla} {}
+x e {} {tcedilla} {}
+x e {} {Ohungarumlaut} {}
+x e {} {ohungarumlaut} {}
+x e {} {Uhungarumlaut} {}
+x e {} {uhungarumlaut} {}
+x e {} {Aogonek} {}
+x e {} {aogonek} {}
+x e {} {Eogonek} {}
+x e {} {eogonek} {}
+x e {} {Iogonek} {}
+x e {} {iogonek} {}
+x e {} {Uogonek} {}
+x e {} {uogonek} {}
+x e {} {Aring} {}
+x e {} {aring} {}
+x e {} {Uring} {}
+x e {} {uring} {}
+x e {} {Abreve} {}
+x e {} {abreve} {}
+x e {} {Ebreve} {}
+x e {} {ebreve} {}
+x e {} {Gbreve} {}
+x e {} {gbreve} {}
+x e {} {Ibreve} {}
+x e {} {ibreve} {}
+x e {} {Obreve} {}
+x e {} {obreve} {}
+x e {} {Ubreve} {}
+x e {} {ubreve} {}
+x e {} {Ccaron} {}
+x e {} {ccaron} {}
+x e {} {Dcaron} {}
+x e {} {dcaron} {}
+x e {} {Ecaron} {}
+x e {} {ecaron} {}
+x e {} {Lcaron} {}
+x e {} {lcaron} {}
+x e {} {Ncaron} {}
+x e {} {ncaron} {}
+x e {} {Rcaron} {}
+x e {} {rcaron} {}
+x e {} {Scaron} {}
+x e {} {scaron} {}
+x e {} {Tcaron} {}
+x e {} {tcaron} {}
+x e {} {Ycaron} {}
+x e {} {ycaron} {}
+x e {} {Zcaron} {}
+x e {} {zcaron} {}
+x e {} {Lstroke} {}
+x e {} {lstroke} {}
+x e {} {Ostroke} {}
+x e {} {ostroke} {}
+x e {} {aumlaut} {}
+x e {} {eumlaut} {}
+x e {} {iumlaut} {}
+x e {} {oumlaut} {}
+x e {} {uumlaut} {}
+x e {} {Aumlaut} {}
+x e {} {Eumlaut} {}
+x e {} {Iumlaut} {}
+x e {} {Oumlaut} {}
+x e {} {Uumlaut} {}
+x e {} {scommaaccent} {}
+x e {} {Scommaaccent} {}
+x e {} {tcommaaccent} {}
+x e {} {Tcommaaccent} {}
+x e {} {Etilde} {}
+x e {} {etilde} {}
+x e {} {Ahook} {}
+x e {} {ahook} {}
+x e {} {Ehook} {}
+x e {} {ehook} {}
+x e {} {Ihook} {}
+x e {} {ihook} {}
+x e {} {Ohook} {}
+x e {} {ohook} {}
+x e {} {Uhook} {}
+x e {} {uhook} {}
+x e {} {Yhook} {}
+x e {} {yhook} {}
+x e {} {Acircumflexgrave} {}
+x e {} {Acircumflexacute} {}
+x e {} {Acircumflextilde} {}
+x e {} {Acircumflexhook} {}
+x e {} {acircumflexgrave} {}
+x e {} {acircumflexacute} {}
+x e {} {acircumflextilde} {}
+x e {} {acircumflexhook} {}
+x e {} {Ecircumflexgrave} {}
+x e {} {Ecircumflexacute} {}
+x e {} {Ecircumflextilde} {}
+x e {} {Ecircumflexhook} {}
+x e {} {ecircumflexgrave} {}
+x e {} {ecircumflexacute} {}
+x e {} {ecircumflextilde} {}
+x e {} {ecircumflexhook} {}
+x e {} {Ocircumflexgrave} {}
+x e {} {Ocircumflexacute} {}
+x e {} {Ocircumflextilde} {}
+x e {} {Ocircumflexhook} {}
+x e {} {ocircumflexgrave} {}
+x e {} {ocircumflexacute} {}
+x e {} {ocircumflextilde} {}
+x e {} {ocircumflexhook} {}
+x e {} {Abrevegrave} {}
+x e {} {Abreveacute} {}
+x e {} {Abrevetilde} {}
+x e {} {Abrevehook} {}
+x e {} {abrevegrave} {}
+x e {} {abreveacute} {}
+x e {} {abrevetilde} {}
+x e {} {abrevehook} {}
+x e {} {Adotbelow} {}
+x e {} {adotbelow} {}
+x e {} {Edotbelow} {}
+x e {} {edotbelow} {}
+x e {} {Idotbelow} {}
+x e {} {idotbelow} {}
+x e {} {Odotbelow} {}
+x e {} {odotbelow} {}
+x e {} {Udotbelow} {}
+x e {} {udotbelow} {}
+x e {} {Ydotbelow} {}
+x e {} {ydotbelow} {}
+x e {} {Ohorndotbelow} {}
+x e {} {ohorndotbelow} {}
+x e {} {Uhorndotbelow} {}
+x e {} {uhorndotbelow} {}
+x e {} {Acircumflexdotbelow} {}
+x e {} {acircumflexdotbelow} {}
+x e {} {Ecircumflexdotbelow} {}
+x e {} {ecircumflexdotbelow} {}
+x e {} {Ocircumflexdotbelow} {}
+x e {} {ocircumflexdotbelow} {}
+x e {} {Abrevedotbelow} {}
+x e {} {abrevedotbelow} {}
+x e {} {Ohorn} {}
+x e {} {Ohorngrave} {}
+x e {} {Ohornacute} {}
+x e {} {Ohorntilde} {}
+x e {} {Ohornhook } {}
+x e {} {ohorn} {}
+x e {} {ohorngrave} {}
+x e {} {ohornacute} {}
+x e {} {ohorntilde} {}
+x e {} {ohornhook } {}
+x e {} {Uhorn} {}
+x e {} {Uhorngrave} {}
+x e {} {Uhornacute} {}
+x e {} {Uhorntilde} {}
+x e {} {Uhornhook } {}
+x e {} {uhorn} {}
+x e {} {uhorngrave} {}
+x e {} {uhornacute} {}
+x e {} {uhorntilde} {}
+x e {} {uhornhook} {}
+x e {} {eszett} {ssharp}
+x e {} {Eszett} {Ssharp}
+x e {} {lslash} {lstroke}
+x e {} {Lslash} {Lstroke}
+x e {} {dslash} {dstroke}
+x e {} {Dslash} {Dstroke}
+x e {} {oslash} {ostroke}
+x e {} {Oslash} {Ostroke}
+x e {} {dcroat} {dstroke}
+x e {} {Dcroat} {Dstroke}
+x s {} {\^ A} {\Acircumflex }
+x s {} {\^ a} {\acircumflex }
+x s {} {\^ C} {\Ccircumflex }
+x s {} {\^ c} {\ccircumflex }
+x s {} {\^ E} {\Ecircumflex }
+x s {} {\^ e} {\ecircumflex }
+x s {} {\^ G} {\Gcircumflex }
+x s {} {\^ g} {\gcircumflex }
+x s {} {\^ H} {\Hcircumflex }
+x s {} {\^ h} {\hcircumflex }
+x s {} {\^ I} {\Icircumflex }
+x s {} {\^ i} {\icircumflex }
+x s {} {\^\i } {\icircumflex }
+x s {} {\^ J} {\Jcircumflex }
+x s {} {\^ j} {\jcircumflex }
+x s {} {\^\j } {\jcircumflex }
+x s {} {\^ O} {\Ocircumflex }
+x s {} {\^ o} {\ocircumflex }
+x s {} {\^ S} {\Scircumflex }
+x s {} {\^ s} {\scircumflex }
+x s {} {\^ U} {\Ucircumflex }
+x s {} {\^ u} {\ucircumflex }
+x s {} {\^ W} {\Wcircumflex }
+x s {} {\^ w} {\wcircumflex }
+x s {} {\^ Y} {\Ycircumflex }
+x s {} {\^ y} {\ycircumflex }
+x s {} {\` A} {\Agrave }
+x s {} {\` a} {\agrave }
+x s {} {\` E} {\Egrave }
+x s {} {\` e} {\egrave }
+x s {} {\` I} {\Igrave }
+x s {} {\` i} {\igrave }
+x s {} {\`\i } {\igrave }
+x s {} {\` O} {\Ograve }
+x s {} {\` o} {\ograve }
+x s {} {\` U} {\Ugrave }
+x s {} {\` u} {\ugrave }
+x s {} {\` Y} {\Ygrave }
+x s {} {\` y} {\ygrave }
+x s {} {\~ A} {\Atilde }
+x s {} {\~ a} {\atilde }
+x s {} {\~ I} {\Itilde }
+x s {} {\~ i} {\itilde }
+x s {} {\~\i } {\itilde }
+x s {} {\~ O} {\Otilde }
+x s {} {\~ o} {\otilde }
+x s {} {\~ U} {\Utilde }
+x s {} {\~ u} {\utilde }
+x s {} {\" A} {\Adiaeresis }
+x s {} {\" a} {\adiaeresis }
+x s {} {\" E} {\Ediaeresis }
+x s {} {\" e} {\ediaeresis }
+x s {} {\" I} {\Idiaeresis }
+x s {} {\" i} {\idiaeresis }
+x s {} {\"\i } {\idiaeresis }
+x s {} {\" O} {\Odiaeresis }
+x s {} {\" o} {\odiaeresis }
+x s {} {\" U} {\Udiaeresis }
+x s {} {\" u} {\udiaeresis }
+x s {} {\" Y} {\Ydiaeresis }
+x s {} {\" y} {\ydiaeresis }
+x s {} {\' A} {\Aacute }
+x s {} {\' a} {\aacute }
+x s {} {\' C} {\Cacute }
+x s {} {\' c} {\cacute }
+x s {} {\' E} {\Eacute }
+x s {} {\' e} {\eacute }
+x s {} {\' I} {\Iacute }
+x s {} {\' i} {\iacute }
+x s {} {\'\i } {\iacute }
+x s {} {\' L} {\Lacute }
+x s {} {\' l} {\lacute }
+x s {} {\' N} {\Nacute }
+x s {} {\' n} {\nacute }
+x s {} {\' O} {\Oacute }
+x s {} {\' o} {\oacute }
+x s {} {\' R} {\Racute }
+x s {} {\' r} {\racute }
+x s {} {\' S} {\Sacute }
+x s {} {\' s} {\sacute }
+x s {} {\' U} {\Uacute }
+x s {} {\' u} {\uacute }
+x s {} {\' Y} {\Yacute }
+x s {} {\' y} {\yacute }
+x s {} {\' Z} {\Zacute }
+x s {} {\' z} {\zacute }
+x s {} {\. C} {\Cdotaccent }
+x s {} {\. c} {\cdotaccent }
+x s {} {\. E} {\Edotaccent }
+x s {} {\. e} {\edotaccent }
+x s {} {\. G} {\Gdotaccent }
+x s {} {\. g} {\gdotaccent }
+x s {} {\. I} {\Idotaccent }
+x s {} {\. i} {\idotaccent }
+x s {} {\.\i } {\idotaccent }
+x s {} {\. Z} {\Zdotaccent }
+x s {} {\. z} {\zdotaccent }
+x s {} {\= A} {\Amacron }
+x s {} {\= a} {\amacron }
+x s {} {\= E} {\Emacron }
+x s {} {\= e} {\emacron }
+x s {} {\= I} {\Imacron }
+x s {} {\= i} {\imacron }
+x s {} {\=\i } {\imacron }
+x s {} {\= O} {\Omacron }
+x s {} {\= o} {\omacron }
+x s {} {\= U} {\Umacron }
+x s {} {\= u} {\umacron }
+x s {} {\c C} {\Ccedilla }
+x s {} {\c c} {\ccedilla }
+x s {} {\c K} {\Kcedilla }
+x s {} {\c k} {\kcedilla }
+x s {} {\c L} {\Lcedilla }
+x s {} {\c l} {\lcedilla }
+x s {} {\c N} {\Ncedilla }
+x s {} {\c n} {\ncedilla }
+x s {} {\c R} {\Rcedilla }
+x s {} {\c r} {\rcedilla }
+x s {} {\c S} {\Scedilla }
+x s {} {\c s} {\scedilla }
+x s {} {\c T} {\Tcedilla }
+x s {} {\c t} {\tcedilla }
+x s {} {\H O} {\Ohungarumlaut }
+x s {} {\H o} {\ohungarumlaut }
+x s {} {\H u} {\uhungarumlaut }
+x s {} {\H U} {\Uhungarumlaut }
+x s {} {\k A} {\Aogonek }
+x s {} {\k a} {\aogonek }
+x s {} {\k E} {\Eogonek }
+x s {} {\k e} {\eogonek }
+x s {} {\k I} {\Iogonek }
+x s {} {\k i} {\iogonek }
+x s {} {\k U} {\Uogonek }
+x s {} {\k u} {\uogonek }
+x s {} {\r A} {\Aring }
+x s {} {\r a} {\aring }
+x s {} {\r U} {\Uring }
+x s {} {\r u} {\uring }
+x s {} {\u A} {\Abreve }
+x s {} {\u a} {\abreve }
+x s {} {\u E} {\Ebreve }
+x s {} {\u e} {\ebreve }
+x s {} {\u G} {\Gbreve }
+x s {} {\u g} {\gbreve }
+x s {} {\u I} {\Ibreve }
+x s {} {\u i} {\ibreve }
+x s {} {\u \i } {\ibreve }
+x s {} {\u O} {\Obreve }
+x s {} {\u o} {\obreve }
+x s {} {\u U} {\Ubreve }
+x s {} {\u u} {\ubreve }
+x s {} {\v C} {\Ccaron }
+x s {} {\v c} {\ccaron }
+x s {} {\v D} {\Dcaron }
+x s {} {\v d} {\dcaron }
+x s {} {\v E} {\Ecaron }
+x s {} {\v e} {\ecaron }
+x s {} {\v L} {\Lcaron }
+x s {} {\v l} {\lcaron }
+x s {} {\v N} {\Ncaron }
+x s {} {\v n} {\ncaron }
+x s {} {\v R} {\Rcaron }
+x s {} {\v r} {\rcaron }
+x s {} {\v S} {\Scaron }
+x s {} {\v s} {\scaron }
+x s {} {\v T} {\Tcaron }
+x s {} {\v t} {\tcaron }
+x s {} {\v Z} {\Zcaron }
+x s {} {\v z} {\zcaron }
+x e {en} {aacute} {a+1}
+x e {en} {Aacute} {A+2}
+x e {en} {agrave} {a+1}
+x e {en} {Agrave} {A+2}
+s l {abbreviation} {en}
+s l {logo} {en}
+s l {unit} {en}
+r l {index} {en}
+c \initializevariable\usedcolorchannels{}
+c \listentry{section}{1}{1}{Property Reference}{2--0-0-1-0-0-0-0--1}{1}
+c \listentry{subsection}{2}{1.1}{Polygon}{2--0-0-1-1-0-0-0--1}{1}
+c \initializevariable\currentstrategypass{1}
+c \initializevariable\totalnofpositions{0}
+c \initializevariable\totalnofMPgraphics{0}
+c \initializevariable\totalnofparbackgrounds{0}
+f e {test}
+c \initializevariable\lastpage{1}
+c \initializevariable\lastpagenumber{1}
