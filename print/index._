@@ -1,0 +1,18 @@
+% This line is a comment because % precedes it.
+% It specifies the format of head named 'title'
+% Specifically the style of the font: sans serif
+% + bold + big font.
+\setuphead[title][style={\ss\bfd},
+    before={\begingroup},
+    after={MapBox}]
+\setupbodyfont[11pt]
+% this makes various control characters
+% non-control characters in templated output
+\nonknuthmode
+\definedescription[descr][
+  headstyle=bold,width=broad]
+\starttext
+\title{Carto}
+\completecontent
+<%= table({symbolizers:symbolizers, _:_}) %>
+\stoptext
