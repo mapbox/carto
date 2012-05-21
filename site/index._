@@ -3,7 +3,8 @@
   <head>
     <title>Carto - MapBox</title>
     <link href='site/reset.css' type='text/css' rel='stylesheet' />
-    <link href='site/site.css' type='text/css' rel='stylesheet' />
+    <link href='site/site.css' type='text/css' rel='stylesheet' media='screen' />
+    <link href='site/print.css' type='text/css' rel='stylesheet' media='print' />
   </head>
   <body>
     <div class='wrapper'>
