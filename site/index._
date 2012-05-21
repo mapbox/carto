@@ -46,8 +46,11 @@
   line-color: #ffff00;
   line-color: rgb(255, 255, 0);
   line-color: rgba(255, 255, 0, 1);
+  line-color: hsl(100, 50%, 50%);
   line-color: yellow;
 }</pre>
+        <p>Especially of note is the support for hsl, which can be
+        <a href='http://mothereffinghsl.com/'>easier to reason about than rgb()</a>
         </div>
 
         <div id='float'>
@@ -84,7 +87,7 @@
 
         <div id='boolean'>
         <h2>Boolean</h2>
-        <p>Boolean means yes or no.</p>
+        <p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
 <pre>#markers {
   marker-allow-overlap:true;
 }</pre>

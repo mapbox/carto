@@ -90,7 +90,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>An image that is repeated below all features on a map as a background.</div>
   </li>
   
   <li><div>
@@ -102,7 +102,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>Map spatial reference (proj4 string)</div>
   </li>
   
   <li><div>
@@ -119,7 +119,7 @@
     <span class='description'>(No buffer will be used)</span>
   </small>
   
-  
+  <div class='description'>Extra tolerance around the map (in pixels) used to ensure labels crossing tile boundaries are equally rendered in each tile (e.g. cut in each tile). Not intended to be used in combination with "avoid-edges".</div>
   </li>
   
   <li><div>
@@ -206,7 +206,19 @@
     <span class='description'>(opaque)</span>
   </small>
   
+  <div class='description'>The opacity of the polygon</div>
+  </li>
   
+  <li><div>
+    <span class='css'>polygon-smooth</span>
+    <small class='types'>
+      
+      <span class='type'><a href='#float'>float</a></span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Amount of smoothing applied</div>
   </li>
   
   <li><div>
@@ -385,6 +397,18 @@
   </li>
   
   <li><div>
+    <span class='css'>line-smooth</span>
+    <small class='types'>
+      
+      <span class='type'><a href='#float'>float</a></span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>Amount of smoothing applied</div>
+  </li>
+  
+  <li><div>
     <span class='css'>line-meta-output</span>
     <small class='types'>
       
@@ -443,7 +467,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>An SVG file that this marker shows at each placement. If no file is given, the marker will show an ellipse.</div>
   </li>
   
   <li><div>
@@ -460,7 +484,7 @@
     <span class='description'>(opaque)</span>
   </small>
   
-  
+  <div class='description'>The overall opacity of the marker</div>
   </li>
   
   <li><div>
@@ -472,7 +496,12 @@
     </small>
   </div>
   
+  <small>Default:
+    black
+    
+  </small>
   
+  <div class='description'>The color of the stroke around a marker shape.</div>
   </li>
   
   <li><div>
@@ -484,7 +513,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>The width of the stroke around a marker shape, in pixels. This is positioned on the boundary, so high values can cover the area itself.</div>
   </li>
   
   <li><div>
@@ -501,7 +530,7 @@
     <span class='description'>(opaque)</span>
   </small>
   
-  
+  <div class='description'>The opacity of a line</div>
   </li>
   
   <li><div>
@@ -514,6 +543,11 @@
       
     </small>
   </div>
+  
+  <small>Default:
+    line
+    
+  </small>
   
   
   </li>
@@ -529,7 +563,12 @@
     </small>
   </div>
   
+  <small>Default:
+    ellipse
+    
+  </small>
   
+  <div class='description'>The default marker-type. If a SVG file is not given as the marker-file parameter, the renderer provides either an arrow or an ellipse (a circle if height is equal to width)</div>
   </li>
   
   <li><div>
@@ -541,7 +580,12 @@
     </small>
   </div>
   
+  <small>Default:
+    5
+    
+  </small>
   
+  <div class='description'>The height of the marker, if using one of the default types.</div>
   </li>
   
   <li><div>
@@ -553,7 +597,12 @@
     </small>
   </div>
   
+  <small>Default:
+    5
+    
+  </small>
   
+  <div class='description'>The height of the marker, if using one of the default types.</div>
   </li>
   
   <li><div>
@@ -565,7 +614,12 @@
     </small>
   </div>
   
+  <small>Default:
+    blue
+    
+  </small>
   
+  <div class='description'>The color of the area of the marker.</div>
   </li>
   
   <li><div>
@@ -577,7 +631,19 @@
     </small>
   </div>
   
+  <div class='description'>Control whether overlapping markers are shown or hidden.</div>
+  </li>
   
+  <li><div>
+    <span class='css'>marker-ignore-placement</span>
+    <small class='types'>
+      
+      <span class='type'><a href='#boolean'>boolean</a></span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>value to control whether the placement of the feature will prevent the placement of other features</div>
   </li>
   
   <li><div>
@@ -588,6 +654,11 @@
       
     </small>
   </div>
+  
+  <small>Default:
+    100
+    
+  </small>
   
   <div class='description'>Space between repeated labels</div>
   </li>
@@ -601,7 +672,12 @@
     </small>
   </div>
   
+  <small>Default:
+    0.2
+    
+  </small>
   
+  <div class='description'>The maximum difference between actual marker placement and the marker-spacing parameter. Setting a high value can allow the renderer to try to resolve placement conflicts with other symbolizers.</div>
   </li>
   
   <li><div>
@@ -613,7 +689,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>An SVG transformation definition</div>
   </li>
   
   <li><div>
@@ -720,7 +796,7 @@
     
   </small>
   
-  
+  <div class='description'>How this shield should be placed. Point placement attempts to place it on top of points, line places along lines multiple times per feature, vertex places on the vertexes of polygons, and interior attempts to place inside of polygons.</div>
   </li>
   
   <li><div>
@@ -956,7 +1032,13 @@
     <span class='css'>shield-horizontal-alignment</span>
     <small class='types'>
       
-      <span class='type'><a href='#string'>string</a></span>
+      <span class='type'>left</span>
+      
+      <span class='type'>middle</span>
+      
+      <span class='type'>right</span>
+      
+      <span class='type'>auto</span>
       
     </small>
   </div>
@@ -1051,6 +1133,11 @@
     </small>
   </div>
   
+  <small>Default:
+    none
+    
+  </small>
+  
   <div class='description'>An image file to be repeated and warped along a line</div>
   </li>
   
@@ -1093,6 +1180,11 @@
       
     </small>
   </div>
+  
+  <small>Default:
+    none
+    
+  </small>
   
   <div class='description'>Image to use as a repeated pattern fill within a polygon</div>
   </li>
@@ -1178,7 +1270,7 @@
     <span class='description'>(opaque)</span>
   </small>
   
-  
+  <div class='description'>The opacity of the raster symbolizer on top of other symbolizers.</div>
   </li>
   
   <li><div>
@@ -1211,7 +1303,7 @@
     
   </small>
   
-  
+  <div class='description'>The blending technique used to overlay this raster image on the layer below. Normal simply covers the layer. Grain merge adds the two layers together and subtracts 128 from the value, making the resulting area sometimes high-contrast. Screen often gives a lighter, washed-out appearance. Multiply multiplies the pixels, giving a high-contrast result. Divide divides the upper layer by the lower layer, making a lighter version.</div>
   </li>
   
   <li><div>
@@ -1235,7 +1327,12 @@
     </small>
   </div>
   
+  <small>Default:
+    fast
+    
+  </small>
   
+  <div class='description'>The scaling algorithm used to making different resolution versions of this raster layer. Bilinear is a good compromise between speed and accuracy, while lanczos gives the highest quality.</div>
   </li>
   
   </ul>
@@ -1254,6 +1351,11 @@
     </small>
   </div>
   
+  <small>Default:
+    none
+    
+  </small>
+  
   <div class='description'>Image file to represent a point</div>
   </li>
   
@@ -1266,7 +1368,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>Control whether overlapping points are shown or hidden.</div>
   </li>
   
   <li><div>
@@ -1314,7 +1416,7 @@
     
   </small>
   
-  
+  <div class='description'>How this point should be placed. Centroid calculates the geometric center of a polygon, which can be outside of it, while interior always places inside of a polygon.</div>
   </li>
   
   <li><div>
@@ -1636,7 +1738,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>Minimum permitted distance to the next text symbolizer.</div>
   </li>
   
   <li><div>
@@ -1672,7 +1774,7 @@
     </small>
   </div>
   
-  
+  <div class='description'>Control whether overlapping text is shown or hidden.</div>
   </li>
   
   <li><div>
@@ -1765,6 +1867,24 @@
   </li>
   
   <li><div>
+    <span class='css'>text-horizontal-alignment</span>
+    <small class='types'>
+      
+      <span class='type'>left</span>
+      
+      <span class='type'>middle</span>
+      
+      <span class='type'>right</span>
+      
+      <span class='type'>auto</span>
+      
+    </small>
+  </div>
+  
+  <div class='description'>The text's horizontal alignment from its centerpoint</div>
+  </li>
+  
+  <li><div>
     <span class='css'>text-align</span>
     <small class='types'>
       
@@ -1825,7 +1945,12 @@
     </small>
   </div>
   
+  <small>Default:
+    #FFFFFF
+    
+  </small>
   
+  <div class='description'>The color of the buildings walls.</div>
   </li>
   
   <li><div>
@@ -1837,7 +1962,12 @@
     </small>
   </div>
   
+  <small>Default:
+    1
+    
+  </small>
   
+  <div class='description'>The opacity of the building as a whole, including all walls.</div>
   </li>
   
   <li><div>
@@ -1849,7 +1979,12 @@
     </small>
   </div>
   
+  <small>Default:
+    0
+    
+  </small>
   
+  <div class='description'>The height of the building in pixels.</div>
   </li>
   
   </ul>
@@ -1867,8 +2002,11 @@
   line-color: #ffff00;
   line-color: rgb(255, 255, 0);
   line-color: rgba(255, 255, 0, 1);
+  line-color: hsl(100, 50%, 50%);
   line-color: yellow;
 }</pre>
+        <p>Especially of note is the support for hsl, which can be
+        <a href='http://mothereffinghsl.com/'>easier to reason about than rgb()</a>
         </div>
 
         <div id='float'>
@@ -1905,7 +2043,7 @@
 
         <div id='boolean'>
         <h2>Boolean</h2>
-        <p>Boolean means yes or no.</p>
+        <p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
 <pre>#markers {
   marker-allow-overlap:true;
 }</pre>
