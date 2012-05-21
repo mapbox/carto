@@ -377,6 +377,7 @@
                 "type": "string",
                 "validate": "font",
                 "doc": "Font name and style to use for the shield text",
+                "default-value": "",
                 "required": true
             },
             "size": {
@@ -404,7 +405,7 @@
                 "css": "shield-avoid-edges",
                 "doc": "Tell positioning algorithm to avoid labeling near intersection edges.",
                 "type": "boolean",
-                "default": false
+                "default-value": false
             },
             "minimum-distance": {
                 "css": "shield-min-distance",
@@ -511,7 +512,7 @@
                     "auto"
                 ],
                 "doc": "The shield's horizontal alignment from its centerpoint",
-                "default": "middle"
+                "default-value": "middle"
             },
             "text-transform": {
                 "css": "shield-text-transform",
@@ -528,13 +529,13 @@
                 "css": "shield-no-text",
                 "type": "boolean",
                 "doc": "Whether the shield should make room for a text label.",
-                "default": "false"
+                "default-value": "false"
             },
             "justify-alignment": {
                 "css": "shield-justify-alignment",
                 "type": "string",
                 "doc": "Define how text in a shield's label is justified",
-                "default": "middle"
+                "default-value": "middle"
             },
             "meta-output": {
                 "css": "shield-meta-output",
@@ -626,6 +627,13 @@
                     "hard_light"
                 ],
                 "doc": "The blending technique used to overlay this raster image on the layer below. Normal simply covers the layer. Grain merge adds the two layers together and subtracts 128 from the value, making the resulting area sometimes high-contrast. Screen often gives a lighter, washed-out appearance. Multiply multiplies the pixels, giving a high-contrast result. Divide divides the upper layer by the lower layer, making a lighter version."
+            },
+            "filter-factor": {
+                "css": "raster-filter-factor",
+                "default-value": -1,
+                "default-meaning": "Allow the datasource to choose appropriate downscaling.",
+                "type": "float",
+                "doc": "This is used by the Raster or Gdal datasources to pre-downscale images using overviews. Higher numbers can sometimes cause much better scaled image output, at the cost of speed."
             },
             "scaling": {
                 "css": "raster-scaling",
@@ -897,7 +905,7 @@
                     "auto"
                 ],
                 "doc": "The text's horizontal alignment from its centerpoint",
-                "default": "middle"
+                "default-value": "middle"
             },
             "justify-alignment": {
                 "css": "text-align",

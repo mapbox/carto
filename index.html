@@ -814,6 +814,11 @@
         </small>
       </div>
       
+      <small>Default:
+        
+        
+      </small>
+      
       <div class='description'>Font name and style to use for the shield text</div>
       </li>
   
@@ -872,6 +877,11 @@
           
         </small>
       </div>
+      
+      <small>Default:
+        false
+        
+      </small>
       
       <div class='description'>Tell positioning algorithm to avoid labeling near intersection edges.</div>
       </li>
@@ -1158,6 +1168,11 @@
         </small>
       </div>
       
+      <small>Default:
+        middle
+        
+      </small>
+      
       <div class='description'>The shield's horizontal alignment from its centerpoint</div>
       </li>
   
@@ -1193,6 +1208,11 @@
         </small>
       </div>
       
+      <small>Default:
+        false
+        
+      </small>
+      
       <div class='description'>Whether the shield should make room for a text label.</div>
       </li>
   
@@ -1204,6 +1224,11 @@
           
         </small>
       </div>
+      
+      <small>Default:
+        middle
+        
+      </small>
       
       <div class='description'>Define how text in a shield's label is justified</div>
       </li>
@@ -1451,8 +1476,25 @@
       <div class='description'>The blending technique used to overlay this raster image on the layer below. Normal simply covers the layer. Grain merge adds the two layers together and subtracts 128 from the value, making the resulting area sometimes high-contrast. Screen often gives a lighter, washed-out appearance. Multiply multiplies the pixels, giving a high-contrast result. Divide divides the upper layer by the lower layer, making a lighter version.</div>
       </li>
   
-      <li id='section-2-raster-scaling'><div>
-        <span class='css'><a href='#section-2-raster-scaling'>raster-scaling</a></span>
+      <li id='section-2-raster-filter-factor'><div>
+        <span class='css'><a href='#section-2-raster-filter-factor'>raster-filter-factor</a></span>
+        <small class='types'>
+          
+          <span class='type'><a href='#float'>float</a></span>
+          
+        </small>
+      </div>
+      
+      <small>Default:
+        -1
+        <span class='description'>(Allow the datasource to choose appropriate downscaling.)</span>
+      </small>
+      
+      <div class='description'>This is used by the Raster or Gdal datasources to pre-downscale images using overviews. Higher numbers can sometimes cause much better scaled image output, at the cost of speed.</div>
+      </li>
+  
+      <li id='section-3-raster-scaling'><div>
+        <span class='css'><a href='#section-3-raster-scaling'>raster-scaling</a></span>
         <small class='types'>
           
           <span class='type'>fast</span>
@@ -2115,6 +2157,11 @@
           
         </small>
       </div>
+      
+      <small>Default:
+        middle
+        
+      </small>
       
       <div class='description'>The text's horizontal alignment from its centerpoint</div>
       </li>
