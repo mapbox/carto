@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Carto - MapBox</title>
+    <title>CartoCSS - MapBox</title>
     <link href='site/reset.css' type='text/css' rel='stylesheet' />
     <link href='site/site.css' type='text/css' rel='stylesheet' media='screen' />
     <link href='site/print.css' type='text/css' rel='stylesheet' media='print' />
@@ -10,7 +10,7 @@
     <div class='wrapper'>
       <div class='left'>
         <div class='header'>
-          <h1>Carto Reference</h1>
+          <h1>CartoCSS Reference</h1>
         </div>
         <div class='toc'>
           <h3>Map Elements</h3>
@@ -27,19 +27,19 @@
       </div>
       <div class='right'>
         <div class='footnote'>
-        <p><a href='https://github.com/mapbox/carto'>Carto</a> is the
+        <p><a href='https://github.com/mapbox/carto'>CartoCSS</a> is the
           stylesheet language in <a href='http://mapbox.com/tilemill/'>TileMill</a>,
           from <a href='http://mapbox.com/'>MapBox</a>.</p>
           <p>This is a reference guide for the various <a href='http://mapnik.org/'>Mapnik</a>
-          features that Carto supports, along with some examples of syntax for their values.
-          You can learn more about Carto by trying it out in TileMill and testing some of the
+          features that CartoCSS supports, along with some examples of syntax for their values.
+          You can learn more about CartoCSS by trying it out in TileMill and testing some of the
           styles published by MapBox, like <a href='https://github.com/mapbox/osm-bright'>osm-bright</a>. There's also a very useful <a href='http://mapbox.com/tilemill/docs/crashcourse/styling/'>styling data section in the TileMill crash course.</a></p>
         </div>
         <%= table({symbolizers:symbolizers, _:_}) %>
         <div class='values'>
         <div id='color'>
         <h2>Color</h2>
-        <p>Carto accepts a variety of syntaxes for colors - HTML-style hex values,
+        <p>CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values,
         rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
         <code>yellow</code> and <code>blue</code>.</p>
 <pre>#line {
@@ -56,7 +56,7 @@
 
         <div id='float'>
         <h2>Float</h2>
-        <p>Float is a fancy way of saying 'number'. In Carto, you specify <em>just a number</em> -
+        <p>Float is a fancy way of saying 'number'. In CartoCSS, you specify <em>just a number</em> -
         unlike CSS, there are no units, but everything is specified in pixels.</p>
 <pre>#line {
   line-width: 2;
@@ -77,7 +77,7 @@
 
         <div id='string'>
         <h2>String</h2>
-        <p>A string is basically just text. In the case of Carto, you're going to put it in quotes. Strings
+        <p>A string is basically just text. In the case of CartoCSS, you're going to put it in quotes. Strings
         can be anything, though pay attention to the cases of <code>text-name</code> and <code>shield-name</code> -
         they actually will refer to features, which you refer to by putting them in brackets, as seen
         in the example below.</p>
