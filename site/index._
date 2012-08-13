@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CartoCSS - MapBox</title>
+    <title>CartoCSS - MapBox (v:<%= version %>)</title>
     <link href='site/reset.css' type='text/css' rel='stylesheet' />
     <link href='site/site.css' type='text/css' rel='stylesheet' media='screen' />
     <link href='site/print.css' type='text/css' rel='stylesheet' media='print' />
@@ -10,7 +10,7 @@
     <div class='wrapper'>
       <div class='left'>
         <div class='header'>
-          <h1>CartoCSS Reference</h1>
+            <h1>CartoCSS Reference <small><%= version %></small></h1>
         </div>
         <div class='toc'>
           <h3>Map Elements</h3>
@@ -23,6 +23,10 @@
             <li><a href='#string'>String</a>
             <li><a href='#boolean'>Boolean</a>
           </ul>
+          <h3>Versions</h3>
+          <% _(versions).forEach(function(v) { %>
+          <a href='<%= v %>.html'><%= v %></a>
+          <% }); %>
         </div>
       </div>
       <div class='right'>
@@ -93,6 +97,45 @@
   marker-allow-overlap:true;
 }</pre>
         </div>
+
+        <div id='expression'>
+        <h2>Expression</h2>
+        <p>Expressions are statements that can include fields, numbers, and other
+        types in a really flexible way. You have run into expressions before,
+        in the realm of 'fields', where you'd specify <code>"[FIELD]"</code>,
+        but expressions allow you to drop the quotes and also do quick addition,
+        division, multiplication, and concatenation from within Carto syntax.</p>
+<pre>#buildings {
+    building-height: [HEIGHT_FIELD] * 10;
+}</pre>
+        </div>
+
+        <div id='numbers'>
+        <h2>Numbers</h2>
+        <p>Numbers are comma-separated lists of one or more number in a specific
+        order. They're used in line dash arrays, in which the numbers specify
+        intervals of line, break, and line again.</p>
+<pre>#disputedboundary {
+    line-dasharray: 1, 4, 2;
+}</pre>
+        </div>
+
+        <div id='functions'>
+        <h2>Functions</h2>
+        <p>Functions are comma-separated lists of one or more functions. For
+        instance, transforms use the <code>functions</code> type to allow
+        for transforms within Carto, which are optionally chainable.</p>
+<pre>#point {
+    point-transform: scale(2, 2);
+}</pre>
+        </div>
+
+
+
+
+
+
+
 
 
         </div>

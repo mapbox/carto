@@ -1,3 +1,0 @@
-#world {
-  polygon-fill: @b;
-}

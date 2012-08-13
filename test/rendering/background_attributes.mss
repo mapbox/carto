@@ -1,3 +1,0 @@
-Map {
-    background-color: #fff;
-}

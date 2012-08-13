@@ -1,5 +1,7 @@
 {
-  "name": "carto",
+  "name": "carto-site",
+  "private": true,
+  "version": "0.0.0",
   "description": "Mapnik Stylesheet Compiler",
   "url": "https://github.com/mapbox/carto",
   "repositories": [{
@@ -11,42 +13,7 @@
     "url": "http://mapbox.com/",
     "email": "info@mapbox.com"
   },
-  "keywords": [
-    "mapnik",
-    "maps",
-    "css",
-    "stylesheets"
-  ],
-  "contributors": [
-    "Tom MacWright <macwright@gmail.com>",
-    "Konstantin Käfer",
-    "Alexis Sellier <self@cloudhead.net>"
-  ],
-  "version": "0.4.5",
-  "licenses": [{
-    "type": "Apache"
-  }],
-  "bin": {
-    "carto": "./bin/carto",
-    "cartox": "./bin/cartox",
-    "mml2json.js": "./bin/mml2json.js"
-  },
-  "main": "./lib/carto/index",
-  "engines": {
-    "node": "0.4.x"
-  },
   "dependencies": {
-    "underscore": "1.1.x",
-    "xml2js": ">= 0.1.0"
-  },
-  "devDependencies": {
-    "expresso": "0.8.x",
-    "docco": "0.3.x",
-    "jshint": "0.2.x",
-    "sax": "0.1.x"
-  },
-  "scripts": {
-    "pretest": "npm install --dev",
-    "test": "expresso"
+    "mapnik-reference": "4.0.x"
   }
 }

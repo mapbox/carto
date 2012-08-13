@@ -14,6 +14,14 @@ h1 {
   font-size:14px;
   line-height:20px;
   padding:10px;
+  background:#f6f6f6;
+  margin-bottom:5px;
+}
+
+h1 small {
+  font-size:11px;
+  line-height:20px;
+  color:#888;
 }
 
 .left {
@@ -58,7 +66,7 @@ ul.symbolizer, ul.values {
 }
 
 ul.symbolizer li, ul.values li {
-  padding:10px 10px;
+  padding:4px 10px 5px 10px;
   border-top:1px solid #eee;
 }
 
@@ -70,7 +78,16 @@ span.css {
 span.css a {
   text-decoration:none;
   color:#222;
-  border-bottom:1px solid #ccc;
+}
+
+span.css a:after {
+    content: ' #';
+    font-size:10px;
+    color:#eee;
+}
+
+span.css a:hover:after {
+    color:#000;
 }
 
 span.css a:hover {
@@ -78,13 +95,13 @@ span.css a:hover {
 }
 
 .type {
-  background:#ffe8e1;
-  padding:2px 4px;
-  border-radius:5px;
+  background:#f6f6f6;
+  padding:1px 3px;
+  border-radius:2px;
+  font-size:11px;
 }
 
 .type a {
-  color:#a77;
 }
 
 

@@ -1,5 +1,6 @@
 var fs = require('fs'),
     path = require('path'),
+    refs = require('mapnik-reference'),
     _ = require('underscore');
 
 function tmpl(x) {
@@ -9,11 +10,17 @@ function tmpl(x) {
 var index = tmpl('index._');
 var toc = tmpl('toc._');
 var table = tmpl('symbolizers._');
-var ref = JSON.parse(fs.readFileSync(path.join(__dirname, '../lib/carto/tree/reference.json'), 'utf8'));
 
-fs.writeFileSync(path.join(__dirname, '../index.html'), index({
-  symbolizers: ref.symbolizers,
-  table: table,
-  toc: toc,
-  _: _
-}));
+var versions = Object.keys(refs.version);
+
+for (var v in refs.version) {
+    var ref = refs.version[v];
+    fs.writeFileSync(path.join(__dirname, '../' + v + '.html'), index({
+      symbolizers: ref.symbolizers,
+      table: table,
+      version: v,
+      versions: versions,
+      toc: toc,
+      _: _
+    }));
+}
