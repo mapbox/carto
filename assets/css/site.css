@@ -1,5 +1,3 @@
-.depth-1, .depth-2, .depth-3, .depth-4 { margin-bottom:40px; }
-
 #docs h2 { font-weight:bold; }
 #docs h4 {
   font-size:15px;
@@ -29,6 +27,13 @@
 
 #docs p,
 #docs ul { margin-bottom:5px; }
+
+.depth-1,
+.depth-2,
+.depth-3,
+.depth-4 {
+  margin-bottom:40px;
+  }
 
 span.args,
 span.bracket { color:#888; }

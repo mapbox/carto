@@ -1,3 +1,9 @@
-<% _(symbolizers).chain().keys().each(function(name) { %>
-  <li><a href='#section-<%= name %>'><%= name %></a></li>
+<% _(symbolizers).each(function(symbolizer, name) { %>
+  <li><a class='parent' href='#<%= name %>'><%= name %></a></li>
+  <% _(symbolizer).chain()
+      .filter(function(p) { return p.css; })
+      .each(function(p) {
+  %>
+  <li><a href='#<%= p.css %>'><%= p.css %></a></li>
+  <% }); %>
 <% }); %>
