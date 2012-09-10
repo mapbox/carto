@@ -69,6 +69,10 @@ span.bracket { color:#888; }
   text-align:center;
   }
 
+small strong {
+  font-weight:bold;
+  }
+
 @media only screen and (max-width: 640px) {
   .doc-footer {
     border-left:none;
