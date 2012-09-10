@@ -35,6 +35,10 @@
   margin-bottom:40px;
   }
 
+.depth-3 {
+  margin-left:10px;
+  }
+
 span.args,
 span.bracket { color:#888; }
 
@@ -69,8 +73,13 @@ span.bracket { color:#888; }
   text-align:center;
   }
 
-small strong {
+h3 small {
+  display:inline-block;
+  }
+#docs small strong {
   font-weight:bold;
+  font-style:normal;
+  color:#3C4E5A;
   }
 
 @media only screen and (max-width: 640px) {

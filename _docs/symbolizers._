@@ -1,10 +1,15 @@
 <div class='separator' id='map-elements'>Map Elements</div>
 <% _(symbolizers).each(function(symbolizer, name) { %>
+<% if (name == '*') { %>
+<h2 id='all'>All selectors</h2>
+<% } else { %>
 <h2 id='<%= name %>'><%= name %></h2>
+<% } %>
   <% _(symbolizer).chain()
       .filter(function(p) { return p.css; })
       .each(function(p) {
   %>
+    <div class='depth-3'>
       <h3 id='<%= p.css %>'>
         <%= p.css %>
         <small>
@@ -15,7 +20,7 @@
           <% } %>
         </small>
       </h3>
-      <div id='content-<%= name %>' class='depth-3'><p>Specify the map to be used.
+      <div id='content-<%= name %>'><p>Specify the map to be used.
         <% if (typeof p['default-value'] !== 'undefined') { %>
         <small><strong>Default Value:</strong>
           <%= '' + p['default-value'] %>
@@ -24,5 +29,6 @@
         <% } %>
         <% if (p.doc) { %><%- p.doc%><% } %>
       </div>
+    </div>
   <% }); %>
 <% }); %>
