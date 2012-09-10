@@ -1,0 +1,9 @@
+auto: true
+server: true
+permalink: /:categories/:title
+baseurl: /cartocss
+version: latest
+url: http://mapbox.com
+title: CartoCSS
+rdiscount:
+  extensions: [smart]

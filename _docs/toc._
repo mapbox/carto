@@ -1,0 +1,3 @@
+<% _(symbolizers).chain().keys().each(function(name) { %>
+  <li><a href='#section-<%= name %>'><%= name %></a></li>
+<% }); %>
