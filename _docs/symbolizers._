@@ -1,4 +1,3 @@
-<div class='separator' id='map-elements'>Map Elements</div>
 <% _(symbolizers).each(function(symbolizer, name) { %>
 <% if (name == '*') { %>
 <h2 id='all'>All selectors</h2>

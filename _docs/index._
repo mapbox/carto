@@ -33,11 +33,15 @@ version: <%= version %>
   {% endif %}
   <div id='docs' class='doc-content prose'>
     <div class='doc pad2'>
+      <h1 id='map-elements'>Map Elements</h1>
+      <p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
       <%= table({symbolizers:symbolizers, _:_}) %>
 
-<div class='separator' id='values'>Values</div>
-<h3 id='color'>Color</h3>
-<div id='content-color' class='depth-0'>
+      <h1 id='values'>Values</h1>
+      <p>Below is a list of values and an explanation of any expression that can be applied to properties in CartCSS.</p>
+
+      <h3 id='color'>Color</h3>
+      <div id='content-color' class='depth-0'>
 <p>CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values,
 rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
 <code>yellow</code> and <code>blue</code>.</p>
