@@ -1,7 +1,7 @@
 auto: true
 server: true
 permalink: /:categories/:title
-baseurl: /cartocss
+baseurl: /carto
 version: 2.1.0
 url: http://mapbox.com
 title: CartoCSS
