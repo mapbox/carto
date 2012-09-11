@@ -1,0 +1,138 @@
+---
+layout: api
+categories: api
+version: <%= version %>
+---
+
+<div class='cell3'>
+  <div class='doc-nav'>
+    <form class='doc-search'>
+      <input type='text' placeholder='Filter methods'>
+      <span class='icon search'></span>
+    </form>
+    <ul class='nav anchors'>
+      <li class='heading'><a href='#map-elements'>Map Elements</a></li>
+      <%= toc({symbolizers:symbolizers, _:_}) %>
+      <li class='heading'><a href='#values'>Values</a></li>
+      <li><a href='#color'>Color</a>
+      <li><a href='#float'>Float</a>
+      <li><a href='#uri'>URI</a>
+      <li><a href='#string'>String</a>
+      <li><a href='#boolean'>Boolean</a>
+    </ul>
+  </div>
+</div>
+
+<div class='cell9'>
+  {% if site.version != page.version %}
+  {% if page.version != 'latest' %}
+  <div class='doc-content doc pad2 warn'>
+    Viewing an older version of {{site.title}}. Check out <a href='{{site.baseurl}}/api/{{site.version}}'>{{site.version}} for the latest</a>.
+  </div>
+  {% endif %}
+  {% endif %}
+  <div id='docs' class='doc-content prose'>
+    <div class='doc pad2'>
+      <h1 id='map-elements'>Map Elements</h1>
+      <p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
+      <%= table({symbolizers:symbolizers, _:_}) %>
+
+      <h1 id='values'>Values</h1>
+      <p>Below is a list of values and an explanation of any expression that can be applied to properties in CartCSS.</p>
+
+      <h3 id='color'>Color</h3>
+      <div id='content-color' class='depth-0'>
+<p>CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values,
+rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
+<code>yellow</code> and <code>blue</code>.</p>
+<pre>#line {
+  line-color: #ff0;
+  line-color: #ffff00;
+  line-color: rgb(255, 255, 0);
+  line-color: rgba(255, 255, 0, 1);
+  line-color: hsl(100, 50%, 50%);
+  line-color: yellow;
+}</pre>
+<p>Especially of note is the support for hsl, which can be
+<a href='http://mothereffinghsl.com/'>easier to reason about than rgb()</a>
+</div>
+
+<h3 id='float'>Float</h3>
+<div id='content-float' class='depth-0'>
+<p>Float is a fancy way of saying 'number'. In CartoCSS, you specify <em>just a number</em> -
+unlike CSS, there are no units, but everything is specified in pixels.</p>
+<pre>#line {
+  line-width: 2;
+}</pre>
+</div>
+
+<h3 id='uri'>URI</h3>
+<div id='content-uri' class='depth-0'>
+<p>URI is a fancy way of saying URL. When an argument is a URI, you use the same kind of
+<code>url('place.png')</code> notation that you would with HTML. Quotes around the URL
+aren't required, but are highly recommended.</p>
+<p>URIs can be paths to places on your computer, or on the internet.</p>
+<pre>#markers {
+  marker-file: url('marker.png');
+}</pre>
+</div>
+
+<h3 id='string'>String</h3>
+<div id='content-string' class='depth-0'>
+<p>A string is basically just text. In the case of CartoCSS, you're going to put it in quotes. Strings
+can be anything, though pay attention to the cases of <code>text-name</code> and <code>shield-name</code> -
+they actually will refer to features, which you refer to by putting them in brackets, as seen
+in the example below.</p>
+<pre>#labels {
+  text-name: "[MY_FIELD]";
+}</pre>
+</div>
+
+<h3 id='boolean'>Boolean</h3>
+<div id='content-boolean' class='depth-0'>
+<p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
+<pre>#markers {
+  marker-allow-overlap:true;
+}</pre>
+</div>
+
+<h3 id='expressions'>Expression</h3>
+<div id='content-expression' class='depth-0'>
+<p>Expressions are statements that can include fields, numbers, and other
+types in a really flexible way. You have run into expressions before,
+in the realm of 'fields', where you'd specify <code>"[FIELD]"</code>,
+but expressions allow you to drop the quotes and also do quick addition,
+division, multiplication, and concatenation from within Carto syntax.</p>
+<pre>#buildings {
+  building-height: [HEIGHT_FIELD] * 10;
+}</pre>
+</div>
+
+<h3 id='numbers'>Numbers</h3>
+<div id='content-numbers' class='depth-0'>
+<p>Numbers are comma-separated lists of one or more number in a specific
+order. They're used in line dash arrays, in which the numbers specify
+intervals of line, break, and line again.</p>
+<pre>#disputedboundary {
+  line-dasharray: 1, 4, 2;
+}</pre>
+</div>
+
+<h3 id='functions'>Functions</h3>
+<div id='content-functions' class='depth-0'>
+<p>Functions are comma-separated lists of one or more functions. For
+instance, transforms use the <code>functions</code> type to allow
+for transforms within Carto, which are optionally chainable.</p>
+<pre>#point {
+  point-transform: scale(2, 2);
+}</pre>
+</div>
+</div>
+
+    <div class='doc-footer'>
+      <div class='pad2'>
+      The code and documentation to <a href='http://github.com/mapbox/carto'>CartoCSS is hosted on GitHub</a> where you can contribute changes and improvements.
+      </div>
+    </div>
+  </div>
+</div>

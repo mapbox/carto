@@ -1,0 +1,21 @@
+---
+layout: default
+section: developers
+class: box
+---
+
+<div class='doc-page pad3c fillM clearfix'>
+  <div class='fillW clearfix'>
+    {{content}}
+  </div>
+</div>
+
+<script>
+  $(function() {
+    var docs = new Docs();
+    docs.colorCode();
+    docs.bindSearch($('.doc-search input'), $('.doc-nav ul'), true);
+    docs.bindInlineCode();
+    $(mapbox.docs);
+  });
+</script>
