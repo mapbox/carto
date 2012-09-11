@@ -1,5 +1,0 @@
-<ul class='toc'>
-<% _(symbolizers).chain().keys().each(function(name) { %>
-  <li><a href='#section-<%= name %>'><%= name %></a></li>
-<% }); %>
-</ul>

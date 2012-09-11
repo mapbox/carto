@@ -1,0 +1,2668 @@
+---
+layout: api
+categories: api
+version: 2.0.2
+---
+
+<div class='cell3'>
+  <div class='doc-nav'>
+    <form class='doc-search'>
+      <input type='text' placeholder='Filter methods'>
+      <span class='icon search'></span>
+    </form>
+    <ul class='nav anchors'>
+      <li class='heading'><a href='#map-elements'>Map Elements</a></li>
+      
+
+<li><a class='parent' href='#map'>map</a></li>
+
+  
+  <li><a href='#background-color'>background-color</a></li>
+  
+  <li><a href='#background-image'>background-image</a></li>
+  
+  <li><a href='#srs'>srs</a></li>
+  
+  <li><a href='#buffer-size'>buffer-size</a></li>
+  
+  <li><a href='#base'>base</a></li>
+  
+  <li><a href='#font-directory'>font-directory</a></li>
+  
+
+
+<li><a class='parent' href='#polygon'>polygon</a></li>
+
+  
+  <li><a href='#polygon-fill'>polygon-fill</a></li>
+  
+  <li><a href='#polygon-gamma'>polygon-gamma</a></li>
+  
+  <li><a href='#polygon-opacity'>polygon-opacity</a></li>
+  
+  <li><a href='#polygon-smooth'>polygon-smooth</a></li>
+  
+
+
+<li><a class='parent' href='#line'>line</a></li>
+
+  
+  <li><a href='#line-color'>line-color</a></li>
+  
+  <li><a href='#line-width'>line-width</a></li>
+  
+  <li><a href='#line-opacity'>line-opacity</a></li>
+  
+  <li><a href='#line-join'>line-join</a></li>
+  
+  <li><a href='#line-cap'>line-cap</a></li>
+  
+  <li><a href='#line-gamma'>line-gamma</a></li>
+  
+  <li><a href='#line-dasharray'>line-dasharray</a></li>
+  
+  <li><a href='#line-dash-offset'>line-dash-offset</a></li>
+  
+  <li><a href='#line-rasterizer'>line-rasterizer</a></li>
+  
+
+
+<li><a class='parent' href='#markers'>markers</a></li>
+
+  
+  <li><a href='#marker-file'>marker-file</a></li>
+  
+  <li><a href='#marker-opacity'>marker-opacity</a></li>
+  
+  <li><a href='#marker-line-color'>marker-line-color</a></li>
+  
+  <li><a href='#marker-line-width'>marker-line-width</a></li>
+  
+  <li><a href='#marker-line-opacity'>marker-line-opacity</a></li>
+  
+  <li><a href='#marker-placement'>marker-placement</a></li>
+  
+  <li><a href='#marker-type'>marker-type</a></li>
+  
+  <li><a href='#marker-width'>marker-width</a></li>
+  
+  <li><a href='#marker-height'>marker-height</a></li>
+  
+  <li><a href='#marker-fill'>marker-fill</a></li>
+  
+  <li><a href='#marker-allow-overlap'>marker-allow-overlap</a></li>
+  
+  <li><a href='#marker-ignore-placement'>marker-ignore-placement</a></li>
+  
+  <li><a href='#marker-spacing'>marker-spacing</a></li>
+  
+  <li><a href='#marker-max-error'>marker-max-error</a></li>
+  
+  <li><a href='#marker-transform'>marker-transform</a></li>
+  
+
+
+<li><a class='parent' href='#shield'>shield</a></li>
+
+  
+  <li><a href='#shield-name'>shield-name</a></li>
+  
+  <li><a href='#shield-face-name'>shield-face-name</a></li>
+  
+  <li><a href='#shield-size'>shield-size</a></li>
+  
+  <li><a href='#shield-fill'>shield-fill</a></li>
+  
+  <li><a href='#shield-placement'>shield-placement</a></li>
+  
+  <li><a href='#shield-avoid-edges'>shield-avoid-edges</a></li>
+  
+  <li><a href='#shield-min-distance'>shield-min-distance</a></li>
+  
+  <li><a href='#shield-spacing'>shield-spacing</a></li>
+  
+  <li><a href='#shield-min-padding'>shield-min-padding</a></li>
+  
+  <li><a href='#shield-wrap-width'>shield-wrap-width</a></li>
+  
+  <li><a href='#shield-wrap-character'>shield-wrap-character</a></li>
+  
+  <li><a href='#shield-halo-fill'>shield-halo-fill</a></li>
+  
+  <li><a href='#shield-halo-radius'>shield-halo-radius</a></li>
+  
+  <li><a href='#shield-character-spacing'>shield-character-spacing</a></li>
+  
+  <li><a href='#shield-line-spacing'>shield-line-spacing</a></li>
+  
+  <li><a href='#shield-file'>shield-file</a></li>
+  
+  <li><a href='#shield-text-dx'>shield-text-dx</a></li>
+  
+  <li><a href='#shield-text-dy'>shield-text-dy</a></li>
+  
+  <li><a href='#shield-dx'>shield-dx</a></li>
+  
+  <li><a href='#shield-dy'>shield-dy</a></li>
+  
+  <li><a href='#shield-opacity'>shield-opacity</a></li>
+  
+  <li><a href='#shield-text-opacity'>shield-text-opacity</a></li>
+  
+  <li><a href='#shield-horizontal-alignment'>shield-horizontal-alignment</a></li>
+  
+  <li><a href='#shield-text-transform'>shield-text-transform</a></li>
+  
+  <li><a href='#shield-no-text'>shield-no-text</a></li>
+  
+  <li><a href='#shield-justify-alignment'>shield-justify-alignment</a></li>
+  
+
+
+<li><a class='parent' href='#line-pattern'>line-pattern</a></li>
+
+  
+  <li><a href='#line-pattern-file'>line-pattern-file</a></li>
+  
+
+
+<li><a class='parent' href='#polygon-pattern'>polygon-pattern</a></li>
+
+  
+  <li><a href='#polygon-pattern-file'>polygon-pattern-file</a></li>
+  
+  <li><a href='#polygon-pattern-alignment'>polygon-pattern-alignment</a></li>
+  
+  <li><a href='#polygon-pattern-gamma'>polygon-pattern-gamma</a></li>
+  
+
+
+<li><a class='parent' href='#raster'>raster</a></li>
+
+  
+  <li><a href='#raster-opacity'>raster-opacity</a></li>
+  
+  <li><a href='#raster-mode'>raster-mode</a></li>
+  
+  <li><a href='#raster-filter-factor'>raster-filter-factor</a></li>
+  
+  <li><a href='#raster-scaling'>raster-scaling</a></li>
+  
+  <li><a href='#raster-mesh-size'>raster-mesh-size</a></li>
+  
+
+
+<li><a class='parent' href='#point'>point</a></li>
+
+  
+  <li><a href='#point-file'>point-file</a></li>
+  
+  <li><a href='#point-allow-overlap'>point-allow-overlap</a></li>
+  
+  <li><a href='#point-ignore-placement'>point-ignore-placement</a></li>
+  
+  <li><a href='#point-opacity'>point-opacity</a></li>
+  
+  <li><a href='#point-placement'>point-placement</a></li>
+  
+  <li><a href='#point-transform'>point-transform</a></li>
+  
+
+
+<li><a class='parent' href='#text'>text</a></li>
+
+  
+  <li><a href='#text-name'>text-name</a></li>
+  
+  <li><a href='#text-face-name'>text-face-name</a></li>
+  
+  <li><a href='#text-size'>text-size</a></li>
+  
+  <li><a href='#text-ratio'>text-ratio</a></li>
+  
+  <li><a href='#text-wrap-width'>text-wrap-width</a></li>
+  
+  <li><a href='#text-wrap-character'>text-wrap-character</a></li>
+  
+  <li><a href='#text-spacing'>text-spacing</a></li>
+  
+  <li><a href='#text-character-spacing'>text-character-spacing</a></li>
+  
+  <li><a href='#text-line-spacing'>text-line-spacing</a></li>
+  
+  <li><a href='#text-label-position-tolerance'>text-label-position-tolerance</a></li>
+  
+  <li><a href='#text-max-char-angle-delta'>text-max-char-angle-delta</a></li>
+  
+  <li><a href='#text-fill'>text-fill</a></li>
+  
+  <li><a href='#text-opacity'>text-opacity</a></li>
+  
+  <li><a href='#text-halo-fill'>text-halo-fill</a></li>
+  
+  <li><a href='#text-halo-radius'>text-halo-radius</a></li>
+  
+  <li><a href='#text-dx'>text-dx</a></li>
+  
+  <li><a href='#text-dy'>text-dy</a></li>
+  
+  <li><a href='#text-vertical-alignment'>text-vertical-alignment</a></li>
+  
+  <li><a href='#text-avoid-edges'>text-avoid-edges</a></li>
+  
+  <li><a href='#text-min-distance'>text-min-distance</a></li>
+  
+  <li><a href='#text-min-padding'>text-min-padding</a></li>
+  
+  <li><a href='#text-min-path-length'>text-min-path-length</a></li>
+  
+  <li><a href='#text-allow-overlap'>text-allow-overlap</a></li>
+  
+  <li><a href='#text-orientation'>text-orientation</a></li>
+  
+  <li><a href='#text-placement'>text-placement</a></li>
+  
+  <li><a href='#text-placement-type'>text-placement-type</a></li>
+  
+  <li><a href='#text-placements'>text-placements</a></li>
+  
+  <li><a href='#text-transform'>text-transform</a></li>
+  
+  <li><a href='#text-horizontal-alignment'>text-horizontal-alignment</a></li>
+  
+  <li><a href='#text-align'>text-align</a></li>
+  
+
+
+<li><a class='parent' href='#building'>building</a></li>
+
+  
+  <li><a href='#building-fill'>building-fill</a></li>
+  
+  <li><a href='#building-fill-opacity'>building-fill-opacity</a></li>
+  
+  <li><a href='#building-height'>building-height</a></li>
+  
+
+
+      <li class='heading'><a href='#values'>Values</a></li>
+      <li><a href='#color'>Color</a>
+      <li><a href='#float'>Float</a>
+      <li><a href='#uri'>URI</a>
+      <li><a href='#string'>String</a>
+      <li><a href='#boolean'>Boolean</a>
+    </ul>
+  </div>
+</div>
+
+<div class='cell9'>
+  {% if site.version != page.version %}
+  {% if page.version != 'latest' %}
+  <div class='doc-content doc pad2 warn'>
+    Viewing an older version of {{site.title}}. Check out <a href='{{site.baseurl}}/api/{{site.version}}'>{{site.version}} for the latest</a>.
+  </div>
+  {% endif %}
+  {% endif %}
+  <div id='docs' class='doc-content prose'>
+    <div class='doc pad2'>
+      <h1 id='map-elements'>Map Elements</h1>
+      <p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
+      
+
+<h2 id='map'>map</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='background-color'>
+        background-color
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          <span class='description'>(transparent)</span>
+        </small>
+        
+        Map Background color
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='background-image'>
+        background-image
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          <span class='description'>(transparent)</span>
+        </small>
+        
+        An image that is repeated below all features on a map as a background.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='srs'>
+        srs
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+          <span class='description'>(The proj4 literal of EPSG:4326 is assumed to be the Map&#x27;s spatial reference and all data from layers within this map will be plotted using this coordinate system. If any layers do not declare an srs value then they will be assumed to be in the same srs as the Map and not transformations will be needed to plot them in the Map&#x27;s coordinate space)</span>
+        </small>
+        
+        Map spatial reference (proj4 string)
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='buffer-size'>
+        buffer-size
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          <span class='description'>(No buffer will be used)</span>
+        </small>
+        
+        Extra tolerance around the map (in pixels) used to ensure labels crossing tile boundaries are equally rendered in each tile (e.g. cut in each tile). Not intended to be used in combination with &quot;avoid-edges&quot;.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='base'>
+        base
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          <span class='description'>(This base path defaults to an empty string meaning that any relative paths to files referenced in styles or layers will be interpreted relative to the application process.)</span>
+        </small>
+        
+        Any relative paths used to reference files will be understood as relative to this directory path if the map is loaded from an in memory object rather than from the filesystem. If the map is loaded from the filesystem and this option is not provided it will be set to the directory of the stylesheet.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='font-directory'>
+        font-directory
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          <span class='description'>(No map-specific fonts will be registered)</span>
+        </small>
+        
+        Path to a directory which holds fonts which should be registered when the Map is loaded (in addition to any fonts that may be automatically registered).
+      </div>
+    </div>
+  
+
+
+<h2 id='polygon'>polygon</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='polygon-fill'>
+        polygon-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          rgba(128,128,128,1)
+          <span class='description'>(gray and fully opaque (alpha = 1), same as rgb(128,128,128))</span>
+        </small>
+        
+        Fill color to assign to a polygon
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='polygon-gamma'>
+        polygon-gamma
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(fully antialiased)</span>
+        </small>
+        
+        Level of antialiasing of polygon edges
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='polygon-opacity'>
+        polygon-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(opaque)</span>
+        </small>
+        
+        The opacity of the polygon
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='polygon-smooth'>
+        polygon-smooth
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          <span class='description'>(no smoothing)</span>
+        </small>
+        
+        Amount of smoothing applied
+      </div>
+    </div>
+  
+
+
+<h2 id='line'>line</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='line-color'>
+        line-color
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          rgba(0,0,0,1)
+          <span class='description'>(black and fully opaque (alpha = 1), same as rgb(0,0,0))</span>
+        </small>
+        
+        The color of a drawn line
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-width'>
+        line-width
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          
+        </small>
+        
+        The width of a line in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-opacity'>
+        line-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(opaque)</span>
+        </small>
+        
+        The opacity of a line
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-join'>
+        line-join
+        <small>
+          
+            <span class='args'>miter</span>
+          
+            <span class='args'>round</span>
+          
+            <span class='args'>bevel</span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          miter
+          
+        </small>
+        
+        The behavior of lines when joining
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-cap'>
+        line-cap
+        <small>
+          
+            <span class='args'>butt</span>
+          
+            <span class='args'>round</span>
+          
+            <span class='args'>square</span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          butt
+          
+        </small>
+        
+        The display of line endings
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-gamma'>
+        line-gamma
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(fully antialiased)</span>
+        </small>
+        
+        Level of antialiasing of stroke line
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-dasharray'>
+        line-dasharray
+        <small>
+          
+            <span class='args'><a href='#numbers'>numbers</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          <span class='description'>(solid line)</span>
+        </small>
+        
+        A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported for more complex patterns.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-dash-offset'>
+        line-dash-offset
+        <small>
+          
+            <span class='args'><a href='#numbers'>numbers</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          <span class='description'>(solid line)</span>
+        </small>
+        
+        valid parameter but not currently used in renderers
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='line-rasterizer'>
+        line-rasterizer
+        <small>
+          
+            <span class='args'>full</span>
+          
+            <span class='args'>fast</span>
+          
+        </small>
+      </h3>
+      <div id='content-line'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          full
+          
+        </small>
+        
+        Exposes an alternate AGG rendering method that sacrifices some accuracy for speed.
+      </div>
+    </div>
+  
+
+
+<h2 id='markers'>markers</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='marker-file'>
+        marker-file
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          <span class='description'>(An ellipse or circle, if width equals height)</span>
+        </small>
+        
+        An SVG file that this marker shows at each placement. If no file is given, the marker will show an ellipse.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-opacity'>
+        marker-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(opaque)</span>
+        </small>
+        
+        The overall opacity of the marker
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-line-color'>
+        marker-line-color
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          black
+          
+        </small>
+        
+        The color of the stroke around a marker shape.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-line-width'>
+        marker-line-width
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        The width of the stroke around a marker shape, in pixels. This is positioned on the boundary, so high values can cover the area itself.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-line-opacity'>
+        marker-line-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(opaque)</span>
+        </small>
+        
+        The opacity of a line
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-placement'>
+        marker-placement
+        <small>
+          
+            <span class='args'>point</span>
+          
+            <span class='args'>line</span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          line
+          
+        </small>
+        
+        Attempt to place markers on a point once or on a line repeatedly
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-type'>
+        marker-type
+        <small>
+          
+            <span class='args'>arrow</span>
+          
+            <span class='args'>ellipse</span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          ellipse
+          
+        </small>
+        
+        The default marker-type. If a SVG file is not given as the marker-file parameter, the renderer provides either an arrow or an ellipse (a circle if height is equal to width)
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-width'>
+        marker-width
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          10
+          
+        </small>
+        
+        The width of the marker, if using one of the default types.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-height'>
+        marker-height
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          10
+          
+        </small>
+        
+        The height of the marker, if using one of the default types.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-fill'>
+        marker-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          blue
+          
+        </small>
+        
+        The color of the area of the marker.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-allow-overlap'>
+        marker-allow-overlap
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          <span class='description'>(Do not allow makers to overlap with each other - overlapping markers will not be shown.)</span>
+        </small>
+        
+        Control whether overlapping markers are shown or hidden.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-ignore-placement'>
+        marker-ignore-placement
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          <span class='description'>(do not store the bbox of this geometry in the collision detector cache)</span>
+        </small>
+        
+        value to control whether the placement of the feature will prevent the placement of other features
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-spacing'>
+        marker-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          100
+          
+        </small>
+        
+        Space between repeated labels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-max-error'>
+        marker-max-error
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0.2
+          
+        </small>
+        
+        The maximum difference between actual marker placement and the marker-spacing parameter. Setting a high value can allow the renderer to try to resolve placement conflicts with other symbolizers.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-transform'>
+        marker-transform
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          <span class='description'>(no transformation)</span>
+        </small>
+        
+        An SVG transformation definition
+      </div>
+    </div>
+  
+
+
+<h2 id='shield'>shield</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='shield-name'>
+        shield-name
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        Value to use for a shield&quot;s text label. Data columns are specified using brackets like [column_name]
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-face-name'>
+        shield-face-name
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          
+        </small>
+        
+        Font name and style to use for the shield text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-size'>
+        shield-size
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        The size of the shield text in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-fill'>
+        shield-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        The color of the shield text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-placement'>
+        shield-placement
+        <small>
+          
+            <span class='args'>point</span>
+          
+            <span class='args'>line</span>
+          
+            <span class='args'>vertex</span>
+          
+            <span class='args'>interior</span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          point
+          
+        </small>
+        
+        How this shield should be placed. Point placement attempts to place it on top of points, line places along lines multiple times per feature, vertex places on the vertexes of polygons, and interior attempts to place inside of polygons.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-avoid-edges'>
+        shield-avoid-edges
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          
+        </small>
+        
+        Tell positioning algorithm to avoid labeling near intersection edges.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-min-distance'>
+        shield-min-distance
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Minimum distance to the next shield symbol, not necessarily the same shield.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-spacing'>
+        shield-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        The spacing between repeated occurrences of the same shield on a line
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-min-padding'>
+        shield-min-padding
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Determines the minimum amount of padding that a shield gets relative to other shields
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-wrap-width'>
+        shield-wrap-width
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Length before wrapping long names.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-wrap-character'>
+        shield-wrap-character
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+           
+          
+        </small>
+        
+        Use this character instead of a space to wrap long names.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-halo-fill'>
+        shield-halo-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          #FFFFFF
+          <span class='description'>(white)</span>
+        </small>
+        
+        Specifies the color of the halo around the text.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-halo-radius'>
+        shield-halo-radius
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          <span class='description'>(no halo)</span>
+        </small>
+        
+        Specify the radius of the halo in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-character-spacing'>
+        shield-character-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-line-spacing'>
+        shield-line-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        Vertical spacing between lines of multiline labels (in pixels)
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-file'>
+        shield-file
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        Image file to render behind the shield text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-text-dx'>
+        shield-text-dx
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Displace text within shield by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive value will shift the text right
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-text-dy'>
+        shield-text-dy
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Displace text within shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive value will shift the text down
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-dx'>
+        shield-dx
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Displace shield by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive value will shift the text right
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-dy'>
+        shield-dy
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Displace shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive value will shift the text down
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-opacity'>
+        shield-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          
+        </small>
+        
+        (Default 1.0) - opacity of the image used for the shield
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-text-opacity'>
+        shield-text-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          
+        </small>
+        
+        (Default 1.0) - opacity of the text placed on top of the shield
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-horizontal-alignment'>
+        shield-horizontal-alignment
+        <small>
+          
+            <span class='args'>left</span>
+          
+            <span class='args'>middle</span>
+          
+            <span class='args'>right</span>
+          
+            <span class='args'>auto</span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          middle
+          
+        </small>
+        
+        The shield&#x27;s horizontal alignment from its centerpoint
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-text-transform'>
+        shield-text-transform
+        <small>
+          
+            <span class='args'>none</span>
+          
+            <span class='args'>uppercase</span>
+          
+            <span class='args'>lowercase</span>
+          
+            <span class='args'>capitalize</span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        Transform the case of the characters
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-no-text'>
+        shield-no-text
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          
+        </small>
+        
+        Whether the shield should make room for a text label.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='shield-justify-alignment'>
+        shield-justify-alignment
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-shield'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          middle
+          
+        </small>
+        
+        Define how text in a shield&#x27;s label is justified
+      </div>
+    </div>
+  
+
+
+<h2 id='line-pattern'>line-pattern</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='line-pattern-file'>
+        line-pattern-file
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line-pattern'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        An image file to be repeated and warped along a line
+      </div>
+    </div>
+  
+
+
+<h2 id='polygon-pattern'>polygon-pattern</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='polygon-pattern-file'>
+        polygon-pattern-file
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon-pattern'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        Image to use as a repeated pattern fill within a polygon
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='polygon-pattern-alignment'>
+        polygon-pattern-alignment
+        <small>
+          
+            <span class='args'>local</span>
+          
+            <span class='args'>global</span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon-pattern'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          local
+          
+        </small>
+        
+        Specify whether to align pattern fills to the layer or to the map.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='polygon-pattern-gamma'>
+        polygon-pattern-gamma
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-polygon-pattern'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(fully antialiased)</span>
+        </small>
+        
+        Level of antialiasing of polygon pattern edges
+      </div>
+    </div>
+  
+
+
+<h2 id='raster'>raster</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='raster-opacity'>
+        raster-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-raster'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(opaque)</span>
+        </small>
+        
+        The opacity of the raster symbolizer on top of other symbolizers.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='raster-mode'>
+        raster-mode
+        <small>
+          
+            <span class='args'>normal</span>
+          
+            <span class='args'>grain_merge</span>
+          
+            <span class='args'>grain_merge2</span>
+          
+            <span class='args'>multiply</span>
+          
+            <span class='args'>multiply2</span>
+          
+            <span class='args'>divide</span>
+          
+            <span class='args'>divide2</span>
+          
+            <span class='args'>screen</span>
+          
+            <span class='args'>hard_light</span>
+          
+        </small>
+      </h3>
+      <div id='content-raster'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          normal
+          
+        </small>
+        
+        The blending technique used to overlay this raster image on the layer below. Normal simply covers the layer. Grain merge adds the two layers together and subtracts 128 from the value, making the resulting area sometimes high-contrast. Screen often gives a lighter, washed-out appearance. Multiply multiplies the pixels, giving a high-contrast result. Divide divides the upper layer by the lower layer, making a lighter version.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='raster-filter-factor'>
+        raster-filter-factor
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-raster'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          -1
+          <span class='description'>(Allow the datasource to choose appropriate downscaling.)</span>
+        </small>
+        
+        This is used by the Raster or Gdal datasources to pre-downscale images using overviews. Higher numbers can sometimes cause much better scaled image output, at the cost of speed.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='raster-scaling'>
+        raster-scaling
+        <small>
+          
+            <span class='args'>fast</span>
+          
+            <span class='args'>bilinear</span>
+          
+            <span class='args'>bilinear8</span>
+          
+            <span class='args'>bicubic</span>
+          
+            <span class='args'>spline16</span>
+          
+            <span class='args'>gaussian</span>
+          
+            <span class='args'>lanczos</span>
+          
+        </small>
+      </h3>
+      <div id='content-raster'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          fast
+          
+        </small>
+        
+        The scaling algorithm used to making different resolution versions of this raster layer. Bilinear is a good compromise between speed and accuracy, while lanczos gives the highest quality.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='raster-mesh-size'>
+        raster-mesh-size
+        <small>
+          
+            <span class='args'><a href='#integer'>integer</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-raster'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          16
+          <span class='description'>(Reprojection mesh will be 1&#x2F;16 of the resolution of the source image)</span>
+        </small>
+        
+        A reduced resolution mesh is used for raster reprojection, and the total image size is divided by the mesh-size to determine the quality of that mesh. Values for mesh-size larger than the default will result in faster reprojection but might lead to distortion.
+      </div>
+    </div>
+  
+
+
+<h2 id='point'>point</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='point-file'>
+        point-file
+        <small>
+          
+            <span class='args'><a href='#uri'>uri</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-point'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        Image file to represent a point
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='point-allow-overlap'>
+        point-allow-overlap
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-point'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          <span class='description'>(Do not allow points to overlap with each other - overlapping markers will not be shown.)</span>
+        </small>
+        
+        Control whether overlapping points are shown or hidden.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='point-ignore-placement'>
+        point-ignore-placement
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-point'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          <span class='description'>(do not store the bbox of this geometry in the collision detector cache)</span>
+        </small>
+        
+        value to control whether the placement of the feature will prevent the placement of other features
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='point-opacity'>
+        point-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-point'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(Fully opaque)</span>
+        </small>
+        
+        A value from 0 to 1 to control the opacity of the point
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='point-placement'>
+        point-placement
+        <small>
+          
+            <span class='args'>centroid</span>
+          
+            <span class='args'>interior</span>
+          
+        </small>
+      </h3>
+      <div id='content-point'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          centroid
+          
+        </small>
+        
+        How this point should be placed. Centroid calculates the geometric center of a polygon, which can be outside of it, while interior always places inside of a polygon.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='point-transform'>
+        point-transform
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-point'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          <span class='description'>(No transformation)</span>
+        </small>
+        
+        SVG transformation definition
+      </div>
+    </div>
+  
+
+
+<h2 id='text'>text</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='text-name'>
+        text-name
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          
+        </small>
+        
+        Value to use for a text label. Data columns are specified using brackets like [column_name]
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-face-name'>
+        text-face-name
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        Font name and style to render a label in
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-size'>
+        text-size
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          10
+          
+        </small>
+        
+        Text size in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-ratio'>
+        text-ratio
+        <small>
+          
+            <span class='args'><a href='#none'>none</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Define the amount of text (of the total) present on successive lines when wrapping occurs
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-wrap-width'>
+        text-wrap-width
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Length of a chunk of text in characters before wrapping text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-wrap-character'>
+        text-wrap-character
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+           
+          
+        </small>
+        
+        Use this character instead of a space to wrap long text.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-spacing'>
+        text-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        Distance between repeated text labels on a line
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-character-spacing'>
+        text-character-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Horizontal spacing adjustment between characters in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-line-spacing'>
+        text-line-spacing
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Vertical spacing adjustment between lines in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-label-position-tolerance'>
+        text-label-position-tolerance
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Allows the label to be displaced from its ideal position by a number of pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-max-char-angle-delta'>
+        text-max-char-angle-delta
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        If present, the maximum angle change, in degrees, allowed between adjacent characters in a label.  This will stop label placement around sharp corners.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-fill'>
+        text-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          #000000
+          
+        </small>
+        
+        Specifies the color for the text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-opacity'>
+        text-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(Fully opaque)</span>
+        </small>
+        
+        A number from 0 to 1 specifying the opacity for the text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-halo-fill'>
+        text-halo-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          #FFFFFF
+          <span class='description'>(white)</span>
+        </small>
+        
+        Specifies the color of the halo around the text.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-halo-radius'>
+        text-halo-radius
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          <span class='description'>(no halo)</span>
+        </small>
+        
+        Specify the radius of the halo in pixels
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-dx'>
+        text-dx
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Displace text by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive value will shift the text right
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-dy'>
+        text-dy
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        Displace text by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive value will shift the text down
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-vertical-alignment'>
+        text-vertical-alignment
+        <small>
+          
+            <span class='args'>top</span>
+          
+            <span class='args'>middle</span>
+          
+            <span class='args'>bottom</span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          middle
+          <span class='description'>(Default affected by value of dy; &quot;bottom&quot; for dy&gt;0, &quot;top&quot; for dy&lt;0.)</span>
+        </small>
+        
+        Position of label relative to point position.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-avoid-edges'>
+        text-avoid-edges
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          
+        </small>
+        
+        Tell positioning algorithm to avoid labeling near intersection edges.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-min-distance'>
+        text-min-distance
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        Minimum permitted distance to the next text symbolizer.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-min-padding'>
+        text-min-padding
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        Determines the minimum amount of padding that a text symbolizer gets relative to other text
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-min-path-length'>
+        text-min-path-length
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          <span class='description'>(place labels on all paths)</span>
+        </small>
+        
+        Place labels only on paths longer than this value.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-allow-overlap'>
+        text-allow-overlap
+        <small>
+          
+            <span class='args'><a href='#boolean'>boolean</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          false
+          <span class='description'>(Do not allow text to overlap with other text - overlapping markers will not be shown.)</span>
+        </small>
+        
+        Control whether overlapping text is shown or hidden.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-orientation'>
+        text-orientation
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        Rotate the text.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-placement'>
+        text-placement
+        <small>
+          
+            <span class='args'>point</span>
+          
+            <span class='args'>line</span>
+          
+            <span class='args'>vertex</span>
+          
+            <span class='args'>interior</span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          point
+          
+        </small>
+        
+        Control the style of placement of a point versus the geometry it is attached to.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-placement-type'>
+        text-placement-type
+        <small>
+          
+            <span class='args'>dummy</span>
+          
+            <span class='args'>simple</span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          dummy
+          
+        </small>
+        
+        Re-position and&#x2F;or re-size text to avoid overlaps. &quot;simple&quot; for basic algorithm (using text-placements string,) &quot;dummy&quot; to turn this feature off.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-placements'>
+        text-placements
+        <small>
+          
+            <span class='args'><a href='#string'>string</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          
+          
+        </small>
+        
+        If &quot;placement-type&quot; is set to &quot;simple&quot;, use this &quot;POSITIONS,[SIZES]&quot; string. See TextSymbolizer docs for format.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-transform'>
+        text-transform
+        <small>
+          
+            <span class='args'>none</span>
+          
+            <span class='args'>uppercase</span>
+          
+            <span class='args'>lowercase</span>
+          
+            <span class='args'>capitalize</span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          none
+          
+        </small>
+        
+        Transform the case of the characters
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-horizontal-alignment'>
+        text-horizontal-alignment
+        <small>
+          
+            <span class='args'>left</span>
+          
+            <span class='args'>middle</span>
+          
+            <span class='args'>right</span>
+          
+            <span class='args'>auto</span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          middle
+          
+        </small>
+        
+        The text&#x27;s horizontal alignment from its centerpoint
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='text-align'>
+        text-align
+        <small>
+          
+            <span class='args'>left</span>
+          
+            <span class='args'>right</span>
+          
+            <span class='args'>center</span>
+          
+        </small>
+      </h3>
+      <div id='content-text'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          center
+          
+        </small>
+        
+        Set the text alignment.
+      </div>
+    </div>
+  
+
+
+<h2 id='building'>building</h2>
+
+  
+    <div class='depth-3'>
+      <h3 id='building-fill'>
+        building-fill
+        <small>
+          
+            <span class='args'><a href='#color'>color</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-building'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          #FFFFFF
+          
+        </small>
+        
+        The color of the buildings walls.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='building-fill-opacity'>
+        building-fill-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-building'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          1
+          
+        </small>
+        
+        The opacity of the building as a whole, including all walls.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='building-height'>
+        building-height
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-building'><p>Specify the map to be used.
+        
+        <small><strong>Default Value:</strong>
+          0
+          
+        </small>
+        
+        The height of the building in pixels.
+      </div>
+    </div>
+  
+
+
+
+      <h1 id='values'>Values</h1>
+      <p>Below is a list of values and an explanation of any expression that can be applied to properties in CartCSS.</p>
+
+      <h3 id='color'>Color</h3>
+      <div id='content-color' class='depth-0'>
+<p>CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values,
+rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
+<code>yellow</code> and <code>blue</code>.</p>
+<pre>#line {
+  line-color: #ff0;
+  line-color: #ffff00;
+  line-color: rgb(255, 255, 0);
+  line-color: rgba(255, 255, 0, 1);
+  line-color: hsl(100, 50%, 50%);
+  line-color: yellow;
+}</pre>
+<p>Especially of note is the support for hsl, which can be
+<a href='http://mothereffinghsl.com/'>easier to reason about than rgb()</a>
+</div>
+
+<h3 id='float'>Float</h3>
+<div id='content-float' class='depth-0'>
+<p>Float is a fancy way of saying 'number'. In CartoCSS, you specify <em>just a number</em> -
+unlike CSS, there are no units, but everything is specified in pixels.</p>
+<pre>#line {
+  line-width: 2;
+}</pre>
+</div>
+
+<h3 id='uri'>URI</h3>
+<div id='content-uri' class='depth-0'>
+<p>URI is a fancy way of saying URL. When an argument is a URI, you use the same kind of
+<code>url('place.png')</code> notation that you would with HTML. Quotes around the URL
+aren't required, but are highly recommended.</p>
+<p>URIs can be paths to places on your computer, or on the internet.</p>
+<pre>#markers {
+  marker-file: url('marker.png');
+}</pre>
+</div>
+
+<h3 id='string'>String</h3>
+<div id='content-string' class='depth-0'>
+<p>A string is basically just text. In the case of CartoCSS, you're going to put it in quotes. Strings
+can be anything, though pay attention to the cases of <code>text-name</code> and <code>shield-name</code> -
+they actually will refer to features, which you refer to by putting them in brackets, as seen
+in the example below.</p>
+<pre>#labels {
+  text-name: "[MY_FIELD]";
+}</pre>
+</div>
+
+<h3 id='boolean'>Boolean</h3>
+<div id='content-boolean' class='depth-0'>
+<p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
+<pre>#markers {
+  marker-allow-overlap:true;
+}</pre>
+</div>
+
+<h3 id='expressions'>Expression</h3>
+<div id='content-expression' class='depth-0'>
+<p>Expressions are statements that can include fields, numbers, and other
+types in a really flexible way. You have run into expressions before,
+in the realm of 'fields', where you'd specify <code>"[FIELD]"</code>,
+but expressions allow you to drop the quotes and also do quick addition,
+division, multiplication, and concatenation from within Carto syntax.</p>
+<pre>#buildings {
+  building-height: [HEIGHT_FIELD] * 10;
+}</pre>
+</div>
+
+<h3 id='numbers'>Numbers</h3>
+<div id='content-numbers' class='depth-0'>
+<p>Numbers are comma-separated lists of one or more number in a specific
+order. They're used in line dash arrays, in which the numbers specify
+intervals of line, break, and line again.</p>
+<pre>#disputedboundary {
+  line-dasharray: 1, 4, 2;
+}</pre>
+</div>
+
+<h3 id='functions'>Functions</h3>
+<div id='content-functions' class='depth-0'>
+<p>Functions are comma-separated lists of one or more functions. For
+instance, transforms use the <code>functions</code> type to allow
+for transforms within Carto, which are optionally chainable.</p>
+<pre>#point {
+  point-transform: scale(2, 2);
+}</pre>
+</div>
+</div>
+
+    <div class='doc-footer'>
+      <div class='pad2'>
+      The code and documentation to <a href='http://github.com/mapbox/carto'>CartoCSS is hosted on GitHub</a> where you can contribute changes and improvements.
+      </div>
+    </div>
+  </div>
+</div>
