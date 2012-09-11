@@ -1,6 +1,6 @@
 <% _(symbolizers).each(function(symbolizer, name) { %>
 <% if (name == '*') { %>
-<h2 id='all'>All selectors</h2>
+<h2 id='all'>All elements</h2>
 <% } else { %>
 <h2 id='<%= name %>'><%= name %></h2>
 <% } %>
