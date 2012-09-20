@@ -19,6 +19,9 @@ version: <%= version %>
       <li><a href='#uri'>URI</a>
       <li><a href='#string'>String</a>
       <li><a href='#boolean'>Boolean</a>
+      <li><a href='#expressions'>Expressions</a>
+      <li><a href='#numbers'>Numbers</a>
+      <li><a href='#functions'>Functions</a>
     </ul>
   </div>
 </div>
@@ -96,7 +99,7 @@ in the example below.</p>
 }</pre>
 </div>
 
-<h3 id='expressions'>Expression</h3>
+<h3 id='expressions'>Expressions</h3>
 <div id='content-expression' class='depth-0'>
 <p>Expressions are statements that can include fields, numbers, and other
 types in a really flexible way. You have run into expressions before,
