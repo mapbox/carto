@@ -19,7 +19,7 @@
           <% } %>
         </small>
       </h3>
-      <div id='content-<%= name %>'><p>Specify the map to be used.
+      <div id='content-<%= name %>'><p>
         <% if (typeof p['default-value'] !== 'undefined') { %>
         <small><strong>Default Value:</strong>
           <%= '' + p['default-value'] %>
