@@ -58,7 +58,7 @@ footer:
       {% if item.path contains 'http' %}
         {% capture url %}{{item.path}}{% endcapture %}
       {% else %}
-        {% capture url %}{{site.baseurl}}{{item.path}}/{% endcapture %}
+        {% capture url %}{{site.url}}/tilemill{{item.path}}/{% endcapture %}
       {% endif %}
       {% if item.category contains page.category or item.category contains page.section or item.path == page.url %}
         {% capture class %}{{item.class}} active{% endcapture %}
@@ -107,7 +107,7 @@ footer:
     <h3>TileMill</h3>
     <div class='links'>
       {% for item in page.footer.tilemill %}
-      <a id='footer-{{item.title | downcase | replace:' ','-'}}' href='{{site.url}}{{site.baseurl}}{{item.path}}/'>{{item.title}}</a>
+      <a id='footer-{{item.title | downcase | replace:' ','-'}}' href='{{site.url}}/tilemill{{item.path}}/'>{{item.title}}</a>
       {% endfor %}
     </div>
   </div>
@@ -119,7 +119,7 @@ footer:
         {% if item.path contains 'http' %}
         {{ item.path }}
         {% else %}
-        {{site.baseurl}}{{item.path}}/
+        {{site.url}}/tilemill{{item.path}}/
         {% endif %}'>{{item.title}}</a>
       {% endfor %}
     </div>
