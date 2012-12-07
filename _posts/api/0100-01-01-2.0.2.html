@@ -2588,6 +2588,31 @@ rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
 }</pre>
 <p>Especially of note is the support for hsl, which can be
 <a href='http://mothereffinghsl.com/'>easier to reason about than rgb()</a>
+<p>Carto also includes several color functions <a href='http://lesscss.org/#-color-functions'>borrowed from less</a>:</p>
+
+<pre class='lang-css'>
+// lighten and darken colors
+lighten(#ace, 10%);
+darken(#ace, 10%);
+
+// saturate and desaturate
+saturate(#550000, 10%);
+desaturate(#00ff00, 10%);
+
+// increase or decrease the opacity of a color
+fadein(#fafafa, 10%);
+fadeout(#fefefe, 14%);
+
+// spin rotates a color around the color wheel by degrees
+spin(#ff00ff, 10);
+
+// mix generates a color in between two other colors.
+mix(#fff, #000, 50%);
+</pre>
+
+These functions all take arguments which can be color variables, literal colors,
+or the results of other functions operating on colors.
+
 </div>
 
 <h3 id='float'>Float</h3>
@@ -2597,6 +2622,17 @@ unlike CSS, there are no units, but everything is specified in pixels.</p>
 <pre>#line {
   line-width: 2;
 }</pre>
+
+It's also possible to do simple math with number values:
+
+<pre>#line {
+  line-width: 4 / 2; // division
+  line-width: 4 + 2; // addition
+  line-width: 4 - 2; // subtraction
+  line-width: 4 * 2; // multiplication
+  line-width: 4 % 2; // modulus
+}</pre>
+
 </div>
 
 <h3 id='uri'>URI</h3>
