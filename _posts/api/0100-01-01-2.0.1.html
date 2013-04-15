@@ -2610,8 +2610,8 @@ spin(#ff00ff, 10);
 mix(#fff, #000, 50%);
 </pre>
 
-These functions all take arguments which can be color variables, literal colors,
-or the results of other functions operating on colors.
+<p>These functions all take arguments which can be color variables, literal colors,
+or the results of other functions operating on colors.</p>
 
 </div>
 
@@ -2623,7 +2623,7 @@ unlike CSS, there are no units, but everything is specified in pixels.</p>
   line-width: 2;
 }</pre>
 
-It's also possible to do simple math with number values:
+<p>It's also possible to do simple math with number values:</p>
 
 <pre>#line {
   line-width: 4 / 2; // division
@@ -2684,6 +2684,25 @@ order. They're used in line dash arrays, in which the numbers specify
 intervals of line, break, and line again.</p>
 <pre>#disputedboundary {
   line-dasharray: 1, 4, 2;
+}</pre>
+</div>
+
+<h3 id='percentages'>Percentages</h3>
+<div id='content-float' class='depth-0'>
+    <p>In Carto, the percentage symbol, <code>%</code> universally means
+    <code>value/100</code>. It's meant to be used with ratio-related properties,
+    like opacity rules. <strong>You should not use percentages as widths,
+    heights, or other properties - unlike CSS, percentages are not
+    relative to cascaded classes or page size, they're, as stated,
+    simply the value divided by one hundred.</strong>
+<pre>#world {
+
+    // this syntax
+    polygon-opacity: 50%;
+
+    // is equivalent to
+    polygon-opacity: 0.5;
+
 }</pre>
 </div>
 

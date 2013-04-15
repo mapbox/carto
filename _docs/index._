@@ -157,6 +157,25 @@ intervals of line, break, and line again.</p>
 }</pre>
 </div>
 
+<h3 id='percentages'>Percentages</h3>
+<div id='content-float' class='depth-0'>
+    <p>In Carto, the percentage symbol, <code>%</code> universally means
+    <code>value/100</code>. It's meant to be used with ratio-related properties,
+    like opacity rules. <strong>You should not use percentages as widths,
+    heights, or other properties - unlike CSS, percentages are not
+    relative to cascaded classes or page size, they're, as stated,
+    simply the value divided by one hundred.</strong>
+<pre>#world {
+
+    // this syntax
+    polygon-opacity: 50%;
+
+    // is equivalent to
+    polygon-opacity: 0.5;
+
+}</pre>
+</div>
+
 <h3 id='functions'>Functions</h3>
 <div id='content-functions' class='depth-0'>
 <p>Functions are comma-separated lists of one or more functions. For
