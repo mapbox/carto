@@ -26,6 +26,11 @@
           <% if (p['default-meaning']) { %><span class='description'>(<%- p['default-meaning'] %>)</span><% } %>
         </small>
         <% } %>
+        <% if (typeof p['range'] !== 'undefined') { %>
+        <small><strong>Range:</strong>
+          <%= '' + p['range'] %>
+        </small>
+        <% } %>
         <% if (p.doc) { %><%- p.doc%><% } %>
       </div>
     </div>

@@ -410,6 +410,7 @@ version: 2.1.0
           <span class='description'>(no filters)</span>
         </small>
         
+        
         A list of image filters.
       </div>
     </div>
@@ -496,6 +497,7 @@ version: 2.1.0
           <span class='description'>(add the current layer on top of other layers)</span>
         </small>
         
+        
         Composite operation. This defines how this layer should behave relative to layers atop or below it.
       </div>
     </div>
@@ -515,6 +517,7 @@ version: 2.1.0
           1
           <span class='description'>(no separate buffer will be used and no alpha will be applied to the style after rendering)</span>
         </small>
+        
         
         An alpha value for the style (which means an alpha applied to all features in separate buffer and then composited back to main buffer)
       </div>
@@ -541,6 +544,7 @@ version: 2.1.0
           <span class='description'>(transparent)</span>
         </small>
         
+        
         Map Background color
       </div>
     </div>
@@ -560,6 +564,7 @@ version: 2.1.0
           
           <span class='description'>(transparent)</span>
         </small>
+        
         
         An image that is repeated below all features on a map as a background.
       </div>
@@ -581,6 +586,7 @@ version: 2.1.0
           <span class='description'>(The proj4 literal of EPSG:4326 is assumed to be the Map&#x27;s spatial reference and all data from layers within this map will be plotted using this coordinate system. If any layers do not declare an srs value then they will be assumed to be in the same srs as the Map and not transformations will be needed to plot them in the Map&#x27;s coordinate space)</span>
         </small>
         
+        
         Map spatial reference (proj4 string)
       </div>
     </div>
@@ -600,6 +606,7 @@ version: 2.1.0
           0
           <span class='description'>(No buffer will be used)</span>
         </small>
+        
         
         Extra tolerance around the map (in pixels) used to ensure labels crossing tile boundaries are equally rendered in each tile (e.g. cut in each tile). Not intended to be used in combination with &quot;avoid-edges&quot;.
       </div>
@@ -621,6 +628,7 @@ version: 2.1.0
           <span class='description'>(This base path defaults to an empty string meaning that any relative paths to files referenced in styles or layers will be interpreted relative to the application process.)</span>
         </small>
         
+        
         Any relative paths used to reference files will be understood as relative to this directory path if the map is loaded from an in memory object rather than from the filesystem. If the map is loaded from the filesystem and this option is not provided it will be set to the directory of the stylesheet.
       </div>
     </div>
@@ -640,6 +648,7 @@ version: 2.1.0
           none
           <span class='description'>(No map-specific fonts will be registered)</span>
         </small>
+        
         
         Path to a directory which holds fonts which should be registered when the Map is loaded (in addition to any fonts that may be automatically registered).
       </div>
@@ -666,6 +675,7 @@ version: 2.1.0
           <span class='description'>(gray and fully opaque (alpha = 1), same as rgb(128,128,128))</span>
         </small>
         
+        
         Fill color to assign to a polygon
       </div>
     </div>
@@ -686,6 +696,7 @@ version: 2.1.0
           <span class='description'>(opaque)</span>
         </small>
         
+        
         The opacity of the polygon
       </div>
     </div>
@@ -704,6 +715,11 @@ version: 2.1.0
         <small><strong>Default Value:</strong>
           1
           <span class='description'>(fully antialiased)</span>
+        </small>
+        
+        
+        <small><strong>Range:</strong>
+          0-1
         </small>
         
         Level of antialiasing of polygon edges
@@ -734,6 +750,7 @@ version: 2.1.0
           <span class='description'>(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the &#x27;linear&#x27; method, while other methods are usually only used to disable AA)</span>
         </small>
         
+        
         An Antigrain Geometry specific rendering hint to control the quality of antialiasing. Under the hood in Mapnik this method is used in combination with the &#x27;gamma&#x27; value (which defaults to 1). The methods are in the AGG source at https:&#x2F;&#x2F;github.com&#x2F;mapnik&#x2F;mapnik&#x2F;blob&#x2F;master&#x2F;deps&#x2F;agg&#x2F;include&#x2F;agg_gamma_functions.h
       </div>
     </div>
@@ -753,6 +770,7 @@ version: 2.1.0
           true
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
+        
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
@@ -774,6 +792,11 @@ version: 2.1.0
           <span class='description'>(no smoothing)</span>
         </small>
         
+        
+        <small><strong>Range:</strong>
+          0-1
+        </small>
+        
         Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
       </div>
     </div>
@@ -793,6 +816,7 @@ version: 2.1.0
           none
           <span class='description'>(geometry will not be transformed)</span>
         </small>
+        
         
         Allows transformation functions to be applied to the geometry.
       </div>
@@ -880,6 +904,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -905,6 +930,7 @@ version: 2.1.0
           <span class='description'>(black and fully opaque (alpha = 1), same as rgb(0,0,0))</span>
         </small>
         
+        
         The color of a drawn line
       </div>
     </div>
@@ -925,6 +951,7 @@ version: 2.1.0
           
         </small>
         
+        
         The width of a line in pixels
       </div>
     </div>
@@ -944,6 +971,7 @@ version: 2.1.0
           1
           <span class='description'>(opaque)</span>
         </small>
+        
         
         The opacity of a line
       </div>
@@ -969,6 +997,7 @@ version: 2.1.0
           
         </small>
         
+        
         The behavior of lines when joining
       </div>
     </div>
@@ -993,6 +1022,7 @@ version: 2.1.0
           
         </small>
         
+        
         The display of line endings
       </div>
     </div>
@@ -1011,6 +1041,11 @@ version: 2.1.0
         <small><strong>Default Value:</strong>
           1
           <span class='description'>(fully antialiased)</span>
+        </small>
+        
+        
+        <small><strong>Range:</strong>
+          0-1
         </small>
         
         Level of antialiasing of stroke line
@@ -1041,6 +1076,7 @@ version: 2.1.0
           <span class='description'>(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the &#x27;linear&#x27; method, while other methods are usually only used to disable AA)</span>
         </small>
         
+        
         An Antigrain Geometry specific rendering hint to control the quality of antialiasing. Under the hood in Mapnik this method is used in combination with the &#x27;gamma&#x27; value (which defaults to 1). The methods are in the AGG source at https:&#x2F;&#x2F;github.com&#x2F;mapnik&#x2F;mapnik&#x2F;blob&#x2F;master&#x2F;deps&#x2F;agg&#x2F;include&#x2F;agg_gamma_functions.h
       </div>
     </div>
@@ -1060,6 +1096,7 @@ version: 2.1.0
           none
           <span class='description'>(solid line)</span>
         </small>
+        
         
         A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported for more complex patterns.
       </div>
@@ -1081,6 +1118,7 @@ version: 2.1.0
           <span class='description'>(solid line)</span>
         </small>
         
+        
         valid parameter but not currently used in renderers (only exists for experimental svg support in Mapnik which is not yet enabled)
       </div>
     </div>
@@ -1100,6 +1138,7 @@ version: 2.1.0
           4
           <span class='description'>(Will auto-convert miters to bevel line joins when theta is less than 29 degrees as per the SVG spec: &#x27;miterLength &#x2F; stroke-width = 1 &#x2F; sin ( theta &#x2F; 2 )&#x27;)</span>
         </small>
+        
         
         The limit on the ratio of the miter length to the stroke-width. Used to automatically convert miter joins to bevel joins for sharp angles to avoid the miter extending beyond the thickness of the stroking path. Normally will not need to be set, but a larger value can sometimes help avoid jaggy artifacts.
       </div>
@@ -1121,6 +1160,7 @@ version: 2.1.0
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
         
+        
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
     </div>
@@ -1139,6 +1179,11 @@ version: 2.1.0
         <small><strong>Default Value:</strong>
           0
           <span class='description'>(no smoothing)</span>
+        </small>
+        
+        
+        <small><strong>Range:</strong>
+          0-1
         </small>
         
         Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
@@ -1160,6 +1205,7 @@ version: 2.1.0
           0
           <span class='description'>(no offset)</span>
         </small>
+        
         
         Offsets a line a number of pixels parallel to its actual path. Postive values move the line left, negative values move it right (relative to the directionality of the line).
       </div>
@@ -1183,6 +1229,7 @@ version: 2.1.0
           
         </small>
         
+        
         Exposes an alternate AGG rendering method that sacrifices some accuracy for speed.
       </div>
     </div>
@@ -1202,6 +1249,7 @@ version: 2.1.0
           none
           <span class='description'>(geometry will not be transformed)</span>
         </small>
+        
         
         Allows transformation functions to be applied to the geometry.
       </div>
@@ -1289,6 +1337,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -1314,6 +1363,7 @@ version: 2.1.0
           <span class='description'>(An ellipse or circle, if width equals height)</span>
         </small>
         
+        
         An SVG file that this marker shows at each placement. If no file is given, the marker will show an ellipse.
       </div>
     </div>
@@ -1333,6 +1383,7 @@ version: 2.1.0
           1
           <span class='description'>(The stroke-opacity and fill-opacity will be used)</span>
         </small>
+        
         
         The overall opacity of the marker, if set, overrides both the opacity of both the fill and stroke
       </div>
@@ -1354,6 +1405,7 @@ version: 2.1.0
           <span class='description'>(opaque)</span>
         </small>
         
+        
         The fill opacity of the marker
       </div>
     </div>
@@ -1374,6 +1426,7 @@ version: 2.1.0
           
         </small>
         
+        
         The color of the stroke around a marker shape.
       </div>
     </div>
@@ -1388,6 +1441,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-markers'><p>
+        
         
         The width of the stroke around a marker shape, in pixels. This is positioned on the boundary, so high values can cover the area itself.
       </div>
@@ -1408,6 +1462,7 @@ version: 2.1.0
           1
           <span class='description'>(opaque)</span>
         </small>
+        
         
         The opacity of a line
       </div>
@@ -1433,6 +1488,7 @@ version: 2.1.0
           <span class='description'>(Place markers at the center point (centroid) of the geometry)</span>
         </small>
         
+        
         Attempt to place markers on a point, in the center of a polygon, or if markers-placement:line, then multiple times along a line. &#x27;interior&#x27; placement can be used to ensure that points placed on polygons are forced to be inside the polygon interior
       </div>
     </div>
@@ -1455,6 +1511,7 @@ version: 2.1.0
           
         </small>
         
+        
         The default marker-type. If a SVG file is not given as the marker-file parameter, the renderer provides either an arrow or an ellipse (a circle if height is equal to width)
       </div>
     </div>
@@ -1474,6 +1531,7 @@ version: 2.1.0
           10
           
         </small>
+        
         
         The width of the marker, if using one of the default types.
       </div>
@@ -1495,6 +1553,7 @@ version: 2.1.0
           
         </small>
         
+        
         The height of the marker, if using one of the default types.
       </div>
     </div>
@@ -1514,6 +1573,7 @@ version: 2.1.0
           blue
           
         </small>
+        
         
         The color of the area of the marker.
       </div>
@@ -1535,6 +1595,7 @@ version: 2.1.0
           <span class='description'>(Do not allow makers to overlap with each other - overlapping markers will not be shown.)</span>
         </small>
         
+        
         Control whether overlapping markers are shown or hidden.
       </div>
     </div>
@@ -1554,6 +1615,7 @@ version: 2.1.0
           false
           <span class='description'>(do not store the bbox of this geometry in the collision detector cache)</span>
         </small>
+        
         
         value to control whether the placement of the feature will prevent the placement of other features
       </div>
@@ -1575,6 +1637,7 @@ version: 2.1.0
           
         </small>
         
+        
         Space between repeated labels
       </div>
     </div>
@@ -1594,6 +1657,7 @@ version: 2.1.0
           0.2
           
         </small>
+        
         
         The maximum difference between actual marker placement and the marker-spacing parameter. Setting a high value can allow the renderer to try to resolve placement conflicts with other symbolizers.
       </div>
@@ -1615,6 +1679,7 @@ version: 2.1.0
           <span class='description'>(No transformation)</span>
         </small>
         
+        
         SVG transformation definition
       </div>
     </div>
@@ -1634,6 +1699,7 @@ version: 2.1.0
           true
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
+        
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
@@ -1655,6 +1721,11 @@ version: 2.1.0
           <span class='description'>(no smoothing)</span>
         </small>
         
+        
+        <small><strong>Range:</strong>
+          0-1
+        </small>
+        
         Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
       </div>
     </div>
@@ -1674,6 +1745,7 @@ version: 2.1.0
           none
           <span class='description'>(geometry will not be transformed)</span>
         </small>
+        
         
         Allows transformation functions to be applied to the geometry.
       </div>
@@ -1761,6 +1833,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -1780,6 +1853,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-shield'><p>
+        
         
         Value to use for a shield&quot;s text label. Data columns are specified using brackets like [column_name]
       </div>
@@ -1801,6 +1875,7 @@ version: 2.1.0
           
         </small>
         
+        
         Image file to render behind the shield text
       </div>
     </div>
@@ -1820,6 +1895,7 @@ version: 2.1.0
           
           
         </small>
+        
         
         Font name and style to use for the shield text
       </div>
@@ -1841,6 +1917,7 @@ version: 2.1.0
           <span class='description'>(text alignment relative to the shield image uses the center of the image as the anchor for text positioning.)</span>
         </small>
         
+        
         This parameter should be set to true if you are trying to position text beside rather than on top of the shield image
       </div>
     </div>
@@ -1856,6 +1933,7 @@ version: 2.1.0
       </h3>
       <div id='content-shield'><p>
         
+        
         The size of the shield text in pixels
       </div>
     </div>
@@ -1870,6 +1948,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-shield'><p>
+        
         
         The color of the shield text
       </div>
@@ -1897,6 +1976,7 @@ version: 2.1.0
           
         </small>
         
+        
         How this shield should be placed. Point placement attempts to place it on top of points, line places along lines multiple times per feature, vertex places on the vertexes of polygons, and interior attempts to place inside of polygons.
       </div>
     </div>
@@ -1916,6 +1996,7 @@ version: 2.1.0
           false
           
         </small>
+        
         
         Tell positioning algorithm to avoid labeling near intersection edges.
       </div>
@@ -1937,6 +2018,7 @@ version: 2.1.0
           <span class='description'>(Do not allow shields to overlap with other map elements already placed.)</span>
         </small>
         
+        
         Control whether overlapping shields are shown or hidden.
       </div>
     </div>
@@ -1956,6 +2038,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Minimum distance to the next shield symbol, not necessarily the same shield.
       </div>
@@ -1977,6 +2060,7 @@ version: 2.1.0
           
         </small>
         
+        
         The spacing between repeated occurrences of the same shield on a line
       </div>
     </div>
@@ -1996,6 +2080,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Determines the minimum amount of padding that a shield gets relative to other shields
       </div>
@@ -2017,6 +2102,7 @@ version: 2.1.0
           
         </small>
         
+        
         Length of a chunk of text in characters before wrapping text
       </div>
     </div>
@@ -2036,6 +2122,7 @@ version: 2.1.0
           false
           
         </small>
+        
         
         Wrap text before wrap-width is reached. If false, wrapped lines will be a bit longer than wrap-width.
       </div>
@@ -2057,6 +2144,7 @@ version: 2.1.0
           
         </small>
         
+        
         Use this character instead of a space to wrap long names.
       </div>
     </div>
@@ -2076,6 +2164,7 @@ version: 2.1.0
           #FFFFFF
           <span class='description'>(white)</span>
         </small>
+        
         
         Specifies the color of the halo around the text.
       </div>
@@ -2097,6 +2186,7 @@ version: 2.1.0
           <span class='description'>(no halo)</span>
         </small>
         
+        
         Specify the radius of the halo in pixels
       </div>
     </div>
@@ -2117,6 +2207,7 @@ version: 2.1.0
           
         </small>
         
+        
         Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement.
       </div>
     </div>
@@ -2131,6 +2222,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-shield'><p>
+        
         
         Vertical spacing between lines of multiline labels (in pixels)
       </div>
@@ -2152,6 +2244,7 @@ version: 2.1.0
           
         </small>
         
+        
         Displace text within shield by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive value will shift the text right
       </div>
     </div>
@@ -2171,6 +2264,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Displace text within shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive value will shift the text down
       </div>
@@ -2192,6 +2286,7 @@ version: 2.1.0
           
         </small>
         
+        
         Displace shield by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive value will shift the text right
       </div>
     </div>
@@ -2211,6 +2306,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Displace shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive value will shift the text down
       </div>
@@ -2232,6 +2328,7 @@ version: 2.1.0
           
         </small>
         
+        
         (Default 1.0) - opacity of the image used for the shield
       </div>
     </div>
@@ -2251,6 +2348,7 @@ version: 2.1.0
           1
           
         </small>
+        
         
         (Default 1.0) - opacity of the text placed on top of the shield
       </div>
@@ -2278,6 +2376,7 @@ version: 2.1.0
           
         </small>
         
+        
         The shield&#x27;s horizontal alignment from its centerpoint
       </div>
     </div>
@@ -2303,6 +2402,7 @@ version: 2.1.0
           middle
           
         </small>
+        
         
         The shield&#x27;s vertical alignment from its centerpoint
       </div>
@@ -2330,6 +2430,7 @@ version: 2.1.0
           
         </small>
         
+        
         Transform the case of the characters
       </div>
     </div>
@@ -2356,6 +2457,7 @@ version: 2.1.0
           
         </small>
         
+        
         Define how text in a shield&#x27;s label is justified
       </div>
     </div>
@@ -2375,6 +2477,7 @@ version: 2.1.0
           true
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
+        
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
@@ -2462,6 +2565,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -2487,6 +2591,7 @@ version: 2.1.0
           
         </small>
         
+        
         An image file to be repeated and warped along a line
       </div>
     </div>
@@ -2506,6 +2611,7 @@ version: 2.1.0
           true
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
+        
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
@@ -2527,6 +2633,11 @@ version: 2.1.0
           <span class='description'>(no smoothing)</span>
         </small>
         
+        
+        <small><strong>Range:</strong>
+          0-1
+        </small>
+        
         Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
       </div>
     </div>
@@ -2546,6 +2657,7 @@ version: 2.1.0
           none
           <span class='description'>(geometry will not be transformed)</span>
         </small>
+        
         
         Allows transformation functions to be applied to the geometry.
       </div>
@@ -2633,6 +2745,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -2658,6 +2771,7 @@ version: 2.1.0
           
         </small>
         
+        
         Image to use as a repeated pattern fill within a polygon
       </div>
     </div>
@@ -2680,6 +2794,7 @@ version: 2.1.0
           
         </small>
         
+        
         Specify whether to align pattern fills to the layer or to the map.
       </div>
     </div>
@@ -2698,6 +2813,11 @@ version: 2.1.0
         <small><strong>Default Value:</strong>
           1
           <span class='description'>(fully antialiased)</span>
+        </small>
+        
+        
+        <small><strong>Range:</strong>
+          0-1
         </small>
         
         Level of antialiasing of polygon pattern edges
@@ -2720,6 +2840,7 @@ version: 2.1.0
           <span class='description'>(The image is rendered without modifications)</span>
         </small>
         
+        
         (Default 1.0) - Apply an opacity level to the image used for the pattern
       </div>
     </div>
@@ -2739,6 +2860,7 @@ version: 2.1.0
           true
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
+        
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
@@ -2760,6 +2882,11 @@ version: 2.1.0
           <span class='description'>(no smoothing)</span>
         </small>
         
+        
+        <small><strong>Range:</strong>
+          0-1
+        </small>
+        
         Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
       </div>
     </div>
@@ -2779,6 +2906,7 @@ version: 2.1.0
           none
           <span class='description'>(geometry will not be transformed)</span>
         </small>
+        
         
         Allows transformation functions to be applied to the geometry.
       </div>
@@ -2866,6 +2994,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -2891,6 +3020,7 @@ version: 2.1.0
           <span class='description'>(opaque)</span>
         </small>
         
+        
         The opacity of the raster symbolizer on top of other symbolizers.
       </div>
     </div>
@@ -2910,6 +3040,7 @@ version: 2.1.0
           -1
           <span class='description'>(Allow the datasource to choose appropriate downscaling.)</span>
         </small>
+        
         
         This is used by the Raster or Gdal datasources to pre-downscale images using overviews. Higher numbers can sometimes cause much better scaled image output, at the cost of speed.
       </div>
@@ -2967,6 +3098,7 @@ version: 2.1.0
           
         </small>
         
+        
         The scaling algorithm used to making different resolution versions of this raster layer. Bilinear is a good compromise between speed and accuracy, while lanczos gives the highest quality.
       </div>
     </div>
@@ -2986,6 +3118,7 @@ version: 2.1.0
           16
           <span class='description'>(Reprojection mesh will be 1&#x2F;16 of the resolution of the source image)</span>
         </small>
+        
         
         A reduced resolution mesh is used for raster reprojection, and the total image size is divided by the mesh-size to determine the quality of that mesh. Values for mesh-size larger than the default will result in faster reprojection but might lead to distortion.
       </div>
@@ -3073,6 +3206,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -3098,6 +3232,7 @@ version: 2.1.0
           
         </small>
         
+        
         Image file to represent a point
       </div>
     </div>
@@ -3117,6 +3252,7 @@ version: 2.1.0
           false
           <span class='description'>(Do not allow points to overlap with each other - overlapping markers will not be shown.)</span>
         </small>
+        
         
         Control whether overlapping points are shown or hidden.
       </div>
@@ -3138,6 +3274,7 @@ version: 2.1.0
           <span class='description'>(do not store the bbox of this geometry in the collision detector cache)</span>
         </small>
         
+        
         value to control whether the placement of the feature will prevent the placement of other features
       </div>
     </div>
@@ -3157,6 +3294,7 @@ version: 2.1.0
           1
           <span class='description'>(Fully opaque)</span>
         </small>
+        
         
         A value from 0 to 1 to control the opacity of the point
       </div>
@@ -3180,6 +3318,7 @@ version: 2.1.0
           
         </small>
         
+        
         How this point should be placed. Centroid calculates the geometric center of a polygon, which can be outside of it, while interior always places inside of a polygon.
       </div>
     </div>
@@ -3199,6 +3338,7 @@ version: 2.1.0
           
           <span class='description'>(No transformation)</span>
         </small>
+        
         
         SVG transformation definition
       </div>
@@ -3286,6 +3426,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -3311,6 +3452,7 @@ version: 2.1.0
           
         </small>
         
+        
         Value to use for a text label. Data columns are specified using brackets like [column_name]
       </div>
     </div>
@@ -3325,6 +3467,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-text'><p>
+        
         
         Font name and style to render a label in
       </div>
@@ -3346,6 +3489,7 @@ version: 2.1.0
           
         </small>
         
+        
         Text size in pixels
       </div>
     </div>
@@ -3365,6 +3509,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Define the amount of text (of the total) present on successive lines when wrapping occurs
       </div>
@@ -3386,6 +3531,7 @@ version: 2.1.0
           
         </small>
         
+        
         Length of a chunk of text in characters before wrapping text
       </div>
     </div>
@@ -3405,6 +3551,7 @@ version: 2.1.0
           false
           
         </small>
+        
         
         Wrap text before wrap-width is reached. If false, wrapped lines will be a bit longer than wrap-width.
       </div>
@@ -3426,6 +3573,7 @@ version: 2.1.0
           
         </small>
         
+        
         Use this character instead of a space to wrap long text.
       </div>
     </div>
@@ -3440,6 +3588,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-text'><p>
+        
         
         Distance between repeated text labels on a line (aka. label-spacing)
       </div>
@@ -3461,6 +3610,7 @@ version: 2.1.0
           
         </small>
         
+        
         Horizontal spacing adjustment between characters in pixels
       </div>
     </div>
@@ -3480,6 +3630,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Vertical spacing adjustment between lines in pixels
       </div>
@@ -3501,6 +3652,7 @@ version: 2.1.0
           
         </small>
         
+        
         Allows the label to be displaced from its ideal position by a number of pixels (only works with placement:line)
       </div>
     </div>
@@ -3520,6 +3672,7 @@ version: 2.1.0
           22.5
           
         </small>
+        
         
         The maximum angle change, in degrees, allowed between adjacent characters in a label. This value internally is converted to radians to the default is 22.5*math.pi&#x2F;180.0. The higher the value the fewer labels will be placed around around sharp corners.
       </div>
@@ -3541,6 +3694,7 @@ version: 2.1.0
           
         </small>
         
+        
         Specifies the color for the text
       </div>
     </div>
@@ -3560,6 +3714,7 @@ version: 2.1.0
           1
           <span class='description'>(Fully opaque)</span>
         </small>
+        
         
         A number from 0 to 1 specifying the opacity for the text
       </div>
@@ -3581,6 +3736,7 @@ version: 2.1.0
           <span class='description'>(white)</span>
         </small>
         
+        
         Specifies the color of the halo around the text.
       </div>
     </div>
@@ -3600,6 +3756,7 @@ version: 2.1.0
           0
           <span class='description'>(no halo)</span>
         </small>
+        
         
         Specify the radius of the halo in pixels
       </div>
@@ -3621,6 +3778,7 @@ version: 2.1.0
           
         </small>
         
+        
         Displace text by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive value will shift the text right
       </div>
     </div>
@@ -3640,6 +3798,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         Displace text by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive value will shift the text down
       </div>
@@ -3667,6 +3826,7 @@ version: 2.1.0
           <span class='description'>(Default affected by value of dy; &quot;bottom&quot; for dy&gt;0, &quot;top&quot; for dy&lt;0.)</span>
         </small>
         
+        
         Position of label relative to point position.
       </div>
     </div>
@@ -3687,6 +3847,7 @@ version: 2.1.0
           
         </small>
         
+        
         Tell positioning algorithm to avoid labeling near intersection edges.
       </div>
     </div>
@@ -3702,6 +3863,7 @@ version: 2.1.0
       </h3>
       <div id='content-text'><p>
         
+        
         Minimum permitted distance to the next text symbolizer.
       </div>
     </div>
@@ -3716,6 +3878,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-text'><p>
+        
         
         Determines the minimum amount of padding that a text symbolizer gets relative to other text
       </div>
@@ -3737,6 +3900,7 @@ version: 2.1.0
           <span class='description'>(place labels on all paths)</span>
         </small>
         
+        
         Place labels only on paths longer than this value.
       </div>
     </div>
@@ -3757,6 +3921,7 @@ version: 2.1.0
           <span class='description'>(Do not allow text to overlap with other text - overlapping markers will not be shown.)</span>
         </small>
         
+        
         Control whether overlapping text is shown or hidden.
       </div>
     </div>
@@ -3771,6 +3936,7 @@ version: 2.1.0
         </small>
       </h3>
       <div id='content-text'><p>
+        
         
         Rotate the text.
       </div>
@@ -3798,6 +3964,7 @@ version: 2.1.0
           
         </small>
         
+        
         Control the style of placement of a point versus the geometry it is attached to.
       </div>
     </div>
@@ -3820,6 +3987,7 @@ version: 2.1.0
           
         </small>
         
+        
         Re-position and&#x2F;or re-size text to avoid overlaps. &quot;simple&quot; for basic algorithm (using text-placements string,) &quot;dummy&quot; to turn this feature off.
       </div>
     </div>
@@ -3839,6 +4007,7 @@ version: 2.1.0
           
           
         </small>
+        
         
         If &quot;placement-type&quot; is set to &quot;simple&quot;, use this &quot;POSITIONS,[SIZES]&quot; string. An example is `text-placements: &quot;E,NE,SE,W,NW,SW&quot;;` 
       </div>
@@ -3866,6 +4035,7 @@ version: 2.1.0
           
         </small>
         
+        
         Transform the case of the characters
       </div>
     </div>
@@ -3891,6 +4061,7 @@ version: 2.1.0
           auto
           
         </small>
+        
         
         The text&#x27;s horizontal alignment from its centerpoint
       </div>
@@ -3918,6 +4089,7 @@ version: 2.1.0
           <span class='description'>(Auto alignment means that text will be centered by default except when using the `placement-type` parameter - in that case either right or left justification will be used automatically depending on where the text could be fit given the `text-placements` directives)</span>
         </small>
         
+        
         Define how text is justified
       </div>
     </div>
@@ -3937,6 +4109,7 @@ version: 2.1.0
           true
           <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
         </small>
+        
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
       </div>
@@ -4024,6 +4197,7 @@ version: 2.1.0
           <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
         </small>
         
+        
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
       </div>
     </div>
@@ -4049,6 +4223,7 @@ version: 2.1.0
           
         </small>
         
+        
         The color of the buildings walls.
       </div>
     </div>
@@ -4069,6 +4244,7 @@ version: 2.1.0
           
         </small>
         
+        
         The opacity of the building as a whole, including all walls.
       </div>
     </div>
@@ -4088,6 +4264,7 @@ version: 2.1.0
           0
           
         </small>
+        
         
         The height of the building in pixels.
       </div>
