@@ -1,56 +1,31 @@
 ---
 layout: default
 section: help
-class: box
 ---
-<link rel='stylesheet' href='{{site.url}}/css/developers.css' />
-<style type='text/css'>
-.ad-support { text-align:right; }
-.ad-support a { margin-top:10px; }
-.doc-content { border-color: #4F5F69; }
-.doc-page{ background: #4F5F69 url({{site.baseurl}}/img/dotgrid-pattern.png);}
-.doc-page div{ background: #FFF; }
-.doc-subnav { margin-top: 0;}
-.doc-subnav li {
-  width:20%;
-  }
-  .doc-subnav li a {
-    background: none; /* IE fix */
-    background: rgba(0,0,0,0.1);
-    color: white;
-    }
-.doc-subnav a.active { background: #3887BE; color: white; }
-@media (max-width:640px) {
-  .ad-support { text-align:center; }
-  .doc-header h2 { padding-bottom: 20px; }
-  .doc-subnav li { width:100%; margin-bottom:1px; }
-}
-</style>
-
-<div class='clearfix doc-header pad3 fillD'>
-  <div class='cell3'>
+{% if page.section == 'help' %}
+<div class='clearfix doc-header pad4 fill-light'>
+  <div class='col3'>
     <h2>Help</h2>
   </div>
-  <ul class='cell9 doc-subnav clearfix'>
-    <li><a href='{{site.url}}/tilemill/docs/install'>Installation</a></li>
-    <li><a href='{{site.url}}/tilemill/docs/crashcourse/introduction'>Crashcourse</a></li>
-    <li><a href='{{site.url}}/tilemill/docs/guides/add-shapefile'>Guides</a></li>
-    <li><a href='{{site.url}}/tilemill/docs/manual/'>Reference</a></li>
-    <li><a href='{{site.url}}/carto' class='active'>CartoCSS Reference</a></li>
-  </ul>
+  <nav class='col9 pill clearfix five-links'>
+    <a href='{{site.baseurl}}/docs/install' class='button'>Installation</a><a href='{{site.baseurl}}/docs/crashcourse/introduction' class='button'>Crashcourse</a><a href='{{site.baseurl}}/docs/guides/add-shapefile' class='button'>Guides</a><a href='{{site.baseurl}}/docs/manual/' class='button'>Reference</a><a href='{{site.url}}/carto' class='button active' >CartoCSS Reference</a></li>
+  </nav>
 </div>
+{% endif %}
 
-<div class='doc-page pad3c fillM clearfix'>
-  <div class='fillW clearfix'>
+<div class='doc-page pad4c fill-grey keyline-left clearfix'>
+  <div class='fill-white prose clearfix'>
     {{content}}
   </div>
 </div>
+
+{% include tilemill-footer.html %}
 
 <script>
   $(function() {
     var docs = new Docs();
     docs.colorCode();
-    docs.bindSearch($('.doc-search input'), $('.doc-nav ul'), true);
+    docs.bindSearch($('.doc-search input'), $('nav.v'), true);
     docs.bindInlineCode();
   });
 </script>
