@@ -29,15 +29,12 @@
 }
 
 .doc-search input {
-  width:95%;
-  height:40px;
   padding:10px 40px 10px 8px;
   }
   .doc-search span {
     position:absolute;
-    top:10px;
-    right:10%;
-    margin-right:10px;
+    top:30px;
+    right:30px;
     }
 
 .doc-nav .nav li.active a {

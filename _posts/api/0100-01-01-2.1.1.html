@@ -1,7 +1,7 @@
 ---
 layout: docs
 categories: api
-version: latest
+version: 2.1.1
 ---
 
 <div class='col3'>
@@ -55,10 +55,6 @@ version: latest
   
   <a class='pad1y2x' href='#polygon-clip'>polygon-clip</a>
   
-  <a class='pad1y2x' href='#polygon-simplify'>polygon-simplify</a>
-  
-  <a class='pad1y2x' href='#polygon-simplify-algorithm'>polygon-simplify-algorithm</a>
-  
   <a class='pad1y2x' href='#polygon-smooth'>polygon-smooth</a>
   
   <a class='pad1y2x' href='#polygon-geometry-transform'>polygon-geometry-transform</a>
@@ -91,10 +87,6 @@ version: latest
   <a class='pad1y2x' href='#line-miterlimit'>line-miterlimit</a>
   
   <a class='pad1y2x' href='#line-clip'>line-clip</a>
-  
-  <a class='pad1y2x' href='#line-simplify'>line-simplify</a>
-  
-  <a class='pad1y2x' href='#line-simplify-algorithm'>line-simplify-algorithm</a>
   
   <a class='pad1y2x' href='#line-smooth'>line-smooth</a>
   
@@ -212,15 +204,9 @@ version: latest
   
   <a class='pad1y2x' href='#shield-vertical-alignment'>shield-vertical-alignment</a>
   
-  <a class='pad1y2x' href='#shield-placement-type'>shield-placement-type</a>
-  
-  <a class='pad1y2x' href='#shield-placements'>shield-placements</a>
-  
   <a class='pad1y2x' href='#shield-text-transform'>shield-text-transform</a>
   
   <a class='pad1y2x' href='#shield-justify-alignment'>shield-justify-alignment</a>
-  
-  <a class='pad1y2x' href='#shield-transform'>shield-transform</a>
   
   <a class='pad1y2x' href='#shield-clip'>shield-clip</a>
   
@@ -234,10 +220,6 @@ version: latest
   <a class='pad1y2x' href='#line-pattern-file'>line-pattern-file</a>
   
   <a class='pad1y2x' href='#line-pattern-clip'>line-pattern-clip</a>
-  
-  <a class='pad1y2x' href='#line-pattern-simplify'>line-pattern-simplify</a>
-  
-  <a class='pad1y2x' href='#line-pattern-simplify-algorithm'>line-pattern-simplify-algorithm</a>
   
   <a class='pad1y2x' href='#line-pattern-smooth'>line-pattern-smooth</a>
   
@@ -260,10 +242,6 @@ version: latest
   
   <a class='pad1y2x' href='#polygon-pattern-clip'>polygon-pattern-clip</a>
   
-  <a class='pad1y2x' href='#polygon-pattern-simplify'>polygon-pattern-simplify</a>
-  
-  <a class='pad1y2x' href='#polygon-pattern-simplify-algorithm'>polygon-pattern-simplify-algorithm</a>
-  
   <a class='pad1y2x' href='#polygon-pattern-smooth'>polygon-pattern-smooth</a>
   
   <a class='pad1y2x' href='#polygon-pattern-geometry-transform'>polygon-pattern-geometry-transform</a>
@@ -284,14 +262,6 @@ version: latest
   <a class='pad1y2x' href='#raster-mesh-size'>raster-mesh-size</a>
   
   <a class='pad1y2x' href='#raster-comp-op'>raster-comp-op</a>
-  
-  <a class='pad1y2x' href='#raster-colorizer-default-mode'>raster-colorizer-default-mode</a>
-  
-  <a class='pad1y2x' href='#raster-colorizer-default-color'>raster-colorizer-default-color</a>
-  
-  <a class='pad1y2x' href='#raster-colorizer-epsilon'>raster-colorizer-epsilon</a>
-  
-  <a class='pad1y2x' href='#raster-colorizer-stops'>raster-colorizer-stops</a>
   
 
 
@@ -349,8 +319,6 @@ version: latest
   
   <a class='pad1y2x' href='#text-halo-radius'>text-halo-radius</a>
   
-  <a class='pad1y2x' href='#text-halo-rasterizer'>text-halo-rasterizer</a>
-  
   <a class='pad1y2x' href='#text-dx'>text-dx</a>
   
   <a class='pad1y2x' href='#text-dy'>text-dy</a>
@@ -395,13 +363,6 @@ version: latest
   <a class='pad1y2x' href='#building-fill-opacity'>building-fill-opacity</a>
   
   <a class='pad1y2x' href='#building-height'>building-height</a>
-  
-
-
-  <a class='pad1y2x parent' href='#debug'><strong>debug</strong></a>
-
-  
-  <a class='pad1y2x' href='#debug-mode'>debug-mode</a>
   
 
 
@@ -818,52 +779,6 @@ version: latest
     </div>
   
     <div class='depth-3'>
-      <h3 id='polygon-simplify'>
-        polygon-simplify
-        <small>
-          
-            <span class='args'><a href='#float'>float</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-polygon'><p>
-        
-        <small><strong>Default Value:</strong>
-          0
-          <span class='description'>(geometry will not be simplified)</span>
-        </small>
-        
-        
-        geometries are simplified by the given tolerance
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='polygon-simplify-algorithm'>
-        polygon-simplify-algorithm
-        <small>
-          
-            <span class='args'>radial-distance</span>
-          
-            <span class='args'>zhao-saalfeld</span>
-          
-            <span class='args'>visvalingam-whyatt</span>
-          
-        </small>
-      </h3>
-      <div id='content-polygon'><p>
-        
-        <small><strong>Default Value:</strong>
-          radial-distance
-          <span class='description'>(geometry will not be simplified using the radial distance algorithm)</span>
-        </small>
-        
-        
-        geometries are simplified by the given algorithm
-      </div>
-    </div>
-  
-    <div class='depth-3'>
       <h3 id='polygon-smooth'>
         polygon-smooth
         <small>
@@ -1253,52 +1168,6 @@ version: latest
     </div>
   
     <div class='depth-3'>
-      <h3 id='line-simplify'>
-        line-simplify
-        <small>
-          
-            <span class='args'><a href='#float'>float</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-line'><p>
-        
-        <small><strong>Default Value:</strong>
-          0
-          <span class='description'>(geometry will not be simplified)</span>
-        </small>
-        
-        
-        geometries are simplified by the given tolerance
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='line-simplify-algorithm'>
-        line-simplify-algorithm
-        <small>
-          
-            <span class='args'>radial-distance</span>
-          
-            <span class='args'>zhao-saalfeld</span>
-          
-            <span class='args'>visvalingam-whyatt</span>
-          
-        </small>
-      </h3>
-      <div id='content-line'><p>
-        
-        <small><strong>Default Value:</strong>
-          radial-distance
-          <span class='description'>(geometry will not be simplified using the radial distance algorithm)</span>
-        </small>
-        
-        
-        geometries are simplified by the given algorithm
-      </div>
-    </div>
-  
-    <div class='depth-3'>
       <h3 id='line-smooth'>
         line-smooth
         <small>
@@ -1340,7 +1209,7 @@ version: latest
         </small>
         
         
-        Offsets a line a number of pixels parallel to its actual path. Positive values move the line left, negative values move it right (relative to the directionality of the line).
+        Offsets a line a number of pixels parallel to its actual path. Postive values move the line left, negative values move it right (relative to the directionality of the line).
       </div>
     </div>
   
@@ -1796,7 +1665,7 @@ version: latest
         </small>
         
         
-        Space between repeated markers in pixels. If the spacing is less than the marker size or larger than the line segment length then no marker will be placed
+        Space between repeated labels
       </div>
     </div>
   
@@ -2156,7 +2025,7 @@ version: latest
         </small>
         
         
-        Avoid placing shields that intersect with tile boundaries.
+        Tell positioning algorithm to avoid labeling near intersection edges.
       </div>
     </div>
   
@@ -2240,7 +2109,7 @@ version: latest
         </small>
         
         
-        Minimum distance a shield will be placed from the edge of a metatile.
+        Determines the minimum amount of padding that a shield gets relative to other shields
       </div>
     </div>
   
@@ -2487,7 +2356,7 @@ version: latest
         </small>
         
         
-        The opacity of the image used for the shield
+        (Default 1.0) - opacity of the image used for the shield
       </div>
     </div>
   
@@ -2508,7 +2377,7 @@ version: latest
         </small>
         
         
-        The opacity of the text placed on top of the shield
+        (Default 1.0) - opacity of the text placed on top of the shield
       </div>
     </div>
   
@@ -2567,50 +2436,6 @@ version: latest
     </div>
   
     <div class='depth-3'>
-      <h3 id='shield-placement-type'>
-        shield-placement-type
-        <small>
-          
-            <span class='args'>dummy</span>
-          
-            <span class='args'>simple</span>
-          
-        </small>
-      </h3>
-      <div id='content-shield'><p>
-        
-        <small><strong>Default Value:</strong>
-          dummy
-          
-        </small>
-        
-        
-        Re-position and&#x2F;or re-size shield to avoid overlaps. &quot;simple&quot; for basic algorithm (using shield-placements string,) &quot;dummy&quot; to turn this feature off.
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='shield-placements'>
-        shield-placements
-        <small>
-          
-            <span class='args'><a href='#string'>string</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-shield'><p>
-        
-        <small><strong>Default Value:</strong>
-          
-          
-        </small>
-        
-        
-        If &quot;placement-type&quot; is set to &quot;simple&quot;, use this &quot;POSITIONS,[SIZES]&quot; string. An example is `shield-placements: &quot;E,NE,SE,W,NW,SW&quot;;` 
-      </div>
-    </div>
-  
-    <div class='depth-3'>
       <h3 id='shield-text-transform'>
         shield-text-transform
         <small>
@@ -2661,27 +2486,6 @@ version: latest
         
         
         Define how text in a shield&#x27;s label is justified
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='shield-transform'>
-        shield-transform
-        <small>
-          
-            <span class='args'><a href='#functions'>functions</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-shield'><p>
-        
-        <small><strong>Default Value:</strong>
-          
-          <span class='description'>(No transformation)</span>
-        </small>
-        
-        
-        SVG transformation definition
       </div>
     </div>
   
@@ -2837,52 +2641,6 @@ version: latest
         
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='line-pattern-simplify'>
-        line-pattern-simplify
-        <small>
-          
-            <span class='args'><a href='#float'>float</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-line-pattern'><p>
-        
-        <small><strong>Default Value:</strong>
-          0
-          <span class='description'>(geometry will not be simplified)</span>
-        </small>
-        
-        
-        geometries are simplified by the given tolerance
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='line-pattern-simplify-algorithm'>
-        line-pattern-simplify-algorithm
-        <small>
-          
-            <span class='args'>radial-distance</span>
-          
-            <span class='args'>zhao-saalfeld</span>
-          
-            <span class='args'>visvalingam-whyatt</span>
-          
-        </small>
-      </h3>
-      <div id='content-line-pattern'><p>
-        
-        <small><strong>Default Value:</strong>
-          radial-distance
-          <span class='description'>(geometry will not be simplified using the radial distance algorithm)</span>
-        </small>
-        
-        
-        geometries are simplified by the given algorithm
       </div>
     </div>
   
@@ -3110,7 +2868,7 @@ version: latest
         </small>
         
         
-        Apply an opacity level to the image used for the pattern
+        (Default 1.0) - Apply an opacity level to the image used for the pattern
       </div>
     </div>
   
@@ -3132,52 +2890,6 @@ version: latest
         
         
         geometries are clipped to map bounds by default for best rendering performance. In some cases users may wish to disable this to avoid rendering artifacts.
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='polygon-pattern-simplify'>
-        polygon-pattern-simplify
-        <small>
-          
-            <span class='args'><a href='#float'>float</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-polygon-pattern'><p>
-        
-        <small><strong>Default Value:</strong>
-          0
-          <span class='description'>(geometry will not be simplified)</span>
-        </small>
-        
-        
-        geometries are simplified by the given tolerance
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='polygon-pattern-simplify-algorithm'>
-        polygon-pattern-simplify-algorithm
-        <small>
-          
-            <span class='args'>radial-distance</span>
-          
-            <span class='args'>zhao-saalfeld</span>
-          
-            <span class='args'>visvalingam-whyatt</span>
-          
-        </small>
-      </h3>
-      <div id='content-polygon-pattern'><p>
-        
-        <small><strong>Default Value:</strong>
-          radial-distance
-          <span class='description'>(geometry will not be simplified using the radial distance algorithm)</span>
-        </small>
-        
-        
-        geometries are simplified by the given algorithm
       </div>
     </div>
   
@@ -3523,74 +3235,6 @@ version: latest
         
         
         Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='raster-colorizer-default-mode'>
-        raster-colorizer-default-mode
-        <small>
-          
-            <span class='args'>discrete</span>
-          
-            <span class='args'>linear</span>
-          
-            <span class='args'>exact</span>
-          
-        </small>
-      </h3>
-      <div id='content-raster'><p>
-        
-        
-        TODO
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='raster-colorizer-default-color'>
-        raster-colorizer-default-color
-        <small>
-          
-            <span class='args'><a href='#color'>color</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-raster'><p>
-        
-        
-        TODO
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='raster-colorizer-epsilon'>
-        raster-colorizer-epsilon
-        <small>
-          
-            <span class='args'><a href='#float'>float</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-raster'><p>
-        
-        
-        TODO
-      </div>
-    </div>
-  
-    <div class='depth-3'>
-      <h3 id='raster-colorizer-stops'>
-        raster-colorizer-stops
-        <small>
-          
-            <span class='args'><a href='#tags'>tags</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-raster'><p>
-        
-        
-        TODO
       </div>
     </div>
   
@@ -4146,29 +3790,6 @@ version: latest
     </div>
   
     <div class='depth-3'>
-      <h3 id='text-halo-rasterizer'>
-        text-halo-rasterizer
-        <small>
-          
-            <span class='args'>full</span>
-          
-            <span class='args'>fast</span>
-          
-        </small>
-      </h3>
-      <div id='content-text'><p>
-        
-        <small><strong>Default Value:</strong>
-          full
-          
-        </small>
-        
-        
-        Exposes an alternate text halo rendering method that sacrifices quality for speed.
-      </div>
-    </div>
-  
-    <div class='depth-3'>
       <h3 id='text-dx'>
         text-dx
         <small>
@@ -4254,7 +3875,7 @@ version: latest
         </small>
         
         
-        Avoid placing labels that intersect with tile boundaries.
+        Tell positioning algorithm to avoid labeling near intersection edges.
       </div>
     </div>
   
@@ -4673,32 +4294,6 @@ version: latest
         
         
         The height of the building in pixels.
-      </div>
-    </div>
-  
-
-
-<h2 id='debug'>debug</h2>
-
-  
-    <div class='depth-3'>
-      <h3 id='debug-mode'>
-        debug-mode
-        <small>
-          
-            <span class='args'><a href='#string'>string</a></span>
-          
-        </small>
-      </h3>
-      <div id='content-debug'><p>
-        
-        <small><strong>Default Value:</strong>
-          collision
-          
-        </small>
-        
-        
-        The mode for debug rendering
       </div>
     </div>
   
