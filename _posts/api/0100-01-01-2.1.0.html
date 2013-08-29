@@ -4281,19 +4281,22 @@ version: 2.1.0
 <p>CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values,
 rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
 <code>yellow</code> and <code>blue</code>.</p>
-<pre>#line {
+
+{% highlight css %}
+#line {
   line-color: #ff0;
   line-color: #ffff00;
   line-color: rgb(255, 255, 0);
   line-color: rgba(255, 255, 0, 1);
   line-color: hsl(100, 50%, 50%);
   line-color: yellow;
-}</pre>
+}
+{% endhighlight %}
 <p>Especially of note is the support for hsl, which can be
 <a href='http://mothereffinghsl.com/'>easier to reason about than rgb()</a>
 <p>Carto also includes several color functions <a href='http://lesscss.org/#-color-functions'>borrowed from less</a>:</p>
 
-<pre class='lang-css'>
+{% highlight css %}
 // lighten and darken colors
 lighten(#ace, 10%);
 darken(#ace, 10%);
@@ -4311,7 +4314,7 @@ spin(#ff00ff, 10);
 
 // mix generates a color in between two other colors.
 mix(#fff, #000, 50%);
-</pre>
+{% endhighlight %}
 
 <p>These functions all take arguments which can be color variables, literal colors,
 or the results of other functions operating on colors.</p>
@@ -4322,19 +4325,23 @@ or the results of other functions operating on colors.</p>
 <div id='content-float' class='depth-0'>
 <p>Float is a fancy way of saying 'number'. In CartoCSS, you specify <em>just a number</em> -
 unlike CSS, there are no units, but everything is specified in pixels.</p>
-<pre>#line {
+{% highlight css %}
+#line {
   line-width: 2;
-}</pre>
+}
+{% endhighlight %}
 
 <p>It's also possible to do simple math with number values:</p>
 
-<pre>#line {
+{% highlight css %}
+#line {
   line-width: 4 / 2; // division
   line-width: 4 + 2; // addition
   line-width: 4 - 2; // subtraction
   line-width: 4 * 2; // multiplication
   line-width: 4 % 2; // modulus
-}</pre>
+}
+{% endhighlight %}
 
 </div>
 
@@ -4344,9 +4351,11 @@ unlike CSS, there are no units, but everything is specified in pixels.</p>
 <code>url('place.png')</code> notation that you would with HTML. Quotes around the URL
 aren't required, but are highly recommended.</p>
 <p>URIs can be paths to places on your computer, or on the internet.</p>
-<pre>#markers {
+{% highlight css %}
+#markers {
   marker-file: url('marker.png');
-}</pre>
+}
+{% endhighlight %}
 </div>
 
 <h3 id='string'>String</h3>
@@ -4355,17 +4364,21 @@ aren't required, but are highly recommended.</p>
 can be anything, though pay attention to the cases of <code>text-name</code> and <code>shield-name</code> -
 they actually will refer to features, which you refer to by putting them in brackets, as seen
 in the example below.</p>
-<pre>#labels {
+{% highlight html %}
+#labels {
   text-name: "[MY_FIELD]";
-}</pre>
+}
+{% endhighlight %}
 </div>
 
 <h3 id='boolean'>Boolean</h3>
 <div id='content-boolean' class='depth-0'>
 <p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
-<pre>#markers {
+{% highlight css %}
+#markers {
   marker-allow-overlap:true;
-}</pre>
+}
+{% endhighlight %}
 </div>
 
 <h3 id='expressions'>Expressions</h3>
@@ -4375,9 +4388,11 @@ types in a really flexible way. You have run into expressions before,
 in the realm of 'fields', where you'd specify <code>"[FIELD]"</code>,
 but expressions allow you to drop the quotes and also do quick addition,
 division, multiplication, and concatenation from within Carto syntax.</p>
-<pre>#buildings {
+{% highlight css %}
+#buildings {
   building-height: [HEIGHT_FIELD] * 10;
-}</pre>
+}
+{% endhighlight %}
 </div>
 
 <h3 id='numbers'>Numbers</h3>
@@ -4385,9 +4400,11 @@ division, multiplication, and concatenation from within Carto syntax.</p>
 <p>Numbers are comma-separated lists of one or more number in a specific
 order. They're used in line dash arrays, in which the numbers specify
 intervals of line, break, and line again.</p>
-<pre>#disputedboundary {
+{% highlight css %}
+#disputedboundary {
   line-dasharray: 1, 4, 2;
-}</pre>
+}
+{% endhighlight %}
 </div>
 
 <h3 id='percentages'>Percentages</h3>
@@ -4398,15 +4415,15 @@ intervals of line, break, and line again.</p>
     heights, or other properties - unlike CSS, percentages are not
     relative to cascaded classes or page size, they're, as stated,
     simply the value divided by one hundred.</strong>
-<pre>#world {
+{% highlight css %}
+#world {
+  // this syntax
+  polygon-opacity: 50%;
 
-    // this syntax
-    polygon-opacity: 50%;
-
-    // is equivalent to
-    polygon-opacity: 0.5;
-
-}</pre>
+  // is equivalent to
+  polygon-opacity: 0.5;
+}
+{% endhighlight %}
 </div>
 
 <h3 id='functions'>Functions</h3>
@@ -4414,9 +4431,12 @@ intervals of line, break, and line again.</p>
 <p>Functions are comma-separated lists of one or more functions. For
 instance, transforms use the <code>functions</code> type to allow
 for transforms within Carto, which are optionally chainable.</p>
-<pre>#point {
+
+{% highlight css %}
+#point {
   point-transform: scale(2, 2);
-}</pre>
+}
+{% endhighlight %}
 </div>
 </div>
 
