@@ -1,32 +1,45 @@
+/* ### General Styles ### */
+.branding .logo {
+  background:transparent url(../../img/tilemill-sprite.png) no-repeat 0 0;
+  }
+.branding .attribution {
+  position:absolute;
+  left:100px;
+  top:50px;
+  }
+  .branding .attribution .small-mapbox {
+    display: inline-block;
+    background: url(../../img/tilemill-sprite.png);
+    background-position:2px -74px;
+    background-repeat:no-repeat;
+    width: 70px;
+    text-indent: -9999px;
+    overflow: hidden;
+    }
+
+@media only screen and (max-width: 640px) {
+  .footer .col3 { border-color: #28353D; }
+  .branding .attribution {
+  width: 90px;
+  left: 50px;
+  right: 0;
+  margin: 0px auto;
+  }
+  .mobile-hide { display: none;}
+}
+
 .doc-search input {
-  width:95%;
-  height:40px;
   padding:10px 40px 10px 8px;
   }
   .doc-search span {
     position:absolute;
-    top:10px;
-    right:10%;
-    margin-right:10px;
+    top:30px;
+    right:30px;
     }
 
 .doc-nav .nav li.active a {
   background-color:#ecf5fa;
   color:#3C4E5A;
-  }
-
-#docs p,
-#docs ul { margin-bottom:5px; }
-
-.depth-1,
-.depth-2,
-.depth-3,
-.depth-4 {
-  margin-bottom:40px;
-  }
-
-.depth-3 {
-  margin-left:10px;
   }
 
 span.args,
@@ -81,4 +94,13 @@ h3 small {
   .doc-footer {
     border-left:none;
   }
+}
+.five-links a { width:20%; }
+.ad-support { text-align:right; }
+.ad-support a { margin-top:10px; }
+@media (max-width:640px) {
+  .five-links a { width:100%; }
+  .ad-support { text-align:center; }
+  .doc-header h2 { padding-bottom: 20px; }
+  .doc-subnav li { width:100%; margin-bottom:1px; }
 }

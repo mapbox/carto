@@ -50,7 +50,7 @@
                 this.$el.on('keydown', $.proxy(this._keydown, this));
               }
 
-              this.$menu.on('mouseenter', 'li', $.proxy(this._mouseenter, this));
+              this.$menu.on('mouseenter', 'a', $.proxy(this._mouseenter, this));
         },
 
         _keydown: function(e) {
@@ -101,10 +101,11 @@
 
         _next: function() {
             var active = this.$menu.find('.active').removeClass('active'),
-                next = active.nextAll('li.filtered').first();
+                next = active.nextAll('.filtered').first();
 
+                console.log(next);
             if (!next.length) {
-                next = $(this.$menu.find('li')[0]);
+                next = $(this.$menu.find('a')[0]);
                 next.addClass('active');
                 if ((this.$menu.offset().top) < this.$menu.height()) {
                     $('html, body').animate({
@@ -128,10 +129,10 @@
 
         _prev: function() {
             var active = this.$menu.find('.active').removeClass('active'),
-                prev = active.prevAll('li.filtered').first();
+                prev = active.prevAll('.filtered').first();
 
             if (!prev.length) {
-                prev = this.$menu.find('li').last();
+                prev = this.$menu.find('a').last();
                 prev.addClass('active');
                 if ((this.$menu.offset().top) < this.$menu.height()) {
                     $('html, body').animate({
@@ -155,7 +156,7 @@
         },
 
         _select: function(e) {
-            var v = this.$menu.find('.active a').attr('href');
+            var v = this.$menu.find('.active').attr('href');
             this.anchor ?
                 window.location.hash = v :
                 window.location = v
@@ -174,14 +175,14 @@
                     body = $(document.getElementById('content-' + id)).text();
 
                 if (!q || body.toLowerCase().indexOf(q) !== -1 || id.toLowerCase().indexOf(q) !== -1) {
-                    $this.parent().addClass('filtered');
+                    $this.addClass('filtered');
                     if ($this.parent().hasClass('heading')) {
                         $this.css('color', '');
                     } else {
                         $this.show();
                     }
                 } else {
-                    $this.parent().removeClass('filtered');
+                    $this.removeClass('filtered');
                     if ($this.parent().hasClass('heading')) {
                         $this.css('color', '#BDBDBD');
                     } else {
@@ -191,7 +192,7 @@
             });
 
             // Hide headers if no children matched
-            this.$menu.find('li.heading').each(function() {
+            this.$menu.find('.heading').each(function() {
                 var $this = $(this),
                     next = $this.next();
 

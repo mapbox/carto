@@ -1,7 +1,7 @@
 ---
 layout: docs
 categories: api
-version: 2.1.0
+version: 2.1.1
 ---
 
 <div class='col3'>
@@ -116,6 +116,8 @@ version: 2.1.0
   <a class='pad1y2x' href='#marker-line-opacity'>marker-line-opacity</a>
   
   <a class='pad1y2x' href='#marker-placement'>marker-placement</a>
+  
+  <a class='pad1y2x' href='#marker-multi-policy'>marker-multi-policy</a>
   
   <a class='pad1y2x' href='#marker-type'>marker-type</a>
   
@@ -1490,6 +1492,31 @@ version: 2.1.0
         
         
         Attempt to place markers on a point, in the center of a polygon, or if markers-placement:line, then multiple times along a line. &#x27;interior&#x27; placement can be used to ensure that points placed on polygons are forced to be inside the polygon interior
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='marker-multi-policy'>
+        marker-multi-policy
+        <small>
+          
+            <span class='args'>each</span>
+          
+            <span class='args'>whole</span>
+          
+            <span class='args'>largest</span>
+          
+        </small>
+      </h3>
+      <div id='content-markers'><p>
+        
+        <small><strong>Default Value:</strong>
+          each
+          <span class='description'>(If a feature contains multiple geometries and the placement type is either point or interior then a marker will be rendered for each)</span>
+        </small>
+        
+        
+        A special setting to allow the user to control rendering behavior for &#x27;multi-geometries&#x27; (when a feature contains multiple geometries). This setting does not apply to markers placed along lines. The &#x27;each&#x27; policy is default and means all geometries will get a marker. The &#x27;whole&#x27; policy means that the aggregate centroid between all geometries will be used. The &#x27;largest&#x27; policy means that only the largest (by bounding box areas) feature will get a rendered marker (this is how text labeling behaves by default).
       </div>
     </div>
   
