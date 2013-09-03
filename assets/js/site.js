@@ -33,11 +33,6 @@
             });
         },
 
-        colorCode: function(cb) {
-            $('pre').addClass('prettyprint');
-            prettyPrint(cb);
-        },
-
         bindSearch: function(input, menu, anchor) {
             this.$el = input;
             this.$menu = menu;
