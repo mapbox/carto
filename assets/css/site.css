@@ -28,15 +28,6 @@
   .mobile-hide { display: none;}
 }
 
-.doc-search input {
-  padding:10px 40px 10px 8px;
-  }
-  .doc-search span {
-    position:absolute;
-    top:30px;
-    right:30px;
-    }
-
 .doc-nav .nav li.active a {
   background-color:#ecf5fa;
   color:#3C4E5A;
