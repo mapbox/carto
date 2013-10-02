@@ -2,7 +2,7 @@ permalink: /:categories/:title
 baseurl: /carto
 pygments: true
 version: 2.1.0
-url: http://mapbox.com
+url: //www.mapbox.com
 title: CartoCSS
 rdiscount:
   extensions: [smart]
