@@ -21,6 +21,8 @@ version: latest
   
   <a class='pad1y2x' href='#image-filters'>image-filters</a>
   
+  <a class='pad1y2x' href='#direct-image-filters'>direct-image-filters</a>
+  
   <a class='pad1y2x' href='#comp-op'>comp-op</a>
   
   <a class='pad1y2x' href='#opacity'>opacity</a>
@@ -33,6 +35,10 @@ version: latest
   <a class='pad1y2x' href='#background-color'>background-color</a>
   
   <a class='pad1y2x' href='#background-image'>background-image</a>
+  
+  <a class='pad1y2x' href='#background-image-comp-op'>background-image-comp-op</a>
+  
+  <a class='pad1y2x' href='#background-image-opacity'>background-image-opacity</a>
   
   <a class='pad1y2x' href='#srs'>srs</a>
   
@@ -242,6 +248,8 @@ version: latest
   <a class='pad1y2x' href='#line-pattern-simplify-algorithm'>line-pattern-simplify-algorithm</a>
   
   <a class='pad1y2x' href='#line-pattern-smooth'>line-pattern-smooth</a>
+  
+  <a class='pad1y2x' href='#line-pattern-offset'>line-pattern-offset</a>
   
   <a class='pad1y2x' href='#line-pattern-geometry-transform'>line-pattern-geometry-transform</a>
   
@@ -454,7 +462,28 @@ version: latest
         </small>
         
         
-        A list of image filters.
+        A list of image filters that will be applied to the active rendering canvas for a given style. The presence of one more more `image-filters` will trigger a new canvas to be created before starting to render a style and then this canvas will be composited back into the main canvas after rendering all features and after all `image-filters` have been applied. See `direct-image-filters` if you want to apply a filter directly to the main canvas.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='direct-image-filters'>
+        direct-image-filters
+        <small>
+          
+            <span class='args'><a href='#functions'>functions</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-*'><p>
+        
+        <small><strong>Default Value:</strong>
+          none
+          <span class='description'>(no filters)</span>
+        </small>
+        
+        
+        A list of image filters to apply to the main canvas (see the `image-filters` doc for how they work on a separate canvas)
       </div>
     </div>
   
@@ -610,6 +639,114 @@ version: latest
         
         
         An image that is repeated below all features on a map as a background.
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='background-image-comp-op'>
+        background-image-comp-op
+        <small>
+          
+            <span class='args'>clear</span>
+          
+            <span class='args'>src</span>
+          
+            <span class='args'>dst</span>
+          
+            <span class='args'>src-over</span>
+          
+            <span class='args'>dst-over</span>
+          
+            <span class='args'>src-in</span>
+          
+            <span class='args'>dst-in</span>
+          
+            <span class='args'>src-out</span>
+          
+            <span class='args'>dst-out</span>
+          
+            <span class='args'>src-atop</span>
+          
+            <span class='args'>dst-atop</span>
+          
+            <span class='args'>xor</span>
+          
+            <span class='args'>plus</span>
+          
+            <span class='args'>minus</span>
+          
+            <span class='args'>multiply</span>
+          
+            <span class='args'>screen</span>
+          
+            <span class='args'>overlay</span>
+          
+            <span class='args'>darken</span>
+          
+            <span class='args'>lighten</span>
+          
+            <span class='args'>color-dodge</span>
+          
+            <span class='args'>color-burn</span>
+          
+            <span class='args'>hard-light</span>
+          
+            <span class='args'>soft-light</span>
+          
+            <span class='args'>difference</span>
+          
+            <span class='args'>exclusion</span>
+          
+            <span class='args'>contrast</span>
+          
+            <span class='args'>invert</span>
+          
+            <span class='args'>invert-rgb</span>
+          
+            <span class='args'>grain-merge</span>
+          
+            <span class='args'>grain-extract</span>
+          
+            <span class='args'>hue</span>
+          
+            <span class='args'>saturation</span>
+          
+            <span class='args'>color</span>
+          
+            <span class='args'>value</span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>
+        
+        <small><strong>Default Value:</strong>
+          src-over
+          <span class='description'>(The background-image will be blended with the background normally (placed on top of any existing background-color))</span>
+        </small>
+        
+        
+        Set the compositing operation used to blend the image into the background
+      </div>
+    </div>
+  
+    <div class='depth-3'>
+      <h3 id='background-image-opacity'>
+        background-image-opacity
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-map'><p>
+        
+        <small><strong>Default Value:</strong>
+          1
+          <span class='description'>(The image opacity will not be changed when applied to the map background)</span>
+        </small>
+        
+        
+        Set the opacity of the image
       </div>
     </div>
   
@@ -2914,6 +3051,27 @@ version: latest
     </div>
   
     <div class='depth-3'>
+      <h3 id='line-pattern-offset'>
+        line-pattern-offset
+        <small>
+          
+            <span class='args'><a href='#float'>float</a></span>
+          
+        </small>
+      </h3>
+      <div id='content-line-pattern'><p>
+        
+        <small><strong>Default Value:</strong>
+          0
+          <span class='description'>(no offset)</span>
+        </small>
+        
+        
+        Offsets a line a number of pixels parallel to its actual path. Positive values move the line left, negative values move it right (relative to the directionality of the line).
+      </div>
+    </div>
+  
+    <div class='depth-3'>
       <h3 id='line-pattern-geometry-transform'>
         line-pattern-geometry-transform
         <small>
@@ -4288,7 +4446,7 @@ version: latest
       <div id='content-text'><p>
         
         
-        Determines the minimum amount of padding that a text symbolizer gets relative to other text
+        Minimum distance a text label will be placed from the edge of a metatile.
       </div>
     </div>
   
