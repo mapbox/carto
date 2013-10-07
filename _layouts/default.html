@@ -1,4 +1,5 @@
 ---
+fullwidth: true
 footer:
   mapbox:
     - title: About
@@ -175,7 +176,7 @@ footer:
   <script>document.write(App.nav());</script>
 </div>
 
-<div class='fill-white {% unless page.fullwidth %} primary-wrapper {% endunless %}'>{{content}}</div>
+<div class='{% unless page.fullwidth %} primary-wrapper {% endunless %}'>{{content}}</div>
 
 <div class='footer keyline-top pad4y fill-white clearfix small'>
   <div class='primary-wrapper'>
