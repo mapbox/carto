@@ -8,9 +8,8 @@
       .filter(function(p) { return p.css; })
       .each(function(p) {
   %>
-    <div class='depth-3'>
-      <h3 id='<%= p.css %>'>
-        <%= p.css %>
+    <div class='depth-3 pad2y'>
+      <h3 id='<%= p.css %>'><%= p.css %>
         <small>
           <% if (_.isArray(p.type)) { _(p.type).each(function(type) { %>
             <span class='args'><%= type %></span>
