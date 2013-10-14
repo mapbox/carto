@@ -1,13 +1,13 @@
 <% _(symbolizers).each(function(symbolizer, name) { %>
 <% if (name == '*') { %>
-  <a class='pad1y2x parent' href='#<%= name %>'><strong>All elements</strong></a>
+  <a class='pad1y pad2x parent' href='#<%= name %>'><strong>All elements</strong></a>
 <% } else { %>
-  <a class='pad1y2x parent' href='#<%= name %>'><strong><%= name %></strong></a>
+  <a class='pad1y pad2x parent' href='#<%= name %>'><strong><%= name %></strong></a>
 <% } %>
   <% _(symbolizer).chain()
       .filter(function(p) { return p.css; })
       .each(function(p) {
   %>
-  <a class='pad1y2x' href='#<%= p.css %>'><%= p.css %></a>
+  <a class='pad1y pad2x' href='#<%= p.css %>'><%= p.css %></a>
   <% }); %>
 <% }); %>
