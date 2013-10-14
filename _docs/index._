@@ -13,17 +13,17 @@ version: <%= version %>
       </fieldset>
     </form>
     <nav class='v small'>
-      <a class='pad1y2x' href='#map-elements'><strong>Map Elements</strong></a>
+      <a class='pad1y pad2x' href='#map-elements'><strong>Map Elements</strong></a>
       <%= toc({symbolizers:symbolizers, _:_}) %>
-      <a class='pad1y2x' href='#values'><strong>Values</strong></a>
-      <a class='pad1y2x' href='#color'><strong>Color</strong></a>
-      <a class='pad1y2x' href='#float'><strong>Float</strong></a>
-      <a class='pad1y2x' href='#uri'><strong>URI</strong></a>
-      <a class='pad1y2x' href='#string'><strong>String</strong></a>
-      <a class='pad1y2x' href='#boolean'><strong>Boolean</strong></a>
-      <a class='pad1y2x' href='#expressions'><strong>Expressions</strong></a>
-      <a class='pad1y2x' href='#numbers'><strong>Numbers</strong></a>
-      <a class='pad1y2x' href='#functions'><strong>Functions</strong></a>
+      <a class='pad1y pad2x' href='#values'><strong>Values</strong></a>
+      <a class='pad1y pad2x' href='#color'><strong>Color</strong></a>
+      <a class='pad1y pad2x' href='#float'><strong>Float</strong></a>
+      <a class='pad1y pad2x' href='#uri'><strong>URI</strong></a>
+      <a class='pad1y pad2x' href='#string'><strong>String</strong></a>
+      <a class='pad1y pad2x' href='#boolean'><strong>Boolean</strong></a>
+      <a class='pad1y pad2x' href='#expressions'><strong>Expressions</strong></a>
+      <a class='pad1y pad2x' href='#numbers'><strong>Numbers</strong></a>
+      <a class='pad1y pad2x' href='#functions'><strong>Functions</strong></a>
     </nav>
   </div>
 </div>
