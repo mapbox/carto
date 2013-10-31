@@ -3,7 +3,7 @@ layout: default
 section: help
 ---
 {% if page.section == 'help' %}
-<div class='clearfix doc-header pad4 fill-light'>
+<div class='clearfix doc-header pad4y limiter'>
   <div class='col3'>
     <h2>Help</h2>
   </div>
@@ -13,8 +13,8 @@ section: help
 </div>
 {% endif %}
 
-<div class='doc-page pad4 fill-grey clearfix'>
-  <div class='fill-white prose clearfix'>
+<div class='doc-page limiter keyline-all clearfix'>
+  <div class='col12 prose clearfix'>
     {{content}}
   </div>
 </div>
@@ -24,7 +24,7 @@ section: help
 <script>
   $(function() {
     var docs = new Docs();
-    docs.bindSearch($('.doc-search input'), $('nav.v'), true);
+    docs.bindSearch($('.doc-search input'), $('.doc-nav'), true);
     docs.bindInlineCode();
   });
 </script>

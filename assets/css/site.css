@@ -1,3 +1,9 @@
+/* Base Candidate */
+.doc-nav a:hover,
+.doc-nav .active {
+  background-color:#f8f8f8;
+  }
+
 /* ### General Styles ### */
 #nav {
   padding-left:160px;
@@ -42,30 +48,6 @@ span.bracket { color:#888; }
   margin:0 2px;
   }
 
-.doc h1 + p {
-  margin-top: -10px;
-  padding-bottom: 20px;
-  }
-
-.warn {
-  font-size:15px;
-  background:#ee8a65;
-  border-color:#c64;
-  min-height:60px;
-  color:white;
-  }
-  .warn a {
-    color:#842;
-    font-weight:bold;
-    }
-
-.separator {
-  margin:0 0 20px;
-  font-size:24px;
-  line-height:1.2500em;
-  }
-
-.doc-nav li h4 { margin:10px 0 0; }
 .doc-footer {
   border-top:1px solid #ccc;
   border-left:1px solid #ccc;
