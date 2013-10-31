@@ -1,8 +1,9 @@
+api: https://www.mapbox.com
+url: https://www.mapbox.com
 permalink: /:categories/:title
 baseurl: /carto
 pygments: true
 version: 2.1.0
-url: https://122e4e-mapbox.global.ssl.fastly.net
 title: CartoCSS
 rdiscount:
   extensions: [smart]
