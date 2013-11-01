@@ -2,19 +2,20 @@
 layout: default
 section: help
 ---
+
 {% if page.section == 'help' %}
-<div class='clearfix doc-header pad4 fill-light'>
-  <div class='col3'>
+<div class='clearfix limiter'>
+  <div class='pad4y'>
     <h2>Help</h2>
   </div>
-  <nav class='col9 pill clearfix five-links'>
-    <a href='{{site.url}}/tilemill/docs/install' class='button'>Installation</a><a href='{{site.url}}/tilemill/docs/crashcourse/introduction' class='button'>Crashcourse</a><a href='{{site.url}}/tilemill/docs/guides/add-shapefile' class='button'>Guides</a><a href='{{site.url}}/tilemill/docs/manual/' class='button'>Reference</a><a href='{{site.url}}/carto' class='button active' >CartoCSS Reference</a></li>
+  <nav class='col12 space-bottom pill clearfix five-links'>
+    <a href='{{site.url}}/tilemill/docs/install' class='truncate button'>Installation</a><a href='{{site.url}}/tilemill/docs/crashcourse/introduction' class='truncate button'>Crashcourse</a><a href='{{site.url}}/tilemill/docs/guides/add-shapefile' class='truncate button'>Guides</a><a href='{{site.url}}/tilemill/docs/manual/' class='truncate button'>Reference</a><a href='{{site.url}}/carto' class='truncate button active' >CartoCSS Reference</a></li>
   </nav>
 </div>
 {% endif %}
 
-<div class='doc-page pad4 fill-grey clearfix'>
-  <div class='fill-white prose clearfix'>
+<div class='doc-page limiter keyline-all clearfix'>
+  <div class='col12 prose clearfix'>
     {{content}}
   </div>
 </div>
@@ -24,7 +25,7 @@ section: help
 <script>
   $(function() {
     var docs = new Docs();
-    docs.bindSearch($('.doc-search input'), $('nav.v'), true);
+    docs.bindSearch($('.doc-search input'), $('.doc-nav'), true);
     docs.bindInlineCode();
   });
 </script>
