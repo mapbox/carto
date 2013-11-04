@@ -402,7 +402,7 @@ version: 2.1.1
 <h3 id='image-filters'>image-filters <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(no filters)</span>
 
@@ -415,7 +415,7 @@ A list of image filters.
 <h3 id='comp-op'>comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current layer on top of other layers)</span>
 
@@ -428,7 +428,7 @@ Composite operation. This defines how this layer should behave relative to layer
 <h3 id='opacity'>opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(no separate buffer will be used and no alpha will be applied to the style after rendering)</span>
 
@@ -447,7 +447,7 @@ An alpha value for the style (which means an alpha applied to all features in se
 <h3 id='background-color'>background-color <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(transparent)</span>
 
@@ -460,7 +460,7 @@ Map Background color
 <h3 id='background-image'>background-image <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 <span class='description'>(transparent)</span>
 
@@ -473,7 +473,7 @@ An image that is repeated below all features on a map as a background.
 <h3 id='srs'>srs <span class='small'><a href='#string'>string</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
 <span class='description'>(The proj4 literal of EPSG:4326 is assumed to be the Map&#x27;s spatial reference and all data from layers within this map will be plotted using this coordinate system. If any layers do not declare an srs value then they will be assumed to be in the same srs as the Map and not transformations will be needed to plot them in the Map&#x27;s coordinate space)</span>
 
@@ -486,7 +486,7 @@ Map spatial reference (proj4 string)
 <h3 id='buffer-size'>buffer-size <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(No buffer will be used)</span>
 
@@ -499,7 +499,7 @@ Extra tolerance around the map (in pixels) used to ensure labels crossing tile b
 <h3 id='base'>base <span class='small'><a href='#string'>string</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 <span class='description'>(This base path defaults to an empty string meaning that any relative paths to files referenced in styles or layers will be interpreted relative to the application process.)</span>
 
@@ -512,7 +512,7 @@ Any relative paths used to reference files will be understood as relative to thi
 <h3 id='font-directory'>font-directory <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(No map-specific fonts will be registered)</span>
 
@@ -531,7 +531,7 @@ Path to a directory which holds fonts which should be registered when the Map is
 <h3 id='polygon-fill'>polygon-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 rgba(128,128,128,1)
 <span class='description'>(gray and fully opaque (alpha = 1), same as rgb(128,128,128))</span>
 
@@ -544,7 +544,7 @@ Fill color to assign to a polygon
 <h3 id='polygon-opacity'>polygon-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(opaque)</span>
 
@@ -557,12 +557,12 @@ The opacity of the polygon
 <h3 id='polygon-gamma'>polygon-gamma <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(fully antialiased)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Level of antialiasing of polygon edges
@@ -573,7 +573,7 @@ Level of antialiasing of polygon edges
 <h3 id='polygon-gamma-method'>polygon-gamma-method <span class='small quiet'>power</span> <span class='small quiet'>linear</span> <span class='small quiet'>none</span> <span class='small quiet'>threshold</span> <span class='small quiet'>multiply</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 power
 <span class='description'>(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the &#x27;linear&#x27; method, while other methods are usually only used to disable AA)</span>
 
@@ -586,7 +586,7 @@ An Antigrain Geometry specific rendering hint to control the quality of antialia
 <h3 id='polygon-clip'>polygon-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -599,12 +599,12 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='polygon-smooth'>polygon-smooth <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no smoothing)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
@@ -615,7 +615,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 <h3 id='polygon-geometry-transform'>polygon-geometry-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(geometry will not be transformed)</span>
 
@@ -628,7 +628,7 @@ Allows transformation functions to be applied to the geometry.
 <h3 id='polygon-comp-op'>polygon-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -647,7 +647,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='line-color'>line-color <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 rgba(0,0,0,1)
 <span class='description'>(black and fully opaque (alpha = 1), same as rgb(0,0,0))</span>
 
@@ -660,7 +660,7 @@ The color of a drawn line
 <h3 id='line-width'>line-width <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 
 
@@ -673,7 +673,7 @@ The width of a line in pixels
 <h3 id='line-opacity'>line-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(opaque)</span>
 
@@ -686,7 +686,7 @@ The opacity of a line
 <h3 id='line-join'>line-join <span class='small quiet'>miter</span> <span class='small quiet'>round</span> <span class='small quiet'>bevel</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 miter
 
 
@@ -699,7 +699,7 @@ The behavior of lines when joining
 <h3 id='line-cap'>line-cap <span class='small quiet'>butt</span> <span class='small quiet'>round</span> <span class='small quiet'>square</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 butt
 
 
@@ -712,12 +712,12 @@ The display of line endings
 <h3 id='line-gamma'>line-gamma <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(fully antialiased)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Level of antialiasing of stroke line
@@ -728,7 +728,7 @@ Level of antialiasing of stroke line
 <h3 id='line-gamma-method'>line-gamma-method <span class='small quiet'>power</span> <span class='small quiet'>linear</span> <span class='small quiet'>none</span> <span class='small quiet'>threshold</span> <span class='small quiet'>multiply</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 power
 <span class='description'>(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the &#x27;linear&#x27; method, while other methods are usually only used to disable AA)</span>
 
@@ -741,7 +741,7 @@ An Antigrain Geometry specific rendering hint to control the quality of antialia
 <h3 id='line-dasharray'>line-dasharray <span class='small'><a href='#numbers'>numbers</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(solid line)</span>
 
@@ -754,7 +754,7 @@ A pair of length values [a,b], where (a) is the dash length and (b) is the gap l
 <h3 id='line-dash-offset'>line-dash-offset <span class='small'><a href='#numbers'>numbers</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(solid line)</span>
 
@@ -767,7 +767,7 @@ valid parameter but not currently used in renderers (only exists for experimenta
 <h3 id='line-miterlimit'>line-miterlimit <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 4
 <span class='description'>(Will auto-convert miters to bevel line joins when theta is less than 29 degrees as per the SVG spec: &#x27;miterLength &#x2F; stroke-width = 1 &#x2F; sin ( theta &#x2F; 2 )&#x27;)</span>
 
@@ -780,7 +780,7 @@ The limit on the ratio of the miter length to the stroke-width. Used to automati
 <h3 id='line-clip'>line-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -793,12 +793,12 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='line-smooth'>line-smooth <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no smoothing)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
@@ -809,7 +809,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 <h3 id='line-offset'>line-offset <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no offset)</span>
 
@@ -822,7 +822,7 @@ Offsets a line a number of pixels parallel to its actual path. Postive values mo
 <h3 id='line-rasterizer'>line-rasterizer <span class='small quiet'>full</span> <span class='small quiet'>fast</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 full
 
 
@@ -835,7 +835,7 @@ Exposes an alternate AGG rendering method that sacrifices some accuracy for spee
 <h3 id='line-geometry-transform'>line-geometry-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(geometry will not be transformed)</span>
 
@@ -848,7 +848,7 @@ Allows transformation functions to be applied to the geometry.
 <h3 id='line-comp-op'>line-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -867,7 +867,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='marker-file'>marker-file <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 <span class='description'>(An ellipse or circle, if width equals height)</span>
 
@@ -880,7 +880,7 @@ An SVG file that this marker shows at each placement. If no file is given, the m
 <h3 id='marker-opacity'>marker-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(The stroke-opacity and fill-opacity will be used)</span>
 
@@ -893,7 +893,7 @@ The overall opacity of the marker, if set, overrides both the opacity of both th
 <h3 id='marker-fill-opacity'>marker-fill-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(opaque)</span>
 
@@ -906,7 +906,7 @@ The fill opacity of the marker
 <h3 id='marker-line-color'>marker-line-color <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 black
 
 
@@ -928,7 +928,7 @@ The width of the stroke around a marker shape, in pixels. This is positioned on 
 <h3 id='marker-line-opacity'>marker-line-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(opaque)</span>
 
@@ -941,7 +941,7 @@ The opacity of a line
 <h3 id='marker-placement'>marker-placement <span class='small quiet'>point</span> <span class='small quiet'>line</span> <span class='small quiet'>interior</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 point
 <span class='description'>(Place markers at the center point (centroid) of the geometry)</span>
 
@@ -954,7 +954,7 @@ Attempt to place markers on a point, in the center of a polygon, or if markers-p
 <h3 id='marker-multi-policy'>marker-multi-policy <span class='small quiet'>each</span> <span class='small quiet'>whole</span> <span class='small quiet'>largest</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 each
 <span class='description'>(If a feature contains multiple geometries and the placement type is either point or interior then a marker will be rendered for each)</span>
 
@@ -967,7 +967,7 @@ A special setting to allow the user to control rendering behavior for &#x27;mult
 <h3 id='marker-type'>marker-type <span class='small quiet'>arrow</span> <span class='small quiet'>ellipse</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 ellipse
 
 
@@ -980,7 +980,7 @@ The default marker-type. If a SVG file is not given as the marker-file parameter
 <h3 id='marker-width'>marker-width <span class='small'><a href='#expression'>expression</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 10
 
 
@@ -993,7 +993,7 @@ The width of the marker, if using one of the default types.
 <h3 id='marker-height'>marker-height <span class='small'><a href='#expression'>expression</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 10
 
 
@@ -1006,7 +1006,7 @@ The height of the marker, if using one of the default types.
 <h3 id='marker-fill'>marker-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 blue
 
 
@@ -1019,7 +1019,7 @@ The color of the area of the marker.
 <h3 id='marker-allow-overlap'>marker-allow-overlap <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(Do not allow makers to overlap with each other - overlapping markers will not be shown.)</span>
 
@@ -1032,7 +1032,7 @@ Control whether overlapping markers are shown or hidden.
 <h3 id='marker-ignore-placement'>marker-ignore-placement <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(do not store the bbox of this geometry in the collision detector cache)</span>
 
@@ -1045,7 +1045,7 @@ value to control whether the placement of the feature will prevent the placement
 <h3 id='marker-spacing'>marker-spacing <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 100
 
 
@@ -1058,7 +1058,7 @@ Space between repeated labels
 <h3 id='marker-max-error'>marker-max-error <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0.2
 
 
@@ -1071,7 +1071,7 @@ The maximum difference between actual marker placement and the marker-spacing pa
 <h3 id='marker-transform'>marker-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 <span class='description'>(No transformation)</span>
 
@@ -1084,7 +1084,7 @@ SVG transformation definition
 <h3 id='marker-clip'>marker-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -1097,12 +1097,12 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='marker-smooth'>marker-smooth <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no smoothing)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
@@ -1113,7 +1113,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 <h3 id='marker-geometry-transform'>marker-geometry-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(geometry will not be transformed)</span>
 
@@ -1126,7 +1126,7 @@ Allows transformation functions to be applied to the geometry.
 <h3 id='marker-comp-op'>marker-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -1154,7 +1154,7 @@ Value to use for a shield&quot;s text label. Data columns are specified using br
 <h3 id='shield-file'>shield-file <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 
 
@@ -1167,7 +1167,7 @@ Image file to render behind the shield text
 <h3 id='shield-face-name'>shield-face-name <span class='small'><a href='#string'>string</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 
 
@@ -1180,7 +1180,7 @@ Font name and style to use for the shield text
 <h3 id='shield-unlock-image'>shield-unlock-image <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(text alignment relative to the shield image uses the center of the image as the anchor for text positioning.)</span>
 
@@ -1211,7 +1211,7 @@ The color of the shield text
 <h3 id='shield-placement'>shield-placement <span class='small quiet'>point</span> <span class='small quiet'>line</span> <span class='small quiet'>vertex</span> <span class='small quiet'>interior</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 point
 
 
@@ -1224,7 +1224,7 @@ How this shield should be placed. Point placement attempts to place it on top of
 <h3 id='shield-avoid-edges'>shield-avoid-edges <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 
 
@@ -1237,7 +1237,7 @@ Tell positioning algorithm to avoid labeling near intersection edges.
 <h3 id='shield-allow-overlap'>shield-allow-overlap <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(Do not allow shields to overlap with other map elements already placed.)</span>
 
@@ -1250,7 +1250,7 @@ Control whether overlapping shields are shown or hidden.
 <h3 id='shield-min-distance'>shield-min-distance <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1263,7 +1263,7 @@ Minimum distance to the next shield symbol, not necessarily the same shield.
 <h3 id='shield-spacing'>shield-spacing <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1276,7 +1276,7 @@ The spacing between repeated occurrences of the same shield on a line
 <h3 id='shield-min-padding'>shield-min-padding <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1289,7 +1289,7 @@ Determines the minimum amount of padding that a shield gets relative to other sh
 <h3 id='shield-wrap-width'>shield-wrap-width <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1302,7 +1302,7 @@ Length of a chunk of text in characters before wrapping text
 <h3 id='shield-wrap-before'>shield-wrap-before <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 
 
@@ -1315,7 +1315,7 @@ Wrap text before wrap-width is reached. If false, wrapped lines will be a bit lo
 <h3 id='shield-wrap-character'>shield-wrap-character <span class='small'><a href='#string'>string</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
  
 
 
@@ -1328,7 +1328,7 @@ Use this character instead of a space to wrap long names.
 <h3 id='shield-halo-fill'>shield-halo-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 #FFFFFF
 <span class='description'>(white)</span>
 
@@ -1341,7 +1341,7 @@ Specifies the color of the halo around the text.
 <h3 id='shield-halo-radius'>shield-halo-radius <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no halo)</span>
 
@@ -1354,7 +1354,7 @@ Specify the radius of the halo in pixels
 <h3 id='shield-character-spacing'>shield-character-spacing <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1376,7 +1376,7 @@ Vertical spacing between lines of multiline labels (in pixels)
 <h3 id='shield-text-dx'>shield-text-dx <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1389,7 +1389,7 @@ Displace text within shield by fixed amount, in pixels, +&#x2F;- along the X axi
 <h3 id='shield-text-dy'>shield-text-dy <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1402,7 +1402,7 @@ Displace text within shield by fixed amount, in pixels, +&#x2F;- along the Y axi
 <h3 id='shield-dx'>shield-dx <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1415,7 +1415,7 @@ Displace shield by fixed amount, in pixels, +&#x2F;- along the X axis.  A positi
 <h3 id='shield-dy'>shield-dy <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1428,7 +1428,7 @@ Displace shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positi
 <h3 id='shield-opacity'>shield-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 
 
@@ -1441,7 +1441,7 @@ Displace shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positi
 <h3 id='shield-text-opacity'>shield-text-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 
 
@@ -1454,7 +1454,7 @@ Displace shield by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positi
 <h3 id='shield-horizontal-alignment'>shield-horizontal-alignment <span class='small quiet'>left</span> <span class='small quiet'>middle</span> <span class='small quiet'>right</span> <span class='small quiet'>auto</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 auto
 
 
@@ -1467,7 +1467,7 @@ The shield&#x27;s horizontal alignment from its centerpoint
 <h3 id='shield-vertical-alignment'>shield-vertical-alignment <span class='small quiet'>top</span> <span class='small quiet'>middle</span> <span class='small quiet'>bottom</span> <span class='small quiet'>auto</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 middle
 
 
@@ -1480,7 +1480,7 @@ The shield&#x27;s vertical alignment from its centerpoint
 <h3 id='shield-text-transform'>shield-text-transform <span class='small quiet'>none</span> <span class='small quiet'>uppercase</span> <span class='small quiet'>lowercase</span> <span class='small quiet'>capitalize</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 
 
@@ -1493,7 +1493,7 @@ Transform the case of the characters
 <h3 id='shield-justify-alignment'>shield-justify-alignment <span class='small quiet'>left</span> <span class='small quiet'>center</span> <span class='small quiet'>right</span> <span class='small quiet'>auto</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 auto
 
 
@@ -1506,7 +1506,7 @@ Define how text in a shield&#x27;s label is justified
 <h3 id='shield-clip'>shield-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -1519,7 +1519,7 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='shield-comp-op'>shield-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -1538,7 +1538,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='line-pattern-file'>line-pattern-file <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 
 
@@ -1551,7 +1551,7 @@ An image file to be repeated and warped along a line
 <h3 id='line-pattern-clip'>line-pattern-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -1564,12 +1564,12 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='line-pattern-smooth'>line-pattern-smooth <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no smoothing)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
@@ -1580,7 +1580,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 <h3 id='line-pattern-geometry-transform'>line-pattern-geometry-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(geometry will not be transformed)</span>
 
@@ -1593,7 +1593,7 @@ Allows transformation functions to be applied to the geometry.
 <h3 id='line-pattern-comp-op'>line-pattern-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -1612,7 +1612,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='polygon-pattern-file'>polygon-pattern-file <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 
 
@@ -1625,7 +1625,7 @@ Image to use as a repeated pattern fill within a polygon
 <h3 id='polygon-pattern-alignment'>polygon-pattern-alignment <span class='small quiet'>local</span> <span class='small quiet'>global</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 local
 
 
@@ -1638,12 +1638,12 @@ Specify whether to align pattern fills to the layer or to the map.
 <h3 id='polygon-pattern-gamma'>polygon-pattern-gamma <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(fully antialiased)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Level of antialiasing of polygon pattern edges
@@ -1654,7 +1654,7 @@ Level of antialiasing of polygon pattern edges
 <h3 id='polygon-pattern-opacity'>polygon-pattern-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(The image is rendered without modifications)</span>
 
@@ -1667,7 +1667,7 @@ Level of antialiasing of polygon pattern edges
 <h3 id='polygon-pattern-clip'>polygon-pattern-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -1680,12 +1680,12 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='polygon-pattern-smooth'>polygon-pattern-smooth <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no smoothing)</span>
 
 
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 0-1
 
 Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
@@ -1696,7 +1696,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 <h3 id='polygon-pattern-geometry-transform'>polygon-pattern-geometry-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 <span class='description'>(geometry will not be transformed)</span>
 
@@ -1709,7 +1709,7 @@ Allows transformation functions to be applied to the geometry.
 <h3 id='polygon-pattern-comp-op'>polygon-pattern-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -1728,7 +1728,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='raster-opacity'>raster-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(opaque)</span>
 
@@ -1741,7 +1741,7 @@ The opacity of the raster symbolizer on top of other symbolizers.
 <h3 id='raster-filter-factor'>raster-filter-factor <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 -1
 <span class='description'>(Allow the datasource to choose appropriate downscaling.)</span>
 
@@ -1754,7 +1754,7 @@ This is used by the Raster or Gdal datasources to pre-downscale images using ove
 <h3 id='raster-scaling'>raster-scaling <span class='small quiet'>near</span> <span class='small quiet'>fast</span> <span class='small quiet'>bilinear</span> <span class='small quiet'>bilinear8</span> <span class='small quiet'>bicubic</span> <span class='small quiet'>spline16</span> <span class='small quiet'>spline36</span> <span class='small quiet'>hanning</span> <span class='small quiet'>hamming</span> <span class='small quiet'>hermite</span> <span class='small quiet'>kaiser</span> <span class='small quiet'>quadric</span> <span class='small quiet'>catrom</span> <span class='small quiet'>gaussian</span> <span class='small quiet'>bessel</span> <span class='small quiet'>mitchell</span> <span class='small quiet'>sinc</span> <span class='small quiet'>lanczos</span> <span class='small quiet'>blackman</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 near
 
 
@@ -1767,7 +1767,7 @@ The scaling algorithm used to making different resolution versions of this raste
 <h3 id='raster-mesh-size'>raster-mesh-size <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 16
 <span class='description'>(Reprojection mesh will be 1&#x2F;16 of the resolution of the source image)</span>
 
@@ -1780,7 +1780,7 @@ A reduced resolution mesh is used for raster reprojection, and the total image s
 <h3 id='raster-comp-op'>raster-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -1799,7 +1799,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='point-file'>point-file <span class='small'><a href='#uri'>uri</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 
 
@@ -1812,7 +1812,7 @@ Image file to represent a point
 <h3 id='point-allow-overlap'>point-allow-overlap <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(Do not allow points to overlap with each other - overlapping markers will not be shown.)</span>
 
@@ -1825,7 +1825,7 @@ Control whether overlapping points are shown or hidden.
 <h3 id='point-ignore-placement'>point-ignore-placement <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(do not store the bbox of this geometry in the collision detector cache)</span>
 
@@ -1838,7 +1838,7 @@ value to control whether the placement of the feature will prevent the placement
 <h3 id='point-opacity'>point-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(Fully opaque)</span>
 
@@ -1851,7 +1851,7 @@ A value from 0 to 1 to control the opacity of the point
 <h3 id='point-placement'>point-placement <span class='small quiet'>centroid</span> <span class='small quiet'>interior</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 centroid
 
 
@@ -1864,7 +1864,7 @@ How this point should be placed. Centroid calculates the geometric center of a p
 <h3 id='point-transform'>point-transform <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 <span class='description'>(No transformation)</span>
 
@@ -1877,7 +1877,7 @@ SVG transformation definition
 <h3 id='point-comp-op'>point-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -1896,7 +1896,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='text-name'>text-name <span class='small'><a href='#expression'>expression</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 
 
@@ -1918,7 +1918,7 @@ Font name and style to render a label in
 <h3 id='text-size'>text-size <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 10
 
 
@@ -1931,7 +1931,7 @@ Text size in pixels
 <h3 id='text-ratio'>text-ratio <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1944,7 +1944,7 @@ Define the amount of text (of the total) present on successive lines when wrappi
 <h3 id='text-wrap-width'>text-wrap-width <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -1957,7 +1957,7 @@ Length of a chunk of text in characters before wrapping text
 <h3 id='text-wrap-before'>text-wrap-before <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 
 
@@ -1970,7 +1970,7 @@ Wrap text before wrap-width is reached. If false, wrapped lines will be a bit lo
 <h3 id='text-wrap-character'>text-wrap-character <span class='small'><a href='#string'>string</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
  
 
 
@@ -1992,7 +1992,7 @@ Distance between repeated text labels on a line (aka. label-spacing)
 <h3 id='text-character-spacing'>text-character-spacing <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -2005,7 +2005,7 @@ Horizontal spacing adjustment between characters in pixels
 <h3 id='text-line-spacing'>text-line-spacing <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -2018,7 +2018,7 @@ Vertical spacing adjustment between lines in pixels
 <h3 id='text-label-position-tolerance'>text-label-position-tolerance <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -2031,7 +2031,7 @@ Allows the label to be displaced from its ideal position by a number of pixels (
 <h3 id='text-max-char-angle-delta'>text-max-char-angle-delta <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 22.5
 
 
@@ -2044,7 +2044,7 @@ The maximum angle change, in degrees, allowed between adjacent characters in a l
 <h3 id='text-fill'>text-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 #000000
 
 
@@ -2057,7 +2057,7 @@ Specifies the color for the text
 <h3 id='text-opacity'>text-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 <span class='description'>(Fully opaque)</span>
 
@@ -2070,7 +2070,7 @@ A number from 0 to 1 specifying the opacity for the text
 <h3 id='text-halo-fill'>text-halo-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 #FFFFFF
 <span class='description'>(white)</span>
 
@@ -2083,7 +2083,7 @@ Specifies the color of the halo around the text.
 <h3 id='text-halo-radius'>text-halo-radius <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(no halo)</span>
 
@@ -2096,7 +2096,7 @@ Specify the radius of the halo in pixels
 <h3 id='text-dx'>text-dx <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -2109,7 +2109,7 @@ Displace text by fixed amount, in pixels, +&#x2F;- along the X axis.  A positive
 <h3 id='text-dy'>text-dy <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -2122,7 +2122,7 @@ Displace text by fixed amount, in pixels, +&#x2F;- along the Y axis.  A positive
 <h3 id='text-vertical-alignment'>text-vertical-alignment <span class='small quiet'>top</span> <span class='small quiet'>middle</span> <span class='small quiet'>bottom</span> <span class='small quiet'>auto</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 auto
 <span class='description'>(Default affected by value of dy; &quot;bottom&quot; for dy&gt;0, &quot;top&quot; for dy&lt;0.)</span>
 
@@ -2135,7 +2135,7 @@ Position of label relative to point position.
 <h3 id='text-avoid-edges'>text-avoid-edges <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 
 
@@ -2166,7 +2166,7 @@ Determines the minimum amount of padding that a text symbolizer gets relative to
 <h3 id='text-min-path-length'>text-min-path-length <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 <span class='description'>(place labels on all paths)</span>
 
@@ -2179,7 +2179,7 @@ Place labels only on paths longer than this value.
 <h3 id='text-allow-overlap'>text-allow-overlap <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 false
 <span class='description'>(Do not allow text to overlap with other text - overlapping markers will not be shown.)</span>
 
@@ -2201,7 +2201,7 @@ Rotate the text.
 <h3 id='text-placement'>text-placement <span class='small quiet'>point</span> <span class='small quiet'>line</span> <span class='small quiet'>vertex</span> <span class='small quiet'>interior</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 point
 
 
@@ -2214,7 +2214,7 @@ Control the style of placement of a point versus the geometry it is attached to.
 <h3 id='text-placement-type'>text-placement-type <span class='small quiet'>dummy</span> <span class='small quiet'>simple</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 dummy
 
 
@@ -2227,7 +2227,7 @@ Re-position and&#x2F;or re-size text to avoid overlaps. &quot;simple&quot; for b
 <h3 id='text-placements'>text-placements <span class='small'><a href='#string'>string</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 
 
 
@@ -2240,7 +2240,7 @@ If &quot;placement-type&quot; is set to &quot;simple&quot;, use this &quot;POSIT
 <h3 id='text-transform'>text-transform <span class='small quiet'>none</span> <span class='small quiet'>uppercase</span> <span class='small quiet'>lowercase</span> <span class='small quiet'>capitalize</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 none
 
 
@@ -2253,7 +2253,7 @@ Transform the case of the characters
 <h3 id='text-horizontal-alignment'>text-horizontal-alignment <span class='small quiet'>left</span> <span class='small quiet'>middle</span> <span class='small quiet'>right</span> <span class='small quiet'>auto</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 auto
 
 
@@ -2266,7 +2266,7 @@ The text&#x27;s horizontal alignment from its centerpoint
 <h3 id='text-align'>text-align <span class='small quiet'>left</span> <span class='small quiet'>right</span> <span class='small quiet'>center</span> <span class='small quiet'>auto</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 auto
 <span class='description'>(Auto alignment means that text will be centered by default except when using the `placement-type` parameter - in that case either right or left justification will be used automatically depending on where the text could be fit given the `text-placements` directives)</span>
 
@@ -2279,7 +2279,7 @@ Define how text is justified
 <h3 id='text-clip'>text-clip <span class='small'><a href='#boolean'>boolean</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 true
 <span class='description'>(geometry will be clipped to map bounds before rendering)</span>
 
@@ -2292,7 +2292,7 @@ geometries are clipped to map bounds by default for best rendering performance. 
 <h3 id='text-comp-op'>text-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 src-over
 <span class='description'>(add the current symbolizer on top of other symbolizer)</span>
 
@@ -2311,7 +2311,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 <h3 id='building-fill'>building-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 #FFFFFF
 
 
@@ -2324,7 +2324,7 @@ The color of the buildings walls.
 <h3 id='building-fill-opacity'>building-fill-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 1
 
 
@@ -2337,7 +2337,7 @@ The opacity of the building as a whole, including all walls.
 <h3 id='building-height'>building-height <span class='small'><a href='#expression'>expression</a></span></h3>
 
 
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 0
 
 
@@ -2469,10 +2469,12 @@ intervals of line, break, and line again.</p>
 <h2 id='percentages'>Percentages</h2>
 <p>In Carto, the percentage symbol, <code>%</code> universally means
 <code>value/100</code>. It's meant to be used with ratio-related properties,
-like opacity rules. <strong>You should not use percentages as widths,
-heights, or other properties - unlike CSS, percentages are not
-relative to cascaded classes or page size, they're, as stated,
-simply the value divided by one hundred.</strong>
+like opacity rules.
+
+<div class='note'>
+<p>You should not use percentages as widths, heights, or other properties - unlike CSS, percentages are not relative to cascaded classes or page size, they're, as stated, simply the value divided by one hundred.</p>
+</div>
+
 {% highlight css %}
 #world {
   // this syntax

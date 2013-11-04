@@ -13,12 +13,12 @@
 <h3 id='<%= p.css %>'><%= p.css.replace(/\s/g, '') %> <span class='small'><a href='#<%= p.type %>'><%= p.type %></a></span></h3>
 <% } %>
 <% if (typeof p['default-value'] !== 'undefined') { %>
-<em class='quiet'>Default Value:</em>
+<span class='quiet'>Default Value:</span>
 <%= '' + p['default-value'] %>
 <% if (p['default-meaning']) { %><span class='description'>(<%- p['default-meaning'] %>)</span><% } %>
 <% } %>
 <% if (typeof p['range'] !== 'undefined') { %>
-<em class='quiet'>Range:</em>
+<span class='quiet'>Range:</span>
 <%= '' + p['range'] %>
 <% } %>
 <% if (p.doc) { %><%- p.doc%><% } %>

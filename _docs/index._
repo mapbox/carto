@@ -161,10 +161,12 @@ intervals of line, break, and line again.</p>
 <h2 id='percentages'>Percentages</h2>
 <p>In Carto, the percentage symbol, <code>%</code> universally means
 <code>value/100</code>. It's meant to be used with ratio-related properties,
-like opacity rules. <strong>You should not use percentages as widths,
-heights, or other properties - unlike CSS, percentages are not
-relative to cascaded classes or page size, they're, as stated,
-simply the value divided by one hundred.</strong>
+like opacity rules.
+
+<div class='note'>
+<p>You should not use percentages as widths, heights, or other properties - unlike CSS, percentages are not relative to cascaded classes or page size, they're, as stated, simply the value divided by one hundred.</p>
+</div>
+
 {% highlight css %}
 #world {
   // this syntax
