@@ -10,7 +10,6 @@ function tmpl(x) {
 var index = tmpl('index._');
 var toc = tmpl('toc._');
 var table = tmpl('symbolizers._');
-
 var versions = Object.keys(refs.version);
 
 for (var v in refs.version) {

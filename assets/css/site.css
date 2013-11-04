@@ -29,16 +29,6 @@
   top:40px;
   white-space:nowrap;
   }
-@media only screen and (max-width: 640px) {
-  .footer .col3 { border-color: #28353D; }
-  .mobile-hide { display: none;}
-}
-
-.doc-nav .nav li.active a {
-  background-color:#ecf5fa;
-  color:#3C4E5A;
-  }
-
 span.args,
 span.bracket { color:#888; }
 
@@ -52,15 +42,6 @@ span.bracket { color:#888; }
   border-top:1px solid #ccc;
   border-left:1px solid #ccc;
   text-align:center;
-  }
-
-h3 small {
-  display:inline-block;
-  }
-#docs small strong {
-  font-weight:bold;
-  font-style:normal;
-  color:#3C4E5A;
   }
 
 @media only screen and (max-width: 640px) {

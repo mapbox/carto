@@ -1,37 +1,27 @@
 <% _(symbolizers).each(function(symbolizer, name) { %>
-<% if (name == '*') { %>
-<h2 id='<%= name %>'>All elements</h2>
+  <% if (name == '*') { %>
+    <h2 id='<%= name %>'>All elements</h2>
+  <% } else { %>
+    <h2 id='<%= name %>'><%= name %></h2>
+  <% } %>
+
+<% _(symbolizer).chain().filter(function(p) { return p.css; }).each(function(p) {%>
+<div class='space-bottom'>
+<% if (_.isArray(p.type)) { %>
+<h3 id='<%= p.css %>'><%= p.css.replace(/\s/g, '') %><% _(p.type).each(function(type) { %> <span class='small quiet'><%= type %></span><% }); %></h3>
 <% } else { %>
-<h2 id='<%= name %>'><%= name %></h2>
+<h3 id='<%= p.css %>'><%= p.css.replace(/\s/g, '') %> <span class='small'><a href='#<%= p.type %>'><%= p.type %></a></span></h3>
 <% } %>
-  <% _(symbolizer).chain()
-      .filter(function(p) { return p.css; })
-      .each(function(p) {
-  %>
-    <div class='depth-3 pad2y'>
-      <h3 id='<%= p.css %>'><%= p.css %>
-        <small>
-          <% if (_.isArray(p.type)) { _(p.type).each(function(type) { %>
-            <span class='args'><%= type %></span>
-          <% }); } else { %>
-            <span class='args'><a href='#<%= p.type %>'><%= p.type %></a></span>
-          <% } %>
-        </small>
-      </h3>
-      <div id='content-<%= name %>'><p>
-        <% if (typeof p['default-value'] !== 'undefined') { %>
-        <small><strong>Default Value:</strong>
-          <%= '' + p['default-value'] %>
-          <% if (p['default-meaning']) { %><span class='description'>(<%- p['default-meaning'] %>)</span><% } %>
-        </small>
-        <% } %>
-        <% if (typeof p['range'] !== 'undefined') { %>
-        <small><strong>Range:</strong>
-          <%= '' + p['range'] %>
-        </small>
-        <% } %>
-        <% if (p.doc) { %><%- p.doc%><% } %>
-      </div>
-    </div>
-  <% }); %>
+<% if (typeof p['default-value'] !== 'undefined') { %>
+<em class='quiet'>Default Value:</em>
+<%= '' + p['default-value'] %>
+<% if (p['default-meaning']) { %><span class='description'>(<%- p['default-meaning'] %>)</span><% } %>
+<% } %>
+<% if (typeof p['range'] !== 'undefined') { %>
+<em class='quiet'>Range:</em>
+<%= '' + p['range'] %>
+<% } %>
+<% if (p.doc) { %><%- p.doc%><% } %>
+</div>
+<% }); %>
 <% }); %>
