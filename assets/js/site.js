@@ -41,11 +41,8 @@
                 .on('keypress', $.proxy(this._keypress, this))
                 .on('keyup', $.proxy(this._keyup, this));
 
-              if ($.browser.webkit || $.browser.msie) {
-                this.$el.on('keydown', $.proxy(this._keydown, this));
-              }
-
-              this.$menu.on('mouseenter', 'a', $.proxy(this._mouseenter, this));
+            this.$el.on('keydown', $.proxy(this._keydown, this));
+            this.$menu.on('mouseenter', 'a', $.proxy(this._mouseenter, this));
         },
 
         _keydown: function(e) {
@@ -63,42 +60,41 @@
             switch(e.keyCode) {
                 case 13: // enter
                 e.preventDefault();
-                break
+                break;
 
                 case 38: // up arrow
                 e.preventDefault();
                 this._prev();
-                break
+                break;
 
                 case 40: // down arrow
                 e.preventDefault();
                 this._next();
-                break
+                break;
             }
           e.stopPropagation();
         },
 
         _keyup: function(e) {
-          switch(e.keyCode) {
-            case 40: // down arrow
-            case 38: // up arrow
-              break;
+            switch(e.keyCode) {
+                case 40: // down arrow
+                case 38: // up arrow
+                    break;
 
-            case 13: // enter
-              this._select(e);
-              break
+                case 13: // enter
+                    this._select(e);
+                break;
 
-            default:
-              this._search(e);
-          }
-          return false;
+                default:
+                    this._search(e);
+            }
+            return false;
         },
 
         _next: function() {
             var active = this.$menu.find('.active').removeClass('active'),
                 next = active.nextAll('.filtered').first();
 
-                console.log(next);
             if (!next.length) {
                 next = $(this.$menu.find('a')[0]);
                 next.addClass('active');
@@ -152,9 +148,8 @@
 
         _select: function(e) {
             var v = this.$menu.find('.active').attr('href');
-            this.anchor ?
-                window.location.hash = v :
-                window.location = v
+            if (this.anchor) (window.location.hash = v);
+            else (window.location = v);
         },
 
         _mouseenter: function(e) {
@@ -285,7 +280,7 @@
                                     open = t[0] === '(',
                                     close = t.slice(t.length - 2, t.length) == ').';
 
-                                if (open && close) null
+                                if (open && close) { }
                                 else if (open) opened++;
                                 else if (close) closed++;
 
