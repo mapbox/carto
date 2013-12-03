@@ -4,6 +4,7 @@ permalink: /:categories/:title
 baseurl: /carto
 pygments: true
 version: 2.1.0
+cartocss: 0.9.5
 title: CartoCSS
 rdiscount:
   extensions: [smart]

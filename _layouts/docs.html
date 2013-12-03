@@ -1,18 +1,25 @@
 ---
 layout: tilemill
-section: help
+section: developers
+version: v0.9.5
 ---
 
-{% if page.section == 'help' %}
 <div class='clearfix limiter'>
   <div class='pad4y'>
-    <h2>Help</h2>
+    <h3 class='tag small'>
+      <a href='{{site.url}}/{{page.section|downcase}}' class='quiet'>{{page.section}}</a>
+    </h3>
+    <h2>
+      CartoCSS
+      <a class='version' href='https://github.com/mapbox/carto/blob/master/CHANGELOG.md#{{site.cartocss|replace:'.', ''}}'>
+        <sup class='fill-grey small'>{{site.cartocss}}</sup>
+      </a>
+    </h2>
   </div>
   <nav class='col12 space-bottom pill clearfix five-links'>
     <a href='{{site.url}}/tilemill/docs/install' class='truncate button'>Installation</a><a href='{{site.url}}/tilemill/docs/crashcourse/introduction' class='truncate button'>Crashcourse</a><a href='{{site.url}}/tilemill/docs/guides/add-shapefile' class='truncate button'>Guides</a><a href='{{site.url}}/tilemill/docs/manual/' class='truncate button'>Reference</a><a href='{{site.url}}/carto' class='truncate button active' >CartoCSS Reference</a></li>
   </nav>
 </div>
-{% endif %}
 
 <div class='doc-page limiter keyline-all clearfix'>
   <div class='col12 clearfix'>
@@ -22,6 +29,7 @@ section: help
 
 {% include tilemill-footer.html %}
 
+<script src='{{site.baseurl}}/assets/js/site.js'></script>
 <script>
   $(function() {
     var docs = new Docs();

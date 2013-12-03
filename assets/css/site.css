@@ -18,6 +18,14 @@
   background-color:#f8f8f8;
   }
 
+.version,
+.version:hover {
+  color:rgba(0,0,0,0.75);
+  }
+  .version > *{
+    padding:2px 5px;
+    }
+
 /* ### General Styles ### */
 span.args,
 span.bracket { color:#888; }
