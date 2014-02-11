@@ -165,7 +165,8 @@ if (ext == '.mml') {
             if (typeof x !== 'string') {
                 return { id: x, data: x.data }
             }
-            return { id: x, data: fs.readFileSync(path.join(path.dirname(input), x), 'utf8') }
+            var absx = x[0] != '/' ? path.join(path.dirname(input), x) : x;
+            return { id: x, data: fs.readFileSync(absx , 'utf8') }
         });
         compileMML(null,data);
     }
