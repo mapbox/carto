@@ -2,317 +2,151 @@
 layout: docs
 categories: api
 version: 2.0.2
+title: CartoCSS 2.0.2
+navigation:
+  - title: Map Elements
+    subnav: 
+      - item: 'map'
+      - item: 'background-color'
+      - item: 'background-image'
+      - item: 'srs'
+      - item: 'buffer-size'
+      - item: 'base'
+      - item: 'font-directory'
+      - item: 'polygon'
+      - item: 'polygon-fill'
+      - item: 'polygon-gamma'
+      - item: 'polygon-opacity'
+      - item: 'polygon-smooth'
+      - item: 'line'
+      - item: 'line-color'
+      - item: 'line-width'
+      - item: 'line-opacity'
+      - item: 'line-join'
+      - item: 'line-cap'
+      - item: 'line-gamma'
+      - item: 'line-dasharray'
+      - item: 'line-dash-offset'
+      - item: 'line-rasterizer'
+      - item: 'markers'
+      - item: 'marker-file'
+      - item: 'marker-opacity'
+      - item: 'marker-line-color'
+      - item: 'marker-line-width'
+      - item: 'marker-line-opacity'
+      - item: 'marker-placement'
+      - item: 'marker-type'
+      - item: 'marker-width'
+      - item: 'marker-height'
+      - item: 'marker-fill'
+      - item: 'marker-allow-overlap'
+      - item: 'marker-ignore-placement'
+      - item: 'marker-spacing'
+      - item: 'marker-max-error'
+      - item: 'marker-transform'
+      - item: 'shield'
+      - item: 'shield-name'
+      - item: 'shield-face-name'
+      - item: 'shield-unlock-image'
+      - item: 'shield-size'
+      - item: 'shield-fill'
+      - item: 'shield-placement'
+      - item: 'shield-avoid-edges'
+      - item: 'shield-min-distance'
+      - item: 'shield-spacing'
+      - item: 'shield-min-padding'
+      - item: 'shield-wrap-width'
+      - item: 'shield-wrap-character'
+      - item: 'shield-halo-fill'
+      - item: 'shield-halo-radius'
+      - item: 'shield-character-spacing'
+      - item: 'shield-line-spacing'
+      - item: 'shield-file'
+      - item: 'shield-text-dx'
+      - item: 'shield-text-dy'
+      - item: 'shield-dx'
+      - item: 'shield-dy'
+      - item: 'shield-opacity'
+      - item: 'shield-text-opacity'
+      - item: 'shield-horizontal-alignment'
+      - item: 'shield-text-transform'
+      - item: 'shield-no-text'
+      - item: 'shield-justify-alignment'
+      - item: 'line-pattern'
+      - item: 'line-pattern-file'
+      - item: 'polygon-pattern'
+      - item: 'polygon-pattern-file'
+      - item: 'polygon-pattern-alignment'
+      - item: 'polygon-pattern-gamma'
+      - item: 'raster'
+      - item: 'raster-opacity'
+      - item: 'raster-mode'
+      - item: 'raster-filter-factor'
+      - item: 'raster-scaling'
+      - item: 'raster-mesh-size'
+      - item: 'point'
+      - item: 'point-file'
+      - item: 'point-allow-overlap'
+      - item: 'point-ignore-placement'
+      - item: 'point-opacity'
+      - item: 'point-placement'
+      - item: 'point-transform'
+      - item: 'text'
+      - item: 'text-name'
+      - item: 'text-face-name'
+      - item: 'text-size'
+      - item: 'text-ratio'
+      - item: 'text-wrap-width'
+      - item: 'text-wrap-character'
+      - item: 'text-spacing'
+      - item: 'text-character-spacing'
+      - item: 'text-line-spacing'
+      - item: 'text-label-position-tolerance'
+      - item: 'text-max-char-angle-delta'
+      - item: 'text-fill'
+      - item: 'text-opacity'
+      - item: 'text-halo-fill'
+      - item: 'text-halo-radius'
+      - item: 'text-dx'
+      - item: 'text-dy'
+      - item: 'text-vertical-alignment'
+      - item: 'text-avoid-edges'
+      - item: 'text-min-distance'
+      - item: 'text-min-padding'
+      - item: 'text-min-path-length'
+      - item: 'text-allow-overlap'
+      - item: 'text-orientation'
+      - item: 'text-placement'
+      - item: 'text-placement-type'
+      - item: 'text-placements'
+      - item: 'text-transform'
+      - item: 'text-horizontal-alignment'
+      - item: 'text-align'
+      - item: 'building'
+      - item: 'building-fill'
+      - item: 'building-fill-opacity'
+      - item: 'building-height'
+  - title: Values
+  - title: Color
+  - title: Float
+  - title: URI
+  - title: String
+  - title: Boolean
+  - title: Expressions
+  - title: Numbers
+  - title: Functions
 ---
 
-<div class='col3'>
-  <form class='doc-search contain pad2 keyline-bottom'>
-    <fieldset class='with-icon'>
-      <span class='icon search'></span>
-      <input class='stretch' type='text' placeholder='Filter'>
-    </fieldset>
-  </form>
-  <nav class='doc-nav'>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#map-elements'><strong>Map Elements</strong></a>
-    
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#map'><strong>map</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#background-color'>background-color</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#background-image'>background-image</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#srs'>srs</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#buffer-size'>buffer-size</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#base'>base</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#font-directory'>font-directory</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon'><strong>polygon</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-fill'>polygon-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-gamma'>polygon-gamma</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-opacity'>polygon-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-smooth'>polygon-smooth</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line'><strong>line</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-color'>line-color</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-width'>line-width</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-opacity'>line-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-join'>line-join</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-cap'>line-cap</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-gamma'>line-gamma</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-dasharray'>line-dasharray</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-dash-offset'>line-dash-offset</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-rasterizer'>line-rasterizer</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#markers'><strong>markers</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-file'>marker-file</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-opacity'>marker-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-line-color'>marker-line-color</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-line-width'>marker-line-width</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-line-opacity'>marker-line-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-placement'>marker-placement</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-type'>marker-type</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-width'>marker-width</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-height'>marker-height</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-fill'>marker-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-allow-overlap'>marker-allow-overlap</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-ignore-placement'>marker-ignore-placement</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-spacing'>marker-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-max-error'>marker-max-error</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#marker-transform'>marker-transform</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield'><strong>shield</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-name'>shield-name</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-face-name'>shield-face-name</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-unlock-image'>shield-unlock-image</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-size'>shield-size</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-fill'>shield-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-placement'>shield-placement</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-avoid-edges'>shield-avoid-edges</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-min-distance'>shield-min-distance</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-spacing'>shield-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-min-padding'>shield-min-padding</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-wrap-width'>shield-wrap-width</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-wrap-character'>shield-wrap-character</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-halo-fill'>shield-halo-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-halo-radius'>shield-halo-radius</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-character-spacing'>shield-character-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-line-spacing'>shield-line-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-file'>shield-file</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-text-dx'>shield-text-dx</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-text-dy'>shield-text-dy</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-dx'>shield-dx</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-dy'>shield-dy</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-opacity'>shield-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-text-opacity'>shield-text-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-horizontal-alignment'>shield-horizontal-alignment</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-text-transform'>shield-text-transform</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-no-text'>shield-no-text</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#shield-justify-alignment'>shield-justify-alignment</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-pattern'><strong>line-pattern</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#line-pattern-file'>line-pattern-file</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-pattern'><strong>polygon-pattern</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-pattern-file'>polygon-pattern-file</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-pattern-alignment'>polygon-pattern-alignment</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#polygon-pattern-gamma'>polygon-pattern-gamma</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#raster'><strong>raster</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#raster-opacity'>raster-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#raster-mode'>raster-mode</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#raster-filter-factor'>raster-filter-factor</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#raster-scaling'>raster-scaling</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#raster-mesh-size'>raster-mesh-size</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point'><strong>point</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point-file'>point-file</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point-allow-overlap'>point-allow-overlap</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point-ignore-placement'>point-ignore-placement</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point-opacity'>point-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point-placement'>point-placement</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#point-transform'>point-transform</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text'><strong>text</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-name'>text-name</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-face-name'>text-face-name</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-size'>text-size</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-ratio'>text-ratio</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-wrap-width'>text-wrap-width</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-wrap-character'>text-wrap-character</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-spacing'>text-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-character-spacing'>text-character-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-line-spacing'>text-line-spacing</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-label-position-tolerance'>text-label-position-tolerance</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-max-char-angle-delta'>text-max-char-angle-delta</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-fill'>text-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-opacity'>text-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-halo-fill'>text-halo-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-halo-radius'>text-halo-radius</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-dx'>text-dx</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-dy'>text-dy</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-vertical-alignment'>text-vertical-alignment</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-avoid-edges'>text-avoid-edges</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-min-distance'>text-min-distance</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-min-padding'>text-min-padding</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-min-path-length'>text-min-path-length</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-allow-overlap'>text-allow-overlap</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-orientation'>text-orientation</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-placement'>text-placement</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-placement-type'>text-placement-type</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-placements'>text-placements</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-transform'>text-transform</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-horizontal-alignment'>text-horizontal-alignment</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#text-align'>text-align</a>
-
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#building'><strong>building</strong></a>
-
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#building-fill'>building-fill</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#building-fill-opacity'>building-fill-opacity</a>
-
-<a class='pad1y pad2x col12 keyline-bottom' href='#building-height'>building-height</a>
-
-
-
-    <a class='pad1y pad2x col12 keyline-bottom' href='#values'><strong>Values</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#color'><strong>Color</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#float'><strong>Float</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#uri'><strong>URI</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#string'><strong>String</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#boolean'><strong>Boolean</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#expressions'><strong>Expressions</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#numbers'><strong>Numbers</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#functions'><strong>Functions</strong></a>
-  </nav>
+{% if site.version != page.version %}
+{% if page.version != 'latest' %}
+<div class='note warning'>
+  Viewing an older version of CartoCSS. Check out <a href='{{site.baseurl}}/api/{{site.version}}'>{{site.version}} for the latest</a>.
 </div>
+{% endif %}
+{% endif %}
+<h1 id='map-elements'>Map elements</h1>
+<p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
 
-<div class='col9 keyline-left prose'>
-  {% if site.version != page.version %}
-  {% if page.version != 'latest' %}
-  <div class='doc-content doc pad4 warn'>
-    Viewing an older version of {{site.title}}. Check out <a href='{{site.baseurl}}/api/{{site.version}}'>{{site.version}} for the latest</a>.
-  </div>
-  {% endif %}
-  {% endif %}
-  <div id='docs' class='doc-content prose'>
-    <div class='doc pad4'>
-      <h1 id='map-elements'>Map elements</h1>
-      <p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
-      
   
     <h2 id='map'>map</h2>
   
@@ -1780,12 +1614,12 @@ rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
 
 {% highlight css %}
 #line {
-  line-color: #ff0;
-  line-color: #ffff00;
-  line-color: rgb(255, 255, 0);
-  line-color: rgba(255, 255, 0, 1);
-  line-color: hsl(100, 50%, 50%);
-  line-color: yellow;
+line-color: #ff0;
+line-color: #ffff00;
+line-color: rgb(255, 255, 0);
+line-color: rgba(255, 255, 0, 1);
+line-color: hsl(100, 50%, 50%);
+line-color: yellow;
 }
 {% endhighlight %}
 <p>Especially of note is the support for hsl, which can be
@@ -1820,7 +1654,7 @@ or the results of other functions operating on colors.</p>
 unlike CSS, there are no units, but everything is specified in pixels.</p>
 {% highlight css %}
 #line {
-  line-width: 2;
+line-width: 2;
 }
 {% endhighlight %}
 
@@ -1828,11 +1662,11 @@ unlike CSS, there are no units, but everything is specified in pixels.</p>
 
 {% highlight css %}
 #line {
-  line-width: 4 / 2; // division
-  line-width: 4 + 2; // addition
-  line-width: 4 - 2; // subtraction
-  line-width: 4 * 2; // multiplication
-  line-width: 4 % 2; // modulus
+line-width: 4 / 2; // division
+line-width: 4 + 2; // addition
+line-width: 4 - 2; // subtraction
+line-width: 4 * 2; // multiplication
+line-width: 4 % 2; // modulus
 }
 {% endhighlight %}
 
@@ -1843,7 +1677,7 @@ aren't required, but are highly recommended.</p>
 <p>URIs can be paths to places on your computer, or on the internet.</p>
 {% highlight css %}
 #markers {
-  marker-file: url('marker.png');
+marker-file: url('marker.png');
 }
 {% endhighlight %}
 
@@ -1854,7 +1688,7 @@ they actually will refer to features, which you refer to by putting them in brac
 in the example below.</p>
 {% highlight html %}
 #labels {
-  text-name: "[MY_FIELD]";
+text-name: "[MY_FIELD]";
 }
 {% endhighlight %}
 
@@ -1862,7 +1696,7 @@ in the example below.</p>
 <p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
 {% highlight css %}
 #markers {
-  marker-allow-overlap:true;
+marker-allow-overlap:true;
 }
 {% endhighlight %}
 
@@ -1874,7 +1708,7 @@ but expressions allow you to drop the quotes and also do quick addition,
 division, multiplication, and concatenation from within Carto syntax.</p>
 {% highlight css %}
 #buildings {
-  building-height: [HEIGHT_FIELD] * 10;
+building-height: [HEIGHT_FIELD] * 10;
 }
 {% endhighlight %}
 
@@ -1884,7 +1718,7 @@ order. They're used in line dash arrays, in which the numbers specify
 intervals of line, break, and line again.</p>
 {% highlight css %}
 #disputedboundary {
-  line-dasharray: 1, 4, 2;
+line-dasharray: 1, 4, 2;
 }
 {% endhighlight %}
 
@@ -1899,11 +1733,11 @@ like opacity rules.
 
 {% highlight css %}
 #world {
-  // this syntax
-  polygon-opacity: 50%;
+// this syntax
+polygon-opacity: 50%;
 
-  // is equivalent to
-  polygon-opacity: 0.5;
+// is equivalent to
+polygon-opacity: 0.5;
 }
 {% endhighlight %}
 
@@ -1914,15 +1748,6 @@ for transforms within Carto, which are optionally chainable.</p>
 
 {% highlight css %}
 #point {
-  point-transform: scale(2, 2);
+point-transform: scale(2, 2);
 }
 {% endhighlight %}
-</div>
-
-    <div class='keyline-top center small'>
-      <div class='pad2'>
-      The code and documentation to <a href='http://github.com/mapbox/carto'>CartoCSS is hosted on GitHub</a> where you can contribute changes and improvements.
-      </div>
-    </div>
-  </div>
-</div>

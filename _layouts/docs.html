@@ -1,39 +1,67 @@
 ---
-layout: tilemill
-section: developers
-version: v0.9.5
+layout: default
+class: fill-light
+fullwidth: true
+section: carto-docs
 ---
 
-<div class='clearfix limiter'>
-  <div class='pad4y'>
-    <h3 class='tag small'>
-      <a href='{{site.url}}/{{page.section|downcase}}' class='quiet'>{{page.section}}</a>
-    </h3>
-    <h2>
-      CartoCSS
-      <a class='version' href='https://github.com/mapbox/carto/blob/master/CHANGELOG.md#{{site.cartocss|replace:'.', ''}}'>
-        <sup class='fill-grey small'>{{site.cartocss}}</sup>
-      </a>
-    </h2>
-  </div>
-  <nav class='col12 space-bottom pill clearfix five-links'>
-    <a href='{{site.url}}/tilemill/docs/install' class='truncate button'>Installation</a><a href='{{site.url}}/tilemill/docs/crashcourse/introduction' class='truncate button'>Crashcourse</a><a href='{{site.url}}/tilemill/docs/guides/add-shapefile' class='truncate button'>Guides</a><a href='{{site.url}}/tilemill/docs/manual/' class='truncate button'>Reference</a><a href='{{site.url}}/carto' class='truncate button active' >CartoCSS Reference</a></li>
-  </nav>
+<link href='{{site.baseurl}}/site.css' rel='stylesheet' />
+<link href='{{site.url}}/css/docs.css' rel='stylesheet' />
+<script src='{{site.url}}/js/docs.js'></script>
+
+<!--Fixed sidebar navigation-->
+<div class='docnav hide-mobile'>
+  <div class='limiter'><div class='col3 contain'>
+    <nav class='scroll-styled quiet-scroll'>
+      <div class='space-bottom2'>
+        <a class='block quiet active strong small truncate' href='{{site.baseurl}}/'>CartoCSS Reference</a>
+      </div>
+      {% for nav in page.navigation %}
+      <div class='space-bottom1'>
+        <a href='#{{nav.title | downcase | replace:' ', '-'}}' class='truncate quiet strong block small'>{{nav.title}}</a>
+          {% if nav.subnav %}
+            {% for i in nav.subnav %}
+            <a href='#{{i.item}}' class='block small truncate'>{% if i.item == '*' %}All elements{% else %}{{i.item}}{% endif %}</a>
+            {% endfor %}
+          {% endif %}
+      </div>
+      {% endfor %}
+    </nav>
+  </div></div>
 </div>
 
-<div class='doc-page limiter keyline-all clearfix'>
-  <div class='col12 clearfix'>
-    {{content}}
+<div class='limiter clearfix'>
+  <div class='pad2y'>
+    <nav class='contain margin3 col9 fill-denim space-bottom round small'>
+      <div class='col3 dark round-left keyline-right pad2y pad1x center truncate'>
+        <strong class='icon tilemill'>TileMill</strong>
+      </div>
+      <div class='col6 dark tabs mobile-cols pad1'><!--
+        --><a href='{{site.baseurl}}/' class='col6 truncate'>Documentation</a><!--
+        --><a href='{{site.url}}/carto/' class='col6 truncate active'>CartoCSS Reference</a>
+      </div>
+      <div id='docs-search' class='col3 pad1 keyline-left'>
+        <fieldset class='col12 with-icon dark'>
+          <span class='icon search'></span>
+          <input type='text' class='col12 round minimal' />
+        </fieldset>
+      </div>
+    </nav>
+  </div>
+  <div class='contain margin3 col9'>
+    <div class='prose pad2 doc round fill-white keyline-all' data-swiftype-index=true>
+      {{content}}
+    </div>
   </div>
 </div>
 
-{% include tilemill-footer.html %}
-
-<script src='{{site.baseurl}}/assets/js/site.js'></script>
 <script>
-  $(function() {
-    var docs = new Docs();
-    docs.bindSearch($('.doc-search input'), $('.doc-nav'), true);
-    docs.bindInlineCode();
-  });
+$('#docs-search input').swiftype({
+    autocompleteContainingElement: $('#docs-search'),
+    filters: {
+      page: {
+        type: ['tilemill-docs', 'carto-docs']
+      }
+    }
+});
 </script>
