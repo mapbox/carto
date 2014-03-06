@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+before_install:
+- true
+
+install:
+- true
+
+before_script:
+- true
+
+script:
+- true
