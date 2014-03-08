@@ -2,43 +2,30 @@
 layout: docs
 categories: api
 version: <%= version %>
+title: CartoCSS <%= version %>
+navigation:
+  - title: Map Elements
+    subnav: <%= toc({symbolizers:symbolizers, _:_}) %>  - title: Values
+  - title: Color
+  - title: Float
+  - title: URI
+  - title: String
+  - title: Boolean
+  - title: Expressions
+  - title: Numbers
+  - title: Functions
 ---
 
-<div class='col3'>
-  <form class='doc-search contain pad2 keyline-bottom'>
-    <fieldset class='with-icon'>
-      <span class='icon search'></span>
-      <input class='stretch' type='text' placeholder='Filter'>
-    </fieldset>
-  </form>
-  <nav class='doc-nav'>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#map-elements'><strong>Map Elements</strong></a>
-    <%= toc({symbolizers:symbolizers, _:_}) %>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#values'><strong>Values</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#color'><strong>Color</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#float'><strong>Float</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#uri'><strong>URI</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#string'><strong>String</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#boolean'><strong>Boolean</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#expressions'><strong>Expressions</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#numbers'><strong>Numbers</strong></a>
-    <a class='pad1y pad2x col12 keyline-bottom' href='#functions'><strong>Functions</strong></a>
-  </nav>
+{% if site.version != page.version %}
+{% if page.version != 'latest' %}
+<div class='note warning'>
+  Viewing an older version of CartoCSS. Check out <a href='{{site.baseurl}}/api/{{site.version}}'>{{site.version}} for the latest</a>.
 </div>
-
-<div class='col9 keyline-left prose'>
-  {% if site.version != page.version %}
-  {% if page.version != 'latest' %}
-  <div class='doc-content doc pad4 warn'>
-    Viewing an older version of {{site.title}}. Check out <a href='{{site.baseurl}}/api/{{site.version}}'>{{site.version}} for the latest</a>.
-  </div>
-  {% endif %}
-  {% endif %}
-  <div id='docs' class='doc-content prose'>
-    <div class='doc pad4'>
-      <h1 id='map-elements'>Map elements</h1>
-      <p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
-      <%= table({symbolizers:symbolizers, _:_}) %>
+{% endif %}
+{% endif %}
+<h1 id='map-elements'>Map elements</h1>
+<p>The following is a list of properties provided in CartoCSS that you can apply to map elements.</p>
+<%= table({symbolizers:symbolizers, _:_}) %>
 
 <h1 id='values'>Values</h1>
 <p>Below is a list of values and an explanation of any expression that can be applied to properties in CartCSS.</p>
@@ -50,12 +37,12 @@ rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
 
 {% highlight css %}
 #line {
-  line-color: #ff0;
-  line-color: #ffff00;
-  line-color: rgb(255, 255, 0);
-  line-color: rgba(255, 255, 0, 1);
-  line-color: hsl(100, 50%, 50%);
-  line-color: yellow;
+line-color: #ff0;
+line-color: #ffff00;
+line-color: rgb(255, 255, 0);
+line-color: rgba(255, 255, 0, 1);
+line-color: hsl(100, 50%, 50%);
+line-color: yellow;
 }
 {% endhighlight %}
 <p>Especially of note is the support for hsl, which can be
@@ -90,7 +77,7 @@ or the results of other functions operating on colors.</p>
 unlike CSS, there are no units, but everything is specified in pixels.</p>
 {% highlight css %}
 #line {
-  line-width: 2;
+line-width: 2;
 }
 {% endhighlight %}
 
@@ -98,11 +85,11 @@ unlike CSS, there are no units, but everything is specified in pixels.</p>
 
 {% highlight css %}
 #line {
-  line-width: 4 / 2; // division
-  line-width: 4 + 2; // addition
-  line-width: 4 - 2; // subtraction
-  line-width: 4 * 2; // multiplication
-  line-width: 4 % 2; // modulus
+line-width: 4 / 2; // division
+line-width: 4 + 2; // addition
+line-width: 4 - 2; // subtraction
+line-width: 4 * 2; // multiplication
+line-width: 4 % 2; // modulus
 }
 {% endhighlight %}
 
@@ -113,7 +100,7 @@ aren't required, but are highly recommended.</p>
 <p>URIs can be paths to places on your computer, or on the internet.</p>
 {% highlight css %}
 #markers {
-  marker-file: url('marker.png');
+marker-file: url('marker.png');
 }
 {% endhighlight %}
 
@@ -124,7 +111,7 @@ they actually will refer to features, which you refer to by putting them in brac
 in the example below.</p>
 {% highlight html %}
 #labels {
-  text-name: "[MY_FIELD]";
+text-name: "[MY_FIELD]";
 }
 {% endhighlight %}
 
@@ -132,7 +119,7 @@ in the example below.</p>
 <p>Boolean means yes or no, so it accepts the values <code>true</code> or <code>false</code>.</p>
 {% highlight css %}
 #markers {
-  marker-allow-overlap:true;
+marker-allow-overlap:true;
 }
 {% endhighlight %}
 
@@ -144,7 +131,7 @@ but expressions allow you to drop the quotes and also do quick addition,
 division, multiplication, and concatenation from within Carto syntax.</p>
 {% highlight css %}
 #buildings {
-  building-height: [HEIGHT_FIELD] * 10;
+building-height: [HEIGHT_FIELD] * 10;
 }
 {% endhighlight %}
 
@@ -154,7 +141,7 @@ order. They're used in line dash arrays, in which the numbers specify
 intervals of line, break, and line again.</p>
 {% highlight css %}
 #disputedboundary {
-  line-dasharray: 1, 4, 2;
+line-dasharray: 1, 4, 2;
 }
 {% endhighlight %}
 
@@ -169,11 +156,11 @@ like opacity rules.
 
 {% highlight css %}
 #world {
-  // this syntax
-  polygon-opacity: 50%;
+// this syntax
+polygon-opacity: 50%;
 
-  // is equivalent to
-  polygon-opacity: 0.5;
+// is equivalent to
+polygon-opacity: 0.5;
 }
 {% endhighlight %}
 
@@ -184,15 +171,6 @@ for transforms within Carto, which are optionally chainable.</p>
 
 {% highlight css %}
 #point {
-  point-transform: scale(2, 2);
+point-transform: scale(2, 2);
 }
 {% endhighlight %}
-</div>
-
-    <div class='keyline-top center small'>
-      <div class='pad2'>
-      The code and documentation to <a href='http://github.com/mapbox/carto'>CartoCSS is hosted on GitHub</a> where you can contribute changes and improvements.
-      </div>
-    </div>
-  </div>
-</div>

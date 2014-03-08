@@ -1,22 +1,19 @@
 ---
 layout: docs
 categories: api
-version: latest
-title: CartoCSS latest
+version: 2.2.0
+title: CartoCSS 2.2.0
 navigation:
   - title: Map Elements
     subnav: 
       - item: '*'
       - item: 'image-filters'
-      - item: 'image-filters-inflate'
       - item: 'direct-image-filters'
       - item: 'comp-op'
       - item: 'opacity'
       - item: 'map'
       - item: 'background-color'
       - item: 'background-image'
-      - item: 'background-image-comp-op'
-      - item: 'background-image-opacity'
       - item: 'srs'
       - item: 'buffer-size'
       - item: 'base'
@@ -114,7 +111,6 @@ navigation:
       - item: 'line-pattern-simplify'
       - item: 'line-pattern-simplify-algorithm'
       - item: 'line-pattern-smooth'
-      - item: 'line-pattern-offset'
       - item: 'line-pattern-geometry-transform'
       - item: 'line-pattern-comp-op'
       - item: 'polygon-pattern'
@@ -228,19 +224,6 @@ A list of image filters that will be applied to the active rendering canvas for 
 
 <div class='space-bottom'>
 
-<h3 id='image-filters-inflate'>image-filters-inflate <span class='small'><a href='#boolean'>boolean</a></span></h3>
-
-
-<span class='quiet'>Default Value:</span>
-false
-<span class='description'>(No special handling will be done and image filters that blur data will only blur up to the edge of a tile boundary)</span>
-
-
-A property that can be set to true to enable using an inflated image internally for seamless blurring across tiles (requires buffered data)
-</div>
-
-<div class='space-bottom'>
-
 <h3 id='direct-image-filters'>direct-image-filters <span class='small'><a href='#functions'>functions</a></span></h3>
 
 
@@ -312,32 +295,6 @@ An image that is repeated below all features on a map as a background.
 
 <div class='space-bottom'>
 
-<h3 id='background-image-comp-op'>background-image-comp-op <span class='small quiet'>clear</span> <span class='small quiet'>src</span> <span class='small quiet'>dst</span> <span class='small quiet'>src-over</span> <span class='small quiet'>dst-over</span> <span class='small quiet'>src-in</span> <span class='small quiet'>dst-in</span> <span class='small quiet'>src-out</span> <span class='small quiet'>dst-out</span> <span class='small quiet'>src-atop</span> <span class='small quiet'>dst-atop</span> <span class='small quiet'>xor</span> <span class='small quiet'>plus</span> <span class='small quiet'>minus</span> <span class='small quiet'>multiply</span> <span class='small quiet'>screen</span> <span class='small quiet'>overlay</span> <span class='small quiet'>darken</span> <span class='small quiet'>lighten</span> <span class='small quiet'>color-dodge</span> <span class='small quiet'>color-burn</span> <span class='small quiet'>hard-light</span> <span class='small quiet'>soft-light</span> <span class='small quiet'>difference</span> <span class='small quiet'>exclusion</span> <span class='small quiet'>contrast</span> <span class='small quiet'>invert</span> <span class='small quiet'>invert-rgb</span> <span class='small quiet'>grain-merge</span> <span class='small quiet'>grain-extract</span> <span class='small quiet'>hue</span> <span class='small quiet'>saturation</span> <span class='small quiet'>color</span> <span class='small quiet'>value</span></h3>
-
-
-<span class='quiet'>Default Value:</span>
-src-over
-<span class='description'>(The background-image will be blended with the background normally (placed on top of any existing background-color))</span>
-
-
-Set the compositing operation used to blend the image into the background
-</div>
-
-<div class='space-bottom'>
-
-<h3 id='background-image-opacity'>background-image-opacity <span class='small'><a href='#float'>float</a></span></h3>
-
-
-<span class='quiet'>Default Value:</span>
-1
-<span class='description'>(The image opacity will not be changed when applied to the map background)</span>
-
-
-Set the opacity of the image
-</div>
-
-<div class='space-bottom'>
-
 <h3 id='srs'>srs <span class='small'><a href='#string'>string</a></span></h3>
 
 
@@ -396,7 +353,7 @@ Path to a directory which holds fonts which should be registered when the Map is
 
 <div class='space-bottom'>
 
-<h3 id='polygon-fill'>polygon-fill <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='polygon-fill'>polygon-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -409,7 +366,7 @@ Fill color to assign to a polygon
 
 <div class='space-bottom'>
 
-<h3 id='polygon-opacity'>polygon-opacity <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='polygon-opacity'>polygon-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -538,7 +495,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 <div class='space-bottom'>
 
-<h3 id='line-color'>line-color <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='line-color'>line-color <span class='small'><a href='#color'>color</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -551,7 +508,7 @@ The color of a drawn line
 
 <div class='space-bottom'>
 
-<h3 id='line-width'>line-width <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='line-width'>line-width <span class='small'><a href='#float'>float</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -564,7 +521,7 @@ The width of a line in pixels
 
 <div class='space-bottom'>
 
-<h3 id='line-opacity'>line-opacity <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='line-opacity'>line-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -823,7 +780,7 @@ The fill opacity of the marker
 
 <div class='space-bottom'>
 
-<h3 id='marker-line-color'>marker-line-color <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='marker-line-color'>marker-line-color <span class='small'><a href='#color'>color</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -845,7 +802,7 @@ The width of the stroke around a marker shape, in pixels. This is positioned on 
 
 <div class='space-bottom'>
 
-<h3 id='marker-line-opacity'>marker-line-opacity <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='marker-line-opacity'>marker-line-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -923,7 +880,7 @@ The height of the marker, if using one of the default types.
 
 <div class='space-bottom'>
 
-<h3 id='marker-fill'>marker-fill <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='marker-fill'>marker-fill <span class='small'><a href='#color'>color</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -1201,7 +1158,7 @@ The spacing between repeated occurrences of the same shield on a line
 
 
 
-Minimum distance a shield will be placed from the edge of a metatile. This option is similiar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the metatile
+Minimum distance a shield will be placed from the edge of a metatile.
 </div>
 
 <div class='space-bottom'>
@@ -1397,7 +1354,7 @@ The shield&#x27;s vertical alignment from its centerpoint
 
 <div class='space-bottom'>
 
-<h3 id='shield-placement-type'>shield-placement-type <span class='small quiet'>dummy</span> <span class='small quiet'>simple</span> <span class='small quiet'>list</span></h3>
+<h3 id='shield-placement-type'>shield-placement-type <span class='small quiet'>dummy</span> <span class='small quiet'>simple</span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -1558,19 +1515,6 @@ geometries are simplified by the given algorithm
 0-1
 
 Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
-</div>
-
-<div class='space-bottom'>
-
-<h3 id='line-pattern-offset'>line-pattern-offset <span class='small'><a href='#float'>float</a></span></h3>
-
-
-<span class='quiet'>Default Value:</span>
-0
-<span class='description'>(no offset)</span>
-
-
-Offsets a line a number of pixels parallel to its actual path. Positive values move the line left, negative values move it right (relative to the directionality of the line).
 </div>
 
 <div class='space-bottom'>
@@ -1895,7 +1839,7 @@ value to control whether the placement of the feature will prevent the placement
 
 <div class='space-bottom'>
 
-<h3 id='point-opacity'>point-opacity <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='point-opacity'>point-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -2075,7 +2019,7 @@ Vertical spacing adjustment between lines in pixels
 
 <div class='space-bottom'>
 
-<h3 id='text-label-position-tolerance'>text-label-position-tolerance <span class='small'><a href='#float'>float</a></span></h3>
+<h3 id='text-label-position-tolerance'>text-label-position-tolerance <span class='small'><a href='#unsigned'>unsigned</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -2231,7 +2175,7 @@ Minimum permitted distance to the next text symbolizer.
 
 
 
-Minimum distance a text label will be placed from the edge of a metatile. This option is similiar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the metatile
+Minimum distance a text label will be placed from the edge of a metatile.
 </div>
 
 <div class='space-bottom'>
@@ -2284,7 +2228,7 @@ Control the style of placement of a point versus the geometry it is attached to.
 
 <div class='space-bottom'>
 
-<h3 id='text-placement-type'>text-placement-type <span class='small quiet'>dummy</span> <span class='small quiet'>simple</span> <span class='small quiet'>list</span></h3>
+<h3 id='text-placement-type'>text-placement-type <span class='small quiet'>dummy</span> <span class='small quiet'>simple</span></h3>
 
 
 <span class='quiet'>Default Value:</span>
@@ -2394,7 +2338,7 @@ The color of the buildings walls.
 
 <div class='space-bottom'>
 
-<h3 id='building-fill-opacity'>building-fill-opacity <span class='small'><a href='#expression'>expression</a></span></h3>
+<h3 id='building-fill-opacity'>building-fill-opacity <span class='small'><a href='#float'>float</a></span></h3>
 
 
 <span class='quiet'>Default Value:</span>
