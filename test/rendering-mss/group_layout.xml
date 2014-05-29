@@ -1,0 +1,25 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <GroupSymbolizer ><PairLayout item-margin="2" max-difference="14" /></GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>6500000</MaxScaleDenominator>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <GroupSymbolizer ><PairLayout item-margin="2" /></GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <MinScaleDenominator>6500000</MinScaleDenominator>
+    <GroupSymbolizer ><SimpleLayout item-margin="1" /></GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <GroupSymbolizer ><PairLayout /></GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000000</MinScaleDenominator>
+    <GroupSymbolizer ><SimpleLayout /></GroupSymbolizer>
+  </Rule>
+</Style>
