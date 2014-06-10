@@ -6,22 +6,18 @@
   <% } %>
 
 <% _(symbolizer).chain().filter(function(p) { return p.css; }).each(function(p) {%>
-<div class='space-bottom'>
 <% if (_.isArray(p.type)) { %>
 <h3 id='<%= p.css %>'><%= p.css.replace(/\s/g, '') %><% _(p.type).each(function(type) { %> <span class='small quiet'><%= type %></span><% }); %></h3>
 <% } else { %>
 <h3 id='<%= p.css %>'><%= p.css.replace(/\s/g, '') %> <span class='small'><a href='#<%= p.type %>'><%= p.type %></a></span></h3>
 <% } %>
 <% if (typeof p['default-value'] !== 'undefined') { %>
+<p>
 <span class='quiet'>Default Value:</span>
 <%= '' + p['default-value'] %>
-<% if (p['default-meaning']) { %><span class='description'>(<%- p['default-meaning'] %>)</span><% } %>
-<% } %>
-<% if (typeof p['range'] !== 'undefined') { %>
-<span class='quiet'>Range:</span>
-<%= '' + p['range'] %>
-<% } %>
+<% if (p['default-meaning']) { %><span class='description'>(<%- p['default-meaning'] %>)</span><% } %><% } %>
+<% if (typeof p['range'] !== 'undefined') { %><span class='quiet'>Range:</span><%= '' + p['range'] %><% } %>
 <% if (p.doc) { %><%- p.doc%><% } %>
-</div>
+</p>
 <% }); %>
 <% }); %>
