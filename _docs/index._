@@ -32,7 +32,7 @@ navigation:
 
 <h2 id='color'>Color</h2>
 <p>CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values,
-rgb, rgba, and hsl. It also supports the predefined HTML colors names, like
+rgb, rgba, hsl, and hsla. It also supports the predefined HTML colors names, like
 <code>yellow</code> and <code>blue</code>.</p>
 
 {% highlight css %}
@@ -42,6 +42,7 @@ line-color: #ffff00;
 line-color: rgb(255, 255, 0);
 line-color: rgba(255, 255, 0, 1);
 line-color: hsl(100, 50%, 50%);
+line-color: hsla(100, 50%, 50%, 1);
 line-color: yellow;
 }
 {% endhighlight %}
