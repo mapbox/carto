@@ -1,0 +1,79 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <Filter>([class] = 2)</Filter>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <![CDATA[[name]]]>
+      <Layout dy="10" >
+        <![CDATA['Alt'+[alt1]]]>
+        <Layout dx="5" ><![CDATA[test]]></Layout>
+      </Layout>
+      <Layout dy="15" dx="10" >
+        <![CDATA[[alt2]]]>
+        <Layout dy="3" dx="2" ><![CDATA[test]]></Layout>
+      </Layout>
+    </TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <Filter>([class] = 2)</Filter>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <![CDATA[[name]]]>
+      <Layout dy="10" ><![CDATA['Alt'+[alt1]]]></Layout>
+      <Layout dy="15" dx="10" >
+        <![CDATA[[alt2]]]>
+        <Layout dy="3" dx="2" ><![CDATA[test]]></Layout>
+      </Layout>
+    </TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <Filter>([class] = 2)</Filter>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <![CDATA[[name]]]>
+      <Layout dy="10" ><![CDATA['Alt'+[alt1]]]></Layout>
+      <Layout dy="10" >
+        <![CDATA[[alt2]]]>
+        <Layout dy="3" dx="2" ><![CDATA[test]]></Layout>
+      </Layout>
+    </TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <MinScaleDenominator>750000</MinScaleDenominator>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <![CDATA[[name]]]>
+      <Layout dy="-15" >
+        <![CDATA[[alt1]]]>
+        <Layout dx="5" ><![CDATA[test]]></Layout>
+      </Layout>
+      <Layout dy="15" dx="10" >
+        <![CDATA[[alt2]]]>
+        <Layout dy="2" ><![CDATA[test]]></Layout>
+      </Layout>
+    </TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <![CDATA[[name]]]>
+      <Layout dy="-15" ><![CDATA[[alt1]]]></Layout>
+      <Layout dy="15" dx="10" >
+        <![CDATA[[alt2]]]>
+        <Layout dy="2" ><![CDATA[test]]></Layout>
+      </Layout>
+    </TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>12500000</MinScaleDenominator>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <![CDATA[[name]]]>
+      <Layout dy="-10" ><![CDATA[[alt1]]]></Layout>
+      <Layout dy="10" >
+        <![CDATA[[alt2]]]>
+        <Layout dy="2" ><![CDATA[test]]></Layout>
+      </Layout>
+    </TextSymbolizer>
+  </Rule>
+</Style>

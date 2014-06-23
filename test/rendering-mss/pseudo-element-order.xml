@@ -1,0 +1,16 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <TextSymbolizer face-name="Deja Vu Sans" >
+      <Format ><![CDATA[before3]]></Format>
+      <Format ><![CDATA[before2]]></Format>
+      <Format ><![CDATA[before1]]></Format>
+      <![CDATA[root]]>
+      <Format ><![CDATA[after0]]></Format>
+      <Format ><![CDATA[after1]]></Format>
+      <Format ><![CDATA[after2]]></Format>
+      <Layout ><![CDATA[layout0]]></Layout>
+      <Layout ><![CDATA[layout1]]></Layout>
+      <Layout ><![CDATA[layout3]]></Layout>
+    </TextSymbolizer>
+  </Rule>
+</Style>
