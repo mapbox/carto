@@ -9,7 +9,6 @@ var helper = require('./support/helper');
 function cleanupItem(key, value) {
     if (key === 'rules') return;
     else if (key === 'ruleIndex') return;
-    else if (key === 'subdefinitions') return;
     else if (key === 'elements') return value.map(function(item) { return item.value; });
     else if (key === 'filters') {
         var arr = [];
