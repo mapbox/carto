@@ -1,0 +1,3 @@
+*.result eol=lf
+*.mml eol=lf
+*.mss eol=lf
