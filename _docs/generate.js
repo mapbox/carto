@@ -8,8 +8,10 @@ function tmpl(x) {
 }
 
 var index = tmpl('index._');
+var indexMD = tmpl('index.md._');
 var toc = tmpl('toc._');
 var table = tmpl('symbolizers._');
+var tableMD = tmpl('symbolizers.md._');
 var versions = Object.keys(refs.version);
 
 for (var v in refs.version) {
@@ -20,6 +22,17 @@ for (var v in refs.version) {
       version: v,
       versions: versions,
       toc: toc,
+      _: _
+    }));
+}
+
+for (var v in refs.version) {
+    var ref = refs.version[v];
+    fs.writeFileSync(path.join(__dirname, '../docs/' + v + '.md'), indexMD({
+      symbolizers: ref.symbolizers,
+      table: tableMD,
+      version: v,
+      versions: versions,
       _: _
     }));
 }
