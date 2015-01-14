@@ -1,0 +1,12 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([highway] = 'motorway')</Filter>
+    <GroupSymbolizer start-column="1" num-columns="6" placement="line" spacing="750" minimum-distance="30" >
+      <SimpleLayout />
+      <GroupRule>
+        <ShieldSymbolizer size="10" fill="#ffffff" face-name="Some Font" file="symbols/mot_shield[length%].png" ><![CDATA[[ref%]]]></ShieldSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+</Style>
