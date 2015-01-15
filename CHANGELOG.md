@@ -1,5 +1,10 @@
 ## Changelog
 
+## 0.14.1
+
+* Support latest Mapnik 3.x
+* Bump `mapnik-reference` dependency to 7.x.
+
 ## 0.14.0
 
 * Support for Mapnik 3.x
