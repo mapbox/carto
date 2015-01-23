@@ -23,7 +23,7 @@ line-color: yellow;
 }
 ```
 
-Especially of note is the support for hsl, which can be [easier to reason about than rgb()](http://mothereffinghsl.com/). Carto also includes several color functions [borrowed from less](http://lesscss.org/#-color-functions):
+Especially of note is the support for hsl, which can be [easier to reason about than rgb()](http://mothereffinghsl.com/). Carto also includes several color operation functions [borrowed from less](http://lesscss.org/functions/#color-operations):
 
 ``` css
 // lighten and darken colors
