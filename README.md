@@ -11,7 +11,7 @@ with an emphasis on speed and flexibility. If you are a previous user of Cascade
 
 ## Documentation
 
-For users looking to learn how to use TileMill the best places to start are to 1) Download [TileMill](http://mapbox.com/carto/) and review the [Carto reference documentation](http://mapbox.com/carto/).
+For users looking to learn how to use TileMill the best places to start are to 1) Download [TileMill](https://github.com/mapbox/carto/) and review the [Carto reference documentation](https://github.com/mapbox/carto/blob/master/docs/latest.md).
 
 Tutorials like the [TileMill Crashcourse](https://www.mapbox.com/tilemill/docs/crashcourse/styling/) are a great place to start to learn the basics of CartoCSS.
 
