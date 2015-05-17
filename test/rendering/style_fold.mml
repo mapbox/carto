@@ -1,0 +1,11 @@
+{
+  "Layer": [
+    {
+      "name": "a",
+      "id": "a"
+    }
+  ],
+  "Stylesheet": [
+    "style_fold.mss"
+  ]
+}
