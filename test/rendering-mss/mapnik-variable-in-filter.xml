@@ -1,0 +1,6 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <Filter>([field] = @render-time-variable)</Filter>
+    <MarkersSymbolizer width="1" />
+  </Rule>
+</Style>
