@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+
+
+<Style name="a" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <Filter>([CODE] != 'X')</Filter>
+    <LineSymbolizer stroke="#008000" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([CODE] != 'X')</Filter>
+    <LineSymbolizer stroke="#ff0000" />
+  </Rule>
+</Style>
+<Layer name="a"
+>
+    <StyleName>a</StyleName>  </Layer>
+
+</Map>
