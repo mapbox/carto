@@ -1,0 +1,6 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <Filter>([way_pixels] &lt;= 192000) and ([way_pixels] &gt;= 3000)</Filter>
+    <LineSymbolizer stroke-width="1" />
+  </Rule>
+</Style>
