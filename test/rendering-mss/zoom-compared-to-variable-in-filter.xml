@@ -1,0 +1,16 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <Filter>(@zoom = @zoom_level)</Filter>
+    <MarkersSymbolizer width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>(@zoom = @zoom_level)</Filter>
+    <MarkersSymbolizer width="1" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>50000</MinScaleDenominator>
+    <MarkersSymbolizer width="1" />
+  </Rule>
+</Style>
