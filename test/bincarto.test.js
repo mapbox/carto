@@ -10,7 +10,7 @@ describe('bin/carto', function() {
     it('errors on no input', function(done) {
         exec(bin, function(err, stdout, stderr) {
             assert.equal(1, err.code);
-            assert.equal("carto: no input files ('carto -h or --help' for help)\n", stdout);
+            assert.equal("carto: no input files ('carto -h or --help' for help)\n", stderr);
             done();
         });
     });
