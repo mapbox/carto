@@ -25,7 +25,7 @@ if (options.help) {
 }
 
 if (options.version) {
-    console.log("carto " + carto.version.join('.') + " (Carto map stylesheet compiler)");
+    console.error("carto " + carto.version.join('.') + " (Carto map stylesheet compiler)");
     process.exit(0);
 }
 
@@ -35,7 +35,7 @@ if (input && input[0] != '/') {
 }
 
 if (!input) {
-    console.log("carto: no input files ('carto -h or --help' for help)");
+    console.error("carto: no input files ('carto -h or --help' for help)");
     process.exit(1);
 }
 
@@ -46,12 +46,12 @@ if (options.benchmark) {
 var ext = path.extname(input);
 
 if (!ext) {
-    console.log("carto: please pass either a .mml file or .mss file");
+    console.error("carto: please pass either a .mml file or .mss file");
     process.exit(1);
 }
 
 if (!existsSync(input)) {
-    console.log("carto: file does not exist: '" + input + "'");
+    console.error("carto: file does not exist: '" + input + "'");
     process.exit(1);
 }
 
@@ -158,5 +158,5 @@ if (ext == '.mml') {
 } else if (ext == '.mss') {
     compileMSS(null,data);
 } else {
-    console.log("carto: please pass either a .mml file or .mss file");
+    console.error("carto: please pass either a .mml file or .mss file");
 }
