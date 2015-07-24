@@ -224,7 +224,7 @@ The `Renderer` interface is the main API for developers, and it takes an MML fil
 To install, download or clone this repository, then copy the `vim-carto`
 directory located at `build/vim-carto` to your `~/.vim` directory.
 
-    cp build/vim-carto ~/.vim -R
+    cp build/vim-carto/* ~/.vim -R
 
 ## Credits
 
