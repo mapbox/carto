@@ -3,6 +3,7 @@
 #
 
 expresso = ./node_modules/.bin/mocha
+BROWSERIFY = ./node_modules/.bin/browserify
 
 lint:
 	./node_modules/.bin/jshint lib/carto/*.js lib/carto/tree/*.js
@@ -16,5 +17,11 @@ test:
 endif
 
 check: test
+
+dist:
+	mkdir -p dist
+
+dist/carto.uncompressed.js: dist $(shell $(BROWSERIFY) --list lib/carto/index.js)
+	$(BROWSERIFY) --debug lib/carto/index.js --standalone carto > $@
 
 .PHONY: test
