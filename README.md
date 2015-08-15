@@ -22,7 +22,7 @@ For more advanced topics see:
  - [How to style labels](https://www.mapbox.com/tilemill/docs/guides/styling-labels/)
  - [How to style lines](https://www.mapbox.com/tilemill/docs/guides/styling-lines/)
  - [How to style polygons](https://www.mapbox.com/tilemill/docs/guides/styling-polygons/)
- - See also the (Styling Concepts)[#styling-concepts] for explanations of advanced features.
+ - See also the [Styling Concepts](#styling-concepts) for explanations of advanced features.
 
 ## Developers
 
