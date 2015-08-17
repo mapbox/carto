@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/mapbox/carto.png)](http://travis-ci.org/mapbox/carto) [![Coverage Status](https://coveralls.io/repos/mapbox/carto/badge.png)](https://coveralls.io/r/mapbox/carto)
 
-Is the language for map design used by [TileMill](). It is similiar in syntax to CSS, but builds upon it with specific abilities to filter map data and by providing things like variables.
+Is the language for map design used by [Mapbox Studio](http://mapbox.com/mapbox-studio/). It is similiar in syntax to CSS, but builds upon it with specific abilities to filter map data and by providing things like variables.
 
 Carto, aka CartoCSS, targets the [Mapnik renderer](http://mapnik.org) and is able to generate Mapnik XML.
 
@@ -11,11 +11,11 @@ with an emphasis on speed and flexibility. If you are a previous user of Cascade
 
 ## Documentation
 
-For users looking to learn how to use TileMill the best places to start are to 1) Download [TileMill](https://github.com/mapbox/carto/) and review the [Carto reference documentation](https://github.com/mapbox/carto/blob/master/docs/latest.md).
+For users looking to learn how to use Mapbox Studio the best places to start are to 1) Download [Mapbox Studio](https://www.mapbox.com/mapbox-studio/) and review the [Carto reference documentation](https://github.com/mapbox/carto/blob/master/docs/latest.md).
 
-Tutorials like the [TileMill Crashcourse](https://www.mapbox.com/tilemill/docs/crashcourse/styling/) are a great place to start to learn the basics of CartoCSS.
+Tutorials like the [Mapbox Getting started with CartoCSS guide](https://www.mapbox.com/guides/getting-started-cartocss/) are a great place to start to learn the basics of CartoCSS.
 
-For more advanced topics see:
+For more advanced topics see the [Studio style quickstart guide](https://www.mapbox.com/guides/style-quickstart/) and [Studio style manual](https://www.mapbox.com/guides/style-manual). The links below reference the Tilemill application, which preceded Mapbox Studio, but still contain useful and relevant information.
 
  - [Details on Filtering data with CartoCSS](https://www.mapbox.com/tilemill/docs/guides/selectors/)
  - [How order works in rendering](https://www.mapbox.com/tilemill/docs/guides/symbol-drawing-order/)
@@ -176,7 +176,7 @@ String comparisons:
 
 #### Installation
 
-If you're using [TileMill](http://mapbox.com/tilemill/), you're already
+If you're using [Mapbox Studio](http://mapbox.com/mapbox-studio/), you're already
 using CartoCSS and don't need to do a thing.
 
 If you're a developer-type and want to use the `carto` binary with
@@ -184,14 +184,14 @@ If you're a developer-type and want to use the `carto` binary with
 
     npm install -g carto
 
-Optionally you may also want to install millstone which is required for resolving data in the same way as TileMill does:
+Optionally you may also want to install millstone which is required for resolving data in the same way as Mapbox Studio does:
 
     npm install -g millstone
 
 
 Having `millstone` installed specifically enable support for localizing external resources (URLs and local files) referenced in your mml file, and detecting projections (using [node-srs](https://github.com/mapbox/node-srs))
 
-Now that Carto is installed you should have a `carto` command line tool available that can be run on a TileMill project:
+Now that Carto is installed you should have a `carto` command line tool available that can be run on a Mapbox Studio project:
 
     carto project.mml > mapnik.xml
 
