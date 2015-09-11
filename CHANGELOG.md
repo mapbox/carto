@@ -1,5 +1,14 @@
 ## Changelog
 
+
+## 0.15.1
+
+* Support for Mapnik 3.0.4
+
+## 0.15.0
+
+* Support for Mapnik 3.0.3
+
 ## 0.14.1
 
 * Support latest Mapnik 3.x
