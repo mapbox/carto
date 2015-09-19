@@ -1,6 +1,6 @@
 {
   "name": "carto",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "description": "Mapnik Stylesheet Compiler",
   "url": "https://github.com/mapbox/carto",
   "repository": {
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "underscore": "~1.6.0",
-    "mapnik-reference": "~8.2.0",
+    "mapnik-reference": "~8.3.0",
     "optimist": "~0.6.0"
   },
   "devDependencies": {
