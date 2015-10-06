@@ -37,7 +37,7 @@
     "node": ">=0.4.x"
   },
   "dependencies": {
-    "underscore": "~1.6.0",
+    "underscore": "~1.8.3",
     "mapnik-reference": "~8.5.0",
     "optimist": "~0.6.0"
   },
