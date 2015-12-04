@@ -2,7 +2,8 @@
 
 Installing:
 
-    git clone git@github.com:mapbox/carto.git
+    git clone https://github.com/mapbox/carto.git
+    cd carto
     npm install
 
 Test:
