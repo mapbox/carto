@@ -4,7 +4,8 @@ var path = require('path'),
     fs = require('fs'),
     carto = require('../lib/carto'),
     url = require('url'),
-    _ = require('underscore');
+    _ = require('underscore'),
+    yaml = require('js-yaml');
 
 var existsSync = require('fs').existsSync || require('path').existsSync
 
@@ -125,7 +126,7 @@ try {
 
 if (ext == '.mml') {
     try {
-        data = JSON.parse(data);
+        data = yaml.safeLoad(data);
     } catch(err) {
         console.error("carto: " + err.message.replace(/^[A-Z]+, /, ''));
         process.exit(1);
