@@ -1,0 +1,14 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <LineSymbolizer stroke="#008000" />
+    <LineSymbolizer stroke="#bbeedd" />
+    <LineSymbolizer stroke="#deadbe" />
+    <LineSymbolizer stroke="#7b2d43" />
+    <LineSymbolizer stroke="rgba(123, 45, 67, 0.89)" />
+    <LineSymbolizer stroke="rgba(123, 45, 67, 0.89)" />
+    <LineSymbolizer stroke="#85d189" />
+    <LineSymbolizer stroke="#85d189" />
+    <LineSymbolizer stroke="rgba(133, 209, 137, 0.89)" />
+    <LineSymbolizer stroke="rgba(133, 209, 137, 0.89)" />
+  </Rule>
+</Style>
