@@ -8,15 +8,15 @@ var fs = require('fs');
 
 describe('bin/carto', function() {
     it('errors on no input', function(done) {
-        exec(bin, function(err, stdout, stderr) {
+        exec(util.format('node %s', bin), function(err, stdout, stderr) {
             assert.equal(1, err.code);
             assert.equal("carto: no input files ('carto -h or --help' for help)\n", stderr);
             done();
         });
     });
     it('renders mml', function(done) {
-        var file = path.join(__dirname, 'rendering', 'identity.mml');
-        exec(util.format('%s %s', bin, file), function(err, stdout, stderr) {
+        var file = path.join('test', 'rendering', 'identity.mml');
+        exec(util.format('node %s %s', bin, file), function(err, stdout, stderr) {
             assert.ifError(err);
             helper.compareToXMLFile(helper.resultFile(file), stdout, done, [
                 helper.removeAbsoluteImages,
@@ -25,8 +25,8 @@ describe('bin/carto', function() {
         });
     });
     it('renders mss', function(done) {
-        var file = path.join(__dirname, 'rendering-mss', 'empty_name.mss');
-        exec(util.format('%s %s', bin, file), function(err, stdout, stderr) {
+        var file = path.join('test', 'rendering-mss', 'empty_name.mss');
+        exec(util.format('node %s %s', bin, file), function(err, stdout, stderr) {
             assert.ifError(err);
             var expected = file.replace(path.extname(file),'')+'.xml';
             var expected_data = fs.readFileSync(expected, 'utf8');
