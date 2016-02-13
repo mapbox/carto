@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+
+
+<Style name="world" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([country] = 'CAN')</Filter>
+    <GroupSymbolizer num-columns="2" ><SimpleLayout />
+      <GroupRule>
+        <MaxScaleDenominator>12500</MaxScaleDenominator>
+        <Filter>([type%] = 'TCH')</Filter>
+        <ShieldSymbolizer file="trans_canada_highway_large.svg" fill="#008000" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <MinScaleDenominator>12500</MinScaleDenominator>
+        <Filter>([type%] = 'TCH')</Filter>
+        <ShieldSymbolizer file="trans_canada_highway_small.svg" fill="#008000" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'QC')</Filter>
+        <ShieldSymbolizer file="quebec_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'CR')</Filter>
+        <ShieldSymbolizer face-name="DejaVu Sans Bold" file="images/county_route.svg" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <ShieldSymbolizer file="generic_shield.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+    <GroupSymbolizer num-columns="0" ><SimpleLayout />
+      <GroupRule>
+        <TextSymbolizer face-name="DejaVu Sans Book" ><![CDATA[[name]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([country] = 'CAN')</Filter>
+    <GroupSymbolizer num-columns="2" ><SimpleLayout />
+      <GroupRule>
+        <MaxScaleDenominator>12500</MaxScaleDenominator>
+        <Filter>([type%] = 'TCH')</Filter>
+        <ShieldSymbolizer file="trans_canada_highway_large.svg" fill="#008000" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <MinScaleDenominator>12500</MinScaleDenominator>
+        <Filter>([type%] = 'TCH')</Filter>
+        <ShieldSymbolizer file="trans_canada_highway_small.svg" fill="#008000" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'QC')</Filter>
+        <ShieldSymbolizer file="quebec_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <ShieldSymbolizer file="generic_shield.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+    <GroupSymbolizer num-columns="0" ><SimpleLayout />
+      <GroupRule>
+        <TextSymbolizer face-name="DejaVu Sans Book" ><![CDATA[[name]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>1500000</MinScaleDenominator>
+    <Filter>([country] = 'CAN')</Filter>
+    <GroupSymbolizer num-columns="2" ><SimpleLayout />
+      <GroupRule>
+        <MaxScaleDenominator>12500</MaxScaleDenominator>
+        <Filter>([type%] = 'TCH')</Filter>
+        <ShieldSymbolizer file="trans_canada_highway_large.svg" fill="#008000" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <MinScaleDenominator>12500</MinScaleDenominator>
+        <Filter>([type%] = 'TCH')</Filter>
+        <ShieldSymbolizer file="trans_canada_highway_small.svg" fill="#008000" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'QC')</Filter>
+        <ShieldSymbolizer file="quebec_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <ShieldSymbolizer file="generic_shield.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([country] = 'USA')</Filter>
+    <GroupSymbolizer num-columns="2" ><PairLayout item-margin="1" />
+      <GroupRule>
+        <Filter>([type%] = 'US')</Filter>
+        <ShieldSymbolizer file="us_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'I')</Filter>
+        <ShieldSymbolizer file="interstate.svg" fill="#ffffff" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'CR')</Filter>
+        <ShieldSymbolizer file="state_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <ShieldSymbolizer file="state_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([country] = 'USA')</Filter>
+    <GroupSymbolizer num-columns="2" ><PairLayout item-margin="1" />
+      <GroupRule>
+        <Filter>([type%] = 'US')</Filter>
+        <ShieldSymbolizer file="us_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <Filter>([type%] = 'I')</Filter>
+        <ShieldSymbolizer file="interstate.svg" fill="#ffffff" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <ShieldSymbolizer file="state_highway.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <GroupSymbolizer num-columns="2" ><SimpleLayout />
+      <GroupRule>
+        <Filter>([type%] = 'CR')</Filter>
+        <ShieldSymbolizer face-name="DejaVu Sans Bold" file="images/county_route.svg" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+      <GroupRule>
+        <ShieldSymbolizer file="generic_shield.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <GroupSymbolizer num-columns="2" ><SimpleLayout />
+      <GroupRule>
+        <ShieldSymbolizer file="generic_shield.svg" face-name="DejaVu Sans Bold" ><![CDATA[[shield_num%]]]></ShieldSymbolizer>
+        <TextSymbolizer face-name="DejaVu Sans Book" dy="-15" ><![CDATA[[above_text%]]]></TextSymbolizer>
+      </GroupRule>
+    </GroupSymbolizer>
+  </Rule>
+</Style>
+<Layer name="world"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>world</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[[absolute path]]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
