@@ -34,9 +34,9 @@
   },
   "dependencies": {
     "js-yaml": "^3.4.6",
+    "lodash": "^4.5.1",
     "mapnik-reference": "~8.5.3",
-    "optimist": "~0.6.0",
-    "underscore": "~1.8.3"
+    "optimist": "~0.6.0"
   },
   "devDependencies": {
     "coveralls": "~2.10.1",
