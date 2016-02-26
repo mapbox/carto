@@ -31,10 +31,10 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>250</MaxScaleDenominator>
+    <MinScaleDenominator>100</MinScaleDenominator>
     <PolygonSymbolizer fill="#f00000" />
   </Rule>
   <Rule>
-    <MinScaleDenominator>5000</MinScaleDenominator>
     <PolygonSymbolizer fill="#000000" />
   </Rule>
 </Style>
