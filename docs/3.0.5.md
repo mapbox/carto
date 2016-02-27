@@ -6,6 +6,7 @@ The following is a list of properties provided in CartoCSS that you can apply to
 
 ##### image-filters `functions`
 
+`agg-stack-blur``emboss``blur``gray``sobel``edge-detect``x-gradient``y-gradient``invert``sharpen``color-blind-protanope``color-blind-deuteranope``color-blind-tritanope``colorize-alpha``color-to-alpha``scale-hsla`
 
 Default Value: none
 _(no filters.)_
@@ -16,6 +17,7 @@ A list of image filters that will be applied to the active rendering canvas for 
 ##### image-filters-inflate `boolean`
 
 
+
 Default Value: false
 _(No special handling will be done and image filters that blur data will only blur up to the edge of a tile boundary.)_
 
@@ -24,6 +26,7 @@ A property that can be set to true to enable using an inflated image internally 
 
 ##### direct-image-filters `functions`
 
+`agg-stack-blur``emboss``blur``gray``sobel``edge-detect``x-gradient``y-gradient``invert``sharpen``color-blind-protanope``color-blind-deuteranope``color-blind-tritanope``colorize-alpha``color-to-alpha``scale-hsla`
 
 Default Value: none
 _(no filters.)_
@@ -34,6 +37,7 @@ A list of image filters to apply to the main canvas (see the `image-filters` doc
 ##### comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
 
+
 Default Value: src-over
 _(Add the current layer on top of other layers.)_
 
@@ -41,6 +45,7 @@ Composite operation. This defines how this layer should behave relative to layer
 * * *
 
 ##### opacity `float`
+
 
 
 Default Value: 1
@@ -55,6 +60,7 @@ An alpha value for the style (which means an alpha applied to all features in se
 ##### background-color `color`
 
 
+
 Default Value: none
 _(Will be rendered transparent.)_
 
@@ -62,6 +68,7 @@ Map Background color.
 * * *
 
 ##### background-image `uri`
+
 
 
 Default Value: 
@@ -73,6 +80,7 @@ An image that is repeated below all features on a map as a background. Accepted 
 ##### background-image-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
 
+
 Default Value: src-over
 _(The background-image will be blended with the background normally (placed on top of any existing background-color).)_
 
@@ -80,6 +88,7 @@ Set the compositing operation used to blend the image into the background.
 * * *
 
 ##### background-image-opacity `float`
+
 
 
 Default Value: 1
@@ -91,6 +100,7 @@ Set the opacity of the image.
 ##### srs `string`
 
 
+
 Default Value: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
 _(The proj4 literal of EPSG:4326 is assumed to be the Map&#39;s spatial reference and all data from layers within this map will be plotted using this coordinate system. If any layers do not declare an srs value then they will be assumed to be in the same srs as the Map and not transformations will be needed to plot them in the Map&#39;s coordinate space.)_
 
@@ -98,6 +108,7 @@ Map spatial reference (proj4 string).
 * * *
 
 ##### buffer-size `float`
+
 
 
 Default Value: 0
@@ -109,6 +120,7 @@ Extra tolerance around the map (in pixels) used to ensure labels crossing tile b
 ##### maximum-extent `string`
 
 
+
 Default Value: -20037508.34,-20037508.34,20037508.34,20037508.34
 _(All data will be clipped to global mercator extent (default is applied in Carto.js).)_
 
@@ -118,6 +130,7 @@ An extent to be used to limit the bounds used to query all layers during renderi
 ##### base `string`
 
 
+
 Default Value: 
 _(This base path defaults to an empty string meaning that any relative paths to files referenced in styles or layers will be interpreted relative to the application process.)_
 
@@ -125,6 +138,7 @@ Any relative paths used to reference files will be understood as relative to thi
 * * *
 
 ##### font-directory `uri`
+
 
 
 Default Value: none
@@ -139,6 +153,7 @@ Path to a directory which holds fonts which should be registered when the Map is
 ##### polygon-fill `color`
 
 
+
 Default Value: The color gray will be used for fill.
 _(Gray and fully opaque (alpha = 1), same as rgb(128,128,128) or rgba(128,128,128,1).)_
 
@@ -146,6 +161,7 @@ Fill color to assign to a polygon.
 * * *
 
 ##### polygon-opacity `float`
+
 
 
 Default Value: 1
@@ -157,6 +173,7 @@ The opacity of the polygon.
 ##### polygon-gamma `float`
 
 
+
 Default Value: 1
 _(Fully antialiased.)_
 Range: 0-1
@@ -166,6 +183,7 @@ Level of antialiasing of polygon edges.
 ##### polygon-gamma-method `keyword`
 `power``linear``none``threshold``multiply`
 
+
 Default Value: power
 _(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the &#39;linear&#39; method, while other methods are usually only used to disable AA.)_
 
@@ -173,6 +191,7 @@ An Antigrain Geometry specific rendering hint to control the quality of antialia
 * * *
 
 ##### polygon-clip `boolean`
+
 
 
 Default Value: false
@@ -184,6 +203,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 ##### polygon-simplify `float`
 
 
+
 Default Value: 0
 _(geometry will not be simplified.)_
 
@@ -192,6 +212,7 @@ Simplify geometries by the given tolerance.
 
 ##### polygon-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
+
 
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
@@ -202,6 +223,7 @@ Simplify geometries by the given algorithm.
 ##### polygon-smooth `float`
 
 
+
 Default Value: 0
 _(No smoothing.)_
 Range: 0-1
@@ -210,6 +232,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 
 ##### polygon-geometry-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(The geometry will not be transformed.)_
@@ -219,6 +242,7 @@ Transform polygon geometry with specified function.
 
 ##### polygon-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -232,6 +256,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### line-color `color`
 
 
+
 Default Value: black
 _(black and fully opaque (alpha = 1), same as rgb(0,0,0) or rgba(0,0,0,1).)_
 
@@ -239,6 +264,7 @@ The color of a drawn line.
 * * *
 
 ##### line-width `float`
+
 
 
 Default Value: 1
@@ -250,6 +276,7 @@ The width of a line in pixels.
 ##### line-opacity `float`
 
 
+
 Default Value: 1
 _(Color is fully opaque.)_
 
@@ -258,6 +285,7 @@ The opacity of a line.
 
 ##### line-join `keyword`
 `miter``miter-revert``round``bevel`
+
 
 Default Value: miter
 _(The line joins will be rendered using a miter look.)_
@@ -268,6 +296,7 @@ The behavior of lines when joining.
 ##### line-cap `keyword`
 `butt``round``square`
 
+
 Default Value: butt
 _(The line endings will be rendered using a butt look.)_
 
@@ -275,6 +304,7 @@ The display of line endings.
 * * *
 
 ##### line-gamma `float`
+
 
 
 Default Value: 1
@@ -286,6 +316,7 @@ Level of antialiasing of stroke line.
 ##### line-gamma-method `keyword`
 `power``linear``none``threshold``multiply`
 
+
 Default Value: power
 _(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the &#39;linear&#39; method, while other methods are usually only used to disable AA.)_
 
@@ -293,6 +324,7 @@ An Antigrain Geometry specific rendering hint to control the quality of antialia
 * * *
 
 ##### line-dasharray `numbers`
+
 
 
 Default Value: none
@@ -304,6 +336,7 @@ A pair of length values [a,b], where (a) is the dash length and (b) is the gap l
 ##### line-dash-offset `numbers`
 
 
+
 Default Value: none
 _(The line will be drawn without dashes.)_
 
@@ -311,6 +344,7 @@ Valid parameter but not currently used in renderers (only exists for experimenta
 * * *
 
 ##### line-miterlimit `float`
+
 
 
 Default Value: 4
@@ -322,6 +356,7 @@ The limit on the ratio of the miter length to the stroke-width. Used to automati
 ##### line-clip `boolean`
 
 
+
 Default Value: false
 _(The geometry will not be clipped to map bounds before rendering.)_
 
@@ -329,6 +364,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 * * *
 
 ##### line-simplify `float`
+
 
 
 Default Value: 0
@@ -340,6 +376,7 @@ Simplify geometries by the given tolerance.
 ##### line-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
 
+
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
 
@@ -347,6 +384,7 @@ Simplify geometries by the given algorithm.
 * * *
 
 ##### line-smooth `float`
+
 
 
 Default Value: 0
@@ -358,6 +396,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 ##### line-offset `float`
 
 
+
 Default Value: 0
 _(Will not be offset.)_
 
@@ -367,6 +406,7 @@ Offsets a line a number of pixels parallel to its actual path. Positive values m
 ##### line-rasterizer `keyword`
 `full``fast`
 
+
 Default Value: full
 _(The line will be rendered using the highest quality method rather than the fastest.)_
 
@@ -375,6 +415,7 @@ Exposes an alternate AGG rendering method that sacrifices some accuracy for spee
 
 ##### line-geometry-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(The geometry will not be transformed.)_
@@ -384,6 +425,7 @@ Transform line geometry with specified function.
 
 ##### line-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -397,6 +439,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### marker-file `uri`
 
 
+
 Default Value: none
 _(An ellipse or circle, if width equals height.)_
 
@@ -404,6 +447,7 @@ A file that this marker shows at each placement. If no file is given, the marker
 * * *
 
 ##### marker-opacity `float`
+
 
 
 Default Value: 1
@@ -415,6 +459,7 @@ The overall opacity of the marker, if set, overrides both the opacity of both th
 ##### marker-fill-opacity `float`
 
 
+
 Default Value: 1
 _(Color is fully opaque.)_
 
@@ -422,6 +467,7 @@ The fill opacity of the marker.
 * * *
 
 ##### marker-line-color `color`
+
 
 
 Default Value: black
@@ -433,6 +479,7 @@ The color of the stroke around the marker.
 ##### marker-line-width `float`
 
 
+
 Default Value: 0.5
 _(The marker will be drawn with an outline of .5 pixels wide.)_
 
@@ -440,6 +487,7 @@ The width of the stroke around the marker, in pixels. This is positioned on the 
 * * *
 
 ##### marker-line-opacity `float`
+
 
 
 Default Value: 1
@@ -451,6 +499,7 @@ The opacity of a line.
 ##### marker-placement `keyword`
 `point``line``interior``vertex-first``vertex-last`
 
+
 Default Value: point
 _(Place markers at the center point (centroid) of the geometry.)_
 
@@ -459,6 +508,7 @@ Attempt to place markers on a point, in the center of a polygon, or if markers-p
 
 ##### marker-multi-policy `keyword`
 `each``whole``largest`
+
 
 Default Value: each
 _(If a feature contains multiple geometries and the placement type is either point or interior then a marker will be rendered for each.)_
@@ -469,6 +519,7 @@ A special setting to allow the user to control rendering behavior for 'multi-geo
 ##### marker-type `keyword`
 `arrow``ellipse`
 
+
 Default Value: ellipse
 _(The marker shape is an ellipse.)_
 
@@ -476,6 +527,7 @@ The default marker-type. If a SVG file is not given as the marker-file parameter
 * * *
 
 ##### marker-width `float`
+
 
 
 Default Value: 10
@@ -487,6 +539,7 @@ The width of the marker, if using one of the default types.
 ##### marker-height `float`
 
 
+
 Default Value: 10
 _(The marker height is 10 pixels.)_
 
@@ -494,6 +547,7 @@ The height of the marker, if using one of the default types.
 * * *
 
 ##### marker-fill `color`
+
 
 
 Default Value: blue
@@ -505,6 +559,7 @@ The color of the area of the marker.
 ##### marker-allow-overlap `boolean`
 
 
+
 Default Value: false
 _(Do not allow markers to overlap with each other - overlapping markers will not be shown.)_
 
@@ -512,6 +567,7 @@ Control whether overlapping markers are shown or hidden.
 * * *
 
 ##### marker-avoid-edges `boolean`
+
 
 
 Default Value: false
@@ -523,6 +579,7 @@ Avoid placing markers that intersect with tile boundaries.
 ##### marker-ignore-placement `boolean`
 
 
+
 Default Value: false
 _(do not store the bbox of this geometry in the collision detector cache.)_
 
@@ -530,6 +587,7 @@ Value to control whether the placement of the feature will prevent the placement
 * * *
 
 ##### marker-spacing `float`
+
 
 
 Default Value: 100
@@ -541,6 +599,7 @@ Space between repeated markers in pixels. If the spacing is less than the marker
 ##### marker-max-error `float`
 
 
+
 Default Value: 0.2
 _(N/A: not intended to be changed.)_
 
@@ -549,6 +608,7 @@ N/A: not intended to be changed.
 
 ##### marker-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(No transformation.)_
@@ -557,6 +617,7 @@ Transform marker instance with specified function. Ignores map scale factor.
 * * *
 
 ##### marker-clip `boolean`
+
 
 
 Default Value: false
@@ -568,6 +629,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 ##### marker-simplify `float`
 
 
+
 Default Value: 0
 _(Geometry will not be simplified.)_
 
@@ -576,6 +638,7 @@ geometries are simplified by the given tolerance.
 
 ##### marker-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
+
 
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
@@ -586,6 +649,7 @@ geometries are simplified by the given algorithm.
 ##### marker-smooth `float`
 
 
+
 Default Value: 0
 _(No smoothing.)_
 Range: 0-1
@@ -594,6 +658,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 
 ##### marker-geometry-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(The geometry will not be transformed.)_
@@ -602,6 +667,7 @@ Transform marker geometry with specified function.
 * * *
 
 ##### marker-offset `float`
+
 
 
 Default Value: 0
@@ -613,6 +679,7 @@ Offsets a marker from a line a number of pixels parallel to its actual path. Pos
 ##### marker-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
 
+
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
 
@@ -621,6 +688,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 ##### marker-direction `keyword`
 `auto``auto-down``left``right``left-only``right-only``up``down`
+
 
 Default Value: right
 _(Markers are oriented to the right in the line direction.)_
@@ -634,6 +702,7 @@ How markers should be placed along lines. With the "auto" setting when marker is
 ##### shield-name `string`
 
 
+
 Default Value: 
 _(No text label will be rendered with the shield.)_
 
@@ -641,6 +710,7 @@ Value to use for a shield"s text label. Data columns are specified using bracket
 * * *
 
 ##### shield-file `uri`
+
 
 
 Default Value: none
@@ -652,6 +722,7 @@ Image file to render behind the shield text. Accepted formats: svg, jpg, png, ti
 ##### shield-face-name `string`
 
 
+
 Default Value: none
 
 
@@ -659,6 +730,7 @@ Font name and style to use for the shield text.
 * * *
 
 ##### shield-unlock-image `boolean`
+
 
 
 Default Value: false
@@ -670,6 +742,7 @@ This parameter should be set to true if you are trying to position text beside r
 ##### shield-size `float`
 
 
+
 Default Value: 10
 _(Font size of 10 will be used to render text.)_
 
@@ -677,6 +750,7 @@ The size of the shield text in pixels.
 * * *
 
 ##### shield-fill `color`
+
 
 
 Default Value: black
@@ -688,6 +762,7 @@ The color of the shield text.
 ##### shield-placement `keyword`
 `point``line``vertex``interior`
 
+
 Default Value: point
 _(One shield will be placed per geometry.)_
 
@@ -695,6 +770,7 @@ How this shield should be placed. Point placement places one shield on top of a 
 * * *
 
 ##### shield-avoid-edges `boolean`
+
 
 
 Default Value: false
@@ -706,6 +782,7 @@ Avoid placing shields that intersect with tile boundaries.
 ##### shield-allow-overlap `boolean`
 
 
+
 Default Value: false
 _(Do not allow shields to overlap with other map elements already placed.)_
 
@@ -713,6 +790,7 @@ Control whether overlapping shields are shown or hidden.
 * * *
 
 ##### shield-margin `float`
+
 
 
 Default Value: 0
@@ -724,6 +802,7 @@ Minimum distance that a shield can be placed from any other text, shield, or mar
 ##### shield-repeat-distance `float`
 
 
+
 Default Value: 0
 _(Shields with the same text will be rendered without restriction.)_
 
@@ -731,6 +810,7 @@ Minimum distance between repeated shields. If set this will prevent shields bein
 * * *
 
 ##### shield-min-distance `float`
+
 
 
 Default Value: 0
@@ -742,6 +822,7 @@ Minimum distance to the next shield with the same text. Only works for line plac
 ##### shield-spacing `float`
 
 
+
 Default Value: 0
 _(Only one shield per line will attempt to be placed.)_
 
@@ -749,6 +830,7 @@ Distance the renderer should use to try to place repeated shields on a line.
 * * *
 
 ##### shield-min-padding `float`
+
 
 
 Default Value: 0
@@ -760,6 +842,7 @@ Minimum distance a shield will be placed from the edge of a tile. This option is
 ##### shield-label-position-tolerance `float`
 
 
+
 Default Value: shield-spacing/2.0
 _(If a shield cannot be placed then the renderer will advance by shield-spacing/2.0 to try placement again.)_
 
@@ -767,6 +850,7 @@ Allows the shield to be displaced from its ideal position by a number of pixels 
 * * *
 
 ##### shield-wrap-width `unsigned`
+
 
 
 Default Value: 0
@@ -778,6 +862,7 @@ Length of a chunk of text in pixels before wrapping text. If set to zero, text d
 ##### shield-wrap-before `boolean`
 
 
+
 Default Value: false
 _(Wrapped lines will be a bit longer than wrap-width.)_
 
@@ -785,6 +870,7 @@ Wrap text before wrap-width is reached.
 * * *
 
 ##### shield-wrap-character `string`
+
 
 
 Default Value: " "
@@ -796,6 +882,7 @@ Use this character instead of a space to wrap long names.
 ##### shield-halo-fill `color`
 
 
+
 Default Value: white
 _(The shield halo text will be rendered white.)_
 
@@ -803,6 +890,7 @@ Specifies the color of the halo around the text.
 * * *
 
 ##### shield-halo-radius `float`
+
 
 
 Default Value: 0
@@ -814,6 +902,7 @@ Specify the radius of the halo in pixels.
 ##### shield-halo-rasterizer `keyword`
 `full``fast`
 
+
 Default Value: full
 _(The shield will be rendered using the highest quality method rather than the fastest.)_
 
@@ -822,6 +911,7 @@ Exposes an alternate text halo rendering method that sacrifices quality for spee
 
 ##### shield-halo-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: 
 _(No transformation.)_
@@ -832,6 +922,7 @@ Transform shield halo relative to the actual text with specified function. Allow
 ##### shield-halo-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``screen``overlay``darken``lighten``color-dodge``color-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
 
+
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
 
@@ -839,6 +930,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 * * *
 
 ##### shield-halo-opacity `float`
+
 
 
 Default Value: 1
@@ -850,6 +942,7 @@ A number from 0 to 1 specifying the opacity for the text halo.
 ##### shield-character-spacing `unsigned`
 
 
+
 Default Value: 0
 _(The default character spacing of the font will be used.)_
 
@@ -857,6 +950,7 @@ Horizontal spacing between characters (in pixels). Currently works for point pla
 * * *
 
 ##### shield-line-spacing `unsigned`
+
 
 
 Default Value: 0
@@ -868,6 +962,7 @@ Vertical spacing between lines of multiline labels (in pixels).
 ##### shield-text-dx `float`
 
 
+
 Default Value: 0
 _(Text will not be displaced.)_
 
@@ -875,6 +970,7 @@ Displace text within shield by fixed amount, in pixels, +/- along the X axis.  A
 * * *
 
 ##### shield-text-dy `float`
+
 
 
 Default Value: 0
@@ -886,6 +982,7 @@ Displace text within shield by fixed amount, in pixels, +/- along the Y axis.  A
 ##### shield-dx `float`
 
 
+
 Default Value: 0
 _(Shield will not be displaced.)_
 
@@ -893,6 +990,7 @@ Displace shield by fixed amount, in pixels, +/- along the X axis.  A positive va
 * * *
 
 ##### shield-dy `float`
+
 
 
 Default Value: 0
@@ -904,6 +1002,7 @@ Displace shield by fixed amount, in pixels, +/- along the Y axis.  A positive va
 ##### shield-opacity `float`
 
 
+
 Default Value: 1
 _(Color is fully opaque.)_
 
@@ -911,6 +1010,7 @@ The opacity of the image used for the shield.
 * * *
 
 ##### shield-text-opacity `float`
+
 
 
 Default Value: 1
@@ -922,6 +1022,7 @@ The opacity of the text placed on top of the shield.
 ##### shield-horizontal-alignment `keyword`
 `left``middle``right``auto`
 
+
 Default Value: auto
 _(TODO.)_
 
@@ -930,6 +1031,7 @@ The shield's horizontal alignment from its centerpoint.
 
 ##### shield-vertical-alignment `keyword`
 `top``middle``bottom``auto`
+
 
 Default Value: middle
 _(TODO.)_
@@ -940,6 +1042,7 @@ The shield's vertical alignment from its centerpoint.
 ##### shield-placement-type `keyword`
 `dummy``simple``list`
 
+
 Default Value: dummy
 _(Alternative placements will not be enabled.)_
 
@@ -947,6 +1050,7 @@ Re-position and/or re-size shield to avoid overlaps. "simple" for basic algorith
 * * *
 
 ##### shield-placements `string`
+
 
 
 Default Value: 
@@ -958,6 +1062,7 @@ If "placement-type" is set to "simple", use this "POSITIONS,[SIZES]" string. An 
 ##### shield-text-transform `keyword`
 `none``uppercase``lowercase``capitalize``reverse`
 
+
 Default Value: none
 _(No text transformation will be applied.)_
 
@@ -967,6 +1072,7 @@ Transform the case of the characters.
 ##### shield-justify-alignment `keyword`
 `left``center``right``auto`
 
+
 Default Value: auto
 _(TODO.)_
 
@@ -975,6 +1081,7 @@ Define how text in a shield's label is justified.
 
 ##### shield-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(No transformation.)_
@@ -983,6 +1090,7 @@ Transform shield instance with specified function. Ignores map scale factor.
 * * *
 
 ##### shield-clip `boolean`
+
 
 
 Default Value: false
@@ -994,6 +1102,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 ##### shield-simplify `float`
 
 
+
 Default Value: 0
 _(geometry will not be simplified.)_
 
@@ -1002,6 +1111,7 @@ Simplify the geometries used for shield placement by the given tolerance.
 
 ##### shield-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
+
 
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
@@ -1012,6 +1122,7 @@ Simplify the geometries used for shield placement by the given algorithm.
 ##### shield-smooth `float`
 
 
+
 Default Value: 0
 _(No smoothing.)_
 Range: 0-1
@@ -1020,6 +1131,7 @@ Smooths out the angles of the geometry used for shield placement. 0 is no smooth
 
 ##### shield-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -1033,6 +1145,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### line-pattern-file `uri`
 
 
+
 Default Value: none
 
 
@@ -1040,6 +1153,7 @@ An image file to be repeated and warped along a line. Accepted formats: svg, jpg
 * * *
 
 ##### line-pattern-clip `boolean`
+
 
 
 Default Value: false
@@ -1051,6 +1165,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 ##### line-pattern-opacity `float`
 
 
+
 Default Value: 1
 _(The image is rendered without modifications.)_
 
@@ -1058,6 +1173,7 @@ Apply an opacity level to the image used for the pattern.
 * * *
 
 ##### line-pattern-simplify `float`
+
 
 
 Default Value: 0
@@ -1069,6 +1185,7 @@ geometries are simplified by the given tolerance.
 ##### line-pattern-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
 
+
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
 
@@ -1076,6 +1193,7 @@ geometries are simplified by the given algorithm.
 * * *
 
 ##### line-pattern-smooth `float`
+
 
 
 Default Value: 0
@@ -1087,6 +1205,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 ##### line-pattern-offset `float`
 
 
+
 Default Value: 0
 _(The line will not be offset.)_
 
@@ -1095,6 +1214,7 @@ Offsets a line a number of pixels parallel to its actual path. Positive values m
 
 ##### line-pattern-geometry-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(The geometry will not be transformed.)_
@@ -1104,6 +1224,7 @@ Transform line geometry with specified function and apply pattern to transformed
 
 ##### line-pattern-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -1117,6 +1238,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### polygon-pattern-file `uri`
 
 
+
 Default Value: none
 
 
@@ -1126,6 +1248,7 @@ Image to use as a repeated pattern fill within a polygon. Accepted formats: svg,
 ##### polygon-pattern-alignment `keyword`
 `global``local`
 
+
 Default Value: global
 _(Patterns will be aligned to the map (or tile boundaries) when being repeated across polygons. This is ideal for seamless patterns in tiled rendering.)_
 
@@ -1133,6 +1256,7 @@ Specify whether to align pattern fills to the layer's geometry (local) or to the
 * * *
 
 ##### polygon-pattern-gamma `float`
+
 
 
 Default Value: 1
@@ -1144,6 +1268,7 @@ Level of antialiasing of polygon pattern edges.
 ##### polygon-pattern-opacity `float`
 
 
+
 Default Value: 1
 _(The image is rendered without modifications.)_
 
@@ -1151,6 +1276,7 @@ Apply an opacity level to the image used for the pattern.
 * * *
 
 ##### polygon-pattern-clip `boolean`
+
 
 
 Default Value: false
@@ -1162,6 +1288,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 ##### polygon-pattern-simplify `float`
 
 
+
 Default Value: 0
 _(geometry will not be simplified.)_
 
@@ -1170,6 +1297,7 @@ geometries are simplified by the given tolerance.
 
 ##### polygon-pattern-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
+
 
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
@@ -1180,6 +1308,7 @@ geometries are simplified by the given algorithm.
 ##### polygon-pattern-smooth `float`
 
 
+
 Default Value: 0
 _(No smoothing.)_
 Range: 0-1
@@ -1188,6 +1317,7 @@ Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values grea
 
 ##### polygon-pattern-geometry-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(The geometry will not be transformed.)_
@@ -1197,6 +1327,7 @@ Transform polygon geometry with specified function and apply pattern to transfor
 
 ##### polygon-pattern-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -1210,6 +1341,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### raster-opacity `float`
 
 
+
 Default Value: 1
 _(Color is fully opaque.)_
 
@@ -1217,6 +1349,7 @@ The opacity of the raster symbolizer on top of other symbolizers.
 * * *
 
 ##### raster-filter-factor `float`
+
 
 
 Default Value: -1
@@ -1228,6 +1361,7 @@ This is used by the Raster or Gdal datasources to pre-downscale images using ove
 ##### raster-scaling `keyword`
 `near``fast``bilinear``bicubic``spline16``spline36``hanning``hamming``hermite``kaiser``quadric``catrom``gaussian``bessel``mitchell``sinc``lanczos``blackman`
 
+
 Default Value: near
 _(Nearest neighboor resampling will be used to scale the image to the target size of the map.)_
 
@@ -1235,6 +1369,7 @@ The scaling algorithm used to making different resolution versions of this raste
 * * *
 
 ##### raster-mesh-size `unsigned`
+
 
 
 Default Value: 16
@@ -1246,6 +1381,7 @@ A reduced resolution mesh is used for raster reprojection, and the total image s
 ##### raster-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
 
+
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
 
@@ -1255,6 +1391,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### raster-colorizer-default-mode `keyword`
 `discrete``linear``exact`
 
+
 Default Value: linear
 _(A linear interpolation is used to generate colors between the two nearest stops.)_
 
@@ -1262,6 +1399,7 @@ This can be either `discrete`, `linear` or `exact`. If it is not specified then 
 * * *
 
 ##### raster-colorizer-default-color `color`
+
 
 
 Default Value: transparent
@@ -1273,6 +1411,7 @@ This can be any color. Sets the color that is applied to all values outside of t
 ##### raster-colorizer-epsilon `float`
 
 
+
 Default Value: 1.1920928955078125e-07
 _(Pixels must very closely match the stop filter otherwise they will not be colored.)_
 
@@ -1280,6 +1419,7 @@ This can be any positive floating point value and will be used as a tolerance in
 * * *
 
 ##### raster-colorizer-stops `tags`
+
 
 
 Default Value: 
@@ -1294,6 +1434,7 @@ Assigns raster data values to colors. Stops must be listed in ascending order, a
 ##### point-file `uri`
 
 
+
 Default Value: none
 _(A 4x4 black square will be rendered.)_
 
@@ -1301,6 +1442,7 @@ Image file to represent a point. Accepted formats: svg, jpg, png, tiff, and webp
 * * *
 
 ##### point-allow-overlap `boolean`
+
 
 
 Default Value: false
@@ -1312,6 +1454,7 @@ Control whether overlapping points are shown or hidden.
 ##### point-ignore-placement `boolean`
 
 
+
 Default Value: false
 _(do not store the bbox of this geometry in the collision detector cache.)_
 
@@ -1319,6 +1462,7 @@ Control whether the placement of the feature will prevent the placement of other
 * * *
 
 ##### point-opacity `float`
+
 
 
 Default Value: 1
@@ -1330,6 +1474,7 @@ A value from 0 to 1 to control the opacity of the point.
 ##### point-placement `keyword`
 `centroid``interior`
 
+
 Default Value: centroid
 _(The centroid of the geometry will be used to place the point.)_
 
@@ -1338,6 +1483,7 @@ Control how this point should be placed. Centroid calculates the geometric cente
 
 ##### point-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: none
 _(No transformation.)_
@@ -1347,6 +1493,7 @@ Transform point instance with specified function. Ignores map scale factor.
 
 ##### point-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -1360,6 +1507,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### text-name `string`
 
 
+
 Default Value: none
 
 
@@ -1367,6 +1515,7 @@ Value to use for a text label. Data columns are specified using brackets like [c
 * * *
 
 ##### text-face-name `string`
+
 
 
 Default Value: none
@@ -1378,6 +1527,7 @@ Font name and style to render a label in.
 ##### text-size `float`
 
 
+
 Default Value: 10
 _(Font size of 10 will be used to render text.)_
 
@@ -1385,6 +1535,7 @@ Text size in pixels.
 * * *
 
 ##### text-ratio `unsigned`
+
 
 
 Default Value: 0
@@ -1396,6 +1547,7 @@ Define the amount of text (of the total) present on successive lines when wrappi
 ##### text-wrap-width `unsigned`
 
 
+
 Default Value: 0
 _(Text will not be wrapped.)_
 
@@ -1403,6 +1555,7 @@ Length of a chunk of text in pixels before wrapping text. If set to zero, text d
 * * *
 
 ##### text-wrap-before `boolean`
+
 
 
 Default Value: false
@@ -1414,6 +1567,7 @@ Wrap text before wrap-width is reached.
 ##### text-wrap-character `string`
 
 
+
 Default Value: " "
 _(Lines will be wrapped when whitespace is encountered.)_
 
@@ -1421,6 +1575,7 @@ Use this character instead of a space to wrap long text.
 * * *
 
 ##### text-repeat-wrap-character `boolean`
+
 
 
 Default Value: false
@@ -1432,6 +1587,7 @@ Keep the character used to wrap a line instead of removing it, and repeat it on 
 ##### text-spacing `unsigned`
 
 
+
 Default Value: 0
 _(Only one label per line will attempt to be placed.)_
 
@@ -1439,6 +1595,7 @@ Distance the renderer should use to try to place repeated text labels on a line.
 * * *
 
 ##### text-character-spacing `float`
+
 
 
 Default Value: 0
@@ -1450,6 +1607,7 @@ Horizontal spacing adjustment between characters in pixels. This value is ignore
 ##### text-line-spacing `unsigned`
 
 
+
 Default Value: 0
 _(The default font spacing will be used.)_
 
@@ -1457,6 +1615,7 @@ Vertical spacing adjustment between lines in pixels.
 * * *
 
 ##### text-label-position-tolerance `float`
+
 
 
 Default Value: text-spacing/2.0
@@ -1468,6 +1627,7 @@ Allows the label to be displaced from its ideal position by a number of pixels (
 ##### text-max-char-angle-delta `float`
 
 
+
 Default Value: 22.5
 _(The label will not be placed if a character falls on a line with an angle sharper than 22.5 degrees.)_
 
@@ -1475,6 +1635,7 @@ The maximum angle change, in degrees, allowed between adjacent characters in a l
 * * *
 
 ##### text-fill `color`
+
 
 
 Default Value: black
@@ -1486,6 +1647,7 @@ Specifies the color for the text.
 ##### text-opacity `float`
 
 
+
 Default Value: 1
 _(Fully opaque.)_
 
@@ -1493,6 +1655,7 @@ A number from 0 to 1 specifying the opacity for the text.
 * * *
 
 ##### text-halo-opacity `float`
+
 
 
 Default Value: 1
@@ -1504,6 +1667,7 @@ A number from 0 to 1 specifying the opacity for the text halo.
 ##### text-halo-fill `color`
 
 
+
 Default Value: white
 _(The halo will be rendered white.)_
 
@@ -1511,6 +1675,7 @@ Specifies the color of the halo around the text.
 * * *
 
 ##### text-halo-radius `float`
+
 
 
 Default Value: 0
@@ -1522,6 +1687,7 @@ Specify the radius of the halo in pixels.
 ##### text-halo-rasterizer `keyword`
 `full``fast`
 
+
 Default Value: full
 _(The text will be rendered using the highest quality method rather than the fastest.)_
 
@@ -1530,6 +1696,7 @@ Exposes an alternate text halo rendering method that sacrifices quality for spee
 
 ##### text-halo-transform `functions`
 
+`matrix``translate``scale``rotate``skewX``skewY`
 
 Default Value: 
 _(No transformation.)_
@@ -1538,6 +1705,7 @@ Transform text halo relative to the actual text with specified function. Allows 
 * * *
 
 ##### text-dx `float`
+
 
 
 Default Value: 0
@@ -1549,6 +1717,7 @@ Displace text by fixed amount, in pixels, +/- along the X axis.  With "dummy" pl
 ##### text-dy `float`
 
 
+
 Default Value: 0
 _(Text will not be displaced.)_
 
@@ -1558,6 +1727,7 @@ Displace text by fixed amount, in pixels, +/- along the Y axis.  With "dummy" pl
 ##### text-vertical-alignment `keyword`
 `top``middle``bottom``auto`
 
+
 Default Value: auto
 _(Default affected by value of dy; &quot;top&quot; for dy&gt;0, &quot;bottom&quot; for dy&lt;0.)_
 
@@ -1565,6 +1735,7 @@ Position of label relative to point position.
 * * *
 
 ##### text-avoid-edges `boolean`
+
 
 
 Default Value: false
@@ -1576,6 +1747,7 @@ Avoid placing labels that intersect with tile boundaries.
 ##### text-margin `float`
 
 
+
 Default Value: 0
 _(No extra margin will be used to determine if a label collides with any other text, shield, or marker.)_
 
@@ -1583,6 +1755,7 @@ Minimum distance that a label can be placed from any other text, shield, or mark
 * * *
 
 ##### text-repeat-distance `float`
+
 
 
 Default Value: 0
@@ -1594,6 +1767,7 @@ Minimum distance between repeated text. If set this will prevent text labels bei
 ##### text-min-distance `float`
 
 
+
 Default Value: 0
 _(Labels with the same text will be rendered without restriction.)_
 
@@ -1601,6 +1775,7 @@ Minimum distance to the next label with the same text. Only works for line place
 * * *
 
 ##### text-min-padding `float`
+
 
 
 Default Value: 0
@@ -1612,6 +1787,7 @@ Minimum distance a text label will be placed from the edge of a tile. This optio
 ##### text-min-path-length `float`
 
 
+
 Default Value: 0
 _(place labels on all geometries no matter how small they are.)_
 
@@ -1619,6 +1795,7 @@ Place labels only on polygons and lines with a bounding width longer than this v
 * * *
 
 ##### text-allow-overlap `boolean`
+
 
 
 Default Value: false
@@ -1630,6 +1807,7 @@ Control whether overlapping text is shown or hidden.
 ##### text-orientation `float`
 
 
+
 Default Value: 0
 _(Text is not rotated and is displayed upright.)_
 
@@ -1637,6 +1815,7 @@ Rotate the text. (only works with text-placement:point).
 * * *
 
 ##### text-rotate-displacement `boolean`
+
 
 
 Default Value: false
@@ -1648,6 +1827,7 @@ Rotates the displacement around the placement origin by the angle given by "orie
 ##### text-upright `keyword`
 `auto``auto-down``left``right``left-only``right-only`
 
+
 Default Value: auto
 _(Text will be positioned upright automatically.)_
 
@@ -1656,6 +1836,7 @@ How this label should be placed along lines. By default when more than half of a
 
 ##### text-placement `keyword`
 `point``line``vertex``interior`
+
 
 Default Value: point
 _(One shield will be placed per geometry.)_
@@ -1666,6 +1847,7 @@ How this label should be placed. Point placement places one label on top of a po
 ##### text-placement-type `keyword`
 `dummy``simple``list`
 
+
 Default Value: dummy
 _(Alternative placements will not be enabled.)_
 
@@ -1673,6 +1855,7 @@ Re-position and/or re-size text to avoid overlaps. "simple" for basic algorithm 
 * * *
 
 ##### text-placements `string`
+
 
 
 Default Value: 
@@ -1684,6 +1867,7 @@ If "placement-type" is set to "simple", use this "POSITIONS,[SIZES]" string. An 
 ##### text-transform `keyword`
 `none``uppercase``lowercase``capitalize``reverse`
 
+
 Default Value: none
 _(Transform text instance with specified function. Ignores map scale factor.)_
 
@@ -1692,6 +1876,7 @@ Transform the case of the characters.
 
 ##### text-horizontal-alignment `keyword`
 `left``middle``right``auto``adjust`
+
 
 Default Value: auto
 _(TODO.)_
@@ -1702,6 +1887,7 @@ The text's horizontal alignment from it's centerpoint. If `placement` is set to 
 ##### text-align `keyword`
 `left``right``center``auto`
 
+
 Default Value: auto
 _(Auto alignment means that text will be centered by default except when using the &#96;placement-type&#96; parameter - in that case either right or left justification will be used automatically depending on where the text could be fit given the &#96;text-placements&#96; directives.)_
 
@@ -1709,6 +1895,7 @@ Define how text is justified.
 * * *
 
 ##### text-clip `boolean`
+
 
 
 Default Value: false
@@ -1720,6 +1907,7 @@ Turning on clipping can help performance in the case that the boundaries of the 
 ##### text-simplify `float`
 
 
+
 Default Value: 0
 _(geometry will not be simplified.)_
 
@@ -1729,6 +1917,7 @@ Simplify the geometries used for text placement by the given tolerance.
 ##### text-simplify-algorithm `keyword`
 `radial-distance``zhao-saalfeld``visvalingam-whyatt`
 
+
 Default Value: radial-distance
 _(The geometry will be simplified using the radial distance algorithm.)_
 
@@ -1736,6 +1925,7 @@ Simplify the geometries used for text placement by the given algorithm.
 * * *
 
 ##### text-smooth `float`
+
 
 
 Default Value: 0
@@ -1747,6 +1937,7 @@ Smooths out the angles of the geometry used for text placement. 0 is no smoothin
 ##### text-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
 
+
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
 
@@ -1755,6 +1946,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 ##### text-halo-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``screen``overlay``darken``lighten``color-dodge``color-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current symbolizer on top of other symbolizer.)_
@@ -1765,6 +1957,7 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ##### text-font-feature-settings `string`
 
 
+
 Default Value: 
 _(Default set of typographic features recommended by OpenType specification. Ligatures are turned off by default when &#96;character-spacing&#96; is greater than zero.)_
 
@@ -1772,6 +1965,7 @@ Comma separated list of OpenType typographic features. The syntax and semantics 
 * * *
 
 ##### text-largest-bbox-only `boolean`
+
 
 
 Default Value: true
@@ -1786,6 +1980,7 @@ Controls default labeling behavior on multipolygons. The default is true and mea
 ##### building-fill `color`
 
 
+
 Default Value: The color gray will be used for fill.
 _(Gray and fully opaque (alpha = 1), same as rgb(128,128,128) or rgba(128,128,128,1).)_
 
@@ -1795,6 +1990,7 @@ The color of the buildings fill. Note: 0.8 will be used to multiply each color c
 ##### building-fill-opacity `float`
 
 
+
 Default Value: 1
 _(Color is fully opaque.)_
 
@@ -1802,6 +1998,7 @@ The opacity of the building as a whole, including all walls.
 * * *
 
 ##### building-height `float`
+
 
 
 Default Value: 0
@@ -1816,6 +2013,7 @@ The height of the building in pixels.
 ##### debug-mode `string`
 
 
+
 Default Value: collision
 _(The otherwise invisible collision boxes will be rendered as squares on the map.)_
 
@@ -1828,6 +2026,7 @@ The mode for debug rendering.
 ##### dot-fill `color`
 
 
+
 Default Value: gray
 _(The dot fill color is gray.)_
 
@@ -1835,6 +2034,7 @@ The color of the area of the dot.
 * * *
 
 ##### dot-opacity `float`
+
 
 
 Default Value: 1
@@ -1846,6 +2046,7 @@ The overall opacity of the dot.
 ##### dot-width `float`
 
 
+
 Default Value: 1
 _(The marker width is 1 pixel.)_
 
@@ -1853,6 +2054,7 @@ The width of the dot in pixels.
 * * *
 
 ##### dot-height `float`
+
 
 
 Default Value: 1
@@ -1863,6 +2065,7 @@ The height of the dot in pixels.
 
 ##### dot-comp-op `keyword`
 `clear``src``dst``src-over``dst-over``src-in``dst-in``src-out``dst-out``src-atop``dst-atop``xor``plus``minus``multiply``divide``screen``overlay``darken``lighten``color-dodge``color-burn``linear-dodge``linear-burn``hard-light``soft-light``difference``exclusion``contrast``invert``invert-rgb``grain-merge``grain-extract``hue``saturation``color``value`
+
 
 Default Value: src-over
 _(Add the current layer on top of other layers.)_
