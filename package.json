@@ -33,6 +33,7 @@
     "node": ">=0.4.x"
   },
   "dependencies": {
+    "js-yaml": "^3.4.6",
     "mapnik-reference": "~8.5.3",
     "optimist": "~0.6.0",
     "underscore": "~1.8.3"
@@ -40,7 +41,6 @@
   "devDependencies": {
     "coveralls": "~2.10.1",
     "istanbul": "~0.2.14",
-    "js-yaml": "^3.4.6",
     "jshint": "0.2.x",
     "mocha": "1.12.x",
     "sax": "0.1.x"
