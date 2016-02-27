@@ -23,11 +23,7 @@
     "Konstantin Käfer",
     "Alexis Sellier <self@cloudhead.net>"
   ],
-  "licenses": [
-    {
-      "type": "Apache"
-    }
-  ],
+  "license": "Apache-2.0",
   "bin": {
     "carto": "./bin/carto"
   },
