@@ -3,6 +3,7 @@
 var path = require('path'),
     fs = require('fs'),
     carto = require('../lib/carto'),
+    semver = require('semver'),
     url = require('url'),
     _ = require('lodash'),
     yaml = require('js-yaml');
@@ -16,6 +17,7 @@ var yargs = require('yargs')
             .options('b', {alias:'benchmark', boolean:true, describe:'Outputs total compile time'})
             .options('l', {alias:'localize', boolean:true, default:false, describe:'Use millstone to localize resources when loading an MML'})
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
+            .options('a', {alias:'api', describe:'Specify Mapnik API version', default:'2.3.0'})
             .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
 
 var options = yargs.argv;
@@ -38,6 +40,13 @@ if (input && input[0] != '/') {
 if (!input) {
     console.error("carto: no input files ('carto -h or --help' for help)");
     process.exit(1);
+}
+
+if (options.api) {
+    if (!semver.valid(options.api)) {
+        console.error("carto: invalid Mapnik API version. A valid version is e.g. 3.0.10");
+        process.exit(1);
+    }
 }
 
 if (options.benchmark) {
@@ -70,13 +79,19 @@ function compileMML(err, data) {
         filename: input,
         benchmark: options.benchmark,
         ppi: options.ppi
+    },
+    {
+        mapnik_version: options.api
     });
     try {
         var output = renderer.render(data);
     } catch (e) {
         if (e.stack) {
             console.error(e.stack);
-        } else {
+        } else if (e.message) {
+            console.error(e.message);
+        }
+        else {
             console.error(e);
         }
         process.exit(1);
@@ -98,7 +113,10 @@ function compileMSS(err, data) {
         filename: path.basename(input),
         benchmark: options.benchmark,
         ppi: options.ppi
-    });
+    },
+    {
+        mapnik_version: options.api
+     });
     try {
         var output = renderer.renderMSS(data);
     } catch (e) {
