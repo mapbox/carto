@@ -1,7 +1,7 @@
 var fs = require('fs'),
     path = require('path'),
     refs = require('mapnik-reference'),
-    _ = require('underscore');
+    _ = require('lodash');
 
 function tmpl(x) {
   return _.template(fs.readFileSync(path.join(__dirname, x), 'utf-8'));
@@ -9,15 +9,14 @@ function tmpl(x) {
 
 var index = tmpl('index._');
 var table = tmpl('symbolizers._');
-var versions = Object.keys(refs.version);
 
-for (var v in refs.version) {
-    var ref = refs.version[v];
+ refs.versions.forEach(function (v) {
+    var ref = refs.load(v);
     fs.writeFileSync(path.join(__dirname, '../docs/' + v + '.md'), index({
       symbolizers: ref.symbolizers,
       table: table,
       version: v,
-      versions: versions,
+      versions: refs.versions,
       _: _
     }));
-}
+});
