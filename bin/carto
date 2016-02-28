@@ -9,7 +9,7 @@ var path = require('path'),
 
 var existsSync = require('fs').existsSync || require('path').existsSync
 
-var optimist = require('optimist')
+var yargs = require('yargs')
             .usage("Usage: $0 <source MML file>")
             .options('h', {alias:'help', describe:'Display this help message'})
             .options('v', {alias:'version', boolean:true, describe:'Display version information'})
@@ -18,7 +18,7 @@ var optimist = require('optimist')
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
             .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
 
-var options = optimist.argv;
+var options = yargs.argv;
 
 if (options.help) {
     optimist.showHelp();
