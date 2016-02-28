@@ -230,15 +230,7 @@ directory located at `build/vim-carto` to your `~/.vim` directory.
 
 CartoCSS is based on [less.js](https://github.com/cloudhead/less.js), a CSS compiler written by Alexis Sellier.
 
-It depends on:
-
-* [underscore.js](https://github.com/documentcloud/underscore/)
-
-Only for running tests:
-
-* [mocha](https://github.com/visionmedia/mocha)
-* [sax-js](https://github.com/isaacs/sax-js/)
-
+See also a [list of dependencies](https://david-dm.org/mapbox/carto#info=dependencies&view=list).
 
 ## Authors
 
