@@ -4,7 +4,6 @@ var path = require('path'),
 
 var existsSync = require('fs').existsSync || require('path').existsSync;
 var carto = require('../lib/carto');
-var tree = require('../lib/carto/tree');
 var helper = require('./support/helper');
 
 
@@ -12,8 +11,6 @@ var helper = require('./support/helper');
 describe('Rendering mss', function() {
 helper.files('rendering-mss', 'mss', function(file) {
     it('should render mss ' + path.basename(file) + ' correctly', function() {
-        var completed = false;
-        var renderResult;
         var mss = helper.mss(file);
         try {
             var output = new carto.Renderer({
@@ -22,7 +19,7 @@ helper.files('rendering-mss', 'mss', function(file) {
                 local_data_dir: path.join(__dirname, 'rendering'),
                 filename: file
             }).renderMSS(mss);
-        } catch(err) {
+        } catch (err) {
             if (Array.isArray(err)){
                 err.forEach(carto.writeError);
             } else {
@@ -38,4 +35,3 @@ helper.files('rendering-mss', 'mss', function(file) {
     });
 });
 });
-

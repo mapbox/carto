@@ -231,7 +231,7 @@ describe('Filtersets', function() {
         f.add({ key: 'TOTAL', op: '!=', val: '11' });
         f.add({ key: 'TOTAL', op: '>',  val:  90 });
         assert.deepEqual(f.filters, {"TOTAL!=11":{"key":"TOTAL","op":"!=","val":"11"},"TOTAL>":{"key":"TOTAL","op":">","val":90}});
-        
+
         f = new tree.Filterset();
         f.add({ key: 'TOTAL', op: '!=', val: '11' });
         f.add({ key: 'TOTAL', op: '>=', val:  9  });

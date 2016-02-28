@@ -18,27 +18,27 @@ describe('Operation', function() {
     it('should work with units', function() {
         var env = { ppi:72, error:function(err) { console.log(err.message); } };
 
-        var o = new tree.Operation("+", [ new tree.Dimension(2.54, 'cm'), new tree.Dimension(0.0254, 'm') ]);
-        assert.equal(o.ev(env).value, 144);
+        var o1 = new tree.Operation("+", [ new tree.Dimension(2.54, 'cm'), new tree.Dimension(0.0254, 'm') ]);
+        assert.equal(o1.ev(env).value, 144);
 
-        var o = new tree.Operation("+", [ new tree.Dimension(25.4, 'mm'), new tree.Dimension(72, 'pt') ]);
-        assert.equal(o.ev(env).value, 144);
+        var o2 = new tree.Operation("+", [ new tree.Dimension(25.4, 'mm'), new tree.Dimension(72, 'pt') ]);
+        assert.equal(o2.ev(env).value, 144);
 
-        var o = new tree.Operation("+", [ new tree.Dimension(72, 'pt'), new tree.Dimension(6, 'pc') ]);
-        assert.equal(o.ev(env).value, 144);
+        var o3 = new tree.Operation("+", [ new tree.Dimension(72, 'pt'), new tree.Dimension(6, 'pc') ]);
+        assert.equal(o3.ev(env).value, 144);
     });
 
     it('should work with different ppi', function() {
         var env = { ppi:300, error:function(err) { console.log(err.message); } };
 
-        var o = new tree.Operation("+", [ new tree.Dimension(2.54, 'cm'), new tree.Dimension(0.0254, 'm') ]);
-        assert.equal(o.ev(env).value, 600);
+        var o1 = new tree.Operation("+", [ new tree.Dimension(2.54, 'cm'), new tree.Dimension(0.0254, 'm') ]);
+        assert.equal(o1.ev(env).value, 600);
 
-        var o = new tree.Operation("+", [ new tree.Dimension(25.4, 'mm'), new tree.Dimension(72, 'pt') ]);
-        assert.equal(o.ev(env).value, 600);
+        var o2 = new tree.Operation("+", [ new tree.Dimension(25.4, 'mm'), new tree.Dimension(72, 'pt') ]);
+        assert.equal(o2.ev(env).value, 600);
 
-        var o = new tree.Operation("+", [ new tree.Dimension(72, 'pt'), new tree.Dimension(6, 'pc') ]);
-        assert.equal(o.ev(env).value, 600);
+        var o3 = new tree.Operation("+", [ new tree.Dimension(72, 'pt'), new tree.Dimension(6, 'pc') ]);
+        assert.equal(o3.ev(env).value, 600);
     });
 
 
