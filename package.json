@@ -39,11 +39,11 @@
     "underscore": "~1.8.3"
   },
   "devDependencies": {
-    "coveralls": "~2.10.1",
-    "istanbul": "~0.2.14",
+    "coveralls": "~2.11.8",
+    "istanbul": "~0.4.2",
     "jshint": "0.2.x",
-    "mocha": "1.12.x",
-    "sax": "0.1.x"
+    "mocha": "~2.4.5",
+    "sax": "~1.1.5"
   },
   "scripts": {
     "pretest": "npm install",
