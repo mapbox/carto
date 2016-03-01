@@ -1,5 +1,5 @@
 var path = require('path'),
-    _ = require('underscore'),
+    _ = require('lodash'),
     fs = require('fs'),
     assert = require('assert'),
     crypto = require('crypto'),
