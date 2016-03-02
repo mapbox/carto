@@ -195,6 +195,15 @@ Now that Carto is installed you should have a `carto` command line tool availabl
 
     carto project.mml > mapnik.xml
 
+Available parameters:
+* -h / --help - Display help message
+* -v / --version - Display version information
+* -b / --benchmark - Outputs total compile time
+* -l / --localize - Use millstone to localize resources when loading an MML (default: off)
+* -n / --nosymlink - Use absolute paths instead of symlinking files
+* -a / --api VERSION - Specify Mapnik API version (e.g. --api 3.0.10) (default: 2.3.0)
+* -ppi RESOLUTION - Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels (default: 90.714)
+
 #### From code
 
 Currently CartoCSS is designed to be invoked from [node.js](http://nodejs.org/).

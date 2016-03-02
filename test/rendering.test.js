@@ -1,6 +1,7 @@
 var path = require('path'),
     assert = require('assert'),
-    fs = require('fs');
+    fs = require('fs'),
+    semver = require('semver');
 
 var carto = require('../lib/carto');
 var tree = require('../lib/carto/tree');
@@ -8,17 +9,36 @@ var helper = require('./support/helper');
 
 describe('Rendering', function() {
 helper.files('rendering', 'mml', function(file) {
+    var api = null,
+        filename = path.basename(file);
+    if (filename.indexOf('_api') !== -1) {
+        api = filename.substring(filename.indexOf('_api') + 4, filename.length - 4);
+        if (!semver.valid(api)) {
+            api = null;
+        }
+    }
     it('should render ' + path.basename(file) + ' correctly', function(done) {
         var completed = false;
         var renderResult;
         var mml = helper.mml(file);
         try {
-            var output = new carto.Renderer({
+            var env = {
                 paths: [ path.dirname(file) ],
                 data_dir: path.join(__dirname, '../data'),
                 local_data_dir: path.join(__dirname, 'rendering'),
                 filename: file
-            }).render(mml);
+            },
+            renderer = null;
+
+            if (api) {
+                renderer = new carto.Renderer(env, {
+                    mapnik_version: api
+                });
+            }
+            else {
+                renderer = new carto.Renderer(env);
+            }
+            var output = renderer.render(mml);
         } catch(err) {
             if (Array.isArray(err)){
                 err.forEach(carto.writeError);
