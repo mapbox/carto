@@ -5,6 +5,11 @@
 
 <Style name="world" filter-mode="first">
   <Rule>
+    <MaxScaleDenominator>750000</MaxScaleDenominator>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <PolygonSymbolizer fill="#dddddd" />
+  </Rule>
+  <Rule>
     <MinScaleDenominator>50000000</MinScaleDenominator>
     <PolygonSymbolizer fill="#ffff00" />
   </Rule>

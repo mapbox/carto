@@ -10,6 +10,10 @@
   polygon-fill: #FF0;
 }
 
+#world[zoom > 9][zoom <= 11] {
+  polygon-fill: #DDD;
+}
+
 #countries {
   [zoom=1] { line-width:2; }
   [zoom=2] { line-width:1.5; }
