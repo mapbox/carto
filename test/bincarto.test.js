@@ -23,6 +23,15 @@ describe('bin/carto', function() {
             done();
         });
     });
+    it('errors on wrongly formatted api version', function(done) {
+        var file = path.join('test', 'rendering', 'identity.mml');
+        var api = 'api';
+        exec(util.format('node %s -a %s %s', bin, api, file), function(err, stdout, stderr) {
+            assert.equal(1, err.code);
+            assert.equal("carto: invalid Mapnik API version. A valid version is e.g. 3.0.10\n", stderr);
+            done();
+        });
+    });
     it('renders mml', function(done) {
         var file = path.join('test', 'rendering', 'identity.mml');
         exec(util.format('node %s %s', bin, file), function(err, stdout, stderr) {
