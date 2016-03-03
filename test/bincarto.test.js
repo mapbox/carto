@@ -34,7 +34,7 @@ describe('bin/carto', function() {
     });
     it('renders mml', function(done) {
         var file = path.join('test', 'rendering', 'identity.mml');
-        exec(util.format('node %s %s', bin, file), function(err, stdout, stderr) {
+        exec(util.format('node %s %s', bin, file), function(err, stdout) {
             assert.ifError(err);
             helper.compareToXMLFile(helper.resultFile(file), stdout, done, [
                 helper.removeAbsoluteImages,
@@ -44,7 +44,7 @@ describe('bin/carto', function() {
     });
     it('renders mss', function(done) {
         var file = path.join('test', 'rendering-mss', 'empty_name.mss');
-        exec(util.format('node %s %s', bin, file), function(err, stdout, stderr) {
+        exec(util.format('node %s %s', bin, file), function(err, stdout) {
             assert.ifError(err);
             var expected = file.replace(path.extname(file),'')+'.xml';
             var expected_data = fs.readFileSync(expected, 'utf8');

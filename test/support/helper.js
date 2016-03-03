@@ -12,11 +12,11 @@ var path = require('path'),
 var helper = exports;
 
 exports.files = function(dir, extension, callback) {
-    var dir = path.join(__dirname, '..', dir);
+    dir = path.join(__dirname, '..', dir);
     extension = new RegExp('\\.' + extension + '$');
     fs.readdirSync(dir).forEach(function(filename) {
         if (extension.test(filename)) {
-            callback(path.join(dir, filename));
+            return callback(path.join(dir, filename));
         }
     });
 };
@@ -24,14 +24,14 @@ exports.files = function(dir, extension, callback) {
 exports.file = function(file, callback) {
     fs.readFile(file, 'utf-8', function(err, content) {
         if (err) throw err;
-        callback(content);
+        return callback(content);
     });
 };
 
 exports.json = function(file, callback) {
     fs.readFile(file, 'utf-8', function(err, content) {
         if (err) throw err;
-        callback(JSON.parse(content));
+        return callback(JSON.parse(content));
     });
 };
 
@@ -84,7 +84,7 @@ exports.parseXML = function(xml, callback) {
 
     parser.onclosetag = function() {
         tree.shift();
-        if (tree.length === 1) callback(tree[0]);
+        if (tree.length === 1) return callback(tree[0]);
     };
 
     parser.ontext = parser.oncdata = function(text) {
@@ -104,9 +104,9 @@ exports.compareToXMLFile = function(filename, second, callback, processors) {
 
                 try {
                     assert.deepEqual(firstXML, secondXML);
-                    callback(null);
+                    return callback(null);
                 } catch (err) {
-                    callback(err, firstXML, secondXML);
+                    return callback(err, firstXML, secondXML);
                 }
             });
         });
@@ -128,8 +128,8 @@ exports.stylize = function(str, style) {
         'green' : [32, 39],
         'red' : [31, 39]
     };
-    return '\033[' + styles[style][0] + 'm' + str +
-           '\033[' + styles[style][1] + 'm';
+    return '\x1B[' + styles[style][0] + 'm' + str +
+           '\x1B[' + styles[style][1] + 'm';
 };
 
 
@@ -163,9 +163,11 @@ exports.rmrf = function rmrf(p) {
 
 exports.md5File = function(file, md5, context) {
     fs.readFile(file, 'binary', function(err, data) {
-        var hash = crypto.createHash('md5').update(data).digest('hex');
-        assert.equal(hash, md5);
-        context.tests++;
+        if (!err) {
+            var hash = crypto.createHash('md5').update(data).digest('hex');
+            assert.equal(hash, md5);
+            context.tests++;
+        }
     });
 };
 

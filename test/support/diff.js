@@ -1,7 +1,7 @@
 /**
  * Fragment used to represent a string fragment in the diff.
  */
-var Fragment = function (string) {
+var Fragment = function Fragment(string) {
     this.content = string;
     this.equiv = false;
 };
@@ -38,7 +38,10 @@ var aggregate = function (a, i, k) {
 
 var join = function (what, t) {
     return what.map(function (a) {
-        if (a) return a.toString(t);
+        if (a) {
+            return a.toString(t);
+        }
+        return null;
     }).join('');
 };
 
@@ -115,12 +118,12 @@ var WordDiff = {
         }
 
         // Fill up gaps.
-        for (var i = 0; i < result.del.length; i++) {
-            if (result.del[i].equiv && result.del[i].content.length < 3) {
-                var j = result.ins.indexOf(result.del[i]);
-                if (result.del[i-1] && result.del[i+1] && result.ins[j-1] && result.ins[j+1] && !result.del[i-1].equiv && !result.del[i+1].equiv && !result.ins[j-1].equiv && !result.ins[j+1].equiv){
-                    result.del[i].equiv = false;
-                    result.ins[j] = clone(result.del[i]);
+        for (var i2 = 0; i2 < result.del.length; i2++) {
+            if (result.del[i2].equiv && result.del[i2].content.length < 3) {
+                var j2 = result.ins.indexOf(result.del[i2]);
+                if (result.del[i2-1] && result.del[i2+1] && result.ins[j2-1] && result.ins[j2+1] && !result.del[i2-1].equiv && !result.del[i2+1].equiv && !result.ins[j2-1].equiv && !result.ins[j2+1].equiv){
+                    result.del[i2].equiv = false;
+                    result.ins[j2] = clone(result.del[i2]);
                 }
             }
         }
@@ -131,8 +134,8 @@ var WordDiff = {
                 moveToEnd(result[type][i], i, result[type]);
 
             // Aggregate subsequent changes to minimize ins/del tags.
-            for (var i = 0; i < result[type].length; i++)
-                aggregate(result[type][i], i, result[type]);
+            for (var i2 = 0; i2 < result[type].length; i2++)
+                aggregate(result[type][i2], i2, result[type]);
         });
 
         return result;
@@ -159,10 +162,11 @@ var WordDiff = {
     render: function (args, result) {
         var join = function (what, type) {
             return what.map(function (a) {
-                if (!a) return;
+                if (!a) return null;
                 if (a.equiv) return a.content;
-                if (type == 'del') return '\033[31;4m' + a.content + '\033[0m';
-                if (type == 'ins') return '\033[32;4m' + a.content + '\033[0m';
+                if (type == 'del') return '\x1B[31;4m' + a.content + '\x1B[0m';
+                if (type == 'ins') return '\x1B[32;4m' + a.content + '\x1B[0m';
+                return null;
             }).join('');
         };
 

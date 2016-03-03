@@ -3,15 +3,12 @@ var path = require('path'),
     fs = require('fs');
 
 var carto = require('../lib/carto');
-var tree = require('../lib/carto/tree');
 var helper = require('./support/helper');
 
 describe('Error handling mml+mss', function() {
 helper.files('errorhandling', 'mml', function(file) {
     var basename = path.basename(file);
     it('should handle errors in ' + basename, function(done) {
-        var completed = false;
-        var renderResult;
         var mml = helper.mml(file);
         try {
             new carto.Renderer({
@@ -23,9 +20,8 @@ helper.files('errorhandling', 'mml', function(file) {
             // should not get here
             assert.ok(false);
             done();
-        } catch(err) {
+        } catch (err) {
             if (err.message.indexOf('***') > -1) throw err;
-            var result = helper.resultFile(file);
             var output = err.message;
             // @TODO for some reason, fs.readFile includes an additional \n
             // at the end of read files. Determine why.
@@ -45,8 +41,6 @@ helper.files('errorhandling', 'mss', function(file) {
         return;
     }
     it('should handle errors in ' + basename, function(done) {
-        var completed = false;
-        var renderResult;
         var mss = helper.mss(file);
         try {
             new carto.Renderer({
@@ -60,9 +54,8 @@ helper.files('errorhandling', 'mss', function(file) {
             // should not get here
             assert.ok(false);
             done();
-        } catch(err) {
+        } catch (err) {
             if (err.message.indexOf('***') > -1) throw err;
-            var result = helper.resultFile(file);
             var output = err.message;
             // @TODO for some reason, fs.readFile includes an additional \n
             // at the end of read files. Determine why.

@@ -42,7 +42,9 @@ helper.files('specificity', 'mss', function(file) {
               try {
                 fs.unlinkSync(actual);
                 fs.unlinkSync(expected);
-              } catch (err) {}
+              } catch (err) {
+                  // do nothing
+              }
             } catch (err) {
                 fs.writeFileSync(actual,JSON.stringify(mss,null,4));
                 fs.writeFileSync(expected,JSON.stringify(json,null,4));
