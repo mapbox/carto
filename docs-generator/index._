@@ -9,7 +9,7 @@ Below is a list of values and an explanation of any expression that can be appli
 
 ### Color
 
-CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values, rgb, rgba, hsl, and hsla. It also supports the predefined HTML colors names, like `yellow` and `blue`.
+CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values, rgb, rgba, hsl, hsla, husl, and husla. It also supports the predefined HTML colors names, like `yellow` and `blue`.
 
 ``` css
 #line {
@@ -19,11 +19,13 @@ line-color: rgb(255, 255, 0);
 line-color: rgba(255, 255, 0, 1);
 line-color: hsl(100, 50%, 50%);
 line-color: hsla(100, 50%, 50%, 1);
+line-color: husl(100, 50%, 50%); // same values yield different color than HSL
+line-color: husla(100, 50%, 50%, 1);
 line-color: yellow;
 }
 ```
 
-Especially of note is the support for hsl, which can be [easier to reason about than rgb()](http://mothereffinghsl.com/). Carto also includes several color operation functions [borrowed from less](http://lesscss.org/functions/#color-operations):
+Especially of note is the support for hsl and husl, which can be [easier to reason about than rgb()](http://mothereffinghsl.com/). Carto also includes several color operation functions [borrowed from less](http://lesscss.org/functions/#color-operations):
 
 ``` css
 // lighten and darken colors
@@ -43,9 +45,16 @@ spin(#ff00ff, 10);
 
 // mix generates a color in between two other colors.
 mix(#fff, #000, 50%);
+
+// get color components
+hue(#ff00ff);
+saturation(#ff00ff);
+lightness(#ff00ff);
+alpha(hsla(100, 50%, 50%, 0.5));
 ```
 
-These functions all take arguments which can be color variables, literal colors, or the results of other functions operating on colors.
+These functions all take arguments which can be color variables, literal colors, or the results of other functions operating on colors. All the above mentioned functions also come in
+a `functionp`-variant (e.g. `lightenp`), which force a given color into perceptual color space.
 
 ### Float
 
