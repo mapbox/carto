@@ -1,6 +1,6 @@
 # CartoCSS
 
-[![Build Status](https://secure.travis-ci.org/mapbox/carto.svg)](http://travis-ci.org/mapbox/carto) [![Build status](https://ci.appveyor.com/api/projects/status/github/mapbox/carto?svg=true)](https://ci.appveyor.com/project/Mapbox/carto) [![Coverage Status](https://coveralls.io/repos/mapbox/carto/badge.svg)](https://coveralls.io/r/mapbox/carto) [![Package Version](https://img.shields.io/npm/v/carto.svg)](https://www.npmjs.com/package/carto)
+[![Build Status](https://secure.travis-ci.org/mapbox/carto.svg)](http://travis-ci.org/mapbox/carto) [![Build status](https://ci.appveyor.com/api/projects/status/github/mapbox/carto?svg=true)](https://ci.appveyor.com/project/Mapbox/carto) [![Coverage Status](https://coveralls.io/repos/github/mapbox/carto/badge.svg?branch=master)](https://coveralls.io/github/mapbox/carto?branch=master) [![Package Version](https://img.shields.io/npm/v/carto.svg)](https://www.npmjs.com/package/carto)
 
 Is the language for map design used by [Mapbox Studio Classic](http://mapbox.com/mapbox-studio-classic/). It is similar in syntax to CSS, but builds upon it with specific abilities to filter map data and by providing things like variables.
 
