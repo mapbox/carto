@@ -1,10 +1,11 @@
 var path = require('path'),
-    _ = require('lodash'),
     fs = require('fs'),
     assert = require('assert'),
     crypto = require('crypto'),
     sax = require('sax'),
     diff = require('./diff').diff,
+    yaml = require('js-yaml'),
+    _ = require('lodash'),
     constants = ((!process.ENOENT) >= 1) ?
         require('constants') :
         { ENOENT: process.ENOENT };
@@ -36,13 +37,20 @@ exports.json = function(file, callback) {
 };
 
 exports.mml = function(file) {
-    var mml = JSON.parse(fs.readFileSync(file, 'utf-8'));
-    mml.Stylesheet = _(mml.Stylesheet).map(function(s) {
-        return {
-            id: s,
-            data: fs.readFileSync(path.join(path.dirname(file), s), 'utf-8')
-        };
-    });
+    var mml = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
+    if (!_.isNil(mml.Stylesheet)) {
+        mml.Stylesheet = mml.Stylesheet.map(function(s) {
+            if (path.extname(s) === '.mss') {
+                return {
+                    id: s,
+                    data: fs.readFileSync(path.join(path.dirname(file), s), 'utf-8')
+                };
+            }
+            else {
+                return s;
+            }
+        });
+    }
     return mml;
 };
 
