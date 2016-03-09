@@ -5,8 +5,7 @@ var path = require('path'),
     carto = require('../lib/carto'),
     semver = require('semver'),
     url = require('url'),
-    _ = require('lodash'),
-    yaml = require('js-yaml');
+    _ = require('lodash');
 
 var existsSync = require('fs').existsSync || require('path').existsSync
 
@@ -65,12 +64,24 @@ if (!existsSync(input)) {
     process.exit(1);
 }
 
-function compileMML(err, data) {
-    // force drain the millstone download pool now
-    // to ensure we can exit without waiting
-    if (options.localize && millstone.drainPool) {
-        millstone.drainPool(function() {});
-    }
+try {
+    var data = fs.readFileSync(input, 'utf-8');
+} catch(err) {
+    console.error("carto: " + err.message.replace(/^[A-Z]+, /, ''));
+    process.exit(1);
+}
+
+if (ext === '.mml') {
+    var mml = new carto.MML(options);
+    mml.load(path.dirname(input), data, compile);
+} else if (ext === '.mss') {
+    compile(null, data);
+} else {
+    console.error("carto: please pass either a .mml file or .mss file");
+}
+
+
+function compile(err, data) {
     if (err) {
         console.error(err);
         process.exit(1);
@@ -84,7 +95,12 @@ function compileMML(err, data) {
         mapnik_version: options.api
     });
     try {
-        var output = renderer.render(data);
+        var output;
+        if (ext === '.mml') {
+            output = renderer.render(data);
+        } else if (ext === '.mss') {
+            output = renderer.renderMSS(data);
+        }
     } catch (e) {
         if (e.stack) {
             console.error(e.stack);
@@ -103,82 +119,3 @@ function compileMML(err, data) {
         console.log('TOTAL: ' + (duration) + 'ms');
     }
 };
-
-function compileMSS(err, data) {
-    if (err) {
-        console.error(err);
-        process.exit(1);
-    }
-    var renderer = new carto.Renderer({
-        filename: path.basename(input),
-        benchmark: options.benchmark,
-        ppi: options.ppi
-    },
-    {
-        mapnik_version: options.api
-     });
-    try {
-        var output = renderer.renderMSS(data);
-    } catch (e) {
-        if (e.stack) {
-            console.error(e.stack);
-        } else {
-            console.error(e);
-        }
-        process.exit(1);
-    }
-    if (!options.benchmark) {
-        console.log(output);
-    } else {
-        var duration = (+new Date) - start;
-        console.log('TOTAL: ' + (duration) + 'ms');
-    }
-};
-
-try {
-    var data = fs.readFileSync(input, 'utf-8');
-} catch(err) {
-    console.error("carto: " + err.message.replace(/^[A-Z]+, /, ''));
-    process.exit(1);
-}
-
-if (ext == '.mml') {
-    try {
-        data = yaml.safeLoad(data);
-    } catch(err) {
-        console.error("carto: " + err.message.replace(/^[A-Z]+, /, ''));
-        process.exit(1);
-    }
-
-    if (options.localize) {
-        var millstone = undefined;
-        try {
-            require.resolve('millstone');
-            millstone = require('millstone');
-        } catch (err) {
-            console.error('carto: Millstone not found, required if localizing stylesheet resources. ' + err.message.replace(/^[A-Z]+, /, ''));
-            process.exit(1);
-        }
-        millstone.resolve({
-            mml: data,
-            base: path.dirname(input),
-            cache: path.join(path.dirname(input), 'cache'),
-           nosymlink: options.nosymlink
-        }, compileMML);
-    } else {
-        if (_.has(data, 'Stylesheet') && !_.isNil(data.Stylesheet)) {
-            data.Stylesheet = _.castArray(data.Stylesheet);
-            data.Stylesheet = data.Stylesheet.map(function(x) {
-                if (typeof x !== 'string') {
-                    return { id: x, data: x.data }
-                }
-                return { id: x, data: fs.readFileSync(path.join(path.dirname(input), x), 'utf8') }
-            });
-        }
-        compileMML(null,data);
-    }
-} else if (ext == '.mss') {
-    compileMSS(null,data);
-} else {
-    console.error("carto: please pass either a .mml file or .mss file");
-}

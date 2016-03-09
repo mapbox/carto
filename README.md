@@ -211,14 +211,19 @@ The `Renderer` interface is the main API for developers, and it takes an MML fil
 
     // defined variables:
     // - input (the name or identifier of the file being parsed)
-    // - data (a string containing the MML or an object of MML)
     var carto = require('carto');
 
     try {
-        var output = new carto.Renderer({
-            filename: input,
-            local_data_dir: path.dirname(input),
-        }).render(data);
+        var data = fs.readFileSync(input, 'utf-8');
+        var mml = new carto.MML();
+        mml.load(path.dirname(input), data, function (err, data) {
+            if (err) throw err;
+            var output = new carto.Renderer({
+                filename: input,
+                local_data_dir: path.dirname(input),
+            }).render(data);
+            console.log(output);
+        });
     } catch(err) {
         if (Array.isArray(err)) {
             err.forEach(function(e) {
@@ -226,7 +231,6 @@ The `Renderer` interface is the main API for developers, and it takes an MML fil
             });
         } else { throw err; }
     }
-    console.log(output);
 
 ### Vim
 

@@ -1,11 +1,10 @@
 var path = require('path'),
+    carto = require('../../lib/carto'),
     fs = require('fs'),
     assert = require('assert'),
     crypto = require('crypto'),
     sax = require('sax'),
     diff = require('./diff').diff,
-    yaml = require('js-yaml'),
-    _ = require('lodash'),
     constants = ((!process.ENOENT) >= 1) ?
         require('constants') :
         { ENOENT: process.ENOENT };
@@ -36,22 +35,10 @@ exports.json = function(file, callback) {
     });
 };
 
-exports.mml = function(file) {
-    var mml = yaml.safeLoad(fs.readFileSync(file, 'utf-8'));
-    if (!_.isNil(mml.Stylesheet)) {
-        mml.Stylesheet = mml.Stylesheet.map(function(s) {
-            if (path.extname(s) === '.mss') {
-                return {
-                    id: s,
-                    data: fs.readFileSync(path.join(path.dirname(file), s), 'utf-8')
-                };
-            }
-            else {
-                return s;
-            }
-        });
-    }
-    return mml;
+exports.mml = function(file, callback) {
+    var data = fs.readFileSync(file, 'utf-8');
+    var mml = new carto.MML();
+    mml.load(path.dirname(file), data, callback);
 };
 
 exports.mss = function(file) {
@@ -122,6 +109,12 @@ exports.compareToXMLFile = function(filename, second, callback, processors) {
 };
 
 exports.resultFile = function(file) {
+    if (process.platform && process.platform === 'win32') {
+        var fileWin = path.join(path.dirname(file), path.basename(file).replace(/\.\w+$/, '_syswin.result'));
+        if (fs.existsSync(fileWin)) {
+            return fileWin;
+        }
+    }
     return path.join(path.dirname(file), path.basename(file).replace(/\.\w+$/, '.result'));
 };
 
