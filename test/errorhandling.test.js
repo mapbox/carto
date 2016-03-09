@@ -9,27 +9,29 @@ describe('Error handling mml+mss', function() {
 helper.files('errorhandling', 'mml', function(file) {
     var basename = path.basename(file);
     it('should handle errors in ' + basename, function(done) {
-        var mml = helper.mml(file);
-        try {
-            new carto.Renderer({
-                paths: [ path.dirname(file) ],
-                data_dir: path.join(__dirname, '../data'),
-                local_data_dir: path.join(__dirname, 'rendering'),
-                filename: file
-            }).render(mml);
-            // should not get here
-            assert.ok(false);
-            done();
-        } catch (err) {
-            if (err.message.indexOf('***') > -1) throw err;
-            var output = err.message;
-            // @TODO for some reason, fs.readFile includes an additional \n
-            // at the end of read files. Determine why.
-            // fs.writeFileSync(helper.resultFile(file), output);
-            var data = fs.readFileSync(helper.resultFile(file), 'utf8');
-            assert.deepEqual(output, data);
-            done();
-        }
+        helper.mml(file, function (err, mml) {
+            try {
+                if (err) throw new Error(err);
+                new carto.Renderer({
+                    paths: [ path.dirname(file) ],
+                    data_dir: path.join(__dirname, '../data'),
+                    local_data_dir: path.join(__dirname, 'rendering'),
+                    filename: file
+                }).render(mml);
+                // should not get here
+                assert.ok(false);
+                done();
+            } catch (err) {
+                if (err.message.indexOf('***') > -1) throw err;
+                var output = err.message;
+                // @TODO for some reason, fs.readFile includes an additional \n
+                // at the end of read files. Determine why.
+                // fs.writeFileSync(helper.resultFile(file), output);
+                var data = fs.readFileSync(helper.resultFile(file), 'utf8');
+                assert.deepEqual(output, data);
+                done();
+            }
+        });
     });
 });
 });
