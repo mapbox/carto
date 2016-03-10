@@ -50,7 +50,7 @@
   },
   "scripts": {
     "pretest": "npm install",
-    "test": "mocha -R spec",
+    "test": "mocha -R spec --timeout 50000",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha && coveralls < ./coverage/lcov.info"
   }
 }
