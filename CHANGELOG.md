@@ -1,5 +1,20 @@
 ## Changelog
 
+## 0.16.0
+
+* Fixed a bug related to parsing numerical selectors ([#393](https://github.com/mapbox/carto/pull/393))
+* More meaningful error messages on errorneous Stylesheet references in MML ([#438](https://github.com/mapbox/carto/pull/438))
+* Added support for YAML MML files ([#419](https://github.com/mapbox/carto/pull/419))
+* Added support for [HuSL](http://www.husl-colors.org) perceptual colors ([#422](https://github.com/mapbox/carto/pull/422))
+* Added support for targeting Mapnik API versions to `carto` command line tool ([#433](https://github.com/mapbox/carto/pull/433))
+* Added support for `minimum-/maximum-scale-denominator` ([#394](https://github.com/mapbox/carto/issues/394))
+* Updated documentation, fixed its display problems and added doc for `image-filter` ([#432](https://github.com/mapbox/carto/pull/432))
+* Moved from `underscore` to `lodash` dependency ([#431](https://github.com/mapbox/carto/pull/431))
+* Moved from `optimist` to `yargs` dependency ([#435](https://github.com/mapbox/carto/pull/435))
+* Bump `mapnik-reference` dependency to 8.5.3 (support for Mapnik 3.0.10)
+* Modernized development dependencies
+* Further small fixes and improvements for development.
+
 ## 0.15.3
 
 * Support for Mapnik 3.0.6
@@ -41,7 +56,7 @@
 
 ## 0.10.0
 
-* Remove automatic inclusion of `maximum-extent` on Map element to allow geometries that are buffered past extent bounds (e.g. dateline). 
+* Remove automatic inclusion of `maximum-extent` on Map element to allow geometries that are buffered past extent bounds (e.g. dateline).
 * Bump `mapnik-reference` dependency to ~5.0.9 (with `shield-halo-rasterizer`)
 
 ## 0.9.6
@@ -230,5 +245,3 @@ Tagged Aug 15, 2012
 
 * Fix bug in which SRS autodetection broke error handling
 * Update carto
-
-
