@@ -46,6 +46,7 @@
   force-percept-greyscale/line-color: greyscalep(hsl(209, 81%, 64%));
 
   mix/line-color: mix(hsl(209, 81%, 64%), hsl(109, 81%, 64%), 20%);
+  mix2/line-color: mix(#5ba2a2, #0080ff, 50%);
   percept-mix/line-color: mix(husl(209, 81%, 64%), hsl(109, 81%, 64%), 20%);
   percept-mix2/line-color: mix(husl(209, 81%, 64%), husl(109, 81%, 64%), 20%);
 
