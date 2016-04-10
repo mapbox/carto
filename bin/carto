@@ -174,11 +174,8 @@ if (ext == '.mml') {
                 }
                 return { id: x, data: fs.readFileSync(path.join(path.dirname(input), x), 'utf8') }
             });
-            compileMML(null,data);
         }
-        else {
-            console.error("Expecting a Stylesheet property containing an (array of) stylesheet object(s) of the form { id: 'x', 'data': 'y' }.");
-        }
+        compileMML(null,data);
     }
 } else if (ext == '.mss') {
     compileMSS(null,data);
