@@ -3,10 +3,10 @@
 ## 0.16.0
 
 * Fixed a bug related to parsing numerical selectors ([#393](https://github.com/mapbox/carto/pull/393))
-* More meaningful error messages on errorneous Stylesheet references in MML ([#438](https://github.com/mapbox/carto/pull/438))
+* More meaningful error messages on erroneous Stylesheet references in MML ([#438](https://github.com/mapbox/carto/pull/438))
 * Added support for YAML MML files ([#419](https://github.com/mapbox/carto/pull/419))
 * Added support for [HuSL](http://www.husl-colors.org) perceptual colors ([#422](https://github.com/mapbox/carto/pull/422))
-* Added support for targeting Mapnik API versions to `carto` command line tool ([#433](https://github.com/mapbox/carto/pull/433))
+* Added support for targeting Mapnik API versions in `carto` command line tool ([#433](https://github.com/mapbox/carto/pull/433))
 * Added support for `minimum-/maximum-scale-denominator` ([#394](https://github.com/mapbox/carto/issues/394))
 * Updated documentation, fixed its display problems and added doc for `image-filter` ([#432](https://github.com/mapbox/carto/pull/432))
 * Moved from `underscore` to `lodash` dependency ([#431](https://github.com/mapbox/carto/pull/431))
