@@ -6,8 +6,8 @@ node_js:
   - "5"
   - "4"
   - "0.12"
-  - "0.10"
+  - "0.10.44"
 
 script:
   - npm test
-  - npm run coverage
+  - if [[ ${TRAVIS_NODE_VERSION} == "0.10.44" ]]; then npm run coverage; fi;
