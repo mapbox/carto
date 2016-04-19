@@ -1,5 +1,9 @@
 ## Changelog
 
+## 0.16.1
+
+* Fixed a regression related to the color mix function ([#442](https://github.com/mapbox/carto/issues/442))
+
 ## 0.16.0
 
 * Fixed a bug related to parsing numerical selectors ([#393](https://github.com/mapbox/carto/pull/393))
