@@ -38,10 +38,13 @@
     <LineSymbolizer stroke="rgba(89, 166, 238, 0.9)" />
     <LineSymbolizer stroke="rgba(89, 166, 238, 0.7)" />
     <LineSymbolizer stroke="#a1a1a1" />
-    <LineSymbolizer stroke="#5eb4d0" />
+    <LineSymbolizer stroke="#6fe077" />
     <LineSymbolizer stroke="#2e91d1" />
-    <LineSymbolizer stroke="#51b6a4" />
-    <LineSymbolizer stroke="#53a89f" />
+    <LineSymbolizer stroke="#00ff00" />
+    <LineSymbolizer stroke="#ff0000" />
+    <LineSymbolizer stroke="rgba(15, 240, 0, 0.68)" />
+    <LineSymbolizer stroke="#52b6a4" />
+    <LineSymbolizer stroke="#54a8a0" />
     <LineSymbolizer stroke="#59a6ee" />
     <LineSymbolizer stroke="#57a6ee" />
   </Rule>

@@ -47,8 +47,11 @@
 
   mix/line-color: mix(hsl(209, 81%, 64%), hsl(109, 81%, 64%), 20%);
   mix2/line-color: mix(#5ba2a2, #0080ff, 50%);
-  percept-mix/line-color: mix(husl(209, 81%, 64%), hsl(109, 81%, 64%), 20%);
-  percept-mix2/line-color: mix(husl(209, 81%, 64%), husl(109, 81%, 64%), 20%);
+  mix3/line-color: mix(#ff0000, #00ff00, 0%);
+  mix4/line-color: mix(#ff0000, #00ff00, 100%);
+  mix5/line-color: mix(rgba(255, 0, 0, 0.2), rgba(0, 255, 0, 0.8), 20%);
+  percept-mix/line-color: mix(hsl(109, 81%, 64%), husl(209, 81%, 64%), 20%);
+  percept-mix2/line-color: mix(husl(109, 81%, 64%), husl(209, 81%, 64%), 20%);
 
   components/line-color: hsl(hue(hsl(209, 81%, 64%)), saturation(hsl(209, 81%, 64%)), lightness(hsl(209, 81%, 64%)));
   percept-components/line-color: husl(huep(hsl(209, 81%, 64%)), saturationp(hsl(209, 81%, 64%)), lightnessp(hsl(209, 81%, 64%)));
