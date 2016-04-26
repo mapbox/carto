@@ -1,5 +1,9 @@
 ## Changelog
 
+## 0.16.2
+
+* Fixed a regression related to color math ([#443](https://github.com/mapbox/carto/issues/443))
+
 ## 0.16.1
 
 * Fixed a regression related to the color mix function ([#442](https://github.com/mapbox/carto/issues/442))
