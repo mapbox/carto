@@ -23,7 +23,7 @@ var yargs = require('yargs')
 var options = yargs.argv;
 
 if (options.help) {
-    optimist.showHelp();
+    yargs.showHelp();
     process.exit(0);
 }
 
