@@ -1,5 +1,10 @@
 ## Changelog
 
+## 0.16.3
+
+* Fixed outdated library reference for carto help screen ([#444](https://github.com/mapbox/carto/pull/443))
+* Fixed a regression related to color math with non-color values being interpreted as HSL instead of RGB ([#446](https://github.com/mapbox/carto/issues/446))
+
 ## 0.16.2
 
 * Fixed a regression related to color math ([#443](https://github.com/mapbox/carto/issues/443))
