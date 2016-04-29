@@ -53,6 +53,16 @@
   percept-mix/line-color: mix(hsl(109, 81%, 64%), husl(209, 81%, 64%), 20%);
   percept-mix2/line-color: mix(husl(109, 81%, 64%), husl(209, 81%, 64%), 20%);
 
+  multiply/line-color: #f8f4f0 * 0.8;
+  divide/line-color: #f8f4f0 / 1.2;
+  add/line-color: #f8f4f0 + 0.8;
+  subtract/line-color: #f8f4f0 - 0.8;
+
+  multiply2/line-color: #252525 * #020202;
+  divide2/line-color: #f8f4f0 / #83b7eb;
+  add2/line-color: #f8f4f0 + #020202;
+  subtract2/line-color: #f8f4f0 - #83b7eb;
+
   components/line-color: hsl(hue(hsl(209, 81%, 64%)), saturation(hsl(209, 81%, 64%)), lightness(hsl(209, 81%, 64%)));
   percept-components/line-color: husl(huep(hsl(209, 81%, 64%)), saturationp(hsl(209, 81%, 64%)), lightnessp(hsl(209, 81%, 64%)));
 }

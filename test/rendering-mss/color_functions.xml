@@ -45,6 +45,14 @@
     <LineSymbolizer stroke="rgba(15, 240, 0, 0.68)" />
     <LineSymbolizer stroke="#52b6a4" />
     <LineSymbolizer stroke="#54a8a0" />
+    <LineSymbolizer stroke="#c6c3c0" />
+    <LineSymbolizer stroke="#cfcbc8" />
+    <LineSymbolizer stroke="#f9f5f1" />
+    <LineSymbolizer stroke="#f7f3ef" />
+    <LineSymbolizer stroke="#4a4a4a" />
+    <LineSymbolizer stroke="#020101" />
+    <LineSymbolizer stroke="#faf6f2" />
+    <LineSymbolizer stroke="#753d05" />
     <LineSymbolizer stroke="#59a6ee" />
     <LineSymbolizer stroke="#57a6ee" />
   </Rule>
