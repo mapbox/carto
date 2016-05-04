@@ -453,7 +453,7 @@ A file that this marker shows at each placement. If no file is given, the marker
 Default Value: 1
 _(The stroke-opacity and fill-opacity of the marker.)_
 
-The overall opacity of the marker, if set, overrides both the opacity of both the fill and stroke.
+The overall opacity of the marker, if set, overrides both the opacity of the fill and the opacity of the stroke.
 * * *
 
 ##### marker-fill-opacity `float`
