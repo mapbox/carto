@@ -16,11 +16,11 @@ Running the head binary:
 
 ## Releasing
 
-1) Make sure all tests are passing
-2) Ensure CHANGELOG.md is up to date
-3) Test relevant applications to ensure no regressions
-4) `npm publish`
-5) Regenerate documentation (see below)
+ - Make sure all tests are passing
+ - Ensure CHANGELOG.md is up to date
+ - Test relevant applications to ensure no regressions
+ - `npm publish`
+ - Regenerate documentation (see below)
 
 If there's a high chance of regression, please bump to 1.0.0 so that code using a semver ^ or ~ doesn't auto-upgrade anyone.
 
