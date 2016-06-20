@@ -14,6 +14,18 @@ Running the head binary:
 
     ./bin/carto
 
+## Releasing
+
+1) Make sure all tests are passing
+2) Ensure CHANGELOG.md is up to date
+3) Test relevant applications to ensure no regressions
+4) `npm publish`
+5) Regenerate documentation (see below)
+
+If there's a high chance of regression, please bump to 1.0.0 so that code using a semver ^ or ~ doesn't auto-upgrade anyone.
+
+For examples of previous releases see: https://github.com/mapbox/carto/issues/440
+
 ## Documentation
 
 This repository contains auto-generated documentation of the content of Carto
