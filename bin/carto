@@ -16,7 +16,7 @@ var yargs = require('yargs')
             .options('b', {alias:'benchmark', boolean:true, describe:'Outputs total compile time'})
             .options('l', {alias:'localize', boolean:true, default:false, describe:'Use millstone to localize resources when loading an MML'})
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
-            .options('a', {alias:'api', describe:'Specify Mapnik API version', default:'2.3.0'})
+            .options('a', {alias:'api', describe:'Specify Mapnik API version', default:carto.tree.Reference.getLatest()})
             .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
 
 var options = yargs.argv;
