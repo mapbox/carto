@@ -1,6 +1,6 @@
 var lint = require('mocha-eslint');
 
-describe('JS linting', function() {
+describe('jslint', function() {
     var paths = [
       'bin',
       'lib',

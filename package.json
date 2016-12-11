@@ -49,8 +49,8 @@
     "sax": "~1.2.1"
   },
   "scripts": {
-    "pretest": "npm install",
-    "test": "mocha -R spec --timeout 50000",
+    "pretest": "npm install && mocha -R spec --timeout 50000 -f jslint",
+    "test": "mocha -R spec --timeout 50000 -i -f jslint",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha && coveralls < ./coverage/lcov.info"
   }
 }
