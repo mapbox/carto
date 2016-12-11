@@ -463,7 +463,7 @@ The overall opacity of the marker, if set, overrides both the opacity of both th
 Default Value: 1
 _(Color is fully opaque.)_
 
-The fill opacity of the marker.
+The fill opacity of the marker. This property will also set the `fill-opacity` of elements in an SVG loaded from a file.
 * * *
 
 ##### marker-line-color `color`
@@ -473,7 +473,7 @@ The fill opacity of the marker.
 Default Value: black
 _(The marker will be drawn with a black outline.)_
 
-The color of the stroke around the marker.
+The color of the stroke around the marker. This property will also set the `stroke` of elements in an SVG loaded from a file.
 * * *
 
 ##### marker-line-width `float`
@@ -483,7 +483,7 @@ The color of the stroke around the marker.
 Default Value: 0.5
 _(The marker will be drawn with an outline of .5 pixels wide.)_
 
-The width of the stroke around the marker, in pixels. This is positioned on the boundary, so high values can cover the area itself.
+The width of the stroke around the marker, in pixels. This is positioned on the boundary, so high values can cover the area itself. This property will also set the `stroke-width` of elements in an SVG loaded from a file.
 * * *
 
 ##### marker-line-opacity `float`
@@ -491,7 +491,7 @@ The width of the stroke around the marker, in pixels. This is positioned on the 
 
 
 Default Value: 1
-_(Color is fully opaque.)_
+_(Color is fully opaque. This property will also set the &#96;stroke-opacity&#96; of elements in an SVG loaded from a file.)_
 
 The opacity of a line.
 * * *
@@ -553,7 +553,7 @@ The height of the marker, if using one of the default types.
 Default Value: blue
 _(The marker fill color is blue.)_
 
-The color of the area of the marker.
+The color of the area of the marker. This property will also set the `fill` of elements in an SVG loaded from a file.
 * * *
 
 ##### marker-allow-overlap `boolean`
