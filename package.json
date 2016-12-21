@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "chroma-js": "~1.2.1",
-    "husl": "~6.0.4",
+    "hsluv": "~0.0.1",
     "js-yaml": "~3.7.0",
     "lodash": "~4.17.2",
     "mapnik-reference": "~8.5.5",
