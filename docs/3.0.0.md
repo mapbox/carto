@@ -2078,7 +2078,7 @@ Composite operation. This defines how this layer should behave relative to layer
 
 ### Values
 
-Below is a list of values and an explanation of any expression that can be applied to properties in CartCSS.
+Below is a list of values and an explanation of any expression that can be applied to properties in CartoCSS.
 
 ### Color
 
@@ -2224,3 +2224,15 @@ Functions are comma-separated lists of one or more functions. For instance, tran
 point-transform: scale(2, 2);
 }
 ```
+
+### Mapnik Render-Time Variables
+
+Mapnik >= 3.0.0 supports variables of the form `@var`. These can be used from CartoCSS by specifying them as strings. For example:
+
+```
+#layer {
+   line-width: '@zoom';
+}
+```
+
+For this to have any effect you have to pass the variables to Mapnik at render time in a hashmap of the form variable_name:variable_value.
