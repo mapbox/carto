@@ -499,7 +499,7 @@ A file that this marker shows at each placement. If no file is given, the marker
 Default Value: 1
 _(The stroke-opacity and fill-opacity of the marker.)_
 
-The overall opacity of the marker, if set, overrides both the opacity of both the fill and stroke.
+The overall opacity of the marker, if set, overrides both the opacity of the fill and the opacity of the stroke.
 * * *
 
 ##### marker-fill-opacity `float` 
@@ -889,7 +889,7 @@ Minimum distance that a shield can be placed from any other text, shield, or mar
 Default Value: 0
 _(Shields with the same text will be rendered without restriction.)_
 
-Minimum distance between repeated shields. If set this will prevent shields being rendered nearby each other that contain the same text. Similiar to shield-min-distance with the difference that it works the same no matter what placement strategy is used.
+Minimum distance between repeated shields. If set this will prevent shields being rendered nearby each other that contain the same text. Similar to shield-min-distance with the difference that it works the same no matter what placement strategy is used.
 * * *
 
 ##### shield-min-distance `float` 
@@ -922,7 +922,7 @@ Distance the renderer should use to try to place repeated shields on a line.
 Default Value: 0
 _(No margin will be used to detect if a shield is nearby a tile boundary.)_
 
-Minimum distance a shield will be placed from the edge of a tile. This option is similiar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the tile.
+Minimum distance a shield will be placed from the edge of a tile. This option is similar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the tile.
 * * *
 
 ##### shield-label-position-tolerance `float` 
@@ -1046,7 +1046,7 @@ _(The default character spacing of the font will be used.)_
 Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement.
 * * *
 
-##### shield-line-spacing `unsigned` 
+##### shield-line-spacing `float` 
 
 
 
@@ -1346,6 +1346,17 @@ _(The geometry will not be transformed.)_
 Transform line geometry with specified function and apply pattern to transformed geometry.
 * * *
 
+##### line-pattern-transform `functions` 
+
+
+`matrix` `translate` `scale` `rotate` `skewX` `skewY` 
+
+Default Value: none
+_(No transformation.)_
+
+Transform line pattern instance with specified function.
+* * *
+
 ##### line-pattern-comp-op `keyword`
 
 `clear` `src` `dst` `src-over` `dst-over` `src-in` `dst-in` `src-out` `dst-out` `src-atop` `dst-atop` `xor` `plus` `minus` `multiply` `divide` `screen` `overlay` `darken` `lighten` `color-dodge` `color-burn` `linear-dodge` `linear-burn` `hard-light` `soft-light` `difference` `exclusion` `contrast` `invert` `invert-rgb` `grain-merge` `grain-extract` `hue` `saturation` `color` `value` 
@@ -1457,6 +1468,17 @@ Default Value: none
 _(The geometry will not be transformed.)_
 
 Transform polygon geometry with specified function and apply pattern to transformed geometry.
+* * *
+
+##### polygon-pattern-transform `functions` 
+
+
+`matrix` `translate` `scale` `rotate` `skewX` `skewY` 
+
+Default Value: none
+_(No transformation.)_
+
+Transform polygon pattern instance with specified function.
 * * *
 
 ##### polygon-pattern-comp-op `keyword`
@@ -1767,7 +1789,7 @@ _(The default character spacing of the font will be used.)_
 Horizontal spacing adjustment between characters in pixels. This value is ignored when `horizontal-alignment` is set to `adjust`. Typographic ligatures are turned off when this value is greater than zero.
 * * *
 
-##### text-line-spacing `unsigned` 
+##### text-line-spacing `float` 
 
 
 
@@ -1940,7 +1962,7 @@ Minimum distance that a label can be placed from any other text, shield, or mark
 Default Value: 0
 _(Labels with the same text will be rendered without restriction.)_
 
-Minimum distance between repeated text. If set this will prevent text labels being rendered nearby each other that contain the same text. Similiar to text-min-distance with the difference that it works the same no matter what placement strategy is used.
+Minimum distance between repeated text. If set this will prevent text labels being rendered nearby each other that contain the same text. Similar to text-min-distance with the difference that it works the same no matter what placement strategy is used.
 * * *
 
 ##### text-min-distance `float` 
@@ -1964,7 +1986,7 @@ Minimum distance to the next label with the same text. Only works for line place
 Default Value: 0
 _(No margin will be used to detect if a text label is nearby a tile boundary.)_
 
-Minimum distance a text label will be placed from the edge of a tile. This option is similiar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the tile.
+Minimum distance a text label will be placed from the edge of a tile. This option is similar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the tile.
 * * *
 
 ##### text-min-path-length `float` 
