@@ -2,7 +2,9 @@
 <% if (name == '*') { %>## All elements<% } else { %>## <%= name %><% } %>
 <% _(symbolizer).filter(function(p) { return p.css; }).each(function(p) { %>
 ##### <%= p.css.replace(/\s/g, '') %> <% if (_.isArray(p.type)) { %>`keyword`<% } else { %>`<%= p.type %>` <% } %>
-<% if (_.has(p, 'status')) { %>Status: *<%= p.status %>*<% } %>
+<% if (_.has(p, 'status')) { %>Status: *<%= p.status %>*
+
+<% } %>
 <% if (_.isArray(p.type)) { %><% _(p.type).each(function(type) { %>`<%= type %>` <% }); %><% } %>
 <% if (p.type === 'functions' && _.isArray(p.functions)) { %><% _(p.functions).each(function(type) { %>`<%= type[0] %>` <% }); %><% } %>
 

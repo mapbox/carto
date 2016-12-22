@@ -436,6 +436,8 @@ Status: *unstable*
 
 
 
+
+
 Default Value: 0
 _(Will not be offset.)_
 
@@ -568,6 +570,8 @@ A special setting to allow the user to control rendering behavior for 'multi-geo
 
 ##### marker-type `keyword`
 Status: *deprecated*
+
+
 `arrow` `ellipse` 
 
 
@@ -1733,6 +1737,8 @@ Status: *unstable*
 
 
 
+
+
 Default Value: false
 _(Character will be removed when used to wrap a line.)_
 
@@ -1939,6 +1945,8 @@ Minimum distance between repeated text. If set this will prevent text labels bei
 
 ##### text-min-distance `float` 
 Status: *deprecated*
+
+
 
 
 
@@ -2159,6 +2167,8 @@ Comma separated list of OpenType typographic features. The syntax and semantics 
 
 ##### text-largest-bbox-only `boolean` 
 Status: *experimental*
+
+
 
 
 
