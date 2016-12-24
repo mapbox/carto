@@ -1,0 +1,6 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <Filter>([dem] &gt; [rep])</Filter>
+    <MarkersSymbolizer fill="#0000ff" />
+  </Rule>
+</Style>
