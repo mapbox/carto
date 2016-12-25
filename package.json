@@ -51,6 +51,6 @@
   "scripts": {
     "pretest": "npm install && mocha -R spec --timeout 50000 -f jslint",
     "test": "mocha -R spec --timeout 50000 -i -f jslint",
-    "coverage": "istanbul cover ./node_modules/.bin/_mocha && coveralls < ./coverage/lcov.info"
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha -- -R spec --timeout 50000 -i -f jslint && coveralls < ./coverage/lcov.info"
   }
 }
