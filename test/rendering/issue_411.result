@@ -5,9 +5,15 @@
 
 <Style name="test" filter-mode="first">
   <Rule>
-    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
     <Filter>([way_pixels] > 1e-7) and ([way_pixels] < 0.000036)</Filter>
-    <TextSymbolizer face-name="Arial" size="10" text="[name]"/>
+    <TextSymbolizer face-name="Arial" size="11" text="[name]" fill="#ff0000"/>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <MinScaleDenominator>50000000</MinScaleDenominator>
+    <Filter>([way_pixels] > 1e-7) and ([way_pixels] < 0.000036)</Filter>
+    <TextSymbolizer face-name="Arial" size="10" text="[name]" fill="#ff0000"/>
   </Rule>
 </Style>
 <Layer
