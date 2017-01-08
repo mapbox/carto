@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+<Style name="world" filter-mode="first" >
+  <Rule>
+    <Filter>([data_column] &gt;= 100)</Filter>
+    <PolygonSymbolizer fill="#0000ff" />
+  </Rule>
+  <Rule>
+    <Filter>([data_column] = null)</Filter>
+    <PolygonSymbolizer fill="#ff0000" fill-opacity="0.5" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill="#808080" />
+  </Rule>
+</Style>
+<Layer name="world">
+    <StyleName>world</StyleName>
+</Layer>
+<Style name="sea" filter-mode="first" >
+  <Rule>
+    <Filter>([data_column] &gt;= 100)</Filter>
+    <PolygonSymbolizer fill="#0000ff" />
+  </Rule>
+  <Rule>
+    <Filter>([data_column] = null)</Filter>
+    <PolygonSymbolizer fill="#ff0000" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill="#808080" />
+  </Rule>
+</Style>
+<Layer name="sea">
+  <StyleName>sea</StyleName>
+</Layer>
+
+</Map>
