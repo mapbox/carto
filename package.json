@@ -30,7 +30,8 @@
   "man": "./man/carto.1",
   "main": "./lib/carto/index",
   "engines": {
-    "node": ">=0.5.x"
+    "node": ">=0.5.x",
+    "npm": ">=1.5.0"
   },
   "dependencies": {
     "chroma-js": "~1.2.1",
