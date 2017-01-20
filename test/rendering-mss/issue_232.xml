@@ -1,0 +1,26 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100</MinScaleDenominator>
+    <Filter>([type] = 'bicycle') and ([network] = 'rcn') and ([reflen] = 8)</Filter>
+    <ShieldSymbolizer file="img/shield-trunk-8.png" fontset-name="fontset-0" ><![CDATA[[ref]]]></ShieldSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100</MinScaleDenominator>
+    <Filter>([type] = 'bicycle') and ([network] = 'ncn') and ([reflen] = 8)</Filter>
+    <ShieldSymbolizer file="img/shield-motorway-8.png" fontset-name="fontset-0" ><![CDATA[[ref]]]></ShieldSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100</MinScaleDenominator>
+    <Filter>([reflen] &lt;= 8) and ([type] = 'bicycle') and ([network] = 'rcn')</Filter>
+    <ShieldSymbolizer fontset-name="fontset-0" file="img/shield-motorway-1.png" ><![CDATA[[ref]]]></ShieldSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>400000</MaxScaleDenominator>
+    <MinScaleDenominator>100</MinScaleDenominator>
+    <Filter>([reflen] &lt;= 8) and ([type] = 'bicycle') and ([network] = 'ncn')</Filter>
+    <ShieldSymbolizer fontset-name="fontset-0" file="img/shield-motorway-1.png" ><![CDATA[[ref]]]></ShieldSymbolizer>
+  </Rule>
+</Style>
