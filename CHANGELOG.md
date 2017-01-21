@@ -1,5 +1,19 @@
 ## Changelog
 
+## 0.17.0
+
+* Carto is now a scoped package named `@mapbox/carto`. Scoped packages require NPM >= 1.5. ([#457](https://github.com/mapbox/carto/pull/457))
+* Carto now runs in the browser too (part of [#413](https://github.com/mapbox/carto/issues/413))
+* Carto can now load MML itself and supports absolute file paths in MML stylesheet references ([#439](https://github.com/mapbox/carto/pull/439))
+* The target API default of Mapnik moved from 2.3.0 to being always the latest version (3.0.x). Take that into account if you run a Mapnik 2.x instance (see also the `-a/--api` command line option).
+([#454](https://github.com/mapbox/carto/issues/454))
+* `husl()` was renamed to `hsluv()`. The HuSL variant is deprecated and will be removed in 1.0.0. ([#456](https://github.com/mapbox/carto/issues/456))
+* The `name` attribute for layers in the MML is deprecated and will be removed in 1.0.0. Use `id` instead. ([#165](https://github.com/mapbox/carto/issues/165))
+* The `_properties` object in the MML of vector tiles projects is now supported ([#450](https://github.com/mapbox/carto/issues/450))
+* Updated `mapnik-reference` to 8.6.1, which enables Browser support and support for the `transform` property of PolygonPatternSymbolizer ([#445](https://github.com/mapbox/carto/issues/445))
+* Bugfixes ([#296](https://github.com/mapbox/carto/issues/296), [#121](https://github.com/mapbox/carto/issues/121), [#315](https://github.com/mapbox/carto/issues/315), [#411](https://github.com/mapbox/carto/issues/411), [#426](https://github.com/mapbox/carto/issues/426), [#273](https://github.com/mapbox/carto/issues/273))
+* Documentation updates ([#269](https://github.com/mapbox/carto/issues/269), [#452](https://github.com/mapbox/carto/issues/452))
+
 ## 0.16.3
 
 * Fixed outdated library reference for carto help screen ([#444](https://github.com/mapbox/carto/pull/443))
