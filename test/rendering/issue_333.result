@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+<FontSet name="fontset-0">
+  <Font face-name="Roboto"/>
+  <Font face-name="Arial"/>
+  <Font face-name="Helvetica Neue"/>
+</FontSet>
+<Style name="world" filter-mode="first" >
+  <Rule>
+    <TextSymbolizer fontset-name="fontset-0" size="11" text="[title]" />
+  </Rule>
+</Style>
+<Layer name="world">
+    <StyleName>world</StyleName>
+</Layer>
+
+</Map>

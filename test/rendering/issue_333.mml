@@ -1,0 +1,10 @@
+{
+  "Stylesheet": [
+    "issue_333.mss"
+  ],
+  "Layer": [
+    {
+      "id": "world"
+    }
+  ]
+}
