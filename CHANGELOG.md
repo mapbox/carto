@@ -1,5 +1,9 @@
 ## Changelog
 
+## 0.17.1
+
+* Revert fix for [#315](https://github.com/mapbox/carto/issues/315) due to performance problems ([#466](https://github.com/mapbox/carto/issues/466))
+
 ## 0.17.0
 
 * Carto is now a scoped package named `@mapbox/carto`. Scoped packages require NPM >= 1.5. ([#457](https://github.com/mapbox/carto/pull/457))
