@@ -48,7 +48,7 @@ describe('bin/carto', function() {
             assert.ifError(err);
             var expected = file.replace(path.extname(file),'')+'.xml';
             var expected_data = fs.readFileSync(expected, 'utf8');
-            assert.equal(stdout,expected_data + '\n');
+            assert.equal(stdout,expected_data);
             done();
         });
     });

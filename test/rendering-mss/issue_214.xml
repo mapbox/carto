@@ -1,0 +1,14 @@
+<Style name="style" filter-mode="first">
+  <Rule>
+    <LineSymbolizer />
+    <PointSymbolizer />
+    <LinePatternSymbolizer file="none" />
+    <PolygonPatternSymbolizer file="none" />
+    <MarkersSymbolizer />
+    <ShieldSymbolizer file="none" face-name="none" />
+    <PolygonSymbolizer />
+    <RasterSymbolizer />
+    <TextSymbolizer face-name="Arial"><![CDATA[[name]]]></TextSymbolizer>
+    <DotSymbolizer />
+  </Rule>
+</Style>
