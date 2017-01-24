@@ -163,3 +163,9 @@ Mapnik >= 3.0.0 supports variables of the form `@var`. These can be used from Ca
 ```
 
 For this to have any effect you have to pass the variables to Mapnik at render time in a hashmap of the form variable_name:variable_value.
+
+### Resetting properties
+
+You can reset properties by specifying them with the keyword `none`. They will then be removed from the symbolizer thus using their default value
+or not using them at all. This does not work or makes sense for all properties like e.g. not for `text-face-name`. For an overview over properties
+where this works or makes sense see [this list](https://github.com/mapbox/carto/blob/master/test/rendering-mss/issue_214.mss).
