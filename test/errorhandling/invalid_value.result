@@ -1,1 +1,1 @@
-invalid_value.mss:2:2 The font '2' (specified as text-face-name) is not a known font on your system, please provide an existing font face name.
+invalid_value.mss:2:2 Invalid value for text-face-name, the type font is expected. 2 (of type float) was given.
