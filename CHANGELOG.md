@@ -1,5 +1,9 @@
 ## Changelog
 
+## 0.17.2
+
+* Remove unintended scoping of package. It is now again `carto`. The NPM requirement is dropped.
+
 ## 0.17.1
 
 * Revert fix for [#315](https://github.com/mapbox/carto/issues/315) due to performance problems ([#466](https://github.com/mapbox/carto/issues/466))

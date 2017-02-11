@@ -182,7 +182,7 @@ using CartoCSS and don't need to do a thing.
 If you're a developer-type and want to use the `carto` binary with
 `node.js` (and you have [npm](http://npmjs.org/) installed),
 
-    npm install -g @mapbox/carto
+    npm install -g carto
 
 Optionally you may also want to install millstone which is required for resolving data in the same way as Mapbox Studio Classic does:
 
@@ -211,7 +211,7 @@ The `Renderer` interface is the main API for developers, and it takes an MML fil
 
     // defined variables:
     // - input (the name or identifier of the file being parsed)
-    var carto = require('@mapbox/carto');
+    var carto = require('carto');
 
     try {
         var data = fs.readFileSync(input, 'utf-8');

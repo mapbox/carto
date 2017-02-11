@@ -1,5 +1,5 @@
 {
-  "name": "@mapbox/carto",
+  "name": "carto",
   "version": "0.17.1",
   "description": "Mapnik Stylesheet Compiler",
   "url": "https://github.com/mapbox/carto",
