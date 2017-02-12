@@ -3,6 +3,9 @@
 ## 0.17.2
 
 * Remove unintended scoping of package. It is now again `carto`. The NPM requirement is dropped.
+* Variables in font definitions are now processed correctly ([#333](https://github.com/mapbox/carto/issues/333))
+* Display a better error for missing fonts on font name validation ([#242](https://github.com/mapbox/carto/issues/242))
+* Some properties can now be reset to their default value by using `none` ([#214](https://github.com/mapbox/carto/issues/214))
 
 ## 0.17.1
 
