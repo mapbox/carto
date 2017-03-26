@@ -1,0 +1,15 @@
+{
+  "Stylesheet": [
+    "issue_469.mss"
+  ],
+  "Layer": [
+    {
+      "properties": {
+        "minzoom": 4,
+        "maxzoom": 8
+      },
+      "id": "place",
+      "class": "place"
+     }
+  ]
+}

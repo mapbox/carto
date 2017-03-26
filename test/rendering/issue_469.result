@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+<Style name="place" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>50000000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([type] = 'city')</Filter>
+    <TextSymbolizer face-name="Arial" size="10"><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="place"
+  maximum-scale-denominator="50000000"
+  minimum-scale-denominator="1500000">
+    <StyleName>place</StyleName>
+  </Layer>
+
+</Map>
