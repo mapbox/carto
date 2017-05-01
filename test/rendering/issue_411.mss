@@ -8,4 +8,10 @@
         text-fill: #ff0000;
         text-face-name: 'Arial';
     }
+    [zoom >= 3][render = '1_outline'] {
+        text-name: "[name]";
+        text-size: 12;
+        text-fill: #ff0000;
+        text-face-name: 'Arial';
+    }
 }

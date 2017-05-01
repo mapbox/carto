@@ -15,6 +15,11 @@
     <Filter>([way_pixels] > 1e-7) and ([way_pixels] < 0.000036)</Filter>
     <TextSymbolizer face-name="Arial" size="10" text="[name]" fill="#ff0000"/>
   </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000000</MaxScaleDenominator>
+    <Filter>([render] = '1_outline')</Filter>
+    <TextSymbolizer face-name="Arial" size="12" text="[name]" fill="#ff0000"/>
+  </Rule>
 </Style>
 <Layer
       name="test"
