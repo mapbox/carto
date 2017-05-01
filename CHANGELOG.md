@@ -1,5 +1,9 @@
 ## Changelog
 
+## 0.17.3
+
+* Fix regression with number parsing after fixing of [#411](https://github.com/mapbox/carto/issues/411) ([#471](https://github.com/mapbox/carto/issues/471))
+
 ## 0.17.2
 
 * Remove unintended scoping of package. It is now again `carto`. The NPM requirement is dropped.
