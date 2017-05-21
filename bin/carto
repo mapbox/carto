@@ -43,7 +43,7 @@ if (!input) {
 
 if (options.api) {
     if (!semver.valid(options.api)) {
-        console.error("carto: invalid Mapnik API version. A valid version is e.g. 3.0.10");
+        console.error("carto: invalid Mapnik API version. A valid version is e.g. 3.0.0 or 3.0.10");
         process.exit(1);
     }
 }
