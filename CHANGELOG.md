@@ -1,5 +1,11 @@
 ## Changelog
 
+## 0.18.0
+
+* Compile time performance improvement by leaving out rules that do not apply to layer minzoom and maxzoom restrictions if specified ([#469](https://github.com/mapbox/carto/issues/469))
+* Confirmed that [#348](https://github.com/mapbox/carto/issues/348) does not occur (anymore)
+* Updated dependencies
+
 ## 0.17.3
 
 * Fix regression with number parsing after fixing of [#411](https://github.com/mapbox/carto/issues/411) ([#471](https://github.com/mapbox/carto/issues/471))
