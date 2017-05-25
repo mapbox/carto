@@ -1,0 +1,1924 @@
+2.0.0
+-----
+
+
+map
+^^^
+
+
+background-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: none
+*(transparent)*
+
+Map Background color
+
+------------
+
+
+background-image
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: 
+*(transparent)*
+
+An image that is repeated below all features on a map as a background.
+
+------------
+
+
+srs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+*(The proj4 literal of EPSG:4326 is assumed to be the Map's spatial reference and all data from layers within this map will be plotted using this coordinate system. If any layers do not declare an srs value then they will be assumed to be in the same srs as the Map and not transformations will be needed to plot them in the Map's coordinate space)*
+
+Map spatial reference (proj4 string)
+
+------------
+
+
+buffer-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No buffer will be used)*
+
+Extra tolerance around the map (in pixels) used to ensure labels crossing tile boundaries are equally rendered in each tile (e.g. cut in each tile). Not intended to be used in combination with "avoid-edges".
+
+------------
+
+
+base
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(This base path defaults to an empty string meaning that any relative paths to files referenced in styles or layers will be interpreted relative to the application process.)*
+
+Any relative paths used to reference files will be understood as relative to this directory path if the map is loaded from an in memory object rather than from the filesystem. If the map is loaded from the filesystem and this option is not provided it will be set to the directory of the stylesheet.
+
+------------
+
+
+font-directory
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+*(No map-specific fonts will be registered)*
+
+Path to a directory which holds fonts which should be registered when the Map is loaded (in addition to any fonts that may be automatically registered).
+
+------------
+
+
+
+
+polygon
+^^^^^^^
+
+
+polygon-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: rgba(128,128,128,1)
+*(gray and fully opaque (alpha = 1), same as rgb(128,128,128))*
+
+Fill color to assign to a polygon
+
+------------
+
+
+polygon-gamma
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(fully antialiased)*
+Range: 0-1
+Level of antialiasing of polygon edges
+
+------------
+
+
+polygon-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(opaque)*
+
+The opacity of the polygon
+
+------------
+
+
+polygon-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(no smoothing)*
+Range: 0-1
+Amount of smoothing applied
+
+------------
+
+
+
+
+line
+^^^^
+
+
+line-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: rgba(0,0,0,1)
+*(black and fully opaque (alpha = 1), same as rgb(0,0,0))*
+
+The color of a drawn line
+
+------------
+
+
+line-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+
+
+The width of a line in pixels
+
+------------
+
+
+line-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(opaque)*
+
+The opacity of a line
+
+------------
+
+
+line-join
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``miter`` ``round`` ``bevel`` 
+
+
+Default Value: miter
+
+
+The behavior of lines when joining
+
+------------
+
+
+line-cap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``butt`` ``round`` ``square`` 
+
+
+Default Value: butt
+
+
+The display of line endings
+
+------------
+
+
+line-gamma
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(fully antialiased)*
+Range: 0-1
+Level of antialiasing of stroke line
+
+------------
+
+
+line-dasharray
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``numbers`` 
+
+
+
+
+
+Default Value: none
+*(solid line)*
+
+A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported for more complex patterns.
+
+------------
+
+
+line-dash-offset
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``numbers`` 
+
+
+
+
+
+Default Value: none
+*(solid line)*
+
+valid parameter but not currently used in renderers
+
+------------
+
+
+line-rasterizer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``full`` ``fast`` 
+
+
+Default Value: full
+
+
+Exposes an alternate AGG rendering method that sacrifices some accuracy for speed.
+
+------------
+
+
+
+
+markers
+^^^^^^^
+
+
+marker-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: 
+*(An ellipse or circle, if width equals height)*
+
+An SVG file that this marker shows at each placement. If no file is given, the marker will show an ellipse.
+
+------------
+
+
+marker-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(opaque)*
+
+The overall opacity of the marker
+
+------------
+
+
+marker-line-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: black
+
+
+The color of the stroke around a marker shape.
+
+------------
+
+
+marker-line-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0.5
+
+
+The width of the stroke around the marker, in pixels. This is positioned on the boundary, so high values can cover the area itself.
+
+------------
+
+
+marker-line-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(opaque)*
+
+The opacity of a line
+
+------------
+
+
+marker-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``point`` ``line`` 
+
+
+Default Value: line
+
+
+Attempt to place markers on a point once or on a line repeatedly
+
+------------
+
+
+marker-type
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``arrow`` ``ellipse`` 
+
+
+Default Value: ellipse
+
+
+The default marker-type. If a SVG file is not given as the marker-file parameter, the renderer provides either an arrow or an ellipse (a circle if height is equal to width)
+
+------------
+
+
+marker-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+
+
+The width of the marker, if using one of the default types.
+
+------------
+
+
+marker-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+
+
+The height of the marker, if using one of the default types.
+
+------------
+
+
+marker-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: blue
+
+
+The color of the area of the marker.
+
+------------
+
+
+marker-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow makers to overlap with each other - overlapping markers will not be shown.)*
+
+Control whether overlapping markers are shown or hidden.
+
+------------
+
+
+marker-ignore-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(do not store the bbox of this geometry in the collision detector cache)*
+
+value to control whether the placement of the feature will prevent the placement of other features
+
+------------
+
+
+marker-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 100
+
+
+Space between repeated labels
+
+------------
+
+
+marker-max-error
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0.2
+
+
+The maximum difference between actual marker placement and the marker-spacing parameter. Setting a high value can allow the renderer to try to resolve placement conflicts with other symbolizers.
+
+------------
+
+
+marker-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(no transformation)*
+
+An SVG transformation definition
+
+------------
+
+
+
+
+shield
+^^^^^^
+
+
+shield-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+
+
+Value to use for a shield"s text label. Data columns are specified using brackets like [column_name]
+
+------------
+
+
+shield-face-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+
+
+Font name and style to use for the shield text
+
+------------
+
+
+shield-unlock-image
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(text alignment relative to the shield image uses the center of the image as the anchor for text positioning.)*
+
+This parameter should be set to true if you are trying to position text beside rather than on top of the shield image
+
+------------
+
+
+shield-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+
+
+The size of the shield text in pixels
+
+------------
+
+
+shield-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: black
+
+
+The color of the shield text
+
+------------
+
+
+shield-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``point`` ``line`` ``vertex`` ``interior`` 
+
+
+Default Value: point
+
+
+How this shield should be placed. Point placement attempts to place it on top of points, line places along lines multiple times per feature, vertex places on the vertexes of polygons, and interior attempts to place inside of polygons.
+
+------------
+
+
+shield-avoid-edges
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+
+
+Tell positioning algorithm to avoid labeling near intersection edges.
+
+------------
+
+
+shield-min-distance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Minimum distance to the next shield symbol, not necessarily the same shield.
+
+------------
+
+
+shield-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+The spacing between repeated occurrences of the same shield on a line
+
+------------
+
+
+shield-min-padding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Determines the minimum amount of padding that a shield gets relative to other shields
+
+------------
+
+
+shield-wrap-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Length before wrapping long names.
+
+------------
+
+
+shield-wrap-character
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value:  
+
+
+Use this character instead of a space to wrap long names.
+
+------------
+
+
+shield-halo-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: #FFFFFF
+*(white)*
+
+Specifies the color of the halo around the text.
+
+------------
+
+
+shield-halo-radius
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(no halo)*
+
+Specify the radius of the halo in pixels
+
+------------
+
+
+shield-character-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement.
+
+------------
+
+
+shield-line-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Vertical spacing between lines of multiline labels (in pixels)
+
+------------
+
+
+shield-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+Image file to render behind the shield text
+
+------------
+
+
+shield-text-dx
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Displace text within shield by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right
+
+------------
+
+
+shield-text-dy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Displace text within shield by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down
+
+------------
+
+
+shield-dx
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Displace shield by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right
+
+------------
+
+
+shield-dy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Displace shield by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down
+
+------------
+
+
+shield-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+
+
+(Default 1.0) - opacity of the image used for the shield
+
+------------
+
+
+shield-text-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+
+
+(Default 1.0) - opacity of the text placed on top of the shield
+
+------------
+
+
+shield-horizontal-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``middle`` ``right`` ``auto`` 
+
+
+Default Value: middle
+
+
+The shield's horizontal alignment from its centerpoint
+
+------------
+
+
+shield-text-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``none`` ``uppercase`` ``lowercase`` ``capitalize`` 
+
+
+Default Value: none
+
+
+Transform the case of the characters
+
+------------
+
+
+shield-no-text
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+
+
+Whether the shield should make room for a text label.
+
+------------
+
+
+shield-justify-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: middle
+
+
+Define how text in a shield's label is justified
+
+------------
+
+
+
+
+line-pattern
+^^^^^^^^^^^^
+
+
+line-pattern-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+An image file to be repeated and warped along a line
+
+------------
+
+
+
+
+polygon-pattern
+^^^^^^^^^^^^^^^
+
+
+polygon-pattern-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+Image to use as a repeated pattern fill within a polygon
+
+------------
+
+
+polygon-pattern-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``local`` ``global`` 
+
+
+Default Value: local
+
+
+Specify whether to align pattern fills to the layer or to the map.
+
+------------
+
+
+polygon-pattern-gamma
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(fully antialiased)*
+Range: 0-1
+Level of antialiasing of polygon pattern edges
+
+------------
+
+
+
+
+raster
+^^^^^^
+
+
+raster-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(opaque)*
+
+The opacity of the raster symbolizer on top of other symbolizers.
+
+------------
+
+
+raster-mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``normal`` ``grain_merge`` ``grain_merge2`` ``multiply`` ``multiply2`` ``divide`` ``divide2`` ``screen`` ``hard_light`` 
+
+
+Default Value: normal
+
+
+The blending technique used to overlay this raster image on the layer below. Normal simply covers the layer. Grain merge adds the two layers together and subtracts 128 from the value, making the resulting area sometimes high-contrast. Screen often gives a lighter, washed-out appearance. Multiply multiplies the pixels, giving a high-contrast result. Divide divides the upper layer by the lower layer, making a lighter version.
+
+------------
+
+
+raster-filter-factor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: -1
+*(Allow the datasource to choose appropriate downscaling.)*
+
+This is used by the Raster or Gdal datasources to pre-downscale images using overviews. Higher numbers can sometimes cause much better scaled image output, at the cost of speed.
+
+------------
+
+
+raster-scaling
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``fast`` ``bilinear`` ``bilinear8`` ``bicubic`` ``spline16`` ``gaussian`` ``lanczos`` 
+
+
+Default Value: fast
+
+
+The scaling algorithm used to making different resolution versions of this raster layer. Bilinear is a good compromise between speed and accuracy, while lanczos gives the highest quality.
+
+------------
+
+
+raster-mesh-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``integer`` 
+
+
+
+
+
+Default Value: 16
+*(Reprojection mesh will be 1/16 of the resolution of the source image)*
+
+A reduced resolution mesh is used for raster reprojection, and the total image size is divided by the mesh-size to determine the quality of that mesh. Values for mesh-size larger than the default will result in faster reprojection but might lead to distortion.
+
+------------
+
+
+
+
+point
+^^^^^
+
+
+point-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+Image file to represent a point
+
+------------
+
+
+point-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow points to overlap with each other - overlapping markers will not be shown.)*
+
+Control whether overlapping points are shown or hidden.
+
+------------
+
+
+point-ignore-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(do not store the bbox of this geometry in the collision detector cache)*
+
+value to control whether the placement of the feature will prevent the placement of other features
+
+------------
+
+
+point-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully opaque)*
+
+A value from 0 to 1 to control the opacity of the point
+
+------------
+
+
+point-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``centroid`` ``interior`` 
+
+
+Default Value: centroid
+
+
+How this point should be placed. Centroid calculates the geometric center of a polygon, which can be outside of it, while interior always places inside of a polygon.
+
+------------
+
+
+point-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(No transformation)*
+
+SVG transformation definition
+
+------------
+
+
+
+
+text
+^^^^
+
+
+text-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+
+
+Value to use for a text label. Data columns are specified using brackets like [column_name]
+
+------------
+
+
+text-face-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+
+
+Font name and style to render a label in
+
+------------
+
+
+text-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+
+
+Text size in pixels
+
+------------
+
+
+text-ratio
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Define the amount of text (of the total) present on successive lines when wrapping occurs
+
+------------
+
+
+text-wrap-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Length of a chunk of text in characters before wrapping text
+
+------------
+
+
+text-wrap-character
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value:  
+
+
+Use this character instead of a space to wrap long text.
+
+------------
+
+
+text-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Distance between repeated text labels on a line
+
+------------
+
+
+text-character-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Horizontal spacing adjustment between characters in pixels
+
+------------
+
+
+text-line-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Vertical spacing adjustment between lines in pixels
+
+------------
+
+
+text-label-position-tolerance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Allows the label to be displaced from its ideal position by a number of pixels
+
+------------
+
+
+text-max-char-angle-delta
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: none
+
+
+If present, the maximum angle change, in degrees, allowed between adjacent characters in a label.  This will stop label placement around sharp corners.
+
+------------
+
+
+text-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: #000000
+
+
+Specifies the color for the text
+
+------------
+
+
+text-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully opaque)*
+
+A number from 0 to 1 specifying the opacity for the text
+
+------------
+
+
+text-halo-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: #FFFFFF
+*(white)*
+
+Specifies the color of the halo around the text.
+
+------------
+
+
+text-halo-radius
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(no halo)*
+
+Specify the radius of the halo in pixels
+
+------------
+
+
+text-dx
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Displace text by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right
+
+------------
+
+
+text-dy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Displace text by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down
+
+------------
+
+
+text-vertical-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``top`` ``middle`` ``bottom`` 
+
+
+Default Value: middle
+*(Default affected by value of dy; "bottom" for dy>0, "top" for dy<0.)*
+
+Position of label relative to point position.
+
+------------
+
+
+text-avoid-edges
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+
+
+Tell positioning algorithm to avoid labeling near intersection edges.
+
+------------
+
+
+text-min-distance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Minimum permitted distance to the next text symbolizer.
+
+------------
+
+
+text-min-padding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Determines the minimum amount of padding that a text symbolizer gets relative to other text
+
+------------
+
+
+text-min-path-length
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(place labels on all paths)*
+
+Place labels only on paths longer than this value.
+
+------------
+
+
+text-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow text to overlap with other text - overlapping markers will not be shown.)*
+
+Control whether overlapping text is shown or hidden.
+
+------------
+
+
+text-orientation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+Rotate the text.
+
+------------
+
+
+text-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``point`` ``line`` ``vertex`` ``interior`` 
+
+
+Default Value: point
+
+
+Control the style of placement of a point versus the geometry it is attached to.
+
+------------
+
+
+text-placement-type
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``dummy`` ``simple`` 
+
+
+Default Value: dummy
+
+
+Re-position and/or re-size text to avoid overlaps. "simple" for basic algorithm (using text-placements string,) "dummy" to turn this feature off.
+
+------------
+
+
+text-placements
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+
+
+If "placement-type" is set to "simple", use this "POSITIONS,[SIZES]" string. See TextSymbolizer docs for format.
+
+------------
+
+
+text-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``none`` ``uppercase`` ``lowercase`` ``capitalize`` 
+
+
+Default Value: none
+
+
+Transform the case of the characters
+
+------------
+
+
+text-horizontal-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``middle`` ``right`` ``auto`` 
+
+
+Default Value: middle
+
+
+The text's horizontal alignment from its centerpoint
+
+------------
+
+
+text-align
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``right`` ``center`` 
+
+
+Default Value: center
+
+
+Set the text alignment.
+
+------------
+
+
+
+
+building
+^^^^^^^^
+
+
+building-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: #FFFFFF
+
+
+The color of the buildings walls.
+
+------------
+
+
+building-fill-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+
+
+The opacity of the building as a whole, including all walls.
+
+------------
+
+
+building-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+
+
+The height of the building in pixels.
+
+------------
+
+
+
+
+
