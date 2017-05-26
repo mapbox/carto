@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# alacarto documentation build configuration file, created by
+# carto documentation build configuration file, created by
 # sphinx-quickstart on Sun Feb  5 10:57:37 2017.
 #
 # This file is execfile()d with the current directory set to its
