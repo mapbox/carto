@@ -29,7 +29,7 @@ and might be more interested in the language reference.
 
 Else you can install the `carto` binary with NPM by running:
 
-    npm install -g alacarto
+    npm install -g carto
 
 You should consider using a Node.js version manager like [NVM](https://github.com/creationix/nvm).
 Optionally you may also want to install millstone which is required for resolving data in the same way as Mapbox Studio Classic does:
