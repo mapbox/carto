@@ -17,6 +17,7 @@ var yargs = require('yargs')
             .options('l', {alias:'localize', boolean:true, default:false, describe:'Use millstone to localize resources when loading an MML'})
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
             .options('a', {alias:'api', describe:'Specify Mapnik API version', default:carto.tree.Reference.getLatest()})
+            .options('q', {alias:'quiet', boolean:true, default:false, describe:'Do not output any warnings'})
             .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
 
 var options = yargs.argv;
@@ -89,7 +90,8 @@ function compile(err, data) {
     var renderer = new carto.Renderer({
         filename: input,
         benchmark: options.benchmark,
-        ppi: options.ppi
+        ppi: options.ppi,
+        quiet: options.quiet
     },
     {
         mapnik_version: options.api

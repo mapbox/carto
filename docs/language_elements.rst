@@ -170,4 +170,4 @@ Resetting properties
 
 You can reset properties by specifying them with the keyword ``none``. They will then be removed from the symbolizer thus using their default value
 or not using them at all. This does not work or makes sense for all properties like e.g. not for ``text-face-name``. For an overview over properties
-where this works or makes sense see `this list <https://github.com/mapbox/carto/blob/master/test/rendering-mss/carto_issue_214.mss>`_.
+where this works or makes sense see `this list <https://github.com/mapbox/carto/blob/master/test/rendering-mss/issue_214.mss>`_.

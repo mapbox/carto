@@ -30,14 +30,14 @@ Now that Carto is installed you should have a *carto* command line tool availabl
 
 The following command line options are available:
 
--h / --help
-    Display help message
-
--v / --version
-    Display version information
+-a / --api VERSION
+    Specify Mapnik API version (e.g. --api 3.0.10) (default: latest Mapnik API version)
 
 -b / --benchmark
     Outputs total compile time
+
+-h / --help
+    Display help message
 
 -l / --localize
     Use millstone to localize resources when loading an MML (default: off)
@@ -45,11 +45,15 @@ The following command line options are available:
 -n / --nosymlink
     Use absolute paths instead of symlinking files
 
--a / --api VERSION
-    Specify Mapnik API version (e.g. --api 3.0.10) (default: latest Mapnik API version)
-
 -ppi RESOLUTION
     Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels (default: 90.714)
+
+-q / --quiet
+    Do not output any warnings (default: off)
+
+-v / --version
+    Display version information
+
 
 Alternatively, Carto can be used from JavaScript. The *Renderer* interface is the main API for developers,
 and it takes an MML file as a string as input. ::
