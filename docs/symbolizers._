@@ -12,7 +12,7 @@ All elements
 
 Type: <% if (_.isArray(p.type)) { %>``keyword``<% } else { %>``<%= p.type %>`` <% } %>
 
-<% if (_.has(p, 'status')) { %>Status: *<%= p.status %>*
+<% if (_.has(p, 'status')) { %>**Status: <%= p.status %>**
 
 <% } %>
 <% if (_.isArray(p.type)) { %>Possible values: <% _(p.type).each(function(type) { %>``<%= type %>`` <% }); %><% } %>

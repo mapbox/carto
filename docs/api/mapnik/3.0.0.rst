@@ -675,7 +675,7 @@ line-offset
 
 Type: ``float`` 
 
-Status: *unstable*
+**Status: unstable**
 
 
 
@@ -887,7 +887,7 @@ marker-type
 
 Type: ``keyword``
 
-Status: *deprecated*
+**Status: deprecated**
 
 
 Possible values: ``arrow`` ``ellipse`` 
@@ -2727,7 +2727,7 @@ text-repeat-wrap-character
 
 Type: ``boolean`` 
 
-Status: *unstable*
+**Status: unstable**
 
 
 
@@ -3052,7 +3052,7 @@ text-min-distance
 
 Type: ``float`` 
 
-Status: *deprecated*
+**Status: deprecated**
 
 
 
@@ -3394,7 +3394,7 @@ text-largest-bbox-only
 
 Type: ``boolean`` 
 
-Status: *experimental*
+**Status: experimental**
 
 
 
