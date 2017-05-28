@@ -1,1 +1,1 @@
-invalid_value.mss:2:2 Invalid value for text-face-name, the type font is expected. 2 (of type float) was given.
+Error: invalid_value.mss:2:2 Invalid value for text-face-name, the type font is expected. 2 (of type float) was given.

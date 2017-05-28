@@ -1,1 +1,1 @@
-bad_filter.mss: [[CODE]!=@x] added to [CODE]=X produces an invalid filter
+Error: bad_filter.mss:3:10 [[CODE]!=@x] added to [CODE]=X produces an invalid filter

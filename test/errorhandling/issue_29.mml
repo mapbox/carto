@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "scale": 1,
+  "Stylesheet": [
+     "issue_29.mss"
+  ],
+  "Layer": [
+    {
+      "id": "test"
+    }
+  ]
+}

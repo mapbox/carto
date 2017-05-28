@@ -5,7 +5,8 @@ var path = require('path'),
     carto = require('../lib/carto'),
     semver = require('semver'),
     url = require('url'),
-    _ = require('lodash');
+    _ = require('lodash'),
+    util = require('../lib/carto/util');
 
 var existsSync = require('fs').existsSync || require('path').existsSync
 
@@ -103,6 +104,24 @@ function compile(err, data) {
         } else if (ext === '.mss') {
             output = renderer.renderMSS(data);
         }
+
+        if (_.has(output, 'msg') && _.isArray(output.msg) &&
+            output.msg.length > 0) {
+            var hasError = false;
+            _.forEach(output.msg, function (v) {
+                if (v.type === 'error') {
+                    console.error(util.getMessageToPrint(v));
+                    hasError = true;
+                }
+                else if (v.type === 'warning') {
+                    console.warn(util.getMessageToPrint(v));
+                }
+            });
+
+            if (hasError) {
+                process.exit(1);
+            }
+        }
     } catch (e) {
         if (e.stack) {
             console.error(e.stack);
@@ -115,7 +134,9 @@ function compile(err, data) {
         process.exit(1);
     }
     if (!options.benchmark) {
-        console.log(output);
+        if (!_.isNil(output.data)) {
+            console.log(output.data);
+        }
     } else {
         var duration = (+new Date) - start;
         console.log('TOTAL: ' + (duration) + 'ms');

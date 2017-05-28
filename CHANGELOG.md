@@ -1,4 +1,26 @@
-## Changelog
+# Changelog
+
+## 1.0.0 (unreleased)
+
+* Documentation is now available on https://cartocss.readthedocs.io. ([#473](https://github.com/mapbox/carto/issues/473))
+* Warnings are emitted if properties are used that are `deprecated`, `unstable` or `experimental`.
+There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress those warnings. ([#474](https://github.com/mapbox/carto/issues/474))
+* Warnings are emitted if a layer has no associated styles or styles do not match a corresponding layer selector. ([#29](https://github.com/mapbox/carto/issues/29))
+
+### Breaking changes
+
+#### Stylesheets
+
+* The deprecated `name` attribute for layers is no longer supported. Use `id` instead.
+* The deprecated color functions `husl` and `husla` are no longer supported. Use `hsluv` and `hsluva` instead.
+
+#### API
+
+* `carto.Renderer.render` and `carto.Renderer.renderMSS` now return an object `{ msg: Array, data: String }` instead of just a
+string. `data` contains the output as before and `msg` now contains an array of error or warning objects.
+In case of errors `data` is `null`.
+* carto now only throws errors in case of program failures. All other style processing
+related errors can be found in the `msg` property (see above).
 
 ## 0.18.0
 

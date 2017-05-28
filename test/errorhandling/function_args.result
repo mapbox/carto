@@ -1,1 +1,1 @@
-function_args.mss:3:38 unknown function agg-stack-blu(), did you mean agg-stack-blur(2)
+Error: function_args.mss:3:38 unknown function agg-stack-blu(), did you mean agg-stack-blur(2)

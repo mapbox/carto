@@ -1,1 +1,1 @@
-Expecting a Stylesheet property containing an (array of) stylesheet object(s) of the form { id: 'x', 'data': 'y' }.
+Error: Expecting a Stylesheet property containing an (array of) stylesheet object(s) of the form { id: 'x', 'data': 'y' }.

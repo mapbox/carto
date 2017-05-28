@@ -66,19 +66,34 @@ and it takes an MML file as a string as input. ::
         var data = fs.readFileSync(input, 'utf-8');
         var mml = new carto.MML();
         mml.load(path.dirname(input), data, function (err, data) {
-            if (err) throw err;
-            var output = new carto.Renderer({
-                filename: input,
-                local_data_dir: path.dirname(input),
-            }).render(data);
-            console.log(output);
+            var output = {};
+
+            if (!err) {
+                output = new carto.Renderer({
+                    filename: input,
+                    local_data_dir: path.dirname(input),
+                }).render(data);
+            }
+
+            if (output.msg) {
+                output.msg.forEach(function (v) {
+                    if (v.type === 'error') {
+                        console.error(carto.Util.getMessageToPrint(v));
+                    }
+                    else if (v.type === 'warning') {
+                        console.warn(carto.Util.getMessageToPrint(v));
+                    }
+                });
+            }
+
+            // output content (if no errors)
+            if (output.data) {
+                console.log(output.data);
+            }
         });
-    } catch(err) {
-        if (Array.isArray(err)) {
-            err.forEach(function(e) {
-                carto.writeError(e, options);
-            });
-        } else { throw err; }
+    } catch (err) {
+        // program failures
+        ...
     }
 
 .. note:: If you want to use Carto within the browser you should not use MML loading via ``carto.MML.load``.

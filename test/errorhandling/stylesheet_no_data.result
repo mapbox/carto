@@ -1,1 +1,1 @@
-Expecting a stylesheet object of the form { id: 'x', 'data': 'y' } for the Stylesheet property.
+Error: Expecting a stylesheet object of the form { id: 'x', 'data': 'y' } for the Stylesheet property.

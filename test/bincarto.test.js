@@ -19,7 +19,7 @@ describe('bin/carto', function() {
         var api = '1.0.0';
         exec(util.format('node %s -a %s %s', bin, api, file), function(err, stdout, stderr) {
             assert.equal(1, err.code);
-            assert.equal("Mapnik version 1.0.0 is not supported\n", stderr);
+            assert.equal("Error: Mapnik version 1.0.0 is not supported\n", stderr);
             done();
         });
     });
