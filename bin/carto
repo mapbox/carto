@@ -18,6 +18,7 @@ var yargs = require('yargs')
             .options('l', {alias:'localize', boolean:true, default:false, describe:'Use millstone to localize resources when loading an MML'})
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
             .options('a', {alias:'api', describe:'Specify Mapnik API version', default:carto.tree.Reference.getLatest()})
+            .options('f', {alias:'file', describe:'Outputs to the given file instead of stdout.'})
             .options('q', {alias:'quiet', boolean:true, default:false, describe:'Do not output any warnings'})
             .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
 
@@ -88,6 +89,7 @@ function compile(err, data) {
         console.error(err);
         process.exit(1);
     }
+
     var renderer = new carto.Renderer({
         filename: input,
         benchmark: options.benchmark,
@@ -135,7 +137,19 @@ function compile(err, data) {
     }
     if (!options.benchmark) {
         if (!_.isNil(output.data)) {
-            console.log(output.data);
+            if (options.file) {
+                try {
+                    fs.writeFileSync(options.file, output.data);
+                }
+                catch (e) {
+                    console.error(e);
+                    console.error('Writing to given file ' + options.file + ' failed. Falling back to stdout output.');
+                    console.log(output.data);
+                }
+            }
+            else {
+                console.log(output.data);
+            }
         }
     } else {
         var duration = (+new Date) - start;

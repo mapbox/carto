@@ -36,6 +36,9 @@ The following command line options are available:
 -b / --benchmark
     Outputs total compile time
 
+-f / --file
+    Outputs to the specified file instead of stdout
+
 -h / --help
     Display help message
 

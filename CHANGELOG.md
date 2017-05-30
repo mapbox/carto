@@ -6,6 +6,7 @@
 * Warnings are emitted if properties are used that are `deprecated`, `unstable` or `experimental`.
 There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress those warnings. ([#474](https://github.com/mapbox/carto/issues/474))
 * Warnings are emitted if a layer has no associated styles or styles do not match a corresponding layer selector. ([#29](https://github.com/mapbox/carto/issues/29))
+* New command line switch `-f / --file` to specify a file for output instead of `stdout`.
 
 ### Breaking changes
 

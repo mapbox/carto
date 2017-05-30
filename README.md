@@ -48,6 +48,7 @@ Now that Carto is installed you should have a `carto` command line tool availabl
 Available parameters:
 * -a / --api VERSION - Specify Mapnik API version (e.g. --api 3.0.10) (default: latest Mapnik API version)
 * -b / --benchmark - Outputs total compile time
+* -f / --file - Outputs to the specified file instead of stdout
 * -h / --help - Display help message
 * -l / --localize - Use millstone to localize resources when loading an MML (default: off)
 * -n / --nosymlink - Use absolute paths instead of symlinking files
