@@ -25,6 +25,11 @@ In case of errors `data` is `null`.
 * carto now only throws errors in case of program failures. All other style processing
 related errors can be found in the `msg` property (see above).
 
+## 0.18.1
+
+* Updated `mapnik-reference` to fix an install problem for some Node.js versions
+* Backported documentation updates
+
 ## 0.18.0
 
 * Compile time performance improvement by leaving out rules that do not apply to layer minzoom and maxzoom restrictions if specified ([#469](https://github.com/mapbox/carto/issues/469))

@@ -385,4 +385,4 @@ errors or warnings so it is advisable to set something recognizable here.
 
 data
 """"
-This contains the actually style in the form of a string.
+This contains the actual style in the form of a string.
