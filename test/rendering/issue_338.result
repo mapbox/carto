@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+<Style name="world" filter-mode="first" >
+  <Rule>
+    <TextSymbolizer face-name="Arial" text="oofbar" />
+  </Rule>
+</Style>
+<Layer name="world">
+    <StyleName>world</StyleName>
+</Layer>
+
+</Map>

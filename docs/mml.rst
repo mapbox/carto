@@ -364,14 +364,16 @@ Referencing style files
 ^^^^^^^^^^^^^^^^^^^^^^^
 Here you reference the style files used in an array of paths/file names. Carto
 understands relative as well as absolute paths. The order of style references is
-not important.
+normally not important, but re-definition of variables can be affected by the order
+of the style files referenced.
 
 Specifying style objects
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Internally style file references are transformed into style objects anyway, so you
 can also specify them directly. This only makes sense if you generate them
 programmatically otherwise the notation could become a bit tedious. You specify
-an array of style objects. The order of the objects is not important.
+an array of style objects. The order of the objects is normally not important,
+but re-definition of variables can be affected by the order of the style objects.
 
 A style object consists of the following properties.
 

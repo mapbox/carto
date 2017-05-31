@@ -84,6 +84,7 @@ helper.files('rendering', 'mml', function(file) {
                             // do nothing
                         }
                     }
+                    done();
                 }, [
                     helper.removeAbsoluteImages,
                     helper.removeAbsoluteDatasources
@@ -92,18 +93,13 @@ helper.files('rendering', 'mml', function(file) {
             else {
                 if (_.has(output, 'msg') && _.isArray(output.msg) &&
                     output.msg.length > 0) {
-                    _.forEach(output.msg, function (v) {
-                        if (v.type === 'error') {
-                            console.error(util.getMessageToPrint(v));
-                        }
-                        else if (v.type === 'warning') {
-                            console.warn(util.getMessageToPrint(v));
-                        }
-                    });
+                    assert.fail('','', util.getMessagesToPrint(output.msg));
                 }
-                assert.ok(false);
+                else {
+                    assert.fail('', '', 'Output was nil but no msg property found.');
+                }
+                done();
             }
-            done();
         });
     });
 });
