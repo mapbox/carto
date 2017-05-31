@@ -3,3 +3,4 @@
 test/rendering/layers/
 test/rendering/cache/
 test/rendering-mss/npm-debug.log
+docs/_build/

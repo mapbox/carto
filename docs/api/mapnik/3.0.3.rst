@@ -1,0 +1,3584 @@
+3.0.3
+-----
+
+
+All elements
+^^^^^^^^^^^^
+
+
+image-filters
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``agg-stack-blur`` ``emboss`` ``blur`` ``gray`` ``sobel`` ``edge-detect`` ``x-gradient`` ``y-gradient`` ``invert`` ``sharpen`` ``color-blind-protanope`` ``color-blind-deuteranope`` ``color-blind-tritanope`` ``colorize-alpha`` ``color-to-alpha`` ``scale-hsla`` 
+
+Default Value: none
+*(no filters.)*
+
+A list of image filters that will be applied to the active rendering canvas for a given style. The presence of one more ``image-filters`` will trigger a new canvas to be created before starting to render a style and then this canvas will be composited back into the main canvas after rendering all features and after all ``image-filters`` have been applied. See ``direct-image-filters`` if you want to apply a filter directly to the main canvas.
+
+------------
+
+
+image-filters-inflate
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(No special handling will be done and image filters that blur data will only blur up to the edge of a tile boundary.)*
+
+A property that can be set to true to enable using an inflated image internally for seamless blurring across tiles (requires buffered data).
+
+------------
+
+
+direct-image-filters
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``agg-stack-blur`` ``emboss`` ``blur`` ``gray`` ``sobel`` ``edge-detect`` ``x-gradient`` ``y-gradient`` ``invert`` ``sharpen`` ``color-blind-protanope`` ``color-blind-deuteranope`` ``color-blind-tritanope`` ``colorize-alpha`` ``color-to-alpha`` ``scale-hsla`` 
+
+Default Value: none
+*(no filters.)*
+
+A list of image filters to apply to the main canvas (see the ``image-filters`` doc for how they work on a separate canvas).
+
+------------
+
+
+comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current layer on top of other layers.)*
+
+Composite operation. This defines how this layer should behave relative to layers atop or below it.
+
+------------
+
+
+opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(No separate buffer will be used and no alpha will be applied to the style after rendering.)*
+
+An alpha value for the style (which means an alpha applied to all features in separate buffer and then composited back to main buffer).
+
+------------
+
+
+
+
+map
+^^^
+
+
+background-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: none
+*(Will be rendered transparent.)*
+
+Map Background color.
+
+------------
+
+
+background-image
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: 
+*(No background image will be used.)*
+
+An image that is repeated below all features on a map as a background. Accepted formats: svg, jpg, png, tiff, and webp.
+
+------------
+
+
+background-image-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(The background-image will be blended with the background normally (placed on top of any existing background-color).)*
+
+Set the compositing operation used to blend the image into the background.
+
+------------
+
+
+background-image-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The image opacity will not be changed when applied to the map background.)*
+
+Set the opacity of the image.
+
+------------
+
+
+srs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+*(The proj4 literal of EPSG:4326 is assumed to be the Map's spatial reference and all data from layers within this map will be plotted using this coordinate system. If any layers do not declare an srs value then they will be assumed to be in the same srs as the Map and not transformations will be needed to plot them in the Map's coordinate space.)*
+
+Map spatial reference (proj4 string).
+
+------------
+
+
+buffer-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No buffer will be used.)*
+
+Extra tolerance around the map (in pixels) used to ensure labels crossing tile boundaries are equally rendered in each tile (e.g. cut in each tile). Not intended to be used in combination with "avoid-edges".
+
+------------
+
+
+maximum-extent
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: -20037508.34,-20037508.34,20037508.34,20037508.34
+*(All data will be clipped to global mercator extent (default is applied in Carto.js).)*
+
+An extent to be used to limit the bounds used to query all layers during rendering. Should be minx, miny, maxx, maxy in the coordinates of the Map.
+
+------------
+
+
+base
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(This base path defaults to an empty string meaning that any relative paths to files referenced in styles or layers will be interpreted relative to the application process.)*
+
+Any relative paths used to reference files will be understood as relative to this directory path if the map is loaded from an in memory object rather than from the filesystem. If the map is loaded from the filesystem and this option is not provided it will be set to the directory of the stylesheet.
+
+------------
+
+
+font-directory
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+*(No map-specific fonts will be registered.)*
+
+Path to a directory which holds fonts which should be registered when the Map is loaded (in addition to any fonts that may be automatically registered).
+
+------------
+
+
+
+
+polygon
+^^^^^^^
+
+
+polygon-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: The color gray will be used for fill.
+*(Gray and fully opaque (alpha = 1), same as rgb(128,128,128) or rgba(128,128,128,1).)*
+
+Fill color to assign to a polygon.
+
+------------
+
+
+polygon-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The opacity of the polygon.
+
+------------
+
+
+polygon-gamma
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully antialiased.)*
+Range: 0-1
+Level of antialiasing of polygon edges.
+
+------------
+
+
+polygon-gamma-method
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``power`` ``linear`` ``none`` ``threshold`` ``multiply`` 
+
+
+Default Value: power
+*(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the 'linear' method, while other methods are usually only used to disable AA.)*
+
+An Antigrain Geometry specific rendering hint to control the quality of antialiasing. Under the hood in Mapnik this method is used in combination with the 'gamma' value (which defaults to 1). The methods are in the AGG source at https://github.com/mapnik/mapnik/blob/master/deps/agg/include/agg_gamma_functions.
+
+------------
+
+
+polygon-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extend outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+polygon-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(geometry will not be simplified.)*
+
+Simplify geometries by the given tolerance.
+
+------------
+
+
+polygon-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+Simplify geometries by the given algorithm.
+
+------------
+
+
+polygon-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+polygon-geometry-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(The geometry will not be transformed.)*
+
+Transform polygon geometry with specified function.
+
+------------
+
+
+polygon-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+
+
+line
+^^^^
+
+
+line-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: black
+*(black and fully opaque (alpha = 1), same as rgb(0,0,0) or rgba(0,0,0,1).)*
+
+The color of a drawn line.
+
+------------
+
+
+line-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The line will be rendered 1 pixel wide.)*
+
+The width of a line in pixels.
+
+------------
+
+
+line-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The opacity of a line.
+
+------------
+
+
+line-join
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``miter`` ``miter-revert`` ``round`` ``bevel`` 
+
+
+Default Value: miter
+*(The line joins will be rendered using a miter look.)*
+
+The behavior of lines when joining.
+
+------------
+
+
+line-cap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``butt`` ``round`` ``square`` 
+
+
+Default Value: butt
+*(The line endings will be rendered using a butt look.)*
+
+The display of line endings.
+
+------------
+
+
+line-gamma
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully antialiased.)*
+Range: 0-1
+Level of antialiasing of stroke line.
+
+------------
+
+
+line-gamma-method
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``power`` ``linear`` ``none`` ``threshold`` ``multiply`` 
+
+
+Default Value: power
+*(pow(x,gamma) is used to calculate pixel gamma, which produces slightly smoother line and polygon antialiasing than the 'linear' method, while other methods are usually only used to disable AA.)*
+
+An Antigrain Geometry specific rendering hint to control the quality of antialiasing. Under the hood in Mapnik this method is used in combination with the 'gamma' value (which defaults to 1). The methods are in the AGG source at https://github.com/mapnik/mapnik/blob/master/deps/agg/include/agg_gamma_functions.
+
+------------
+
+
+line-dasharray
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``numbers`` 
+
+
+
+
+
+Default Value: none
+*(The line will be drawn without dashes.)*
+
+A pair of length values [a,b], where (a) is the dash length and (b) is the gap length respectively. More than two values are supported for more complex patterns.
+
+------------
+
+
+line-dash-offset
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``numbers`` 
+
+
+
+
+
+Default Value: none
+*(The line will be drawn without dashes.)*
+
+Valid parameter but not currently used in renderers (only exists for experimental svg support in Mapnik which is not yet enabled).
+
+------------
+
+
+line-miterlimit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 4
+*(Will auto-convert miters to bevel line joins when theta is less than 29 degrees as per the SVG spec: 'miterLength / stroke-width = 1 / sin ( theta / 2 )'.)*
+
+The limit on the ratio of the miter length to the stroke-width. Used to automatically convert miter joins to bevel joins for sharp angles to avoid the miter extending beyond the thickness of the stroking path. Normally will not need to be set, but a larger value can sometimes help avoid jaggy artifacts.
+
+------------
+
+
+line-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extent outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+line-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(geometry will not be simplified.)*
+
+Simplify geometries by the given tolerance.
+
+------------
+
+
+line-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+Simplify geometries by the given algorithm.
+
+------------
+
+
+line-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+line-offset
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+**Status: unstable**
+
+
+
+
+
+Default Value: 0
+*(Will not be offset.)*
+
+Offsets a line a number of pixels parallel to its actual path. Positive values move the line left, negative values move it right (relative to the directionality of the line).
+
+------------
+
+
+line-rasterizer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``full`` ``fast`` 
+
+
+Default Value: full
+*(The line will be rendered using the highest quality method rather than the fastest.)*
+
+Exposes an alternate AGG rendering method that sacrifices some accuracy for speed.
+
+------------
+
+
+line-geometry-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(The geometry will not be transformed.)*
+
+Transform line geometry with specified function.
+
+------------
+
+
+line-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+
+
+markers
+^^^^^^^
+
+
+marker-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+*(An ellipse or circle, if width equals height.)*
+
+A file that this marker shows at each placement. If no file is given, the marker will show an ellipse. Accepted formats: svg, jpg, png, tiff, and webp.
+
+------------
+
+
+marker-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The stroke-opacity and fill-opacity of the marker.)*
+
+The overall opacity of the marker, if set, overrides both the opacity of the fill and the opacity of the stroke.
+
+------------
+
+
+marker-fill-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The fill opacity of the marker. This property will also set the ``fill-opacity`` of elements in an SVG loaded from a file.
+
+------------
+
+
+marker-line-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: black
+*(The marker will be drawn with a black outline.)*
+
+The color of the stroke around the marker. This property will also set the ``stroke`` of elements in an SVG loaded from a file.
+
+------------
+
+
+marker-line-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0.5
+*(The marker will be drawn with an outline of .5 pixels wide.)*
+
+The width of the stroke around the marker, in pixels. This is positioned on the boundary, so high values can cover the area itself. This property will also set the ``stroke-width`` of elements in an SVG loaded from a file.
+
+------------
+
+
+marker-line-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque. This property will also set the ``stroke-opacity`` of elements in an SVG loaded from a file.)*
+
+The opacity of a line.
+
+------------
+
+
+marker-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``point`` ``line`` ``interior`` ``vertex-first`` ``vertex-last`` 
+
+
+Default Value: point
+*(Place markers at the center point (centroid) of the geometry.)*
+
+Attempt to place markers on a point, in the center of a polygon, or if markers-placement:line, then multiple times along a line. 'interior' placement can be used to ensure that points placed on polygons are forced to be inside the polygon interior. The 'vertex-first' and 'vertex-last' options can be used to place markers at the first or last vertex of lines or polygons.
+
+------------
+
+
+marker-multi-policy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``each`` ``whole`` ``largest`` 
+
+
+Default Value: each
+*(If a feature contains multiple geometries and the placement type is either point or interior then a marker will be rendered for each.)*
+
+A special setting to allow the user to control rendering behavior for 'multi-geometries' (when a feature contains multiple geometries). This setting does not apply to markers placed along lines. The 'each' policy is default and means all geometries will get a marker. The 'whole' policy means that the aggregate centroid between all geometries will be used. The 'largest' policy means that only the largest (by bounding box areas) feature will get a rendered marker (this is how text labeling behaves by default).
+
+------------
+
+
+marker-type
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: deprecated**
+
+
+Possible values: ``arrow`` ``ellipse`` 
+
+
+Default Value: ellipse
+*(The marker shape is an ellipse.)*
+
+The default marker-type. If a SVG file is not given as the marker-file parameter, the renderer provides either an arrow or an ellipse (a circle if height is equal to width).
+
+------------
+
+
+marker-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+*(The marker width is 10 pixels.)*
+
+The width of the marker, if using one of the default types.
+
+------------
+
+
+marker-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+*(The marker height is 10 pixels.)*
+
+The height of the marker, if using one of the default types.
+
+------------
+
+
+marker-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: blue
+*(The marker fill color is blue.)*
+
+The color of the area of the marker. This property will also set the ``fill`` of elements in an SVG loaded from a file.
+
+------------
+
+
+marker-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow markers to overlap with each other - overlapping markers will not be shown.)*
+
+Control whether overlapping markers are shown or hidden.
+
+------------
+
+
+marker-avoid-edges
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Markers will be potentially placed near tile edges and therefore may look cut off unless they are rendered on each adjacent tile.)*
+
+Avoid placing markers that intersect with tile boundaries.
+
+------------
+
+
+marker-ignore-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(do not store the bbox of this geometry in the collision detector cache.)*
+
+Value to control whether the placement of the feature will prevent the placement of other features.
+
+------------
+
+
+marker-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 100
+*(In the case of marker-placement:line then draw a marker every 100 pixels along a line.)*
+
+Space between repeated markers in pixels. If the spacing is less than the marker size or larger than the line segment length then no marker will be placed. Any value less than 1 will be ignored and the default will be used instead.
+
+------------
+
+
+marker-max-error
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0.2
+*(N/A: not intended to be changed.)*
+
+N/A: not intended to be changed.
+
+------------
+
+
+marker-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(No transformation.)*
+
+Transform marker instance with specified function. Ignores map scale factor.
+
+------------
+
+
+marker-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extent outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+marker-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Geometry will not be simplified.)*
+
+geometries are simplified by the given tolerance.
+
+------------
+
+
+marker-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+geometries are simplified by the given algorithm.
+
+------------
+
+
+marker-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+marker-geometry-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(The geometry will not be transformed.)*
+
+Transform marker geometry with specified function.
+
+------------
+
+
+marker-offset
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Will not be offset.)*
+
+Offsets a marker from a line a number of pixels parallel to its actual path. Positive values move the marker left, negative values move it right (relative to the directionality of the line).
+
+------------
+
+
+marker-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+marker-direction
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``auto`` ``auto-down`` ``left`` ``right`` ``left-only`` ``right-only`` ``up`` ``down`` 
+
+
+Default Value: right
+*(Markers are oriented to the right in the line direction.)*
+
+How markers should be placed along lines. With the "auto" setting when marker is upside down the marker is automatically rotated by 180 degrees to keep it upright. The "auto-down" value places marker in the opposite orientation to "auto". The "left" or "right" settings can be used to force marker to always be placed along a line in a given direction and therefore disables rotating if marker appears upside down. The "left-only" or "right-only" properties also force a given direction but will discard upside down markers rather than trying to flip it. The "up" and "down" settings don't adjust marker's orientation to the line direction.
+
+------------
+
+
+
+
+shield
+^^^^^^
+
+
+shield-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(No text label will be rendered with the shield.)*
+
+Value to use for a shield"s text label. Data columns are specified using brackets like [column_name].
+
+------------
+
+
+shield-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+Image file to render behind the shield text. Accepted formats: svg, jpg, png, tiff, and webp.
+
+------------
+
+
+shield-face-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: none
+
+
+Font name and style to use for the shield text.
+
+------------
+
+
+shield-unlock-image
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(text alignment relative to the shield image uses the center of the image as the anchor for text positioning.)*
+
+This parameter should be set to true if you are trying to position text beside rather than on top of the shield image.
+
+------------
+
+
+shield-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+*(Font size of 10 will be used to render text.)*
+
+The size of the shield text in pixels.
+
+------------
+
+
+shield-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: black
+*(The shield text will be rendered black.)*
+
+The color of the shield text.
+
+------------
+
+
+shield-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``point`` ``line`` ``vertex`` ``interior`` 
+
+
+Default Value: point
+*(One shield will be placed per geometry.)*
+
+How this shield should be placed. Point placement places one shield on top of a point geometry and at the centroid of a polygon or the middle point of a line, line places along lines multiple times per feature, vertex places on the vertexes of polygons, and interior attempts to place inside of a polygon.
+
+------------
+
+
+shield-avoid-edges
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Shields will be potentially placed near tile edges and therefore may look cut off unless they are rendered on each adjacent tile.)*
+
+Avoid placing shields that intersect with tile boundaries.
+
+------------
+
+
+shield-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow shields to overlap with other map elements already placed.)*
+
+Control whether overlapping shields are shown or hidden.
+
+------------
+
+
+shield-margin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No extra margin will be used to determine if a shield collides with any other text, shield, or marker.)*
+
+Minimum distance that a shield can be placed from any other text, shield, or marker.
+
+------------
+
+
+shield-repeat-distance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Shields with the same text will be rendered without restriction.)*
+
+Minimum distance between repeated shields. If set this will prevent shields being rendered nearby each other that contain the same text. Similar to shield-min-distance with the difference that it works the same no matter what placement strategy is used.
+
+------------
+
+
+shield-min-distance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Shields with the same text will be rendered without restriction.)*
+
+Minimum distance to the next shield with the same text. Only works for line placement.
+
+------------
+
+
+shield-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Only one shield per line will attempt to be placed.)*
+
+Distance the renderer should use to try to place repeated shields on a line.
+
+------------
+
+
+shield-min-padding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No margin will be used to detect if a shield is nearby a tile boundary.)*
+
+Minimum distance a shield will be placed from the edge of a tile. This option is similar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the tile.
+
+------------
+
+
+shield-label-position-tolerance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: shield-spacing/2.0
+*(If a shield cannot be placed then the renderer will advance by shield-spacing/2.0 to try placement again.)*
+
+Allows the shield to be displaced from its ideal position by a number of pixels (only works with placement:line).
+
+------------
+
+
+shield-wrap-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``unsigned`` 
+
+
+
+
+
+Default Value: 0
+*(Text will not be wrapped.)*
+
+Length of a chunk of text in pixels before wrapping text. If set to zero, text doesn't wrap.
+
+------------
+
+
+shield-wrap-before
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Wrapped lines will be a bit longer than wrap-width.)*
+
+Wrap text before wrap-width is reached.
+
+------------
+
+
+shield-wrap-character
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: " "
+*(Lines will be wrapped when whitespace is encountered.)*
+
+Use this character instead of a space to wrap long names.
+
+------------
+
+
+shield-halo-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: white
+*(The shield halo text will be rendered white.)*
+
+Specifies the color of the halo around the text.
+
+------------
+
+
+shield-halo-radius
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(no halo.)*
+
+Specify the radius of the halo in pixels.
+
+------------
+
+
+shield-halo-rasterizer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``full`` ``fast`` 
+
+
+Default Value: full
+*(The shield will be rendered using the highest quality method rather than the fastest.)*
+
+Exposes an alternate text halo rendering method that sacrifices quality for speed.
+
+------------
+
+
+shield-halo-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: 
+*(No transformation.)*
+
+Transform shield halo relative to the actual text with specified function. Allows for shadow or embossed effects. Ignores map scale factor.
+
+------------
+
+
+shield-halo-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+shield-halo-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully opaque.)*
+
+A number from 0 to 1 specifying the opacity for the text halo.
+
+------------
+
+
+shield-character-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``unsigned`` 
+
+
+
+
+
+Default Value: 0
+*(The default character spacing of the font will be used.)*
+
+Horizontal spacing between characters (in pixels). Currently works for point placement only, not line placement.
+
+------------
+
+
+shield-line-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(The default font spacing will be used.)*
+
+Vertical spacing between lines of multiline labels (in pixels).
+
+------------
+
+
+shield-text-dx
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Text will not be displaced.)*
+
+Displace text within shield by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the shield right.
+
+------------
+
+
+shield-text-dy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Text will not be displaced.)*
+
+Displace text within shield by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the shield down.
+
+------------
+
+
+shield-dx
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Shield will not be displaced.)*
+
+Displace shield by fixed amount, in pixels, +/- along the X axis.  A positive value will shift the text right.
+
+------------
+
+
+shield-dy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Shield will not be displaced.)*
+
+Displace shield by fixed amount, in pixels, +/- along the Y axis.  A positive value will shift the text down.
+
+------------
+
+
+shield-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The opacity of the image used for the shield.
+
+------------
+
+
+shield-text-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The opacity of the text placed on top of the shield.
+
+------------
+
+
+shield-horizontal-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``middle`` ``right`` ``auto`` 
+
+
+Default Value: auto
+*(TODO.)*
+
+The shield's horizontal alignment from its centerpoint.
+
+------------
+
+
+shield-vertical-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``top`` ``middle`` ``bottom`` ``auto`` 
+
+
+Default Value: middle
+*(TODO.)*
+
+The shield's vertical alignment from its centerpoint.
+
+------------
+
+
+shield-placement-type
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``dummy`` ``simple`` ``list`` 
+
+
+Default Value: dummy
+*(Alternative placements will not be enabled.)*
+
+Re-position and/or re-size shield to avoid overlaps. "simple" for basic algorithm (using shield-placements string,) "dummy" to turn this feature off.
+
+------------
+
+
+shield-placements
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(No alternative placements will be used.)*
+
+If "placement-type" is set to "simple", use this "POSITIONS,[SIZES]" string. An example is ``shield-placements: "E,NE,SE,W,NW,SW";``.
+
+------------
+
+
+shield-text-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``none`` ``uppercase`` ``lowercase`` ``capitalize`` ``reverse`` 
+
+
+Default Value: none
+*(No text transformation will be applied.)*
+
+Transform the case of the characters.
+
+------------
+
+
+shield-justify-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``center`` ``right`` ``auto`` 
+
+
+Default Value: auto
+*(TODO.)*
+
+Define how text in a shield's label is justified.
+
+------------
+
+
+shield-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(No transformation.)*
+
+Transform shield instance with specified function. Ignores map scale factor.
+
+------------
+
+
+shield-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extent outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+shield-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(geometry will not be simplified.)*
+
+Simplify the geometries used for shield placement by the given tolerance.
+
+------------
+
+
+shield-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+Simplify the geometries used for shield placement by the given algorithm.
+
+------------
+
+
+shield-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out the angles of the geometry used for shield placement. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+shield-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+
+
+line-pattern
+^^^^^^^^^^^^
+
+
+line-pattern-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+An image file to be repeated and warped along a line. Accepted formats: svg, jpg, png, tiff, and webp.
+
+------------
+
+
+line-pattern-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extent outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+line-pattern-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The image is rendered without modifications.)*
+
+Apply an opacity level to the image used for the pattern.
+
+------------
+
+
+line-pattern-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(geometry will not be simplified.)*
+
+geometries are simplified by the given tolerance.
+
+------------
+
+
+line-pattern-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+geometries are simplified by the given algorithm.
+
+------------
+
+
+line-pattern-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+line-pattern-offset
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(The line will not be offset.)*
+
+Offsets a line a number of pixels parallel to its actual path. Positive values move the line left, negative values move it right (relative to the directionality of the line).
+
+------------
+
+
+line-pattern-geometry-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(The geometry will not be transformed.)*
+
+Transform line geometry with specified function and apply pattern to transformed geometry.
+
+------------
+
+
+line-pattern-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(No transformation.)*
+
+Transform line pattern instance with specified function.
+
+------------
+
+
+line-pattern-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+
+
+polygon-pattern
+^^^^^^^^^^^^^^^
+
+
+polygon-pattern-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+
+
+Image to use as a repeated pattern fill within a polygon. Accepted formats: svg, jpg, png, tiff, and webp.
+
+------------
+
+
+polygon-pattern-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``global`` ``local`` 
+
+
+Default Value: global
+*(Patterns will be aligned to the map (or tile boundaries) when being repeated across polygons. This is ideal for seamless patterns in tiled rendering.)*
+
+Specify whether to align pattern fills to the layer's geometry (local) or to the map (global).
+
+------------
+
+
+polygon-pattern-gamma
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully antialiased.)*
+Range: 0-1
+Level of antialiasing of polygon pattern edges.
+
+------------
+
+
+polygon-pattern-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The image is rendered without modifications.)*
+
+Apply an opacity level to the image used for the pattern.
+
+------------
+
+
+polygon-pattern-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extent outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+polygon-pattern-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(geometry will not be simplified.)*
+
+geometries are simplified by the given tolerance.
+
+------------
+
+
+polygon-pattern-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+geometries are simplified by the given algorithm.
+
+------------
+
+
+polygon-pattern-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out geometry angles. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+polygon-pattern-geometry-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(The geometry will not be transformed.)*
+
+Transform polygon geometry with specified function and apply pattern to transformed geometry.
+
+------------
+
+
+polygon-pattern-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(No transformation.)*
+
+Transform polygon pattern instance with specified function.
+
+------------
+
+
+polygon-pattern-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+
+
+raster
+^^^^^^
+
+
+raster-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The opacity of the raster symbolizer on top of other symbolizers.
+
+------------
+
+
+raster-filter-factor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: -1
+*(Allow the datasource to choose appropriate downscaling.)*
+
+This is used by the Raster or Gdal datasources to pre-downscale images using overviews. Higher numbers can sometimes cause much better scaled image output, at the cost of speed.
+
+------------
+
+
+raster-scaling
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``near`` ``fast`` ``bilinear`` ``bicubic`` ``spline16`` ``spline36`` ``hanning`` ``hamming`` ``hermite`` ``kaiser`` ``quadric`` ``catrom`` ``gaussian`` ``bessel`` ``mitchell`` ``sinc`` ``lanczos`` ``blackman`` 
+
+
+Default Value: near
+*(Nearest neighboor resampling will be used to scale the image to the target size of the map.)*
+
+The scaling algorithm used to making different resolution versions of this raster layer. Bilinear is a good compromise between speed and accuracy, while lanczos gives the highest quality.
+
+------------
+
+
+raster-mesh-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``unsigned`` 
+
+
+
+
+
+Default Value: 16
+*(Reprojection mesh will be 1/16 of the resolution of the source image.)*
+
+A reduced resolution mesh is used for raster reprojection, and the total image size is divided by the mesh-size to determine the quality of that mesh. Values for mesh-size larger than the default will result in faster reprojection but might lead to distortion.
+
+------------
+
+
+raster-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+raster-colorizer-default-mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``discrete`` ``linear`` ``exact`` 
+
+
+Default Value: linear
+*(A linear interpolation is used to generate colors between the two nearest stops.)*
+
+This can be either ``discrete``, ``linear`` or ``exact``. If it is not specified then the default is ``linear``.
+
+------------
+
+
+raster-colorizer-default-color
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: transparent
+*(Pixels that are not colored by the colorizer stops will be transparent.)*
+
+This can be any color. Sets the color that is applied to all values outside of the range of the colorizer-stops. If not supplied pixels will be fully transparent.
+
+------------
+
+
+raster-colorizer-epsilon
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1.1920928955078125e-07
+*(Pixels must very closely match the stop filter otherwise they will not be colored.)*
+
+This can be any positive floating point value and will be used as a tolerance in floating point comparisions. The higher the value the more likely a stop will match and color data.
+
+------------
+
+
+raster-colorizer-stops
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``tags`` 
+
+
+
+
+
+Default Value: 
+*(No colorization will happen without supplying stops.)*
+
+Assigns raster data values to colors. Stops must be listed in ascending order, and contain at a minimum the value and the associated color. You can also include the color-mode as a third argument, like ``stop(100,#fff,exact)``.
+
+------------
+
+
+
+
+point
+^^^^^
+
+
+point-file
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``uri`` 
+
+
+
+
+
+Default Value: none
+*(A 4x4 black square will be rendered.)*
+
+Image file to represent a point. Accepted formats: svg, jpg, png, tiff, and webp.
+
+------------
+
+
+point-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow points to overlap with each other - overlapping markers will not be shown.)*
+
+Control whether overlapping points are shown or hidden.
+
+------------
+
+
+point-ignore-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(do not store the bbox of this geometry in the collision detector cache.)*
+
+Control whether the placement of the feature will prevent the placement of other features.
+
+------------
+
+
+point-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully opaque.)*
+
+A value from 0 to 1 to control the opacity of the point.
+
+------------
+
+
+point-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``centroid`` ``interior`` 
+
+
+Default Value: centroid
+*(The centroid of the geometry will be used to place the point.)*
+
+Control how this point should be placed. Centroid calculates the geometric center of a polygon, which can be outside of it, while interior always places inside of a polygon.
+
+------------
+
+
+point-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: none
+*(No transformation.)*
+
+Transform point instance with specified function. Ignores map scale factor.
+
+------------
+
+
+point-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+
+
+text
+^^^^
+
+
+text-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: none
+
+
+Value to use for a text label. Data columns are specified using brackets like [column_name].
+
+------------
+
+
+text-face-name
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: none
+
+
+Font name and style to render a label in.
+
+------------
+
+
+text-size
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 10
+*(Font size of 10 will be used to render text.)*
+
+Text size in pixels.
+
+------------
+
+
+text-ratio
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``unsigned`` 
+
+
+
+
+
+Default Value: 0
+*(TODO.)*
+
+Define the amount of text (of the total) present on successive lines when wrapping occurs.
+
+------------
+
+
+text-wrap-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``unsigned`` 
+
+
+
+
+
+Default Value: 0
+*(Text will not be wrapped.)*
+
+Length of a chunk of text in pixels before wrapping text. If set to zero, text doesn't wrap.
+
+------------
+
+
+text-wrap-before
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Wrapped lines will be a bit longer than wrap-width.)*
+
+Wrap text before wrap-width is reached.
+
+------------
+
+
+text-wrap-character
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: " "
+*(Lines will be wrapped when whitespace is encountered.)*
+
+Use this character instead of a space to wrap long text.
+
+------------
+
+
+text-repeat-wrap-character
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+**Status: unstable**
+
+
+
+
+
+Default Value: false
+*(Character will be removed when used to wrap a line.)*
+
+Keep the character used to wrap a line instead of removing it, and repeat it on the new line.
+
+------------
+
+
+text-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``unsigned`` 
+
+
+
+
+
+Default Value: 0
+*(Only one label per line will attempt to be placed.)*
+
+Distance the renderer should use to try to place repeated text labels on a line.
+
+------------
+
+
+text-character-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(The default character spacing of the font will be used.)*
+
+Horizontal spacing adjustment between characters in pixels. This value is ignored when ``horizontal-alignment`` is set to ``adjust``. Typographic ligatures are turned off when this value is greater than zero.
+
+------------
+
+
+text-line-spacing
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(The default font spacing will be used.)*
+
+Vertical spacing adjustment between lines in pixels.
+
+------------
+
+
+text-label-position-tolerance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: text-spacing/2.0
+*(If a shield cannot be placed then the renderer will advance by text-spacing/2.0 to try placement again.)*
+
+Allows the label to be displaced from its ideal position by a number of pixels (only works with placement:line).
+
+------------
+
+
+text-max-char-angle-delta
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 22.5
+*(The label will not be placed if a character falls on a line with an angle sharper than 22.5 degrees.)*
+
+The maximum angle change, in degrees, allowed between adjacent characters in a label. This value internally is converted to radians to the default is 22.5*math.pi/180.0. The higher the value the fewer labels will be placed around around sharp corners.
+
+------------
+
+
+text-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: black
+*(The text will be rendered black.)*
+
+Specifies the color for the text.
+
+------------
+
+
+text-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully opaque.)*
+
+A number from 0 to 1 specifying the opacity for the text.
+
+------------
+
+
+text-halo-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Fully opaque.)*
+
+A number from 0 to 1 specifying the opacity for the text halo.
+
+------------
+
+
+text-halo-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: white
+*(The halo will be rendered white.)*
+
+Specifies the color of the halo around the text.
+
+------------
+
+
+text-halo-radius
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(no halo.)*
+
+Specify the radius of the halo in pixels.
+
+------------
+
+
+text-halo-rasterizer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``full`` ``fast`` 
+
+
+Default Value: full
+*(The text will be rendered using the highest quality method rather than the fastest.)*
+
+Exposes an alternate text halo rendering method that sacrifices quality for speed.
+
+------------
+
+
+text-halo-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``functions`` 
+
+
+
+Possible values: ``matrix`` ``translate`` ``scale`` ``rotate`` ``skewX`` ``skewY`` 
+
+Default Value: 
+*(No transformation.)*
+
+Transform text halo relative to the actual text with specified function. Allows for shadow or embossed effects. Ignores map scale factor.
+
+------------
+
+
+text-dx
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Text will not be displaced.)*
+
+Displace text by fixed amount, in pixels, +/- along the X axis.  With "dummy" placement-type, a positive value displaces to the right. With "simple" placement-type, it is either left, right or unchanged, depending on the placement selected. Any non-zero value implies "horizontal-alignment" changes to "left" by default. Has no effect with 'line' text-placement-type.
+
+------------
+
+
+text-dy
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Text will not be displaced.)*
+
+Displace text by fixed amount, in pixels, +/- along the Y axis.  With "dummy" placement-type, a positive value displaces downwards. With "simple" placement-type, it is either up, down or unchanged, depending on the placement selected. With "line" placement-type, a positive value displaces above the path.
+
+------------
+
+
+text-vertical-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``top`` ``middle`` ``bottom`` ``auto`` 
+
+
+Default Value: auto
+*(Default affected by value of dy; "top" for dy>0, "bottom" for dy<0.)*
+
+Position of label relative to point position.
+
+------------
+
+
+text-avoid-edges
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Text will be potentially placed near tile edges and therefore may look cut off unless the same text label is rendered on each adjacent tile.)*
+
+Avoid placing labels that intersect with tile boundaries.
+
+------------
+
+
+text-margin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No extra margin will be used to determine if a label collides with any other text, shield, or marker.)*
+
+Minimum distance that a label can be placed from any other text, shield, or marker.
+
+------------
+
+
+text-repeat-distance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Labels with the same text will be rendered without restriction.)*
+
+Minimum distance between repeated text. If set this will prevent text labels being rendered nearby each other that contain the same text. Similar to text-min-distance with the difference that it works the same no matter what placement strategy is used.
+
+------------
+
+
+text-min-distance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+**Status: deprecated**
+
+
+
+
+
+Default Value: 0
+*(Labels with the same text will be rendered without restriction.)*
+
+Minimum distance to the next label with the same text. Only works for line placement. Deprecated: replaced by ``text-repeat-distance`` and ``text-margin``
+
+------------
+
+
+text-min-padding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No margin will be used to detect if a text label is nearby a tile boundary.)*
+
+Minimum distance a text label will be placed from the edge of a tile. This option is similar to shield-avoid-edges:true except that the extra margin is used to discard cases where the shield+margin are not fully inside the tile.
+
+------------
+
+
+text-min-path-length
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(place labels on all geometries no matter how small they are.)*
+
+Place labels only on polygons and lines with a bounding width longer than this value (in pixels).
+
+------------
+
+
+text-allow-overlap
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Do not allow text to overlap with other text - overlapping markers will not be shown.)*
+
+Control whether overlapping text is shown or hidden.
+
+------------
+
+
+text-orientation
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Text is not rotated and is displayed upright.)*
+
+Rotate the text. (only works with text-placement:point).
+
+------------
+
+
+text-rotate-displacement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(Label center is used for rotation.)*
+
+Rotates the displacement around the placement origin by the angle given by "orientation".
+
+------------
+
+
+text-upright
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``auto`` ``auto-down`` ``left`` ``right`` ``left-only`` ``right-only`` 
+
+
+Default Value: auto
+*(Text will be positioned upright automatically.)*
+
+How this label should be placed along lines. By default when more than half of a label's characters are upside down the label is automatically flipped to keep it upright. By changing this parameter you can prevent this "auto-upright" behavior. The "auto-down" value places text in the opposite orientation to "auto". The "left" or "right" settings can be used to force text to always be placed along a line in a given direction and therefore disables flipping if text appears upside down. The "left-only" or "right-only" properties also force a given direction but will discard upside down text rather than trying to flip it.
+
+------------
+
+
+text-placement
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``point`` ``line`` ``vertex`` ``interior`` 
+
+
+Default Value: point
+*(One shield will be placed per geometry.)*
+
+How this label should be placed. Point placement places one label on top of a point geometry and at the centroid of a polygon or the middle point of a line, line places along lines multiple times per feature, vertex places on the vertexes of polygons, and interior attempts to place inside of a polygon.
+
+------------
+
+
+text-placement-type
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``dummy`` ``simple`` ``list`` 
+
+
+Default Value: dummy
+*(Alternative placements will not be enabled.)*
+
+Re-position and/or re-size text to avoid overlaps. "simple" for basic algorithm (using text-placements string,) "dummy" to turn this feature off.
+
+------------
+
+
+text-placements
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(No alternative placements will be used.)*
+
+If "placement-type" is set to "simple", use this "POSITIONS,[SIZES]" string. An example is ``text-placements: "E,NE,SE,W,NW,SW";``.
+
+------------
+
+
+text-transform
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``none`` ``uppercase`` ``lowercase`` ``capitalize`` ``reverse`` 
+
+
+Default Value: none
+*(Transform text instance with specified function. Ignores map scale factor.)*
+
+Transform the case of the characters.
+
+------------
+
+
+text-horizontal-alignment
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``middle`` ``right`` ``auto`` ``adjust`` 
+
+
+Default Value: auto
+*(TODO.)*
+
+The text's horizontal alignment from it's centerpoint. If ``placement`` is set to ``line``, then ``adjust`` can be set to auto-fit the text to the length of the path by dynamically calculating ``character-spacing``.
+
+------------
+
+
+text-align
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``left`` ``right`` ``center`` ``auto`` 
+
+
+Default Value: auto
+*(Auto alignment means that text will be centered by default except when using the ``placement-type`` parameter - in that case either right or left justification will be used automatically depending on where the text could be fit given the ``text-placements`` directives.)*
+
+Define how text is justified.
+
+------------
+
+
+text-clip
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+
+
+
+
+Default Value: false
+*(The geometry will not be clipped to map bounds before rendering.)*
+
+Turning on clipping can help performance in the case that the boundaries of the geometry extent outside of tile extents. But clipping can result in undesirable rendering artifacts in rare cases.
+
+------------
+
+
+text-simplify
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(geometry will not be simplified.)*
+
+Simplify the geometries used for text placement by the given tolerance.
+
+------------
+
+
+text-simplify-algorithm
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+
+
+Default Value: radial-distance
+*(The geometry will be simplified using the radial distance algorithm.)*
+
+Simplify the geometries used for text placement by the given algorithm.
+
+------------
+
+
+text-smooth
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No smoothing.)*
+Range: 0-1
+Smooths out the angles of the geometry used for text placement. 0 is no smoothing, 1 is fully smoothed. Values greater than 1 will produce wild, looping geometries.
+
+------------
+
+
+text-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+text-halo-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current symbolizer on top of other symbolizer.)*
+
+Composite operation. This defines how this symbolizer should behave relative to symbolizers atop or below it.
+
+------------
+
+
+text-font-feature-settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: 
+*(Default set of typographic features recommended by OpenType specification. Ligatures are turned off by default when ``character-spacing`` is greater than zero.)*
+
+Comma separated list of OpenType typographic features. The syntax and semantics conforms to ``font-feature-settings`` from W3C CSS.
+
+------------
+
+
+text-largest-bbox-only
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``boolean`` 
+
+**Status: experimental**
+
+
+
+
+
+Default Value: true
+*(For multipolygons only polygon with largest bbox area is labeled (does not apply to other geometries).)*
+
+Controls default labeling behavior on multipolygons. The default is true and means that only the polygon with largest bbox is labeled.
+
+------------
+
+
+
+
+building
+^^^^^^^^
+
+
+building-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: The color gray will be used for fill.
+*(Gray and fully opaque (alpha = 1), same as rgb(128,128,128) or rgba(128,128,128,1).)*
+
+The color of the buildings fill. Note: 0.8 will be used to multiply each color component to auto-generate a darkened wall color.
+
+------------
+
+
+building-fill-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(Color is fully opaque.)*
+
+The opacity of the building as a whole, including all walls.
+
+------------
+
+
+building-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(Buildings will not have a visual height and will instead look like flat polygons.)*
+
+The height of the building in pixels.
+
+------------
+
+
+
+
+debug
+^^^^^
+
+
+debug-mode
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``string`` 
+
+
+
+
+
+Default Value: collision
+*(The otherwise invisible collision boxes will be rendered as squares on the map.)*
+
+The mode for debug rendering.
+
+------------
+
+
+
+
+dot
+^^^
+
+
+dot-fill
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``color`` 
+
+
+
+
+
+Default Value: gray
+*(The dot fill color is gray.)*
+
+The color of the area of the dot.
+
+------------
+
+
+dot-opacity
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The opacity of the dot.)*
+
+The overall opacity of the dot.
+
+------------
+
+
+dot-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The marker width is 1 pixel.)*
+
+The width of the dot in pixels.
+
+------------
+
+
+dot-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 1
+*(The marker height is 1 pixels.)*
+
+The height of the dot in pixels.
+
+------------
+
+
+dot-comp-op
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` ``dst-in`` ``src-out`` ``dst-out`` ``src-atop`` ``dst-atop`` ``xor`` ``plus`` ``minus`` ``multiply`` ``divide`` ``screen`` ``overlay`` ``darken`` ``lighten`` ``color-dodge`` ``color-burn`` ``linear-dodge`` ``linear-burn`` ``hard-light`` ``soft-light`` ``difference`` ``exclusion`` ``contrast`` ``invert`` ``invert-rgb`` ``grain-merge`` ``grain-extract`` ``hue`` ``saturation`` ``color`` ``value`` 
+
+
+Default Value: src-over
+*(Add the current layer on top of other layers.)*
+
+Composite operation. This defines how this layer should behave relative to layers atop or below it.
+
+------------
+
+
+
+
+

@@ -1,5 +1,10 @@
 ## Changelog
 
+## 0.18.1
+
+* Updated `mapnik-reference` to fix an install problem for some Node.js versions
+* Backported documentation updates
+
 ## 0.18.0
 
 * Compile time performance improvement by leaving out rules that do not apply to layer minzoom and maxzoom restrictions if specified ([#469](https://github.com/mapbox/carto/issues/469))
