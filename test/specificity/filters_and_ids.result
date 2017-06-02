@@ -1,8 +1,8 @@
 [
-    {"elements":["#world","#countries"],"filters":["[NAME]=United States"],"specificity":[2,0,1,94],"matchCount": 0},
-    {"elements":["#world"],"filters":["[NAME]=United States"],"zoom":"......XXXXXXXXXXXXXXXXXXXX","specificity":[1,0,2,60],"matchCount": 0},
-    {"elements":["#world"],"filters":["[NAME]=United States"],"specificity":[1,0,1,33],"matchCount": 0},
-    {"elements":["#world"],"filters":["[NAME]=Canada"],"specificity":[1,0,1,7],"matchCount": 0},
-    {"elements":[],"zoom":"......XXXXXXXXXXXXXXXXXXXX","specificity":[0,0,1,146],"matchCount": 0},
-    {"elements":[],"filters":["[NAME]=United States"],"specificity":[0,0,1,120],"matchCount": 0}
+    {"elements":["#world","#countries"],"filters":["[NAME]=United States"],"specificity":[2,0,1,67108863,94],"matchCount": 0},
+    {"elements":["#world"],"filters":["[NAME]=United States"],"zoom":"......XXXXXXXXXXXXXXXXXXXX","specificity":[1,0,2,67108800,60],"matchCount": 0},
+    {"elements":["#world"],"filters":["[NAME]=United States"],"specificity":[1,0,1,67108863,33],"matchCount": 0},
+    {"elements":["#world"],"filters":["[NAME]=Canada"],"specificity":[1,0,1,67108863,7],"matchCount": 0},
+    {"elements":[],"zoom":"......XXXXXXXXXXXXXXXXXXXX","specificity":[0,0,1,67108800,146],"matchCount": 0},
+    {"elements":[],"filters":["[NAME]=United States"],"specificity":[0,0,1,67108863,120],"matchCount": 0}
 ]

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map>
+<Style name="world" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>25000000</MaxScaleDenominator>
+    <TextSymbolizer face-name="Arial" text="roofbar" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000000</MinScaleDenominator>
+    <TextSymbolizer face-name="Arial" text="oofbar" />
+  </Rule>
+</Style>
+<Layer name="world">
+    <StyleName>world</StyleName>
+</Layer>
+<Style name="sea" filter-mode="first" >
+  <Rule>
+    <Filter>([test] = 5)</Filter>
+    <TextSymbolizer face-name="Arial" text="roofbar" />
+  </Rule>
+  <Rule>
+    <TextSymbolizer face-name="Arial" text="oofbar" />
+  </Rule>
+</Style>
+<Layer name="sea">
+    <StyleName>sea</StyleName>
+</Layer>
+
+</Map>
