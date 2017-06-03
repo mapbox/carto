@@ -1,23 +1,23 @@
 <Style name="style" filter-mode="first">
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
-    <Filter>([tourism] = 'attraction') and ([tourism].match('anythingelse'))</Filter>
-    <MarkersSymbolizer marker-type="ellipse" fill="#ff0000" width="20" />
+    <Filter>([tourism].match('anythingelse')) and ([tourism] = 'attraction')</Filter>
+    <MarkersSymbolizer fill="#ff0000" marker-type="ellipse" width="20" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([tourism] = 'attraction') and ([tourism].match('anythingelse'))</Filter>
-    <MarkersSymbolizer marker-type="ellipse" fill="#0000ff" width="6" />
+    <Filter>([tourism].match('anythingelse')) and ([tourism] = 'attraction')</Filter>
+    <MarkersSymbolizer fill="#0000ff" marker-type="ellipse" width="6" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <Filter>([tourism] = 'attraction')</Filter>
-    <MarkersSymbolizer marker-type="ellipse" fill="#ff0000" width="20" />
+    <MarkersSymbolizer fill="#ff0000" marker-type="ellipse" width="20" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <Filter>([tourism].match('anythingelse'))</Filter>
-    <MarkersSymbolizer marker-type="ellipse" fill="#0000ff" width="6" />
+    <MarkersSymbolizer fill="#0000ff" marker-type="ellipse" width="6" />
   </Rule>
 </Style>
