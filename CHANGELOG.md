@@ -8,6 +8,7 @@ There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress 
 * Warnings are emitted if a layer has no associated styles or styles do not match a corresponding layer selector. ([#29](https://github.com/mapbox/carto/issues/29))
 * New command line switch `-f / --file` to specify a file for output instead of `stdout`.
 * carto now honors variable redefinition and uses the last defined value instead of the first one ([#338](https://github.com/mapbox/carto/issues/338)).
+* Parameters of symbolizers are now ouput in alphabetical order according to the CartoCSS name of that parameter.
 
 ### Breaking changes
 
@@ -16,6 +17,8 @@ There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress 
 * The deprecated `name` attribute for layers is no longer supported. Use `id` instead.
 * The deprecated color functions `husl` and `husla` are no longer supported. Use `hsluv` and `hsluva` instead.
 * If you define a variable with the same name twice the latest defined value is now used in contrast to the first defined one as before.
+* Parameters of symbolizers are now ouput in alphabetical order according to the CartoCSS name of that parameter. If you somehow depend on the order
+of parameters (e.g. for tests) expect them to change.
 
 #### API
 

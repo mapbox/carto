@@ -1,5 +1,5 @@
 <Style name="style" filter-mode="first">
   <Rule>
-    <TextSymbolizer face-name="DejaVu Sans Book" size="10" fill="#d2691e"><![CDATA[]]></TextSymbolizer>
+    <TextSymbolizer face-name="DejaVu Sans Book" fill="#d2691e" size="10"><![CDATA[]]></TextSymbolizer>
   </Rule>
 </Style>

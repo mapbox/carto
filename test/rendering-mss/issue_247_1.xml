@@ -6,6 +6,6 @@
 </Style>
 <Style name="style-outline" filter-mode="first">
   <Rule>
-    <LineSymbolizer stroke="#85c5d3" stroke-width="4" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#85c5d3" stroke-linejoin="round" stroke-width="4" />
   </Rule>
 </Style>

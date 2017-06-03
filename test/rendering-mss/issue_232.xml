@@ -3,13 +3,13 @@
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <MinScaleDenominator>100</MinScaleDenominator>
     <Filter>([type] = 'bicycle') and ([network] = 'rcn') and ([reflen] = 8)</Filter>
-    <ShieldSymbolizer file="img/shield-trunk-8.png" fontset-name="fontset-0"><![CDATA[[ref]]]></ShieldSymbolizer>
+    <ShieldSymbolizer fontset-name="fontset-0" file="img/shield-trunk-8.png"><![CDATA[[ref]]]></ShieldSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>
     <MinScaleDenominator>100</MinScaleDenominator>
     <Filter>([type] = 'bicycle') and ([network] = 'ncn') and ([reflen] = 8)</Filter>
-    <ShieldSymbolizer file="img/shield-motorway-8.png" fontset-name="fontset-0"><![CDATA[[ref]]]></ShieldSymbolizer>
+    <ShieldSymbolizer fontset-name="fontset-0" file="img/shield-motorway-8.png"><![CDATA[[ref]]]></ShieldSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>400000</MaxScaleDenominator>

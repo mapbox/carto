@@ -7,9 +7,9 @@
 <Style name="style-outline" filter-mode="first">
   <Rule>
     <Filter>([ne_10m_adm] = 'AAA')</Filter>
-    <LineSymbolizer stroke="#85c5d3" stroke-width="4" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#85c5d3" stroke-linejoin="round" stroke-width="4" />
   </Rule>
   <Rule>
-    <LineSymbolizer stroke="#85c5d3" stroke-width="4" stroke-linejoin="round" />
+    <LineSymbolizer stroke="#85c5d3" stroke-linejoin="round" stroke-width="4" />
   </Rule>
 </Style>

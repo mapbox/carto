@@ -5,7 +5,7 @@
     <LinePatternSymbolizer file="none" />
     <PolygonPatternSymbolizer file="none" />
     <MarkersSymbolizer />
-    <ShieldSymbolizer file="none" face-name="none" />
+    <ShieldSymbolizer face-name="none" file="none" />
     <PolygonSymbolizer />
     <RasterSymbolizer />
     <TextSymbolizer face-name="Arial"><![CDATA[[name]]]></TextSymbolizer>
