@@ -1,34 +1,36 @@
 MML File Structure
 ==================
 
-The MML File (we call it like that here because of its file extension .mml) is a
+The MML file (here: Map Markup Language file) is a
 `YAML <https://en.wikipedia.org/wiki/YAML>`_ or `JSON <https://en.wikipedia.org/wiki/JSON>`_
-file containing layer definitions and stylesheet references. Thus, it is the central
+file containing layer definitions and stylesheet references. It is the central
 part of a CartoCSS stylesheet. If you generate Mapnik XML from a stylesheet this is
 the file you feed to carto and from which and its references the XML is produced.
 
-If you wonder whether you should use YAML or JSON here is a bit of advice. Internally,
+You may wonder whether you should use YAML or JSON. Internally,
 JSON is used because it is a language that is easy to understand for machines.
 YAML is a superset of JSON and is easier to read and write for humans and is also
 less verbose. If you edit a stylesheet collaboratively and use version control
-YAML might make it easier to resolve version conflicts. But carto understands both
+YAML might make it easier to resolve version conflicts. Carto fully understands both
 forms.
 
 .. note:: YAML makes it less tedious to specify repeating properties like database
-   infos for PostGIS datasources or extents by using a language feature called
+   information for PostGIS datasources or extents by using a language feature called
    `anchors or aliases <http://www.yaml.org/spec/1.2/spec.html#id2785586>`_.
 
 Properties Overview
 -------------------
 
-What follows is an overview over properties a MML file can have. Simple ones are described
-here while more complex ones get their own section.
+What follows is an overview over properties a MML file can have. This list is not
+complete. There may be other (also undocumented) options that Mapnik understands.
+Simple properties are described here in alphabetical order while more complex
+ones get their own section.
 
 center
 ^^^^^^
 Type: ``Array``
 
-Specifies the center coordinates and zoom level of the map. Longitude, latitude and
+Specifies the initial center coordinates and zoom level of the map. Longitude, latitude and
 zoom level in that order. Example (WGS84): ``[-1.28398, 47.08997, 17]``
 
 bounds
@@ -56,13 +58,13 @@ page on Image IO <https://github.com/mapnik/mapnik/wiki/Image-IO>`_.
 
 Layer
 ^^^^^
-Lists all layers in the project (see :ref:`layer-reference`)
+Lists all layers used in the project (see :ref:`layer-reference`)
 
 maxzoom
 ^^^^^^^
 Type: ``Integer``
 
-Specifies the maximum zoom level for the map
+Specifies the maximum zoom level of the map
 
 metatile
 ^^^^^^^^
@@ -77,7 +79,7 @@ minzoom
 ^^^^^^^
 Type: ``Integer``
 
-Specifies the minimum zoom level for the map
+Specifies the minimum zoom level of the map
 
 name
 ^^^^
@@ -89,20 +91,20 @@ _properties
 ^^^^^^^^^^^
 Type: ``Object``
 
-This is the same as the ``properties`` property for layers on a global level with
+This is the same as the ``properties`` property for layers, but on a global level with
 a bit different structure. It is used when you do not specify the layers in the MML
 itself but only reference them. This is used in vector tile styles where the style
 and the data are separate.
 
-Specify first the layer name and then below it specify its properties as you would
-in the ``properties`` property of the specific layer.
+First specifiy the layer name and then below it specify its properties as you would
+do in the ``properties`` property of the specific layer.
 
 scale
 ^^^^^
 Type: ``Integer``
 
 Specifies pixel scaling for the output. For example, a scale of 2 means that there
-are two pixels for each pixel in the output.
+are two pixels for each map pixel in the output.
 
 srs
 ^^^
@@ -122,7 +124,7 @@ Layer property
 ---------------
 Type: ``Array``
 
-Within this property layer objects are referenced that are the building blocks
+Beneath this property layer objects are referenced that are the building blocks
 of the map style. The order of specification is important as it constitutes
 the drawing order of layers used by Mapnik. Layers specified first are drawn first
 and those specified later are drawn afterwards.
@@ -130,18 +132,19 @@ and those specified later are drawn afterwards.
 Layers have different properties and their data can come from different data sources
 such as shape files or relational databases like PostgreSQL/PostGIS.
 
-A layer object can have the following properties.
+A layer object can have the following properties (there may be more that Mapnik
+understands, also undocumented ones).
 
 class
 ^^^^^
 Type: ``String``
 
 One or more classes associated with this layer separated by blanks. In style selectors
-a class can be referenced by ``.classname`` if class contains ``classname``.
+a class can be referenced by ``.classname`` if class contains ``classname`` similar to CSS.
 
 Datasource
 ^^^^^^^^^^
-Mapnik supports different datasources. Within this property you specify the type
+Mapnik supports different datasources. Beneath this property you specify the type
 of the datasource and additional properties depending on the type.
 
 Not all possible configuration options for each datasource are listed here. For
@@ -287,7 +290,7 @@ id
 Type: ``String``
 
 A unique identifier for this layer. In style selectors it can be referenced with
-``#layerid`` if the id is ``layerid``.
+``#layerid`` if the id is ``layerid`` similar to CSS.
 
 properties
 ^^^^^^^^^^
@@ -357,8 +360,8 @@ Stylesheet property
 
 Type: ``Array``
 
-You have two options to specify the styles. Either you reference MSS files or
-you specify style objects directly.
+You have two options to specify the styles. Either you reference MSS files
+(here: Map Stylesheet files) or you specify style objects directly.
 
 Referencing style files
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -386,3 +389,80 @@ errors or warnings so it is advisable to set something recognizable here.
 data
 """"
 This contains the actual style in the form of a string.
+
+Example
+-------
+Here is a simple MML file example with two layers (one shapefile and one PostGIS
+layer) referencing one style file in YAML format. It has been modified from the
+MML file of `openstreetmap-carto <https://github.com/gravitystorm/openstreetmap-carto>`_. ::
+
+    scale: 1
+    metatile: 2
+    name: Example MML file
+    description: A example MML file to illustrate its options
+    bounds: &world
+      - -180
+      - -85.05112877980659
+      - 180
+      - 85.05112877980659
+    center:
+      - 0
+      - 0
+      - 4
+    format: png
+    minzoom: 0
+    maxzoom: 19
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+
+    # Various parts to be included later on
+    _parts:
+      extents: &extents
+        extent: *world
+        srs-name: "900913"
+        srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      osm2pgsql: &osm2pgsql
+        type: "postgis"
+        dbname: "gis"
+        key_field: ""
+        geometry_field: "way"
+        extent: "-20037508,-20037508,20037508,20037508"
+
+    Stylesheet:
+      - style_file.mss
+    Layer:
+      - id: world
+        name: world
+        geometry: polygon
+        <<: *extents
+        Datasource:
+          file: data/simplified-land-polygons-complete-3857/simplified_land_polygons.shp
+          type: shape
+        properties:
+          maxzoom: 9
+      - id: landcover-low-zoom
+        name: landcover-low-zoom
+        geometry: polygon
+        <<: *extents
+        Datasource:
+          <<: *osm2pgsql
+          table: |-
+            (SELECT
+                way, name, way_pixels,
+                COALESCE(wetland, landuse, "natural") AS feature
+              FROM (SELECT
+                  way, COALESCE(name, '') AS name,
+                  ('landuse_' || (CASE WHEN landuse IN ('forest', 'military') THEN landuse ELSE NULL END)) AS landuse,
+                  ('natural_' || (CASE WHEN "natural" IN ('wood', 'sand', 'scree', 'shingle', 'bare_rock') THEN "natural" ELSE NULL END)) AS "natural",
+                  ('wetland_' || (CASE WHEN "natural" IN ('wetland', 'mud') THEN (CASE WHEN "natural" IN ('mud') THEN "natural" ELSE tags->'wetland' END) ELSE NULL END)) AS wetland,
+                  way_area/NULLIF(!pixel_width!::real*!pixel_height!::real,0) AS way_pixels
+                FROM planet_osm_polygon
+                WHERE (landuse IN ('forest', 'military')
+                  OR "natural" IN ('wood', 'wetland', 'mud', 'sand', 'scree', 'shingle', 'bare_rock'))
+                  AND way_area > 0.01*!pixel_width!::real*!pixel_height!::real
+                  AND building IS NULL
+                ORDER BY COALESCE(layer,0), way_area DESC
+              ) AS features
+            ) AS landcover_low_zoom
+        properties:
+          minzoom: 7
+          maxzoom: 9
