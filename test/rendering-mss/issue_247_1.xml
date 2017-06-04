@@ -1,10 +1,9 @@
-
-<Style name="style-inline" filter-mode="first">
+<Style filter-mode="first" name="style-inline">
   <Rule>
     <LineSymbolizer stroke="#000000" stroke-width="1" />
   </Rule>
 </Style>
-<Style name="style-outline" filter-mode="first">
+<Style filter-mode="first" name="style-outline">
   <Rule>
     <LineSymbolizer stroke="#85c5d3" stroke-linejoin="round" stroke-width="4" />
   </Rule>

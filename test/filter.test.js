@@ -15,10 +15,10 @@ describe('Field', function() {
             f.ev({});
             assert.ok(f);
         });
-        it('yields xml', function() {
+        it('yields object', function() {
             var f = new tree.Filter(new tree.Field('foo'), '=', new tree.Dimension(1));
             f.ev({});
-            assert.equal(f.toXML({}), '[foo] = 1');
+            assert.equal(f.toObject({}), '[foo] = 1');
         });
     });
 });

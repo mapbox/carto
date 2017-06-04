@@ -1,4 +1,4 @@
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
     <LineSymbolizer stroke="#008000" />
     <LineSymbolizer stroke="#bbeedd" />

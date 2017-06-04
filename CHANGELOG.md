@@ -8,7 +8,11 @@ There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress 
 * Warnings are emitted if a layer has no associated styles or styles do not match a corresponding layer selector. ([#29](https://github.com/mapbox/carto/issues/29))
 * New command line switch `-f / --file` to specify a file for output instead of `stdout`.
 * carto now honors variable redefinition and uses the last defined value instead of the first one ([#338](https://github.com/mapbox/carto/issues/338)).
-* Parameters of symbolizers are now ouput in alphabetical order according to the CartoCSS name of that parameter. This makes output more predictable.
+* All parameters of XML tags are now ouput in alphabetical order. This makes output more predictable.
+* carto is now able to output a JSON variant of Mapnik XML. There is a new command line / API switch
+(`-o / --output` / `outputFormat`) to choose the output format. Possible values are `mapnik` (default)
+for Mapnik XML and `json` for the JSON variant (part of [#413](https://github.com/mapbox/carto/issues/413)).
+For Mapnik XML all character data as tag content is now prefixed with CDATA.
 
 ### Breaking changes
 
@@ -17,7 +21,7 @@ There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress 
 * The deprecated `name` attribute for layers is no longer supported. Use `id` instead.
 * The deprecated color functions `husl` and `husla` are no longer supported. Use `hsluv` and `hsluva` instead.
 * If you define a variable with the same name twice the latest defined value is now used in contrast to the first defined one as before.
-* Parameters of symbolizers are now ouput in alphabetical order according to the CartoCSS name of that parameter. If you somehow depend on the order
+* All parameters of XML tags are now ouput in alphabetical order. If you somehow depend on the order
 of parameters (e.g. for tests) expect them to change.
 
 #### API

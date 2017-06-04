@@ -1,4 +1,4 @@
-<Style name="style" filter-mode="first" image-filters="scale-hsla(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5)" direct-image-filters="scale-hsla(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5)">
+<Style direct-image-filters="scale-hsla(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5)" filter-mode="first" image-filters="scale-hsla(0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5)" name="style">
   <Rule>
     <PolygonSymbolizer fill="#ff0000" />
   </Rule>

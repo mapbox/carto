@@ -1,6 +1,6 @@
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
-    <Filter>([Hello&amp;Goodbye] = 'yes')</Filter>
+    <Filter><![CDATA[([Hello&amp;Goodbye] = 'yes')]]></Filter>
     <TextSymbolizer face-name="El&amp;Font Bubble Regular"><![CDATA[[name]]]></TextSymbolizer>
   </Rule>
 </Style>

@@ -1,6 +1,6 @@
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
-    <Filter>([zoomy] &gt; 2)</Filter>
+    <Filter><![CDATA[([zoomy] > 2)]]></Filter>
     <PolygonSymbolizer fill="#ff0000" />
   </Rule>
 </Style>

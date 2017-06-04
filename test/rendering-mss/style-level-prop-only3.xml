@@ -1,2 +1,1 @@
-<Style name="style" filter-mode="first" image-filters="invert">
-</Style>
+<Style filter-mode="first" image-filters="invert" name="style"></Style>

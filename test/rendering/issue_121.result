@@ -13,7 +13,7 @@
 </Parameters>
 
 
-<Style name="filtertest" filter-mode="first" >
+<Style filter-mode="first" name="filtertest">
   <Rule>
     <Filter>([a] &gt; 20)</Filter>
     <MarkersSymbolizer fill="#0000ff" />

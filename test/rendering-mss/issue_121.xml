@@ -1,6 +1,6 @@
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
-    <Filter>([dem] &gt; [rep])</Filter>
+    <Filter><![CDATA[([dem] > [rep])]]></Filter>
     <MarkersSymbolizer fill="#0000ff" />
   </Rule>
 </Style>

@@ -3,7 +3,8 @@
 [![Build Status](https://secure.travis-ci.org/mapbox/carto.svg)](http://travis-ci.org/mapbox/carto) [![Build status](https://ci.appveyor.com/api/projects/status/github/mapbox/carto?svg=true)](https://ci.appveyor.com/project/Mapbox/carto) [![Coverage Status](https://coveralls.io/repos/github/mapbox/carto/badge.svg?branch=master)](https://coveralls.io/github/mapbox/carto?branch=master) [![Package Version](https://img.shields.io/npm/v/carto.svg)](https://www.npmjs.com/package/carto) [![Dependencies](https://david-dm.org/mapbox/carto.svg)](https://david-dm.org/mapbox/carto)    [![Documentation Status](https://readthedocs.org/projects/cartocss/badge/?version=latest)](http://cartocss.readthedocs.io/en/latest/?badge=latest)
 
 CartoCSS (short: Carto) is a language for map design. It is similar in syntax to CSS, but builds upon it with specific abilities to filter map data and by providing things like variables.
-It targets the [Mapnik renderer](http://mapnik.org) and is able to generate Mapnik XML. It can run from the command line or in the browser.
+It targets the [Mapnik renderer](http://mapnik.org) and is able to generate Mapnik XML and a JSON variant of Mapnik XML.
+It can run from the command line or in the browser.
 
 Carto is an evolution of the [Cascadenik](https://github.com/mapnik/Cascadenik) idea and language, with an emphasis on speed and flexibility.
 
@@ -52,6 +53,7 @@ Available parameters:
 * -h / --help - Display help message
 * -l / --localize - Use millstone to localize resources when loading an MML (default: off)
 * -n / --nosymlink - Use absolute paths instead of symlinking files
+* -o / --output - Specify output format, possible values are `mapnik` and `json` (default: `mapnik`)
 * -ppi RESOLUTION - Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels (default: 90.714)
 * -q / --quiet - Do not output any warnings (default: off)
 * -v / --version - Display version information

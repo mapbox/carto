@@ -1,9 +1,9 @@
-<Style name="style-label" filter-mode="first">
+<Style filter-mode="first" name="style-label">
   <Rule>
     <TextSymbolizer allow-overlap="true" face-name="DejaVu Sans Book" fill="#ff6347"><![CDATA['1']]></TextSymbolizer>
   </Rule>
 </Style>
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
     <MarkersSymbolizer allow-overlap="true" fill="#cd853f" width="10" />
   </Rule>

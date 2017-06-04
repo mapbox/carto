@@ -1,14 +1,14 @@
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
-    <Filter>([foo] = 'bar') and ([type] = 'primary')</Filter>
+    <Filter><![CDATA[([foo] = 'bar') and ([type] = 'primary')]]></Filter>
     <LineSymbolizer stroke="#ff0000" stroke-width="10" />
   </Rule>
   <Rule>
-    <Filter>([foo] = 'bar')</Filter>
+    <Filter><![CDATA[([foo] = 'bar')]]></Filter>
     <LineSymbolizer stroke-width="10" />
   </Rule>
   <Rule>
-    <Filter>([type] = 'primary')</Filter>
+    <Filter><![CDATA[([type] = 'primary')]]></Filter>
     <LineSymbolizer stroke="#ff0000" />
   </Rule>
 </Style>

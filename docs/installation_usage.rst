@@ -48,6 +48,9 @@ The following command line options are available:
 -n / --nosymlink
     Use absolute paths instead of symlinking files
 
+-o / --output
+    Specify output format, possible values are ``mapnik`` and ``json`` (default: ``mapnik``)
+
 -ppi RESOLUTION
     Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels (default: 90.714)
 

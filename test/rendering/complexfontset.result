@@ -6,7 +6,7 @@
   <Font face-name="Georgia Regular"/>
   <Font face-name="Arial Italic"/>
 </FontSet>
-<Style name="world" filter-mode="first">
+<Style filter-mode="first" name="world">
   <Rule>
     <TextSymbolizer size="11" fontset-name="fontset-0" >[NAME]</TextSymbolizer>
   </Rule>
@@ -20,7 +20,7 @@
     </Datasource>
   </Layer>
 
-<Style name="countries" filter-mode="first">
+<Style filter-mode="first" name="countries">
   <Rule>
     <TextSymbolizer size="11" fontset-name="fontset-0" >[NAME]</TextSymbolizer>
   </Rule>

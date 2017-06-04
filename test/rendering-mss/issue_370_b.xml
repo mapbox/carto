@@ -1,6 +1,6 @@
-<Style name="style" filter-mode="first">
+<Style filter-mode="first" name="style">
   <Rule>
-    <Filter>([way_pixels] &lt;= 192000) and ([way_pixels] &gt;= 3000)</Filter>
+    <Filter><![CDATA[([way_pixels] <= 192000) and ([way_pixels] >= 3000)]]></Filter>
     <LineSymbolizer stroke-width="1" />
   </Rule>
 </Style>

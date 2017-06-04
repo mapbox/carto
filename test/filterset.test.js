@@ -9,9 +9,9 @@ describe('Filtersets', function() {
             assert.ok(f);
             assert.ok(f.filters);
         });
-        it('yields xml', function() {
+        it('yields object', function() {
             var f = new tree.Filterset();
-            assert.equal(f.toXML({}), '');
+            assert.deepEqual(f.toObject({}), {});
         });
         it('yields a clone', function() {
             var f = new tree.Filterset();

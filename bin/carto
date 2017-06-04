@@ -19,6 +19,7 @@ var yargs = require('yargs')
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
             .options('a', {alias:'api', describe:'Specify Mapnik API version', default:carto.tree.Reference.getLatest()})
             .options('f', {alias:'file', describe:'Outputs to the given file instead of stdout.'})
+            .options('o', {alias:'output', describe:'Specify output format (mapnik, json)', default:'mapnik'})
             .options('q', {alias:'quiet', boolean:true, default:false, describe:'Do not output any warnings'})
             .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
 
@@ -94,7 +95,8 @@ function compile(err, data) {
         filename: input,
         benchmark: options.benchmark,
         ppi: options.ppi,
-        quiet: options.quiet
+        quiet: options.quiet,
+        outputFormat: options.output
     },
     {
         mapnik_version: options.api

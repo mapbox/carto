@@ -1,2 +1,1 @@
-<Style name="style" filter-mode="first" comp-op="color-burn">
-</Style>
+<Style comp-op="color-burn" filter-mode="first" name="style"></Style>
