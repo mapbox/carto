@@ -13,6 +13,8 @@ There is a new command line / API switch (`-q / --quiet` / `quiet`) to suppress 
 (`-o / --output` / `outputFormat`) to choose the output format. Possible values are `mapnik` (default)
 for Mapnik XML and `json` for the JSON variant (part of [#413](https://github.com/mapbox/carto/issues/413)).
 For Mapnik XML all character data as tag content is now prefixed with CDATA.
+* Expressions are allowed in filters e.g. `[height] % 50 = 0` or `[height] + 10 = 0`, fields have to be properly written within brackets
+([#377](https://github.com/mapbox/carto/issues/377))
 
 ### Breaking changes
 

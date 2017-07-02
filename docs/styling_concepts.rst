@@ -134,3 +134,8 @@ String comparisons::
 
     /* a regular expression over name */
     #world[name =~ "A.*"]
+
+More complex expressions::
+
+    #world[[population] % 50 = 0]
+    #world[[population] * 2 < 1000]

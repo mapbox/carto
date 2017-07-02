@@ -1,0 +1,6 @@
+<Style filter-mode="first" name="style">
+  <Rule>
+    <Filter><![CDATA[([height]%50 = 0)]]></Filter>
+    <MarkersSymbolizer fill="#ff0000" />
+  </Rule>
+</Style>
