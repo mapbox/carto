@@ -68,6 +68,9 @@ rules:
   no-array-constructor: 2
   no-bitwise: 0
   no-caller: 2
+  no-cond-assign:
+    - 2
+    - except-parens
   no-confusing-arrow: 2
   no-console: 0
   no-continue: 0
