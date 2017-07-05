@@ -1,6 +1,7 @@
 # CartoCSS
 
 [![Build Status](https://secure.travis-ci.org/mapbox/carto.svg)](http://travis-ci.org/mapbox/carto) [![Build status](https://ci.appveyor.com/api/projects/status/github/mapbox/carto?svg=true)](https://ci.appveyor.com/project/Mapbox/carto) [![Coverage Status](https://coveralls.io/repos/github/mapbox/carto/badge.svg?branch=master)](https://coveralls.io/github/mapbox/carto?branch=master) [![Package Version](https://img.shields.io/npm/v/carto.svg)](https://www.npmjs.com/package/carto) [![Dependencies](https://david-dm.org/mapbox/carto.svg)](https://david-dm.org/mapbox/carto)    [![Documentation Status](https://readthedocs.org/projects/cartocss/badge/?version=latest)](http://cartocss.readthedocs.io/en/latest/?badge=latest)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Fcarto.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Fcarto?ref=badge_shield)
 
 CartoCSS (short: Carto) is a language for map design. It is similar in syntax to CSS, but builds upon it with specific abilities to filter map data and by providing things like variables.
 It targets the [Mapnik renderer](http://mapnik.org) and is able to generate Mapnik XML and a JSON variant of Mapnik XML.
@@ -126,3 +127,7 @@ See also a [list of dependencies](https://david-dm.org/mapbox/carto#info=depende
 * AJ Ashton (ajashton)
 * Dane Springmeyer (springmeyer)
 * Michael Glanznig (nebulon42)
+
+## License
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Fcarto.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Fcarto?ref=badge_large)
