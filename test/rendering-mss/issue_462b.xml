@@ -1,0 +1,10 @@
+<Style filter-mode="first" name="style">
+  <Rule>
+    <Filter><![CDATA[([feature] = 'baz')]]></Filter>
+    <ShieldSymbolizer face-name="Arial" file="test.svg" fill="#0000ff"><![CDATA[[refs]]]></ShieldSymbolizer>
+  </Rule>
+  <Rule>
+    <Filter><![CDATA[([feature] = 'bar')]]></Filter>
+    <ShieldSymbolizer face-name="Arial" file="test.svg" fill="#ff0000"><![CDATA[[refs]]]></ShieldSymbolizer>
+  </Rule>
+</Style>
