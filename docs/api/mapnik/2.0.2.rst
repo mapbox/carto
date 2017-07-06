@@ -1,10 +1,18 @@
 2.0.2
+=====
+Style
 -----
+
+
+
+
+
+Symbolizers
+-----------
 
 
 map
 ^^^
-
 
 background-color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,10 +117,8 @@ Path to a directory which holds fonts which should be registered when the Map is
 
 
 
-
 polygon
 ^^^^^^^
-
 
 polygon-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,10 +189,8 @@ Amount of smoothing applied
 
 
 
-
 line
 ^^^^
-
 
 line-color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -342,10 +346,8 @@ Exposes an alternate AGG rendering method that sacrifices some accuracy for spee
 
 
 
-
 markers
 ^^^^^^^
-
 
 marker-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -603,10 +605,8 @@ An SVG transformation definition
 
 
 
-
 shield
 ^^^^^^
-
 
 shield-name
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1068,10 +1068,8 @@ Define how text in a shield's label is justified
 
 
 
-
 line-pattern
 ^^^^^^^^^^^^
-
 
 line-pattern-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1091,10 +1089,8 @@ An image file to be repeated and warped along a line
 
 
 
-
 polygon-pattern
 ^^^^^^^^^^^^^^^
-
 
 polygon-pattern-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1148,10 +1144,8 @@ Level of antialiasing of polygon pattern edges
 
 
 
-
 raster
 ^^^^^^
-
 
 raster-opacity
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1239,10 +1233,8 @@ A reduced resolution mesh is used for raster reprojection, and the total image s
 
 
 
-
 point
 ^^^^^
-
 
 point-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1347,10 +1339,8 @@ SVG transformation definition
 
 
 
-
 text
 ^^^^
-
 
 text-name
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1863,10 +1853,8 @@ Set the text alignment.
 
 
 
-
 building
 ^^^^^^^^
-
 
 building-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

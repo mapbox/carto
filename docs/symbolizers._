@@ -1,11 +1,36 @@
-<% _(symbolizers).each(function(symbolizer, name) { %>
-<% if (name == '*') { %>
-All elements
-^^^^^^^^^^^^
-<% } else { %>
+Style
+-----
+
+<% _(style).each(function(rule, name) { %>
+<% if (_.has(rule, 'css')) { %>
 <%= name %>
 <%= Array(name.length + 1).join('^') %>
+<%= rule.css.replace(/\s/g, '') %>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: <% if (_.isArray(rule.type)) { %>``keyword``<% } else { %>``<%= rule.type %>`` <% } %>
+
+<% if (_.has(rule, 'status')) { %>**Status: <%= rule.status %>**
+
 <% } %>
+<% if (_.isArray(rule.type)) { %>Possible values: <% _(rule.type).each(function(type) { %>``<%= type %>`` <% }); %><% } %>
+<% if (rule.type === 'functions' && _.isArray(rule.functions)) { %>Possible values: <% _(rule.functions).each(function(type) { %>``<%= type[0] %>`` <% }); %><% } %>
+
+<% if (typeof rule['default-value'] !== '') { %>Default Value: <%= rule['default-value'] %><% } %>
+<% if (rule['default-meaning']) { %>*(<%= subst(rule['default-meaning']) %>)*<% } %>
+<% if (typeof rule['range'] !== 'undefined') { %>Range: <%= '' + rule['range'] %><% } %>
+<% if (rule.doc) { %><%= subst(rule.doc) %><% } %>
+
+------------
+<% } %>
+<% }); %>
+
+Symbolizers
+-----------
+
+<% _(symbolizers).each(function(symbolizer, name) { %>
+<%= name %>
+<%= Array(name.length + 1).join('^') %>
 <% _(symbolizer).filter(function(p) { return p.css; }).each(function(p) { %>
 <%= p.css.replace(/\s/g, '') %>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

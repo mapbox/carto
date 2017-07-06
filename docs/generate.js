@@ -21,8 +21,9 @@ refs.versions.forEach(function (v) {
     var ref = refs.load(v),
         output = '';
 
-    output += v + '\n' + Array(v.length + 1).join('-') + '\n';
+    output += v + '\n' + Array(v.length + 1).join('=') + '\n';
     output += table({
+      style: ref.style,
       symbolizers: ref.symbolizers,
       subst: substituteReSt,
       _: _

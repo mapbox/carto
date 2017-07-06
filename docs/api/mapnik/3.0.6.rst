@@ -1,11 +1,14 @@
 3.0.6
+=====
+Style
 -----
 
 
-All elements
-^^^^^^^^^^^^
 
 
+
+image-filters
+^^^^^^^^^^^^^
 image-filters
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -16,13 +19,16 @@ Type: ``functions``
 Possible values: ``agg-stack-blur`` ``emboss`` ``blur`` ``gray`` ``sobel`` ``edge-detect`` ``x-gradient`` ``y-gradient`` ``invert`` ``sharpen`` ``color-blind-protanope`` ``color-blind-deuteranope`` ``color-blind-tritanope`` ``colorize-alpha`` ``color-to-alpha`` ``scale-hsla`` 
 
 Default Value: none
-*(no filters.)*
+*(no filters)*
 
 A list of image filters that will be applied to the active rendering canvas for a given style. The presence of one more ``image-filters`` will trigger a new canvas to be created before starting to render a style and then this canvas will be composited back into the main canvas after rendering all features and after all ``image-filters`` have been applied. See ``direct-image-filters`` if you want to apply a filter directly to the main canvas.
 
 ------------
 
 
+
+image-filters-inflate
+^^^^^^^^^^^^^^^^^^^^^
 image-filters-inflate
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -33,13 +39,16 @@ Type: ``boolean``
 
 
 Default Value: false
-*(No special handling will be done and image filters that blur data will only blur up to the edge of a tile boundary.)*
+*(No special handling will be done and image filters that blur data will only blur up to the edge of a tile boundary)*
 
 A property that can be set to true to enable using an inflated image internally for seamless blurring across tiles (requires buffered data).
 
 ------------
 
 
+
+direct-image-filters
+^^^^^^^^^^^^^^^^^^^^
 direct-image-filters
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -50,13 +59,16 @@ Type: ``functions``
 Possible values: ``agg-stack-blur`` ``emboss`` ``blur`` ``gray`` ``sobel`` ``edge-detect`` ``x-gradient`` ``y-gradient`` ``invert`` ``sharpen`` ``color-blind-protanope`` ``color-blind-deuteranope`` ``color-blind-tritanope`` ``colorize-alpha`` ``color-to-alpha`` ``scale-hsla`` 
 
 Default Value: none
-*(no filters.)*
+*(no filters)*
 
 A list of image filters to apply to the main canvas (see the ``image-filters`` doc for how they work on a separate canvas).
 
 ------------
 
 
+
+comp-op
+^^^^^^^
 comp-op
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -67,13 +79,16 @@ Possible values: ``clear`` ``src`` ``dst`` ``src-over`` ``dst-over`` ``src-in`` 
 
 
 Default Value: src-over
-*(Add the current layer on top of other layers.)*
+*(add the current layer on top of other layers)*
 
 Composite operation. This defines how this layer should behave relative to layers atop or below it.
 
 ------------
 
 
+
+opacity
+^^^^^^^
 opacity
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -92,10 +107,12 @@ An alpha value for the style (which means an alpha applied to all features in se
 
 
 
+Symbolizers
+-----------
+
 
 map
 ^^^
-
 
 background-color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -251,10 +268,8 @@ Path to a directory which holds fonts which should be registered when the Map is
 
 
 
-
 polygon
 ^^^^^^^
-
 
 polygon-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -427,9 +442,24 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 
 
-
 line
 ^^^^
+
+line
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+
+
+------------
 
 
 line-color
@@ -741,10 +771,8 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 
 
-
 markers
 ^^^^^^^
-
 
 marker-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1191,10 +1219,8 @@ How markers should be placed along lines. With the "auto" setting when marker is
 
 
 
-
 shield
 ^^^^^^
-
 
 shield-name
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1945,10 +1971,8 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 
 
-
 line-pattern
 ^^^^^^^^^^^^
-
 
 line-pattern-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -2121,10 +2145,8 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 
 
-
 polygon-pattern
 ^^^^^^^^^^^^^^^
-
 
 polygon-pattern-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -2314,10 +2336,8 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 
 
-
 raster
 ^^^^^^
-
 
 raster-opacity
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -2473,10 +2493,8 @@ Assigns raster data values to colors. Stops must be listed in ascending order, a
 
 
 
-
 point
 ^^^^^
-
 
 point-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -2598,10 +2616,8 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 
 
-
 text
 ^^^^
-
 
 text-name
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -3409,10 +3425,8 @@ Controls default labeling behavior on multipolygons. The default is true and mea
 
 
 
-
 building
 ^^^^^^^^
-
 
 building-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -3466,18 +3480,16 @@ The height of the building in pixels.
 
 
 
-
 debug
 ^^^^^
-
 
 debug-mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Type: ``string`` 
+Type: ``keyword``
 
 
-
+Possible values: ``collision`` ``vertex`` 
 
 
 Default Value: collision
@@ -3489,10 +3501,8 @@ The mode for debug rendering.
 
 
 
-
 dot
 ^^^
-
 
 dot-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

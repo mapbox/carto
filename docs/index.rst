@@ -1,5 +1,6 @@
+########
 CartoCSS
-==================================
+########
 
 CartoCSS (short: Carto) is a language for map design. It is similar in syntax to CSS, but builds upon it with specific abilities to
 filter map data and by providing things like variables. It targets the `Mapnik renderer <http://mapnik.org>`_ and is able to generate Mapnik XML or

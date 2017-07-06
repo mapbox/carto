@@ -1,10 +1,11 @@
+*****************
 Language Elements
-=================
+*****************
 
 Below is a list of values and an explanation of any expression that can be applied to properties in CartoCSS.
 
 Color
------
+=====
 
 CartoCSS accepts a variety of syntaxes for colors - HTML-style hex values, rgb, rgba, hsl, hsla, hsluv, and hsluva.
 It also supports the predefined HTML colors names, like `yellow` and `blue`. ::
@@ -52,7 +53,7 @@ These functions all take arguments which can be color variables, literal colors,
 All the above mentioned functions also come in a *functionp*-variant (e.g. ``lightenp``), which force a given color into HSLuv color space.
 
 Float
------
+=====
 
 Float is a fancy way of saying 'number'. In CartoCSS, you specify *just a number* - unlike CSS, there are no units,
 but everything is specified in pixels. ::
@@ -72,7 +73,7 @@ It's also possible to do simple math with number values::
     }
 
 URI
----
+===
 
 URI is a fancy way of saying URL. When an argument is a URI, you use the same kind of ``url('place.png')``
 notation that you would with HTML. Quotes around the URL aren't required, but are highly recommended.
@@ -83,7 +84,7 @@ URIs can be paths to places on your computer, or on the internet. ::
     }
 
 String
-------
+======
 
 A string is basically just text. In the case of CartoCSS, you're going to put it in quotes. Strings can be anything,
 though pay attention to the cases of ``text-name`` and ``shield-name`` - they actually will refer to features,
@@ -94,7 +95,7 @@ which you refer to by putting them in brackets, as seen in the example below. ::
     }
 
 Boolean
--------
+=======
 
 Boolean means yes or no, so it accepts the values ``true`` or ``false``. ::
 
@@ -103,7 +104,7 @@ Boolean means yes or no, so it accepts the values ``true`` or ``false``. ::
     }
 
 Expressions
------------
+===========
 
 Expressions are statements that can include fields, numbers, and other types in a really flexible way.
 You have run into expressions before, in the realm of 'fields', where you'd specify ``"[FIELD]"``,
@@ -115,7 +116,7 @@ and concatenation from within CartoCSS syntax. ::
     }
 
 Numbers
--------
+=======
 
 Numbers are comma-separated lists of one or more number in a specific order.
 They're used in line dash arrays, in which the numbers specify intervals of line, break, and line again. ::
@@ -125,7 +126,7 @@ They're used in line dash arrays, in which the numbers specify intervals of line
     }
 
 Percentages
------------
+===========
 
 In CartoCSS, the percentage symbol, ``%`` universally means ``value/100``.
 It's meant to be used with ratio-related properties, like opacity rules.
@@ -145,7 +146,7 @@ In an example::
     }
 
 Functions
----------
+=========
 
 Functions are comma-separated lists of one or more functions. For instance, transforms use the ``functions`` type
 to allow for transforms within CartoCSS, which are optionally chainable. ::
@@ -155,7 +156,7 @@ to allow for transforms within CartoCSS, which are optionally chainable. ::
     }
 
 Mapnik Render-Time Variables
-----------------------------
+============================
 
 Mapnik >= 3.0.0 supports variables of the form ``@var``. These can be used from CartoCSS by specifying them as strings. For example::
 
@@ -166,7 +167,7 @@ Mapnik >= 3.0.0 supports variables of the form ``@var``. These can be used from 
 For this to have any effect you have to pass the variables to Mapnik at render time in a hashmap of the form ``variable_name:variable_value``.
 
 Resetting properties
---------------------
+====================
 
 You can reset properties by specifying them with the keyword ``none``. They will then be removed from the symbolizer thus using their default value
 or not using them at all. This does not work or makes sense for all properties like e.g. not for ``text-face-name``. For an overview over properties

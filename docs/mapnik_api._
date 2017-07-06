@@ -1,5 +1,6 @@
+************************
 Mapnik API documentation
-========================
+************************
 
 The following is a list of properties provided in CartoCSS that you can apply to map elements
 when using the Mapnik renderer. Each API version of Mapnik has its own subsection. Pick the one that

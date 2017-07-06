@@ -1,8 +1,9 @@
+********************
 Installation & Usage
-====================
+********************
 
 Installation
-------------
+============
 
 If you are using a map design application like Kosmtik, Mapbox Studio Classic or Tilemill you already have CartoCSS installed
 and might be more interested in the language reference.
@@ -22,7 +23,7 @@ Having *millstone* installed specifically enables support for localizing externa
 and detecting projections (using `node-srs <https://github.com/mapbox/node-srs>`_).
 
 Usage
------
+=====
 
 Now that Carto is installed you should have a *carto* command line tool available that can be run on a CartoCSS project::
 
