@@ -8,9 +8,7 @@ Style
 
 
 image-filters
-^^^^^^^^^^^^^
-image-filters
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type: ``functions`` 
 
@@ -28,9 +26,7 @@ A list of image filters that will be applied to the active rendering canvas for 
 
 
 image-filters-inflate
-^^^^^^^^^^^^^^^^^^^^^
-image-filters-inflate
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type: ``boolean`` 
 
@@ -48,9 +44,7 @@ A property that can be set to true to enable using an inflated image internally 
 
 
 direct-image-filters
-^^^^^^^^^^^^^^^^^^^^
-direct-image-filters
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type: ``functions`` 
 
@@ -68,9 +62,7 @@ A list of image filters to apply to the main canvas (see the ``image-filters`` d
 
 
 comp-op
-^^^^^^^
-comp-op
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type: ``keyword``
 
@@ -88,9 +80,7 @@ Composite operation. This defines how this layer should behave relative to layer
 
 
 opacity
-^^^^^^^
-opacity
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Type: ``float`` 
 
