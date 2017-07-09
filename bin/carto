@@ -3,7 +3,6 @@
 var path = require('path'),
     fs = require('fs'),
     carto = require('../lib/carto'),
-    semver = require('semver'),
     url = require('url'),
     _ = require('lodash'),
     util = require('../lib/carto/util');
@@ -17,7 +16,7 @@ var yargs = require('yargs')
             .options('b', {alias:'benchmark', boolean:true, describe:'Outputs total compile time'})
             .options('l', {alias:'localize', boolean:true, default:false, describe:'Use millstone to localize resources when loading an MML'})
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
-            .options('a', {alias:'api', describe:'Specify Mapnik API version', default:carto.tree.Reference.getLatest()})
+            .options('a', {alias:'api', describe:'Specify Mapnik API version'})
             .options('f', {alias:'file', describe:'Outputs to the given file instead of stdout.'})
             .options('o', {alias:'output', describe:'Specify output format (mapnik, json)', default:'mapnik'})
             .options('q', {alias:'quiet', boolean:true, default:false, describe:'Do not output any warnings'})
@@ -43,13 +42,6 @@ if (input && input[0] != '/') {
 if (!input) {
     console.error("carto: no input files ('carto -h or --help' for help)");
     process.exit(1);
-}
-
-if (options.api) {
-    if (!semver.valid(options.api)) {
-        console.error("carto: invalid Mapnik API version. A valid version is e.g. 3.0.0 or 3.0.10");
-        process.exit(1);
-    }
 }
 
 if (options.benchmark) {
@@ -96,10 +88,8 @@ function compile(err, data) {
         benchmark: options.benchmark,
         ppi: options.ppi,
         quiet: options.quiet,
-        outputFormat: options.output
-    },
-    {
-        mapnik_version: options.api
+        outputFormat: options.output,
+        version: options.api
     });
     try {
         var output;

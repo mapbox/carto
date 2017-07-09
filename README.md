@@ -67,14 +67,13 @@ The `Renderer` interface is the main API for developers, and it takes an MML fil
 
     try {
         var data = fs.readFileSync(input, 'utf-8');
-        var mml = new carto.MML();
+        var mml = new carto.MML({});
         mml.load(path.dirname(input), data, function (err, data) {
             var output = {};
 
             if (!err) {
                 output = new carto.Renderer({
-                    filename: input,
-                    local_data_dir: path.dirname(input),
+                    filename: input
                 }).render(data);
             }
 

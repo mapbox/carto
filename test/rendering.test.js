@@ -54,13 +54,9 @@ helper.files('rendering', 'mml', function(file) {
                 renderer = null;
 
                 if (api) {
-                    renderer = new carto.Renderer(env, {
-                        mapnik_version: api
-                    });
+                    env.version = api
                 }
-                else {
-                    renderer = new carto.Renderer(env);
-                }
+                renderer = new carto.Renderer(env);
                 output = renderer.render(mml);
             }
             else {

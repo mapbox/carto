@@ -26,9 +26,12 @@ describe('Specificity', function() {
 helper.files('specificity', 'mss', function(file) {
     it('should handle spec correctly in ' + file, function(done) {
         helper.file(file, function(content) {
+            var ref = new carto.tree.Reference();
+            ref.setVersion(ref.getLatest());
             var tree = (new carto.Parser({
                 paths: [ path.dirname(file) ],
-                filename: file
+                filename: file,
+                ref: ref
             })).parse(content);
 
             var mss = tree.toList({});

@@ -15,6 +15,8 @@ for Mapnik XML and `json` for the JSON variant (part of [#413](https://github.co
 For Mapnik XML all character data as tag content is now prefixed with CDATA.
 * Expressions are allowed in filters e.g. `[height] % 50 = 0` or `[height] + 10 = 0`, fields have to be properly written within brackets
 ([#377](https://github.com/mapbox/carto/issues/377))
+* carto now accepts custom references for validating rules (part of [#413](https://github.com/mapbox/carto/issues/413))
+* The JavaScript API has been documented ([#479](https://github.com/mapbox/carto/issues/479))
 
 ### Breaking changes
 
@@ -33,6 +35,13 @@ string. `data` contains the output as before and `msg` now contains an array of 
 In case of errors `data` is `null`.
 * carto now only throws errors in case of program failures. All other style processing
 related errors can be found in the `msg` property (see above).
+* The constructor of `carto.Renderer` now only takes one options object
+instead of a `env` and `options` parameter.
+* The option `mapnik_version` and `validation_data` of `carto.Renderer` have
+been renamed to `version` and `validationData` respectively.
+* `carto.Renderer` now checks each option before forwarding them to the rendering
+chain. Supported options are defined in the documentation. If you use a option that is
+missing please open a issue.
 
 ## 0.18.1
 

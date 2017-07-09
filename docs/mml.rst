@@ -1,3 +1,5 @@
+.. _mml-file-structure:
+
 MML File Structure
 ==================
 
