@@ -192,3 +192,4 @@ rules:
   wrap-regex: 0
   yield-star-spacing: 2
   yoda: 0
+  no-useless-escape: 0
