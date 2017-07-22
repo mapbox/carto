@@ -46,6 +46,10 @@ been renamed to `version` and `validationData` respectively.
 chain. Supported options are defined in the documentation. If you use a option that is
 missing please open a issue.
 
+## 0.18.2
+
+* Remove `millstone` from optional dependencies again
+
 ## 0.18.1
 
 * Updated `mapnik-reference` to fix an install problem for some Node.js versions
