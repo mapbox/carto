@@ -20,6 +20,7 @@ For Mapnik XML all character data as tag content is now prefixed with CDATA.
 * New symbolizer rules (work on the whole symbolizer) enable control of symbolizer serialization. Write e.g. `line: none` to suppress output
 of the line symbolizer for this definition. Write e.g. `marker: auto` to output a markers symbolizer with default values. Symbolizer rules
 are considered an advanced features and are never inherited to other definitions ([#477](https://github.com/mapbox/carto/pull/477)).
+* Remove `millstone` from optional dependencies again ([#482](https://github.com/mapbox/carto/issues/482)).
 
 ### Breaking changes
 
