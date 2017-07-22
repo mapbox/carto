@@ -261,6 +261,25 @@ Path to a directory which holds fonts which should be registered when the Map is
 polygon
 ^^^^^^^
 
+polygon
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a polygon symbolizer rule or emitting it with default values.
+
+------------
+
+
 polygon-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -434,6 +453,25 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 line
 ^^^^
+
+line
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a line symbolizer rule or emitting it with default values.
+
+------------
+
 
 line-color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -746,6 +784,25 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 markers
 ^^^^^^^
+
+marker
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a marker symbolizer rule or emitting it with default values.
+
+------------
+
 
 marker-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1194,6 +1251,25 @@ How markers should be placed along lines. With the "auto" setting when marker is
 
 shield
 ^^^^^^
+
+shield
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a shield symbolizer.
+
+------------
+
 
 shield-name
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -1947,6 +2023,25 @@ Composite operation. This defines how this symbolizer should behave relative to 
 line-pattern
 ^^^^^^^^^^^^
 
+line-pattern
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a line pattern symbolizer rule or emitting it with default values.
+
+------------
+
+
 line-pattern-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -2120,6 +2215,25 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 polygon-pattern
 ^^^^^^^^^^^^^^^
+
+polygon-pattern
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a polygon pattern symbolizer rule or emitting it with default values.
+
+------------
+
 
 polygon-pattern-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -2312,6 +2426,25 @@ Composite operation. This defines how this symbolizer should behave relative to 
 raster
 ^^^^^^
 
+raster
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a raster symbolizer rule or emitting it with default values.
+
+------------
+
+
 raster-opacity
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -2469,6 +2602,25 @@ Assigns raster data values to colors. Stops must be listed in ascending order, a
 point
 ^^^^^
 
+point
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a point symbolizer rule or emitting it with default values.
+
+------------
+
+
 point-file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -2591,6 +2743,25 @@ Composite operation. This defines how this symbolizer should behave relative to 
 
 text
 ^^^^
+
+text
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a text symbolizer rule.
+
+------------
+
 
 text-name
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -3401,6 +3572,25 @@ Controls default labeling behavior on multipolygons. The default is true and mea
 building
 ^^^^^^^^
 
+building
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a building symbolizer rule or emitting it with default values.
+
+------------
+
+
 building-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -3476,6 +3666,25 @@ The mode for debug rendering.
 
 dot
 ^^^
+
+dot
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``keyword``
+
+**Status: unstable**
+
+
+Possible values: ``auto`` ``none`` 
+
+
+Default Value: 
+
+
+Allows omitting a dot symbolizer rule or emitting it with default values.
+
+------------
+
 
 dot-fill
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
