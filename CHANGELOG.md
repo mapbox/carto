@@ -1,5 +1,9 @@
 ## Changelog
 
+## 0.18.2
+
+* Remove `millstone` from optional dependencies again
+
 ## 0.18.1
 
 * Updated `mapnik-reference` to fix an install problem for some Node.js versions
