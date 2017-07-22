@@ -166,9 +166,40 @@ Mapnik >= 3.0.0 supports variables of the form ``@var``. These can be used from 
 
 For this to have any effect you have to pass the variables to Mapnik at render time in a hashmap of the form ``variable_name:variable_value``.
 
-Resetting properties
-====================
+Controlling output of symbolizers and symbolizer attributes
+===========================================================
 
-You can reset properties by specifying them with the keyword ``none``. They will then be removed from the symbolizer thus using their default value
-or not using them at all. This does not work or makes sense for all properties like e.g. not for ``text-face-name``. For an overview over properties
+You can control symbolizer output by using rules that work on the whole symbolizer. E.g. ``line`` works on the
+line symbolizer. By using the keywords ``none`` or ``auto`` you can either suppress the symbolizer or output it with
+default values. The keyword ``auto`` does not work on shield and text symbolizers because they have attributes without
+default values. Here is an example how this works::
+
+    #layer {
+      line: none;
+      line-width: 2;
+      [feature = 'redfeature'] {
+        line-color: red;
+      }
+      [feature = 'bluefeature'] {
+        line-color: blue;
+      }
+    }
+
+Without ``line: none`` carto would output a line symbolizer with default values for all features
+other than redfeature and bluefeature, that is a black line with width 1. In contrast, you can
+quickly output a symbolizer with default value by using ``auto``::
+
+    #layer {
+      [feature = 'quickfeature'] {
+        marker: auto;
+      }
+    }
+
+This outputs a default markers symbolizer for all quickfeature features.
+
+You can also control the output of individual symbolizer properties by specifying them with the keyword ``none`` e.g. ``line-color: none``.
+They will then be removed from the symbolizer thus using their default value
+or not using them at all. This does not work or makes sense for all properties like e.g. not for ``text-face-name`` as it does not have a default value. For an overview over properties
 where this works or makes sense see `this list <https://github.com/mapbox/carto/blob/master/test/rendering-mss/issue_214.mss>`_.
+In this case the use of ``none`` and ``auto`` is equivalent. In both cases the default
+value will be used as Mapnik uses the default value automatically when the property is not present.

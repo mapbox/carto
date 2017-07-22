@@ -17,6 +17,9 @@ For Mapnik XML all character data as tag content is now prefixed with CDATA.
 ([#377](https://github.com/mapbox/carto/issues/377))
 * carto now accepts custom references for validating rules (part of [#413](https://github.com/mapbox/carto/issues/413))
 * The JavaScript API has been documented ([#479](https://github.com/mapbox/carto/issues/479))
+* New symbolizer rules (work on the whole symbolizer) enable control of symbolizer serialization. Write e.g. `line: none` to suppress output
+of the line symbolizer for this definition. Write e.g. `marker: auto` to output a markers symbolizer with default values. Symbolizer rules
+are considered an advanced features and are never inherited to other definitions ([#477](https://github.com/mapbox/carto/pull/477)).
 
 ### Breaking changes
 

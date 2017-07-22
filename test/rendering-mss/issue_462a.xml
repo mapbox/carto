@@ -1,0 +1,13 @@
+<Style filter-mode="first" name="style">
+  <Rule>
+    <Filter><![CDATA[([feature] = 'baz')]]></Filter>
+    <LineSymbolizer stroke="#0000ff" />
+  </Rule>
+  <Rule>
+    <Filter><![CDATA[([feature] = 'bar')]]></Filter>
+    <LineSymbolizer stroke="#ff0000" />
+  </Rule>
+  <Rule>
+    <LineSymbolizer />
+  </Rule>
+</Style>

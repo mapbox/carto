@@ -1,0 +1,8 @@
+Warning: issue_462.mss:2:4 shield is unstable. It may change in the future.
+Error: issue_462.mss:2:4 Invalid value for shield, the type keyword (options: none) is expected. auto (of type keyword) was given.
+Warning: issue_462.mss:3:4 text is unstable. It may change in the future.
+Error: issue_462.mss:3:4 Invalid value for text, the type keyword (options: none) is expected. auto (of type keyword) was given.
+Warning: issue_462.mss:4:4 line-pattern is unstable. It may change in the future.
+Error: issue_462.mss:4:4 Invalid value for line-pattern, the type keyword (options: none) is expected. auto (of type keyword) was given.
+Warning: issue_462.mss:5:4 polygon-pattern is unstable. It may change in the future.
+Error: issue_462.mss:5:4 Invalid value for polygon-pattern, the type keyword (options: none) is expected. auto (of type keyword) was given.
