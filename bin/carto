@@ -83,7 +83,6 @@ if (ext === '.mml') {
 }
 
 if (options.profile) {
-    const fs = require('fs');
     const profile = profiler.stopProfiling('carto');
 
     profile.export(function(error, result) {
