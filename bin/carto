@@ -11,16 +11,17 @@ var existsSync = require('fs').existsSync || require('path').existsSync
 
 var yargs = require('yargs')
             .usage("Usage: $0 <source MML file>")
-            .options('h', {alias:'help', describe:'Display this help message'})
-            .options('v', {alias:'version', boolean:true, describe:'Display version information'})
+            .options('a', {alias:'api', describe:'Specify Mapnik API version'})
             .options('b', {alias:'benchmark', boolean:true, describe:'Outputs total compile time'})
+            .options('f', {alias:'file', describe:'Outputs to the given file instead of stdout.'})
+            .options('h', {alias:'help', describe:'Display this help message'})
             .options('l', {alias:'localize', boolean:true, default:false, describe:'Use millstone to localize resources when loading an MML'})
             .options('n', {alias:'nosymlink', boolean:true, describe:'Use absolute paths instead of symlinking files'})
-            .options('a', {alias:'api', describe:'Specify Mapnik API version'})
-            .options('f', {alias:'file', describe:'Outputs to the given file instead of stdout.'})
             .options('o', {alias:'output', describe:'Specify output format (mapnik, json)', default:'mapnik'})
+            .options('p', {alias:'profile', boolean:true, default:false, describe:'Generate v8 profile data that can be loaded in chromium/chrome\'s profiler for inspection.'})
             .options('q', {alias:'quiet', boolean:true, default:false, describe:'Do not output any warnings'})
-            .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714});
+            .options('ppi', {describe:'Pixels per inch used to convert m, mm, cm, in, pt, pc to pixels', default:90.714})
+            .options('v', {alias:'version', boolean:true, describe:'Display version information'});
 
 var options = yargs.argv;
 
@@ -67,6 +68,11 @@ try {
     process.exit(1);
 }
 
+if (options.profile) {
+    const profiler = require('v8-profiler');
+    profiler.startProfiling('carto');
+}
+
 if (ext === '.mml') {
     var mml = new carto.MML(options);
     mml.load(path.dirname(input), data, compile);
@@ -76,6 +82,15 @@ if (ext === '.mml') {
     console.error("carto: please pass either a .mml file or .mss file");
 }
 
+if (options.profile) {
+    const fs = require('fs');
+    const profile = profiler.stopProfiling('carto');
+
+    profile.export(function(error, result) {
+        fs.writeFileSync('carto.cpuprofile', result);
+        profile.delete();
+    })
+}
 
 function compile(err, data) {
     if (err) {

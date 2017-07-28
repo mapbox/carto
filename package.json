@@ -42,11 +42,17 @@
     "yargs": "~8.0.1"
   },
   "devDependencies": {
+    "core-util-is": "^1.0.2",
     "coveralls": "~2.13.1",
+    "inherits": "^2.0.3",
     "istanbul": "~0.4.5",
     "mocha": "~3.4.1",
     "mocha-eslint": "^4.0.0",
-    "sax": "~1.2.1"
+    "npm": "^5.3.0",
+    "readable-stream": "^2.3.3",
+    "sax": "~1.2.1",
+    "util-deprecate": "^1.0.2",
+    "v8-profiler": "^5.7.0"
   },
   "scripts": {
     "pretest": "npm install && mocha -R spec --timeout 50000 -f jslint",
