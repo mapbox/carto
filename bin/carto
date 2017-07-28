@@ -83,7 +83,7 @@ if (ext === '.mml') {
 }
 
 if (options.profile) {
-    const profile = profiler.stopProfiling('carto');
+    var profile = profiler.stopProfiling('carto');
 
     profile.export(function(error, result) {
         fs.writeFileSync('carto.cpuprofile', result);
