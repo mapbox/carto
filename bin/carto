@@ -69,7 +69,7 @@ try {
 }
 
 if (options.profile) {
-    const profiler = require('v8-profiler');
+    var profiler = require('v8-profiler');
     profiler.startProfiling('carto');
 }
 
