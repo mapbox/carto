@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 (unreleased)
+## 1.0.0
 
 * Documentation is now available on https://cartocss.readthedocs.io. ([#473](https://github.com/mapbox/carto/issues/473))
 * Warnings are emitted if properties are used that are `deprecated`, `unstable` or `experimental`.
