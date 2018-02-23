@@ -22,26 +22,14 @@ Running the head binary:
  - `npm publish`
  - Regenerate documentation (see below)
 
-If there's a high chance of regression, please bump to 1.0.0 so that code using a semver ^ or ~ doesn't auto-upgrade anyone.
+If there's a high chance of regression, please bump to a new major version number
+so that code using a semver ^ or ~ doesn't auto-upgrade anyone.
 
 For examples of previous releases see: https://github.com/mapbox/carto/issues/440
 
 ## Documentation
 
 This repository contains auto-generated documentation of the content of Carto
-that's published on Mapbox.com.
-
-    git fetch origin gh-pages:gh-pages
-
-Edit `_docs/package.json` to point to the head version of [mapnik-reference](https://github.com/mapnik/mapnik-reference).
-
-    cd _docs
-    npm install
-    node generate.js
-
-Then run up a directory and run the testing server:
-
-    cd ../
-    jekyll serve -p 4000
-
-Test the new site at `localhost:4000/carto` and if things look good then git add your changes and push.
+that's published on readthedocs.io. You find the relevant files in the `docs`
+directory. Those files with the extension `rst` are the ones where you find
+the documentation sources in reStructuredText.
