@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+* Fix a error in the serialization process. ([#473](https://github.com/mapbox/carto/issues/488))
+
 ## 1.0.0
 
 * Documentation is now available on https://cartocss.readthedocs.io. ([#473](https://github.com/mapbox/carto/issues/473))
