@@ -61,42 +61,44 @@ Available parameters:
 Alternatively, Carto can be used from JavaScript.
 The `Renderer` interface is the main API for developers, and it takes an MML file as a string as input.
 
-    // defined variables:
-    // - input (the name or identifier of the file being parsed)
-    var carto = require('carto');
+```javascript
+// defined variables:
+// - input (the name or identifier of the file being parsed)
+var carto = require('carto');
 
-    try {
-        var data = fs.readFileSync(input, 'utf-8');
-        var mml = new carto.MML({});
-        mml.load(path.dirname(input), data, function (err, data) {
-            var output = {};
+try {
+    var data = fs.readFileSync(input, 'utf-8');
+    var mml = new carto.MML({});
+    mml.load(path.dirname(input), data, function (err, data) {
+        var output = {};
 
-            if (!err) {
-                output = new carto.Renderer({
-                    filename: input
-                }).render(data);
-            }
+        if (!err) {
+            output = new carto.Renderer({
+                filename: input
+            }).render(data);
+        }
 
-            if (output.msg) {
-                output.msg.forEach(function (v) {
-                    if (v.type === 'error') {
-                        console.error(carto.Util.getMessageToPrint(v));
-                    }
-                    else if (v.type === 'warning') {
-                        console.warn(carto.Util.getMessageToPrint(v));
-                    }
-                });
-            }
+        if (output.msg) {
+            output.msg.forEach(function (v) {
+                if (v.type === 'error') {
+                    console.error(carto.Util.getMessageToPrint(v));
+                }
+                else if (v.type === 'warning') {
+                    console.warn(carto.Util.getMessageToPrint(v));
+                }
+            });
+        }
 
-            // output content (if no errors)
-            if (output.data) {
-                console.log(output.data);
-            }
-        });
-    } catch (err) {
-        // program failures
-        ...
-    }
+        // output content (if no errors)
+        if (output.data) {
+            console.log(output.data);
+        }
+    });
+} catch (err) {
+    // program failures
+    ...
+}
+```
 
 If you want to use CartoCSS within the browser you should not use MML loading via `carto.MML.load`.
 Instead you should supply the JSON of the MML including the Stylesheet strings directly to `carto.Renderer.render`.
