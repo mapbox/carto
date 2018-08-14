@@ -1,5 +1,5 @@
-3.0.3
-=====
+3.0.20
+======
 Style
 -----
 
@@ -289,7 +289,7 @@ Type: ``color``
 
 
 
-Default Value: The color gray will be used for fill.
+Default Value: rgba(128,128,128,1)
 *(Gray and fully opaque (alpha = 1), same as rgb(128,128,128) or rgba(128,128,128,1).)*
 
 Fill color to assign to a polygon.
@@ -1379,7 +1379,7 @@ shield-placement
 Type: ``keyword``
 
 
-Possible values: ``point`` ``line`` ``vertex`` ``interior`` 
+Possible values: ``point`` ``line`` ``vertex`` ``interior`` ``grid`` ``alternating-grid`` 
 
 
 Default Value: point
@@ -2021,6 +2021,40 @@ Composite operation. This defines how this symbolizer should behave relative to 
 ------------
 
 
+shield-grid-cell-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No placement will be done.)*
+
+Controls horizontal spacing between placements of placement type ``grid`` or ``alternating-grid``.
+
+------------
+
+
+shield-grid-cell-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No placement will be done.)*
+
+Controls vertical spacing between placements of placement type ``grid`` or ``alternating-grid``.
+
+------------
+
+
 
 line-pattern
 ^^^^^^^^^^^^
@@ -2039,7 +2073,7 @@ Possible values: ``none``
 Default Value: 
 
 
-Allows omitting a line pattern symbolizer rule.
+Allows omitting a line pattern symbolizer rule or emitting it with default values.
 
 ------------
 
@@ -2760,7 +2794,7 @@ Possible values: ``none``
 Default Value: 
 
 
-Allows omitting a text symbolizer rule or emitting it with default values.
+Allows omitting a text symbolizer rule.
 
 ------------
 
@@ -3336,7 +3370,7 @@ text-placement
 Type: ``keyword``
 
 
-Possible values: ``point`` ``line`` ``vertex`` ``interior`` 
+Possible values: ``point`` ``line`` ``vertex`` ``interior`` ``grid`` ``alternating-grid`` 
 
 
 Default Value: point
@@ -3566,6 +3600,40 @@ Default Value: true
 *(For multipolygons only polygon with largest bbox area is labeled (does not apply to other geometries).)*
 
 Controls default labeling behavior on multipolygons. The default is true and means that only the polygon with largest bbox is labeled.
+
+------------
+
+
+text-grid-cell-width
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No placement will be done.)*
+
+Controls horizontal spacing between placements of placement type ``grid`` or ``alternating-grid``.
+
+------------
+
+
+text-grid-cell-height
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Type: ``float`` 
+
+
+
+
+
+Default Value: 0
+*(No placement will be done.)*
+
+Controls vertical spacing between placements of placement type ``grid`` or ``alternating-grid``.
 
 ------------
 

@@ -7,6 +7,7 @@ when using the Mapnik renderer. Each API version of Mapnik has its own subsectio
 applies to the version you are running. If there is no subsection for your specific version the
 next older listed version applies to this version.
 
+.. include:: api/mapnik/3.0.20.rst
 .. include:: api/mapnik/3.0.6.rst
 .. include:: api/mapnik/3.0.3.rst
 .. include:: api/mapnik/3.0.0.rst

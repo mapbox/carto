@@ -289,7 +289,7 @@ Type: ``color``
 
 
 
-Default Value: The color gray will be used for fill.
+Default Value: rgba(128,128,128,1)
 *(Gray and fully opaque (alpha = 1), same as rgb(128,128,128) or rgba(128,128,128,1).)*
 
 Fill color to assign to a polygon.
@@ -388,7 +388,7 @@ polygon-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
@@ -683,7 +683,7 @@ line-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
@@ -1152,7 +1152,7 @@ marker-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
@@ -1463,6 +1463,8 @@ shield-min-distance
 
 Type: ``float`` 
 
+**Status: deprecated**
+
 
 
 
@@ -1470,7 +1472,7 @@ Type: ``float``
 Default Value: 0
 *(Shields with the same text will be rendered without restriction.)*
 
-Minimum distance to the next shield with the same text. Only works for line placement.
+Minimum distance to any other collision object. Deprecated: replaced by ``text-margin``.
 
 ------------
 
@@ -1570,9 +1572,9 @@ Type: ``string``
 
 
 Default Value: " "
-*(Lines will be wrapped when whitespace is encountered.)*
+*(Lines will be wrapped conforming to the (untailored) Unicode Line Break Algorithm provided by ICU BreakIterator.)*
 
-Use this character instead of a space to wrap long names.
+Must be a single character. If you set it to other than the space character, Mapnik will wrap strictly on that character without involving any additional rules.
 
 ------------
 
@@ -1974,7 +1976,7 @@ shield-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
@@ -2116,7 +2118,7 @@ line-pattern-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
@@ -2343,7 +2345,7 @@ polygon-pattern-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
@@ -2875,9 +2877,9 @@ Type: ``string``
 
 
 Default Value: " "
-*(Lines will be wrapped when whitespace is encountered.)*
+*(Lines will be wrapped conforming to the (untailored) Unicode Line Break Algorithm provided by ICU BreakIterator.)*
 
-Use this character instead of a space to wrap long text.
+Must be a single character. If you set it to other than the space character, Mapnik will wrap strictly on that character without involving any additional rules.
 
 ------------
 
@@ -3470,7 +3472,7 @@ text-simplify-algorithm
 Type: ``keyword``
 
 
-Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` 
+Possible values: ``radial-distance`` ``zhao-saalfeld`` ``visvalingam-whyatt`` ``douglas-peucker`` 
 
 
 Default Value: radial-distance
