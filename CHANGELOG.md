@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+* Update dependencies
+* Update mapnik-reference to support new Mapnik API version ([#498](https://github.com/mapbox/carto/issues/498))
+
 ## 1.1.0
 
 * Update dependencies
