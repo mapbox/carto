@@ -12,15 +12,15 @@ Carto is an evolution of the [Cascadenik](https://github.com/mapnik/Cascadenik) 
 
 The best place to start is to review the [CartoCSS documentation](https://cartocss.readthedocs.io).
 
-Tutorials like the [Mapbox Getting started with CartoCSS guide](https://www.mapbox.com/guides/getting-started-cartocss/) are a great place to start to learn the basics of CartoCSS.
+Tutorials like the [Mapbox Getting started with CartoCSS guide](https://github.com/mapbox/mapbox-studio-classic/blob/mb-pages/docs/studio-classic-manual/04-classic-manual-cartocss.md) are a great place to start to learn the basics of CartoCSS.
 
-For more advanced topics see the [Studio style quickstart guide](https://www.mapbox.com/guides/style-quickstart/) and [Studio style manual](https://www.mapbox.com/guides/style-manual). The links below reference the Tilemill application, which preceded Mapbox Studio Classic, but still contain useful and relevant information.
+For more advanced topics see the [Studio style quickstart guide](https://github.com/mapbox/mapbox-studio-classic/blob/mb-pages/docs/tutorials/style-quickstart.md) and [Studio style manual](https://github.com/mapbox/mapbox-studio-classic/blob/mb-pages/docs/studio-classic-manual/01-classic-manual-intro.md). The links below reference the Tilemill application, which preceded Mapbox Studio Classic, but still contain useful and relevant information.
 
- - [Details on Filtering data with CartoCSS](https://www.mapbox.com/tilemill/docs/guides/selectors/)
- - [How order works in rendering](https://www.mapbox.com/tilemill/docs/guides/symbol-drawing-order/)
- - [How to style labels](https://www.mapbox.com/tilemill/docs/guides/styling-labels/)
- - [How to style lines](https://www.mapbox.com/tilemill/docs/guides/styling-lines/)
- - [How to style polygons](https://www.mapbox.com/tilemill/docs/guides/styling-polygons/)
+ - [Details on Filtering data with CartoCSS](https://tilemill-project.github.io/tilemill/docs/guides/selectors/)
+ - [How order works in rendering](https://tilemill-project.github.io/tilemill/docs/guides/symbol-drawing-order/)
+ - [How to style labels](https://tilemill-project.github.io/tilemill/docs/guides/styling-labels/)
+ - [How to style lines](https://tilemill-project.github.io/tilemill/docs/guides/styling-lines/)
+ - [How to style polygons](https://tilemill-project.github.io/tilemill/docs/guides/styling-polygons/)
  - See also the [Styling Concepts](#styling-concepts) for explanations of advanced features.
 
 ## Installation
