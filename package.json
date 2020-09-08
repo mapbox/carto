@@ -44,7 +44,7 @@
   "devDependencies": {
     "coveralls": "~3.0.0",
     "istanbul": "~0.4.5",
-    "mocha": "~5.2.0",
+    "mocha": "~8.1.3",
     "mocha-eslint": "^4.0.0",
     "sax": "~1.2.1"
   },
