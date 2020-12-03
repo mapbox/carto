@@ -1,14 +1,14 @@
 language: node_js
-
+arch:
+  - amd64
+  - ppc64le
 sudo: false
-
 node_js:
   - "14"
   - "13"
   - "12"
   - "11"
   - "10"
-  - "8"
 
 script:
   - npm test
