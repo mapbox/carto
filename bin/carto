@@ -67,7 +67,7 @@ try {
     process.exit(1);
 }
 
-if (ext === '.mml') {
+if (ext === '.mml' || ext === '.yml') {
     var mml = new carto.MML(options);
     mml.load(path.dirname(input), data, compile);
 } else if (ext === '.mss') {
@@ -93,7 +93,7 @@ function compile(err, data) {
     });
     try {
         var output;
-        if (ext === '.mml') {
+        if (ext === '.mml' || ext === '.yml') {
             output = renderer.render(data);
         } else if (ext === '.mss') {
             output = renderer.renderMSS(data);
