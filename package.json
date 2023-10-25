@@ -38,7 +38,7 @@
     "js-yaml": "~3.14.0",
     "lodash": "~4.17.10",
     "mapnik-reference": "~8.10.0",
-    "semver": "~5.6.0",
+    "semver": "~5.7.2",
     "yargs": "~15.4.1"
   },
   "devDependencies": {
